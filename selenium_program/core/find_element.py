@@ -59,7 +59,7 @@ class FindElement(object):
         # 裁剪图片
         screen_shot_file_path = self.identifying_code_file
         imgObject = Image.open(screen_shot_file_path)  # 获得截屏的图片
-        imgCaptcha = imgObject.crop((x, y, x + ele_width + 5, y + ele_height + 5))  # 裁剪
+        imgCaptcha = imgObject.crop((x, y, x + ele_width + 5, y + ele_height))  # 裁剪
         # 保存裁剪的图片
         filename = get_screen_shot_filename()
         save_file_path = os.path.join(screen_shot_path, filename)
@@ -68,6 +68,10 @@ class FindElement(object):
         code = baidu_discern(save_file_path)
         # 添加至对象空间
         self.code = code
+
+        # 删除无用的截图
+        os.remove(screen_shot_file_path)
+
         return code, filename
 
     def input_identifying_code(self, data):
