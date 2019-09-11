@@ -1,0 +1,62 @@
+
+/*---------网页头部-------------*/
+#main_title>div{
+    height: 55px;
+    background-color: #2cacff;
+}
+
+/*---------网页头部-------------*/
+
+
+
+/*----------主体部分-------------*/
+#main_body{
+    height: 730px;
+}
+
+/*++++++选项++++++++*/
+#main_body_option{
+    height: 100%;
+}
+
+#main_body_option>div{
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+
+    /*text-align: left;*/
+    /*padding-left: 30px;*/
+
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+
+    background-color: #e0f8ff;
+    color: #717171;
+    border: 1px solid #7d7d7d;
+}
+
+#main_body_option>div:hover{
+    color: black;
+    cursor: pointer;
+}
+
+#main_body_option>div:active{
+    color: red;
+}
+
+/*++++++选项++++++++*/
+
+
+
+#main_body_content{
+    height: 100%;
+    padding: 0 0;
+}
+
+#main_body_content iframe{
+    width: 100%;
+    height: 100%;
+}
+/*----------主体部分-------------*/
+

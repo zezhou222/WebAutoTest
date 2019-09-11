@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="robots" content="all,follow">
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="/static/vendor/bootstrap/css/bootstrap.min.css">
+    <!-- Font Awesome CSS-->
+    <link rel="stylesheet" href="/static/vendor/font-awesome/css/font-awesome.min.css">
+    <!-- Fontastic Custom icon font-->
+    <link rel="stylesheet" href="/static/css/fontastic.css">
+    <!-- Google fonts - Poppins -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,700">
+    <!-- theme stylesheet-->
+    <link rel="stylesheet" href="/static/css/style.default.css" id="theme-stylesheet">
+    <!-- Custom stylesheet - for your changes-->
+    <link rel="stylesheet" href="/static/css/custom.css">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="/static/img/favicon.ico">
+</head>
+<body>
+<div class="page login-page">
+    <div class="container d-flex align-items-center">
+        <div class="form-holder has-shadow">
+            <div class="row">
+                <!-- Logo & Information Panel-->
+                <div class="col-lg-6">
+                    <div class="info d-flex align-items-center">
+                        <div class="content">
+                            <div class="logo">
+                                <h1>Dashboard</h1>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Form Panel    -->
+                <div class="col-lg-6 bg-white">
+                    <div class="form d-flex align-items-center">
+                        <div class="content">
+                            <form class="form-validate">
+                                <div class="form-group">
+                                    <input id="register-username" type="text" name="username" required
+                                           data-msg="Please enter your username" class="input-material">
+                                    <label for="register-username" class="label-material">User Name</label>
+                                </div>
+                                <div class="form-group">
+                                    <input id="register-email" type="email" name="email" required
+                                           data-msg="Please enter a valid email address" class="input-material">
+                                    <label for="register-email" class="label-material">Email Address </label>
+                                </div>
+                                <div class="form-group">
+                                    <input id="register-password" type="password" name="password" required
+                                           data-msg="Please enter your password" class="input-material">
+                                    <label for="register-password" class="label-material">password </label>
+                                </div>
+                                <!--<div class="form-group terms-conditions">-->
+                                    <!--<input id="register-agree" name="registerAgree" type="checkbox" required value="1"-->
+                                           <!--data-msg="Your agreement is required" class="checkbox-template">-->
+                                    <!--<label for="register-agree">Agree the terms and policy</label>-->
+                                <!--</div>-->
+                            </form>
+                            <div class="form-group">
+                                <button id="register_btn" type="submit" class="btn btn-primary">
+                                    Register
+                                </button>
+                            </div>
+
+                            <small>Already have an account?</small>
+                            <a href="login.html" class="signup">Login</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyrights text-center">
+        <!--<p>Copyright &copy; 2019.Company name All rights reserved.More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></p>-->
+    </div>
+</div>
+<!-- JavaScript files-->
+<script src="/static/vendor/jquery/jquery.min.js"></script>
+<script src="/static/vendor/popper.js/umd/popper.min.js"></script>
+<script src="/static/vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="/static/vendor/jquery.cookie/jquery.cookie.js"></script>
+<script src="/static/vendor/chart.js/Chart.min.js"></script>
+<script src="/static/vendor/jquery-validation/jquery.validate.min.js"></script>
+<!-- Main File-->
+<script src="/static/js/front.js"></script>
+
+<script src="/static/js/settings.js"></script>
+<script>
+
+    function all_event(){
+        // 点击注册按钮的事件
+        click_register_btn_event();
+    }
+
+    function click_register_btn_event(){
+
+        $('#register_btn').click(function (e) {
+
+            var formdata = new FormData($('form')[0]);
+            // 提交注册信息
+            $.ajax({
+                url: submit_user_register_info_url,
+                type: 'post',
+                data: formdata,
+                processData:false,  //表示不处理数据
+                contentType:false,  //不设置数据类型
+                success: function (response) {
+                    if (response.flag == 0){
+                        // 可加注册成功的动画
+
+                        // 跳转至登陆页面
+                        location.href = login_url;
+                    }else{
+                        alert(response.error_info);
+                    }
+
+                }
+            });
+
+        });
+
+    }
+
+    all_event();
+
+</script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<div>
+    <div>
+        <h5><b>用例名称：</b>{{ uc_name }}</h5>
+        <h5><b>用例描述：</b>{{ uc_desc }}</h5>
+        <h5><b>执行的用户：</b>{{ username }}</h5>
+        <h5><b>用例的执行时间：</b>{{ execute_time }}</h5>
+        <h5><b>总运行时间：</b>{{ total_run_time }}s</h5>
+        <h5><b>执行结果：</b>
+            {% if status == 'failed' %}
+            <span style="color: #ec0000;">{{ status }}</span>
+            {% else %}
+            <span style="color: #00d600;">{{ status }}</span>
+            {% endif %}
+        </h5>
+    </div>
+
+</div>
+
+<div>
+    <table border="1">
+        <thead>
+        <tr>
+            <td width="80">执行顺序</td>
+            <td>步骤参数</td>
+            <td width="130">是否执行该步骤</td>
+            <td width="80">执行状态</td>
+            <td width="80">运行时长</td>
+            <td>错误信息</td>
+        </tr>
+        </thead>
+        <tbody>
+        {% for dic in result_list %}
+        <tr>
+            <td>
+                {{ loop.index }}
+            </td>
+            <td>{{ dic.params }}</td>
+            <td>
+                {% if dic.execute == 1 %}
+                执行
+                {% endif %}
+            </td>
+            <td>
+                {% if dic.status == 1 %}
+                <span style="color: #00de00">success</span>
+                {% else %}
+                <span style="color: #de060f">failed</span>
+                {% endif %}
+            </td>
+            <td>{{ dic.run_time }}s</td>
+            <td>
+                {{ dic.error_info }}
+            </td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+

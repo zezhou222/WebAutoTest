@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/static/bootstrap-3.3.7-dist/css/bootstrap.css">
+    <style>
+        .step_content{
+            height: 270px;
+            /*border: 1px solid red;*/
+            overflow-y: scroll;
+        }
+    </style>
+</head>
+<body style="width: 98%;">
+
+<h3 class="text-center">{% if opt == 'edit' %}编辑用例{% endif %}</h3>
+<br>
+<form class="form-horizontal">
+    {{ form.csrf_token }}
+    <div class="form-group">
+        <label for="name" class="col-md-2 control-label">用例名称</label>
+        <div class="col-md-3">
+            <input type="text" class="form-control" id="name" name="name">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-md-2 control-label" for="uc_type">用例类型</label>
+        <div class="col-md-2">
+            <select class="form-control" id="uc_type" name="uc_type">
+                <option value="general" selected>普通用例</option>
+                <option value="public">公用用例</option>
+            </select>
+        </div>
+    </div>
+    </div>
+    <div class="form-group">
+        <label for="desc" class="col-md-2 control-label">用例描述</label>
+        <div class="col-md-6">
+            <textarea id="desc" name="desc" rows="3" class="form-control"></textarea>
+        </div>
+    </div>
+    <div class="form-group">
+        <br>
+        <div class="col-md-6 col-md-offset-2">
+            <input type="button" class="btn btn-success btn-xs" value="新增" id="add_option">
+            <input type="button" class="btn btn-danger btn-xs" value="删除" id="del_option">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-md-2 control-label">用例步骤</label>
+        <div class="col-md-10 step_content">
+            <table class="table table-hover">
+                <thead>
+                <tr>
+                    <td width="20"><input type="checkbox" id="all_choice"></td>
+                    <td width="200">操作</td>
+                    <td>参数1</td>
+                    <td>参数2</td>
+                    <td>参数3</td>
+                    <td width="50">执行</td>
+                    <td>操作</td>
+                </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="form-group">
+        <input type="button" class="btn btn-success btn-sm pull-right" id="add_use_case_button" value="{% if opt == 'add' %}添加{% else %}保存{% endif %}">
+    </div>
+
+</form>
+
+<script src="/static/js/jquery-3.4.1.js"></script>
+<script src="/static/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+
+<script src="/static/js/settings.js"></script>
+<script>
+    // 步骤选项
+    var all_step_option;
+    // 步骤标签
+    var step_label;
+    // 公共用例
+    var all_public_use_case;
+    // 用例选择标签
+    var use_case_label;
+    // 需要id、xpath选择标签的方法列表
+    var ele_choice_method = ['find_element_input_content', 'find_element_click', 'find_element_double_click', 'identifying_code', 'input_identifying_code'];
+    // 查找元素的选择标签
+    var find_ele_choice_label = '<select name="find_type" id="" class="form-control"><option value="id">id</option><option value="xpath">xpath</option><option value="class_name">class_name</option></select>';
+    // 普通的文本输入框标签
+    var general_input_label = '<input type="text" class="form-control">';
+    // 打开那种浏览器测试的选择标签
+    var open_browser_choice_label = '<select name="browser" id="" class="form-control"><option value="google">谷歌浏览器</option></select>';
+    // 编辑的用例id，编辑页面用
+    var edit_use_case_id;
+</script>
+<script>
+
+    function all_event() {
+        // 添加步骤选项的事件
+        click_add_option_event();
+        // 所有的步骤全选或全取消勾选
+        click_all_choice_event();
+        // 删除步骤选项事件
+        click_del_option_event();
+        // 添加用例的事件
+        click_add_use_case_button_event();
+        // 步骤向上移动
+        click_step_move_up_button_event();
+        // 步骤向下移动
+        click_step_move_down_button_event();
+        // 某个步骤被选中后，下一个参数的样式发生改变
+        click_step_option_event();
+    }
+
+    // 生成选项标签，只调用一次
+    function create_step_option_label() {
+        var content = '<select name="step" class="form-control">';
+        for (var k in all_step_option){
+            content += `<option value="${k}">${all_step_option[k]["step_name"]}</option>`
+        }
+        content += '</select>';
+        return content;
+    }
+
+    // 生成公共模块的选项标签，只调用一次
+    function create_option_label() {
+        var content = '<select name="public_use_case" class="form-control">';
+        for (var i=0;i<all_public_use_case.length;i++){
+            content += `<option value="${all_public_use_case[i].use_case_name}">${all_public_use_case[i].use_case_name}</option>`
+        }
+        content += '</select>';
+        return content;
+    }
+
+    // 创建一行步骤初始数据
+    function create_row_data() {
+        var content = `<tr>
+             <td><input type="checkbox" name="choice"></td>
+             <td>
+                 ${step_label}
+             </td>
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+             <td class="text-center"><input type="checkbox" checked></td>
+             <td>
+                <button type="button" class="btn btn-default btn-sm col-md-5 step_move_up">
+                    <span class="glyphicon glyphicon glyphicon-arrow-up text-success" aria-hidden="true" style="position:relative;left:-5px;"></span>
+                </button>
+                <button type="button" class="btn btn-default btn-sm col-md-5 col-md-offset-2 step_move_down">
+                    <span class="glyphicon glyphicon glyphicon-arrow-down text-primary" aria-hidden="true" style="position:relative;left:-5px;"></span>
+                </button>
+            </td>
+         </tr>`
+        return content;
+    }
+
+    // 初始化操作，从服务端获取操作选项和获取公共用例
+    (function () {
+        $.ajax({
+            url: get_step_url,
+            success: function (response) {
+                all_step_option = response;
+                step_label = create_step_option_label();
+            }
+        });
+        $.ajax({
+            url: get_public_use_case_url,
+            success: function (response) {
+                all_public_use_case = response;
+                use_case_label = create_option_label();
+            }
+        });
+        // 编辑的初始化,渲染数据
+        if ($(window.parent.document).find('iframe').attr('src').slice(0,edit_use_case_page_url.length) == edit_use_case_page_url){
+            // 编辑用例的id
+            edit_use_case_id = {{ use_case_id }};
+
+            // 获取数据
+            var new_url = `${get_execute_step_url}?use_case_id=${edit_use_case_id}`;
+            $.ajax({
+                url: new_url,
+                success: function (response) {
+                    // console.log(response);
+                    // 渲染用例名称
+                    $('#name').val(response.name);
+                    // 渲染用例类型
+                    $('#uc_type').find(`option[value=${response.uc_type}]`).prop('selected', true);
+                    // 渲染用例描述
+                    $('#desc').text(response.desc);
+
+                    // 添加初始化步骤
+                    for (var i=0;i<response.step.length;i++){
+                        $('tbody').append(create_row_data());
+                    }
+                    // 步骤渲染数据
+                    $('tbody').find('tr').each(function (index,ele) {
+                        var temp = response.step[index].split('@@');
+                        var method = temp.shift();
+                        var execute = temp.pop() == '1' ? true:false;
+                        // console.log(temp, method, execute);
+                        // 选中步骤选项
+                        $(ele).find('td').eq(1).find(`option[value=${method}]`).prop('selected', true);
+                        // 选中是否执行
+                        $(ele).find('td').eq(5).find('input').prop('checked', execute);
+                        // 渲染步骤参数
+                        $(ele).find('td').eq(2).children().remove();
+                        if (method == 'open_webdriver'){
+                            $(ele).find('td').eq(2).append(open_browser_choice_label);
+                            $(ele).find('td').eq(2).find(`option[value=${temp[0]}]`).prop('selected', true);
+                        }else if(method == 'public_use_case'){
+                            $(ele).find('td').eq(2).append(use_case_label);
+                            $(ele).find('td').eq(2).find(`option[value=${temp[0]}]`).prop('selected', true);
+                        }else if(if_content_in_list(method, ele_choice_method)){
+                            $(ele).find('td').eq(2).append(find_ele_choice_label);
+                            $(ele).find('td').eq(2).find(`option[value=${temp[0]}]`).prop('selected', true);
+                            for (var i=0;i<temp.length;i++){
+                                $(ele).find('td').eq(i+2).find(`input`).val(temp[i]);
+                            }
+                        }else{
+                            $(ele).find('td').eq(2).append(general_input_label);
+                            for (var i=0;i<temp.length;i++){
+                                $(ele).find('td').eq(i+2).find(`input`).val(temp[i]);
+                            }
+                        }
+                    });
+
+                }
+            });
+        }
+    })();
+
+
+    function click_add_option_event() {
+
+        $('#add_option').click(function (e) {
+            var label = create_row_data();
+            // 插入一条行数据
+            $('tbody').append(label);
+
+        });
+
+    }
+
+    function click_all_choice_event(){
+
+        $('#all_choice').change(function (e) {
+            $('input[name=choice]').prop('checked', $(this).prop('checked'));
+        });
+
+    }
+
+    function click_del_option_event(){
+
+        $('#del_option').click(function (e) {
+            $('input[name=choice]:checked').parent().parent().remove();
+        });
+
+    }
+
+    // 拼接步骤参数
+    function join_step_params(tbody_obj) {
+        // 移除飘红
+        $('tbody').find('.bg-danger').removeClass('bg-danger');
+
+        var step = [];
+        var flag = true;
+        // 有步骤则进入进行拼接添加，没有表示空步骤的用例
+        tbody_obj.find('tr').each(function (index, tr) {
+            var temp = [];
+            // 获取步骤方法名称，并添加
+            var step_method_name = $(tr).find('td').eq(1).find('option:selected').val();
+            temp.push(step_method_name);
+
+            // 参数1的，获取xpath那种，选择浏览器那种，选择用例那种，普通文本输入框那种
+            var content;
+            if (step_method_name == 'public_use_case' || step_method_name == 'open_webdriver' || if_content_in_list(step_method_name, ele_choice_method)){
+                content = $(tr).find('td').eq(2).find('option:selected').val();
+            }else{
+                content = $(tr).find('td').eq(2).find('input').val();
+            }
+            // 如果内容为空不添加
+            if (content.trim() != ""){
+                temp.push(content);
+            }
+
+            // 获取步骤的参数2-3
+            for (var i=3;i<$(tr).find('td').length-2;i++){
+                var value = $(tr).find('td').eq(i).find('input').val();
+                if (value.trim() != ""){
+                    temp.push(value);
+                }
+            }
+
+            // 获取是否执行
+            var excute = $(tr).find('td').eq(-2).find('input').prop('checked');
+            if (excute){
+                temp.push('1')
+            }else{
+                temp.push('0')
+            }
+
+            // 判断参数的长度和规定的是否一致，不一致则飘红提示
+            var step_length = parseInt(all_step_option[step_method_name]['step_length']);
+
+            if (temp.length != step_length){
+                flag = false;
+                $(tr).addClass('bg-danger');
+            }
+            // 进行拼接，加到总的步骤里面
+            step.push(temp.join('@@'));
+        });
+        return {'flag':flag, 'step': step.join("||")}
+    }
+
+
+    function click_add_use_case_button_event(){
+        
+        $('#add_use_case_button').click(function (e) {
+            // 还需要前端判断一下输入的信息格式是否正确
+
+            var formdata = new FormData();
+            // 添加csrf_tokken
+            formdata.append('csrf_token', $('#csrf_token').val());
+            // 添加用例名称
+            formdata.append('name', $('#name').val());
+            // 添加用例类型
+            formdata.append('uc_type', $('#uc_type').find('option:selected').val());
+            // 添加用例描述
+            formdata.append('desc', $('#desc').val());
+            // 搞出用例步骤的逻辑
+            var step_retult = join_step_params($('tbody'));
+            // console.log(step_retult);
+            // return
+
+            formdata.append('params', step_retult["step"]);
+            // 清除无用的
+            formdata.delete('step');
+            // 判断步骤格式是否正确
+            if (!step_retult["flag"]){
+                alert("步骤格式有误");
+                return;
+            }else{
+                // 移除飘红
+                $('tbody').find('.bg-danger').removeClass('bg-danger');
+            }
+
+            // 编辑走编辑的url，添加走添加的url
+            if ($(window.parent.document).find('iframe').attr('src').slice(0,edit_use_case_page_url.length) == edit_use_case_page_url){
+                var new_url = edit_use_case_url;
+                var submit_type = 'put';
+                formdata.append('edit_use_case_id', edit_use_case_id);
+            }else{
+                var new_url = add_use_case_url;
+                var submit_type = 'post';
+            }
+
+            $.ajax({
+                url: new_url,
+                type: submit_type,
+                data: formdata,
+                processData:false,  //表示不处理数据
+                contentType:false,  //不设置数据类型
+                success: function (response) {
+
+                    if (response.flag == 0){
+                        // 添加成功的动画效果
+
+                        if ($(window.parent.document).find('iframe').attr('src').slice(0,edit_use_case_page_url.length) == edit_use_case_page_url){
+                            // 回退ifame页面
+                            $(window.parent.document).find('iframe')[0].contentWindow.history.back();
+                        }else{
+                            // 刷新添加页面，继续让其添加用例
+                            $(window.parent.document).find('iframe').attr('src', add_use_case_page_url);
+                        }
+
+                    }else if (response.flag == 1){
+                        // 用例名称为空的情况
+                        console.log(response);
+                    }else{
+                        alert(response.error_info);
+                    };
+
+                },
+            });
+        });
+        
+    }
+
+
+    function click_step_move_up_button_event(){
+        
+        $('.step_content tbody').on('click', '.step_move_up', function (e) {
+            var now_tr = $(this).parent().parent();
+            // 判断上方是否有标签
+            if (! now_tr.prev().length){
+                return
+            }
+
+            // 克隆一份标签
+            var new_tr = now_tr.clone(true);
+            // select被选中的单独赋值一下。
+            // tr下下标为1的td是步骤方法的
+            new_tr.children().eq(1).find('select').val(now_tr.children().eq(1).find('select option:selected').val());
+            // tr下下标为2的有可能是select标签也有可能是input标签，如果是input标签找不到就添加不成
+            new_tr.children().eq(2).find('select').val(now_tr.children().eq(2).find('select option:selected').val());
+            // 在当前点击的标签上面添加
+            now_tr.prev().before(new_tr);
+            // 删除点击上移的
+            now_tr.remove();
+        })
+        
+    }
+
+
+    function click_step_move_down_button_event(){
+
+        $('.step_content tbody').on('click', '.step_move_down', function (e) {
+            var now_tr = $(this).parent().parent();
+            // 判断下方是否有标签
+            if (! now_tr.next().length){
+                return
+            }
+
+            // 克隆一份标签
+            var new_tr = now_tr.clone(true);
+            // select被选中的单独赋值一下。
+            new_tr.children().eq(1).find('select').val(now_tr.children().eq(1).find('select option:selected').val());
+            new_tr.children().eq(2).find('select').val(now_tr.children().eq(2).find('select option:selected').val());
+            // 在当前点击的标签下面添加
+            now_tr.next().after(new_tr);
+            // 删除点击下移的
+            now_tr.remove();
+        });
+
+    }
+
+
+    function if_content_in_list(con, lis) {
+        var flag = false;
+        for (var i=0;i<lis.length;i++){
+            if (con == lis[i]){
+                flag = true;
+                break;
+            }
+        }
+        return flag;
+    }
+
+    function click_step_option_event(){
+
+        $('.step_content tbody').on('change', 'select[name="step"]', function (e) {
+            // 通过判断方法，使第一个参数切换各种标签
+            var method = $(this).find('option:selected').val();
+            // 移除参数一号标签
+            $(this).parent().next().children().remove();
+            // 添加新标签
+            if (method == 'public_use_case'){
+                $(this).parent().next().append(use_case_label);
+            }else if (if_content_in_list(method, ele_choice_method)) {
+                $(this).parent().next().append(find_ele_choice_label);
+            }else if (method == 'open_webdriver'){
+                $(this).parent().next().append(open_browser_choice_label);
+            }else{
+                $(this).parent().next().append(general_input_label);
+            }
+
+        })
+
+    }
+
+    all_event();
+
+</script>
+</body>
+</html>

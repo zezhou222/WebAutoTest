@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Home</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="robots" content="all,follow">
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="/static/vendor/bootstrap/css/bootstrap.min.css">
+    <!--<link rel="stylesheet" href="/static/bootstrap-3.3.7-dist/css/bootstrap.min.css">-->
+    <!-- Font Awesome CSS-->
+    <link rel="stylesheet" href="/static/vendor/font-awesome/css/font-awesome.min.css">
+    <!-- Fontastic Custom icon font-->
+    <link rel="stylesheet" href="/static/css/fontastic.css">
+    <!-- Google fonts - Poppins -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,700">
+    <!-- theme stylesheet-->
+    <link rel="stylesheet" href="/static/css/style.default.css" id="theme-stylesheet">
+    <!-- Custom stylesheet - for your changes-->
+    <link rel="stylesheet" href="/static/css/custom.css">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="/static/img/favicon.ico">
+</head>
+<body>
+<div class="page">
+    <!-- Main Navbar-->
+    <header class="header">
+        <nav class="navbar">
+            <!-- Search Box-->
+            <div class="search-box">
+                <button class="dismiss"><i class="icon-close"></i></button>
+                <form id="searchForm" action="#" role="search">
+                    <input type="search" placeholder="What are you looking for..." class="form-control">
+                </form>
+            </div>
+            <div class="container-fluid">
+                <div class="navbar-holder d-flex align-items-center justify-content-between">
+                    <!-- Navbar Header-->
+                    <div class="navbar-header">
+                        <!-- Navbar Brand --><a href="index.html" class="navbar-brand d-none d-sm-inline-block">
+                        <div class="brand-text d-none d-lg-inline-block">
+                            <span>Web </span><strong>自动化测试平台</strong></div>
+                        <div class="brand-text d-none d-sm-inline-block d-lg-none"><strong>BD</strong></div>
+                    </a>
+                        <!-- Toggle Button--><a id="toggle-btn" href="#"
+                                                class="menu-btn active"><span></span><span></span><span></span></a>
+                    </div>
+                    <!-- Navbar Menu -->
+                    <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
+                        <!-- Search-->
+                        <li class="nav-item d-flex align-items-center"><a id="search" href="#"><i
+                                class="icon-search"></i></a></li>
+                        <!-- Notifications-->
+                        <li class="nav-item dropdown"><a id="notifications" rel="nofollow" data-target="#" href="#"
+                                                         data-toggle="dropdown" aria-haspopup="true"
+                                                         aria-expanded="false" class="nav-link"><i
+                                class="fa fa-bell-o"></i><span class="badge bg-red badge-corner">12</span></a>
+                            <ul aria-labelledby="notifications" class="dropdown-menu">
+                                <li><a rel="nofollow" href="#" class="dropdown-item">
+                                    <div class="notification">
+                                        <div class="notification-content"><i class="fa fa-envelope bg-green"></i>You
+                                            have 6 new messages
+                                        </div>
+                                        <div class="notification-time">
+                                            <small>4 minutes ago</small>
+                                        </div>
+                                    </div>
+                                </a></li>
+                                <li><a rel="nofollow" href="#" class="dropdown-item">
+                                    <div class="notification">
+                                        <div class="notification-content"><i class="fa fa-twitter bg-blue"></i>You have
+                                            2 followers
+                                        </div>
+                                        <div class="notification-time">
+                                            <small>4 minutes ago</small>
+                                        </div>
+                                    </div>
+                                </a></li>
+                                <li><a rel="nofollow" href="#" class="dropdown-item">
+                                    <div class="notification">
+                                        <div class="notification-content"><i class="fa fa-upload bg-orange"></i>Server
+                                            Rebooted
+                                        </div>
+                                        <div class="notification-time">
+                                            <small>4 minutes ago</small>
+                                        </div>
+                                    </div>
+                                </a></li>
+                                <li><a rel="nofollow" href="#" class="dropdown-item">
+                                    <div class="notification">
+                                        <div class="notification-content"><i class="fa fa-twitter bg-blue"></i>You have
+                                            2 followers
+                                        </div>
+                                        <div class="notification-time">
+                                            <small>10 minutes ago</small>
+                                        </div>
+                                    </div>
+                                </a></li>
+                                <li><a rel="nofollow" href="#" class="dropdown-item all-notifications text-center">
+                                    <strong>view all notifications </strong></a></li>
+                            </ul>
+                        </li>
+                        <!-- Messages                        -->
+                        <li class="nav-item dropdown"><a id="messages" rel="nofollow" data-target="#" href="#"
+                                                         data-toggle="dropdown" aria-haspopup="true"
+                                                         aria-expanded="false" class="nav-link"><i
+                                class="fa fa-envelope-o"></i><span class="badge bg-orange badge-corner">10</span></a>
+                            <ul aria-labelledby="notifications" class="dropdown-menu">
+                                <li><a rel="nofollow" href="#" class="dropdown-item d-flex">
+                                    <div class="msg-profile"><img src="/static/img/avatar-1.jpg" alt="..."
+                                                                  class="img-fluid rounded-circle"></div>
+                                    <div class="msg-body">
+                                        <h3 class="h5">Jason Doe</h3><span>Sent You Message</span>
+                                    </div>
+                                </a></li>
+                                <li><a rel="nofollow" href="#" class="dropdown-item d-flex">
+                                    <div class="msg-profile"><img src="/static/img/avatar-2.jpg" alt="..."
+                                                                  class="img-fluid rounded-circle"></div>
+                                    <div class="msg-body">
+                                        <h3 class="h5">Frank Williams</h3><span>Sent You Message</span>
+                                    </div>
+                                </a></li>
+                                <li><a rel="nofollow" href="#" class="dropdown-item d-flex">
+                                    <div class="msg-profile"><img src="/static/img/avatar-3.jpg" alt="..."
+                                                                  class="img-fluid rounded-circle"></div>
+                                    <div class="msg-body">
+                                        <h3 class="h5">Ashley Wood</h3><span>Sent You Message</span>
+                                    </div>
+                                </a></li>
+                                <li><a rel="nofollow" href="#" class="dropdown-item all-notifications text-center">
+                                    <strong>Read all messages </strong></a></li>
+                            </ul>
+                        </li>
+                        <!-- Languages dropdown    -->
+                        <li class="nav-item dropdown"><a id="languages" rel="nofollow" data-target="#" href="#"
+                                                         data-toggle="dropdown" aria-haspopup="true"
+                                                         aria-expanded="false"
+                                                         class="nav-link language dropdown-toggle"><img
+                                src="/static/img/flags/16/GB.png" alt="English"><span class="d-none d-sm-inline-block">English</span></a>
+                            <ul aria-labelledby="languages" class="dropdown-menu">
+                                <li><a rel="nofollow" href="#" class="dropdown-item"> <img
+                                        src="/static/img/flags/16/DE.png" alt="English" class="mr-2">German</a></li>
+                                <li><a rel="nofollow" href="#" class="dropdown-item"> <img
+                                        src="/static/img/flags/16/FR.png" alt="English" class="mr-2">French </a></li>
+                            </ul>
+                        </li>
+                        <!-- Logout    -->
+                        <li class="nav-item"><a href="javascript:void(0);" class="nav-link logout" id="logout"> <span
+                                class="d-none d-sm-inline">Logout</span><i class="fa fa-sign-out"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="page-content d-flex align-items-stretch">
+        <!-- Side Navbar -->
+        <nav class="side-navbar">
+            <!-- Sidebar Header-->
+            <div class="sidebar-header d-flex align-items-center">
+                <div class="avatar"><img src="/static/img/avatar-1.jpg" alt="..." class="img-fluid rounded-circle">
+                </div>
+                <div class="title">
+                    <h1 class="h4" id="username_show"></h1>
+                    <p id="email_addr"></p>
+                </div>
+            </div>
+
+            <!-- Sidebar Navidation Menus--><span class="heading">Main</span>
+            <ul class="list-unstyled">
+                <li class="active"><a href="javascript:void(0);" id="use_case_test_btn" flag="use_case_test">用例测试</a></li>
+                <li><a href="javascript:void(0);" id="add_use_case_btn" flag="add_use_case">添加用例</a></li>
+            </ul>
+            <span class="heading">Extras</span>
+            <ul class="list-unstyled">
+                <li><a href="javascript:void(0);" id="alter_pwd_btn" flag="alter_pwd">修改密码</a></li>
+                <li><a href="javascript:void(0);" flag="alter_email">修改邮箱</a></li>
+            </ul>
+        </nav>
+
+        <div class="content-inner" style="padding: 0 0;">
+
+            <!-- Page Header-->
+            <header class="page-header">
+              <div class="container-fluid">
+                  <h3 class="no-margin-bottom" id="child_option_title">用例测试</h3>
+              </div>
+            </header>
+
+            <!--<div class="breadcrumb-holder container-fluid">-->
+                <!--<ul class="breadcrumb">-->
+                    <!--<li class="breadcrumb-item"><a href="index.html">用例测试</a></li>-->
+                    <!--<li class="breadcrumb-item"><a href="index.html">Tables</a></li>-->
+                <!--</ul>-->
+            <!--</div>-->
+
+            <iframe src="" frameborder="0" width="100%"></iframe>
+
+        </div>
+    </div>
+</div>
+<!-- JavaScript files-->
+<script src="/static/js/jquery-3.4.1.js"></script>
+<script src="/static/vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="/static/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+<script src="/static/js/jquery.cookie.js"></script>
+<script src="/static/js/front.js"></script>
+
+
+<script src="/static/js/settings.js"></script>
+<script>
+
+    var menu_flag_map = {
+        'use_case_test': use_case_url,
+        'add_use_case': add_use_case_page_url,
+        'alter_pwd': alter_password_url,
+        'alter_email': alter_email_url,
+    };
+
+</script>
+<script>
+
+    function all_event() {
+        // 用户的注销事件
+        click_logout_event();
+        // 样式相关的，点击菜单加active事件、修改子页面title
+        click_menu_add_active_event();
+        // 切换菜单界面
+        click_menu_event();
+    }
+
+    // 初始化页面信息
+    (function () {
+        // 显示用户名称
+        $('#username_show').text($.cookie('username'));
+        $('#email_addr').text($.cookie('email'))
+        // 用例界面展示
+        $('iframe').attr('src', use_case_url);
+        $('iframe').attr('height', window.innerHeight);
+    })();
+
+    function click_logout_event() {
+
+        $('#logout').click(function (e) {
+            $.ajax({
+                url: logout_url,
+                type: 'get',
+                success: function (response) {
+
+                    if (response.flag == 0){
+                        location.reload();
+                    }
+
+                }
+            });
+        });
+
+    }
+
+    function click_menu_add_active_event(){
+
+        $('.list-unstyled').on('click','li',function (e) {
+            // 移除所有的li标签的active类值
+            $('.list-unstyled').find('li').removeClass('active');
+            // 给点击的li标签添加类值active
+            $(this).addClass('active');
+            // 设置子页面title
+            $('#child_option_title').text($(this).find('a').text());
+        })
+
+    }
+
+    function click_menu_event() {
+
+        $('.list-unstyled a').click(function (e) {
+            $('iframe').attr('src', menu_flag_map[$(this).attr('flag')]);
+        });
+
+    }
+
+    all_event();
+
+</script>
+
+</body>
+</html>
