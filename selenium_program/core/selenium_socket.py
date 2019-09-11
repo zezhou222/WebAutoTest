@@ -8,11 +8,10 @@ from concurrent.futures import ThreadPoolExecutor
 from lib.global_func import (get_cursor, commit_data)
 from core.selenium_operate import SeleniumOperate
 from conf.settings import (thread_count, step_result_template_path, sender, sender_username, sender_password, screen_shot_path)
+from lib.send_mail import MyEmail
 
 
 # 开启线程池
-from lib.send_mail import MyEmail
-
 thread = ThreadPoolExecutor(thread_count)
 
 

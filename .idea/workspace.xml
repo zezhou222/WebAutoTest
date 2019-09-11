@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="44b59855-be2c-4e8a-8303-5ec8425ffe0c" name="Default Changelist" comment="" />
+    <list default="true" id="44b59855-be2c-4e8a-8303-5ec8425ffe0c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/selenium_program/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/selenium_program/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/selenium_program/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/selenium_program/core/find_element.py" beforeDir="false" afterPath="$PROJECT_DIR$/selenium_program/core/find_element.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/selenium_program/core/selenium_operate.py" beforeDir="false" afterPath="$PROJECT_DIR$/selenium_program/core/selenium_operate.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,6 +110,14 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="-700175664">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FavoritesManager">
     <favorites_list name="AutoTestWeb" />
@@ -142,7 +157,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Blueprint/test_case.py">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="320">
+=======
+            <state relative-caret-position="157">
+>>>>>>> fenzhi1
               <caret line="204" column="23" selection-start-line="204" selection-start-column="23" selection-end-line="204" selection-end-column="23" />
             </state>
           </provider>
@@ -210,6 +229,9 @@
       <find>content-inner</find>
     </findStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -254,7 +276,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="565" />
     <option name="y" value="55" />
     <option name="width" value="1160" />
@@ -474,7 +496,11 @@
       <window_info anchor="bottom" id="Docker" order="5" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="6" />
       <window_info anchor="bottom" id="Find" order="7" />
+<<<<<<< HEAD
       <window_info active="true" anchor="bottom" id="Run" order="8" sideWeight="0.49865952" visible="true" weight="0.27859238" />
+=======
+      <window_info active="true" anchor="bottom" id="Run" order="8" sideWeight="0.49865952" visible="true" weight="0.27900147" />
+>>>>>>> fenzhi1
       <window_info anchor="bottom" id="Debug" order="9" weight="0.398827" />
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
@@ -704,6 +730,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/static/screen_shot/c56848a36f795349ea2db2c3dbde359e.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/screen_shot/569c3d228c28b243a1095083757cf023.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/run_web.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="603">
+          <caret line="61" lean-forward="true" selection-start-line="61" selection-end-line="61" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Blueprint/return_page.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="864">
@@ -718,6 +757,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2349">
           <caret line="91" selection-start-line="91" selection-end-line="91" />
+<<<<<<< HEAD
         </state>
       </provider>
     </entry>
@@ -725,6 +765,8 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1809">
           <caret line="67" selection-start-line="67" selection-end-line="67" />
+=======
+>>>>>>> fenzhi1
         </state>
       </provider>
     </entry>
@@ -738,12 +780,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/screen_shot/c56848a36f795349ea2db2c3dbde359e.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/screen_shot/569c3d228c28b243a1095083757cf023.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/add_use_case.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2484">
@@ -754,27 +790,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Blueprint/test_case.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="204" column="23" selection-start-line="204" selection-start-column="23" selection-end-line="204" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/create_table.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="320">
+          <caret line="204" column="23" selection-start-line="204" selection-start-column="23" selection-end-line="204" selection-end-column="23" />
+=======
         <state relative-caret-position="945">
           <caret line="41" column="50" selection-start-line="41" selection-start-column="50" selection-end-line="41" selection-end-column="50" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
+>>>>>>> fenzhi1
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/run_web.py">
+    <entry file="file://$PROJECT_DIR$/static/js/settings.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="945">
+          <caret line="41" column="50" selection-start-line="41" selection-start-column="50" selection-end-line="41" selection-end-column="50" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+=======
+        <state relative-caret-position="1809">
+          <caret line="67" selection-start-line="67" selection-end-line="67" />
+>>>>>>> fenzhi1
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Blueprint/test_case.py">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="603">
           <caret line="61" lean-forward="true" selection-start-line="61" selection-end-line="61" />
+=======
+        <state relative-caret-position="157">
+          <caret line="204" column="23" selection-start-line="204" selection-start-column="23" selection-end-line="204" selection-end-column="23" />
+>>>>>>> fenzhi1
         </state>
       </provider>
     </entry>

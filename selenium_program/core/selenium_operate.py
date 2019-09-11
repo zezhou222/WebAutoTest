@@ -1,5 +1,6 @@
 import time
 from selenium import webdriver
+from selenium.common.exceptions import InvalidArgumentException
 from core.find_element import FindElement
 from core.execute_action import ExecuteAction
 
@@ -21,15 +22,15 @@ class SeleniumOperate(FindElement, ExecuteAction):
         self.driver.maximize_window()
 
     def open_url(self, data):
-        # selenium.common.exceptions.InvalidArgumentException: Message: invalid argument 报错，需要带协议头，try捕获错误
         url = data[0]
-        self.driver.get(url)
-        print(len(self.driver.page_source))
+        try:
+            self.driver.get(url)
+        except InvalidArgumentException:
+            raise ValueError('请求地址需要加协议头.')
 
     def sleep_second(self, data):
         second = int(data[0])
         time.sleep(second)
-        # raise TypeError("自定义错误！！")
 
     def close_browser(self, data=None):
         self.driver.quit()
