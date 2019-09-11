@@ -1,7 +1,7 @@
 from flask import (Blueprint, render_template, session, request)
 from sqlalchemy.sql import or_
 from lib.global_func import get_db
-from lib.models import (Userinfo, Use_case, Step_detail, Use_case_step)
+from lib.models import (Userinfo, Use_case)
 from lib.paging import Paging
 from lib.flask_form import UseCaseForm
 
@@ -36,6 +36,11 @@ def alter_password():
 @app.route(rule='/alter_email/')
 def alter_email():
     return render_template('alter_email.html')
+
+
+@app.route(rule='/forget_password/')
+def forget_pwd():
+    return render_template('forget_pwd.html')
 
 
 @app.route(rule='/get_use_case_page/')

@@ -65,3 +65,9 @@ var alter_email_url = server_ip + '/alter_email/';
 
 // 获取用例执行结果截图的url
 var get_screen_shot_url = server_ip + '/get_screen_shot_page/';
+
+// 忘记密码发送邮件的url
+var forget_pwd_send_email_url = server_ip + '/send_forget_pwd_email/';
+
+// 重置密码的url
+var reset_pwd_url = server_ip + '/reset_pwd/';

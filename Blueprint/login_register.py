@@ -1,6 +1,8 @@
 from flask import (Blueprint, request, session, jsonify, make_response)
-from lib.global_func import (get_md5, get_db, save_data_to_db)
+from lib.global_func import (get_md5, get_db, save_data_to_db, make_random_code)
 from lib.models import Userinfo
+from lib.send_mail import MyEmail
+from settings import sender, sender_username, sender_password
 
 app = Blueprint(name='login_register', import_name=__name__)
 
@@ -118,5 +120,48 @@ def alter_email():
     else:
         db.query(Userinfo).filter(Userinfo.id == user_id).update({'send_mail': send_mail})
     db.commit()
+
+    return jsonify(ret)
+
+
+@app.route(rule='/send_forget_pwd_email/')
+def send_forget_pwd_email():
+    ret = {'flag': 0}
+    # 查询用户
+    db = get_db()
+    obj = db.query(Userinfo).filter(Userinfo.username == request.args.get('username')).first()
+    if obj is None:
+        ret['flag'] = 1
+        ret['error_info'] = '该用户名不存在!'
+        return jsonify(ret)
+
+    # 获取随机验证码
+    code = make_random_code()
+    # 设置session，用于提交验证
+    session['code'] = code
+    session['temp_user_id'] = obj.id
+    session['temp_username'] = obj.username
+    # 发送邮件
+    obj = MyEmail(sender=sender, receiver=obj.email, username=sender_username, password=sender_password)
+    obj.create_email('来自Web自动化测试平台的验证码.')
+    obj.email_text('验证码为：%s' % code)
+    obj.send_mail()
+
+    return jsonify(ret)
+
+
+@app.route(rule='/reset_pwd/', methods=['post'])
+def reset_pwd():
+    ret = {'flag': 0}
+    # 验证验证码
+    if session['code'] != request.form.get('code').strip():
+        ret['flag'] = 1
+        ret['error_info'] = '验证码有误！'
+    else:
+        new_pwd = get_md5(session.get('temp_username'), request.form.get('new_pwd'))
+        # 修改密码
+        db = get_db()
+        db.query(Userinfo).filter(Userinfo.id == session.get('temp_user_id')).update({'password': new_pwd})
+        db.commit()
 
     return jsonify(ret)

@@ -17,3 +17,8 @@ selenium_sk_port = 9001
 
 # 截图存储的文件夹路径，需要和selenium的一致
 screen_shot_path = os.path.join(project_path, 'static', 'screen_shot')
+
+# 发送邮件的配置
+sender = '523198313@qq.com'
+sender_username = '523198313'
+sender_password = 'ycfnekkursixcaif'

@@ -1,5 +1,7 @@
 import json
 import hashlib
+import random
+
 from sqlalchemy.orm import sessionmaker
 from create_table import engine
 from lib.connect_selenim_socket import ConnectSelenium
@@ -50,3 +52,16 @@ def send_to_selenium(data):
     obj = ConnectSelenium()
     sk = obj.get_sk()
     sk.send(json.dumps(data).encode('utf-8'))
+
+
+# 生成随机验证码
+def make_random_code():
+    # 验证码取值列表
+    random_list = [str(i) for i in range(0, 10)]  # 数字
+    random_list += [chr(i) for i in range(97, 123)]  # 小写字母
+    random_list += [chr(i) for i in range(65, 91)]  # 大写字母
+    return ''.join(random.choices(k=6, population=random_list))
+
+
+if __name__ == '__main__':
+    print(make_random_code())

@@ -29,7 +29,7 @@ app.register_blueprint(use_case_result.app)
 # 简单的请求中间件
 @app.before_request
 def login_check():
-    white_list = ['/login/$', '/register/$', '/user_register/$', '/user_login/$', '/static/.+', '/favicon.ico']
+    white_list = ['/login/$', '/register/$', '/user_register/$', '/user_login/$', '/static/.+', '/favicon.ico', '/forget_password/$', '/send_forget_pwd_email/$', '/reset_pwd/$']
     for rule in white_list:
         ret = re.match(rule, request.path)
         if ret:

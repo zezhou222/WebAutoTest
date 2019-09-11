@@ -16,7 +16,12 @@ class SeleniumOperate(FindElement, ExecuteAction):
         # 用于打开不同的浏览器
         browser = data.pop()
         # 目前先一个谷歌，之后进行判断打开不同的
-        self.driver = webdriver.Chrome(r'file/chromedriver.exe')
+        if browser == 'google':
+            self.driver = webdriver.Chrome(executable_path=r'file/chromedriver.exe')
+        elif browser == 'firefox':
+            self.driver = webdriver.Firefox(executable_path=r'file/geckodriver.exe')
+
+        self.driver.refresh()
 
     def enlarge_window(self, data=None):
         self.driver.maximize_window()

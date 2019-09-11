@@ -54,12 +54,12 @@ class FindElement(object):
         x, y = int(x), int(y)
         # 查找标签
         ele = getattr(self, mode)(param)
-        ele_width = int(self.driver.execute_script("return document.getElementById('%s').width" % param))
-        ele_height = int(self.driver.execute_script("return document.getElementById('%s').height" % param))
+        ele_width = ele.size.get('width')
+        ele_height = ele.size.get('height')
         # 裁剪图片
         screen_shot_file_path = self.identifying_code_file
         imgObject = Image.open(screen_shot_file_path)  # 获得截屏的图片
-        imgCaptcha = imgObject.crop((x, y, x + ele_width + 5, y + ele_height))  # 裁剪
+        imgCaptcha = imgObject.crop((x, y, x + ele_width + 8, y + ele_height))  # 裁剪
         # 保存裁剪的图片
         filename = get_screen_shot_filename()
         save_file_path = os.path.join(screen_shot_path, filename)
@@ -80,3 +80,9 @@ class FindElement(object):
         param = data[1]
         ele = getattr(self, mode)(param)
         ele.send_keys(self.code)
+
+    def switch_iframe(self, data):
+        mode = data[0]
+        param = data[1]
+        ele = getattr(self, mode)(param)
+        self.driver.switch_to.frame(ele)

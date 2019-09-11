@@ -46,3 +46,15 @@ class ExecuteAction(object):
         self.driver.close()
         self.driver.switch_to.window(self.driver.window_handles[-1])
 
+    def back(self, data):
+        self.driver.back()
+
+    def forward(self, data):
+        self.driver.forward()
+
+    # 切换至主文档(当在iframe标签时候，是无法操作主文档页面的标签，所以通过这个切换)
+    def switch_main_dom(self, data):
+        self.driver.switch_to.default_content()
+
+    def switch_parent_dom(self, data):
+        self.driver.switch_to.parent_frame()

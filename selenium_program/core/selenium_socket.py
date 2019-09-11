@@ -116,7 +116,7 @@ class SeleniumServer(socketserver.BaseRequestHandler):
                     error_info = str(error)
 
                 # 结束时间
-                end_time = time.time() - start_time
+                end_time = round(time.time() - start_time, 5)
 
                 # 单个步骤执行结果先写入列表中
                 # 判断步骤是否是截图的

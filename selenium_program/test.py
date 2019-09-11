@@ -26,12 +26,14 @@ from selenium.webdriver.common.by import By
 # time.sleep(2)
 # driver.quit()
 
-from PIL import Image
+# from PIL import Image
+#
+# file_path = '../static/screen_shot/c56848a36f795349ea2db2c3dbde359e.png'
+#
+# imgObject = Image.open(file_path)   # 获得截屏的图片
+# imgCaptcha = imgObject.crop((480, 250, 540, 280))  # 裁剪
+# filename = 'code.png'
+# imgCaptcha.save(filename)
 
-file_path = '../static/screen_shot/c56848a36f795349ea2db2c3dbde359e.png'
-
-imgObject = Image.open(file_path)   # 获得截屏的图片
-imgCaptcha = imgObject.crop((480, 250, 540, 280))  # 裁剪
-filename = 'code.png'
-imgCaptcha.save(filename)
-
+driver = webdriver.Firefox(executable_path='./file/geckodriver.exe')
+driver.get('https://www.baidu.com')
