@@ -20,9 +20,7 @@ class SeleniumOperate(FindElement, ExecuteAction):
             self.driver = webdriver.Chrome(executable_path=r'file/chromedriver.exe')
         elif browser == 'firefox':
             self.driver = webdriver.Firefox(executable_path=r'file/geckodriver.exe')
-
-        self.driver.refresh()
-
+        
     def enlarge_window(self, data=None):
         self.driver.maximize_window()
 

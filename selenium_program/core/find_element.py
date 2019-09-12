@@ -38,7 +38,15 @@ class FindElement(object):
             raise ValueError('通过类名未找到%s的标签.' % param)
         else:
             return ret[0]
-
+    
+    def css_selector(self, param):
+        try:
+            ret = WebDriverWait(self.driver, find_ele_timeout_time, find_ele_per_second).until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, param)))
+        except TimeoutException:
+            raise ValueError('通过css选择器未找到%s的标签.' % param)
+        else:
+            return ret[0]
+    
     def find_element_input_content(self, data):
         mode = data[0]
         param = data[1]
@@ -79,7 +87,10 @@ class FindElement(object):
         mode = data[0]
         param = data[1]
         ele = getattr(self, mode)(param)
-        ele.send_keys(self.code)
+        if hasattr(self, 'code'):
+            ele.send_keys(self.code)
+        else:
+            raise ValueError('请先识别验证码!')
 
     def switch_iframe(self, data):
         mode = data[0]
