@@ -22,3 +22,6 @@ screen_shot_path = os.path.join(project_path, 'static', 'screen_shot')
 sender = '523198313@qq.com'
 sender_username = '523198313'
 sender_password = 'ycfnekkursixcaif'
+
+# 临时文件夹路径
+temp_path = os.path.join(project_path, 'temp')

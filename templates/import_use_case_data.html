@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/static/bootstrap-3.3.7-dist/css/bootstrap.css">
+    <style>
+        .file-button {
+            position: relative;
+            display: inline-block;
+            overflow: hidden;
+        }
+
+        .file-button input {
+            position: absolute;
+            right: 0;
+            top: 0;
+            opacity: 0;
+        }
+
+        .small_hand {
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="row">
+        <form id="upload-form">
+            <span class="btn btn-info file-button" style="width: 100%">
+                <span class="small_hand">上传excel文件</span>
+                <input type="file" class="small_hand" id="upload-btn" name="files" multiple style="width: 100%;">
+            </span>
+        </form>
+    </div>
+
+    <!-- 介绍 -->
+    <div class="row">
+        <h3 class="text-center">通过excel文件导入用例数据.</h3>
+        <h4>excel的模板写法：</h4>
+        <img src="/static/image/通过excel导入用例数据的模板.png" alt="" width="500">
+        <span class="help-block">注:步骤也可先不填写，提示词也可不写但参数位置都是固定的.</span>
+        <h4>excel写法例子:</h4>
+        <img src="/static/image/excel导入用例数据的例子.png" alt="" width="700">
+        <h4>用例步骤的方法名:</h4>
+        <img src="/static/image/use_case_step.png" alt="" width="1100">
+        <br>
+        <br>
+    </div>
+
+
+</div>
+
+
+<script src="/static/js/jquery-3.4.1.js"></script>
+<script src="/static/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+
+<script src="/static/js/settings.js"></script>
+<script>
+
+    function all_event() {
+        // 检测用户上传用例数据的事件
+        use_case_data_upload_event();
+    }
+
+    function use_case_data_upload_event() {
+
+        $('#upload-form').on('change', '#upload-btn', function (e) {
+            // 验证文件的后缀名，是否是xlsx
+            var files = $('#upload-btn')[0].files;
+            for (var index = 0; index < files.length; index++) {
+                if (files[index].name.split('.').slice(-1)[0] !== 'xlsx') {
+                    window.parent.toastr.error('请上传excel文件!!!');
+                    return
+                }
+            }
+            // 弹窗
+            window.parent.toastr.info('开始发送文件.');
+
+            // 拿到上传的文件
+            var formdata = new FormData($('#upload-form')[0]);
+
+            // 上传文件，通过xmlhttprequest，这样可以检测进度
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', send_excel_file_url, true);
+
+            // 发送完成的事件
+            xhr.onload = function (e){
+                var response = JSON.parse(this.response);
+                if (response.flag === 0){
+                    // 成功弹窗效果
+                    window.parent.toastr.success('服务器读取完毕.');
+                }else{
+                    window.parent.toastr.error(response.error_info);
+                }
+                // 清空文件框的files
+                var obj=document.getElementById('upload-btn');
+                obj.outerHTML=obj.outerHTML;
+
+            };
+
+            // 上传进度的事件
+            xhr.upload.onprogress = function (evt) {
+                // 等于表示上传完毕
+                if (evt.total === evt.loaded) {
+                    window.parent.toastr.info('文件上传完毕，正在读取中.');
+                }
+            };
+
+            xhr.send(formdata);
+
+        });
+
+    }
+
+    all_event();
+
+</script>
+</body>
+</html>

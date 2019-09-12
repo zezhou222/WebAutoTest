@@ -43,6 +43,11 @@ def forget_pwd():
     return render_template('forget_pwd.html')
 
 
+@app.route(rule='/import_use_case_data/')
+def import_use_case_data():
+    return render_template('import_use_case_data.html')
+
+
 @app.route(rule='/get_use_case_page/')
 def use_case_page():
     opt = request.args.get('opt')
@@ -63,6 +68,8 @@ def use_case_page():
             usecase_objs = db.query(Use_case).filter(Use_case.uc_type == 'public', Use_case.name.like(search_content))
         elif opt == 'general':
             usecase_objs = db.query(Use_case).filter(Use_case.user_id == user_obj.id, Use_case.uc_type == 'general',Use_case.name.like(search_content))
+    # 倒序
+    usecase_objs = usecase_objs.order_by(Use_case.id.desc())
 
     data_sum = usecase_objs.count()
     page = Paging(request, request.args.get('page', 1), data_sum, show_num=3)

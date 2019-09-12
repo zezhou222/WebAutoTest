@@ -1,7 +1,7 @@
 import re
 from flask_cors import CORS
 from flask import (Flask, request, session, redirect)
-from Blueprint import (test_case, return_page, login_register, use_case_result)
+from Blueprint import (test_case, return_page, login_register, use_case_result, use_case_data)
 from lib.connect_selenim_socket import ConnectSelenium
 
 
@@ -24,6 +24,8 @@ app.register_blueprint(test_case.app)
 app.register_blueprint(login_register.app)
 # 用例结果相关得
 app.register_blueprint(use_case_result.app)
+# 导入用例数据的
+app.register_blueprint(use_case_data.app)
 
 
 # 简单的请求中间件

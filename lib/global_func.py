@@ -1,6 +1,8 @@
 import json
 import hashlib
 import random
+import time
+from uuid import uuid4
 
 from sqlalchemy.orm import sessionmaker
 from create_table import engine
@@ -61,6 +63,13 @@ def make_random_code():
     random_list += [chr(i) for i in range(97, 123)]  # 小写字母
     random_list += [chr(i) for i in range(65, 91)]  # 大写字母
     return ''.join(random.choices(k=6, population=random_list))
+
+
+# 获取一个随机文件名
+def get_random_filename():
+    md5 = hashlib.md5(str(time.time()).encode('utf-8'))
+    md5.update(str(uuid4()).encode('utf-8'))
+    return md5.hexdigest() + '.png'
 
 
 if __name__ == '__main__':

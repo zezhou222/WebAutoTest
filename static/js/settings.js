@@ -71,3 +71,9 @@ var forget_pwd_send_email_url = server_ip + '/send_forget_pwd_email/';
 
 // 重置密码的url
 var reset_pwd_url = server_ip + '/reset_pwd/';
+
+// 导入用例数据页面url
+var import_use_case_data_page_url = server_ip + '/import_use_case_data/';
+
+// 发送excel文件的url
+var send_excel_file_url = server_ip + '/accept_excel_file/';

@@ -97,49 +97,49 @@ class SeleniumServer(socketserver.BaseRequestHandler):
                 continue
 
             # 非公共用例的执行
-            if hasattr(self.selenium_obj, step_method):
+            # if hasattr(self.selenium_obj, step_method):
 
-                # 判断如果是验证码，那么先执行截图一次
-                if step_method == 'identifying_code':
-                    ret = getattr(self.selenium_obj, 'screen_shot')([])
-                    self.selenium_obj.identifying_code_file = os.path.join(screen_shot_path, ret)
-                    
-                # 执行步骤
-                try:
-                    ret = getattr(self.selenium_obj, step_method)(all_step)
-                except Exception as error:
-                    print('执行%s步骤出问题，错误信息:%s' % (dic.get('params'), error))
-                    # 修改状态标志
-                    whole_status = 'failed'
-                    single_status = 0
-                    # 错误信息
-                    error_info = str(error)
+            # 判断如果是验证码，那么先执行截图一次
+            if step_method == 'identifying_code':
+                ret = getattr(self.selenium_obj, 'screen_shot')([])
+                self.selenium_obj.identifying_code_file = os.path.join(screen_shot_path, ret)
 
-                # 结束时间
-                end_time = round(time.time() - start_time, 5)
+            # 执行步骤
+            try:
+                ret = getattr(self.selenium_obj, step_method)(all_step)
+            except Exception as error:
+                print('执行%s步骤出问题，错误信息:%s' % (dic.get('params'), error))
+                # 修改状态标志
+                whole_status = 'failed'
+                single_status = 0
+                # 错误信息
+                error_info = str(error)
 
-                # 单个步骤执行结果先写入列表中
-                # 判断步骤是否是截图的
-                if step_method == 'screen_shot':
-                    # 表示这个用例执行有截图
-                    screen_shot_flag = 1
-                    execute_data.append((uc_result_id, step_id, single_status, error_info, None, end_time, ret))
-                # 识别验证码的
-                elif step_method == 'identifying_code':
-                    # 表示这个用例执行有截图
-                    screen_shot_flag = 1
-                    code, code_path = ret
-                    if code == '':
-                        code = '未识别出该验证码.'
-                    else:
-                        code = '识别的验证码为:%s' % code
-                    execute_data.append((uc_result_id, step_id, single_status, code, None, end_time, code_path))
+            # 结束时间
+            end_time = round(time.time() - start_time, 5)
+
+            # 单个步骤执行结果先写入列表中
+            # 判断步骤是否是截图的
+            if step_method == 'screen_shot':
+                # 表示这个用例执行有截图
+                screen_shot_flag = 1
+                execute_data.append((uc_result_id, step_id, single_status, error_info, None, end_time, ret))
+            # 识别验证码的
+            elif step_method == 'identifying_code':
+                # 表示这个用例执行有截图
+                screen_shot_flag = 1
+                code, code_path = ret
+                if code == '':
+                    code = '未识别出该验证码.'
                 else:
-                    execute_data.append((uc_result_id, step_id, single_status, error_info, None, end_time, None))
-
+                    code = '识别的验证码为:%s' % code
+                execute_data.append((uc_result_id, step_id, single_status, code, None, end_time, code_path))
             else:
-                # 非正常请求来的
-                return
+                execute_data.append((uc_result_id, step_id, single_status, error_info, None, end_time, None))
+
+            # else:
+            #     # 非正常请求来的
+            #     return
 
         return execute_data, whole_status, screen_shot_flag
 

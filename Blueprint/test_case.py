@@ -4,6 +4,7 @@ from lib.flask_form import UseCaseForm
 from sqlalchemy.sql import or_
 from lib.models import (Use_case_step, Userinfo, Use_case, Step_detail, Use_case_result, Result_step)
 from lib.global_func import (get_db, save_data_to_db, del_db_data, send_to_selenium)
+from lib.use_case_func import (check_public_uc_name, check_general_uc_name, add_uc_data)
 
 
 app = Blueprint(name='test_case', import_name=__name__)
@@ -64,45 +65,28 @@ class TestCase(MethodView):
 
         # form认证通过
 
-        # 查找用户id
         db = get_db()
-        user_obj = db.query(Userinfo).filter(Userinfo.username == session.get('login_user')).first()
         # 格式化出保存的数据
         data = request.form.to_dict()
         data.pop('csrf_token')
-        data['user_id'] = user_obj.id
-        params = data.pop('params')
-        # print(data, params)
+        data['user_id'] = session.get('user_id')
 
         # 如果是公共用例的检测重名
-        if data['uc_type'] == 'public':
-            t = db.query(Use_case).filter(Use_case.uc_type == 'publick', Use_case.name == data['name']).first()
-            if t:
-                ret['flag'] = 2
-                ret['error_info'] = "添加的用例与公共用例重名"
-                return jsonify(ret)
-
-        # 如果是自己的用例重名
-        t = db.query(Use_case).filter(Use_case.user_id == data['user_id'], Use_case.name == data['name']).first()
-        if t:
-            ret['flag'] = 3
-            ret['error_info'] = "已有该用例名称"
+        flag = check_public_uc_name(data)
+        if flag:
+            ret['flag'] = 2
+            ret['error_info'] = "添加的用例与公共用例重名"
             return jsonify(ret)
 
-        # 实例用例对象
-        use_case_obj = Use_case(**data)
-        use_case_obj.uc2step_detail = []
+        # 如果是自己的用例重名
+        # flag = check_general_uc_name(data)
+        # if flag:
+        #     ret['flag'] = 3
+        #     ret['error_info'] = "已有该用例名称"
+        #     return jsonify(ret)
 
-        # 实例用例步骤数据
-        if params != '':
-            many_param = params.split('||')
-            for param in many_param:
-                temp = param.split('@@')
-                execute = int(temp[-1])
-                use_case_obj.uc2step_detail.append(Step_detail(params=param, execute=execute))
-
-        # 保存用例数据至数据库
-        save_data_to_db(db, [use_case_obj])
+        # 添加用例数据
+        add_uc_data(data)
 
         return jsonify(ret)
 
@@ -155,8 +139,7 @@ class TestCase(MethodView):
 
         # 如果是公共用例的检测重名
         if data['uc_type'] == 'public':
-            t = db.query(Use_case).filter(Use_case.uc_type == 'publick', Use_case.name == data['name']).first()
-            if t:
+            if check_public_uc_name(data):
                 ret['flag'] = 2
                 ret['error_info'] = "编辑的用例与公共用例重名"
                 return jsonify(ret)

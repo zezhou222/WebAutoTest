@@ -16,6 +16,7 @@ def commit_data():
     obj = ConnectMysql()
     obj.commit_data()
 
+
 # 获取一个随机截图文件名
 def get_screen_shot_filename():
     md5 = hashlib.md5(str(time.time()).encode('utf-8'))
