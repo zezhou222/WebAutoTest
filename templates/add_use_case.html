@@ -343,7 +343,8 @@
             formdata.delete('step');
             // 判断步骤格式是否正确
             if (!step_retult["flag"]){
-                alert("步骤格式有误");
+                window.parent.toastr.warning("步骤格式有误.");
+                // alert("步骤格式有误");
                 return;
             }else{
                 // 移除飘红
@@ -370,6 +371,7 @@
 
                     if (response.flag == 0){
                         // 添加成功的动画效果
+                        window.parent.toastr.success("{% if opt == 'edit' %}修改用例成功!{% else %}添加用例成功!{% endif %}");
 
                         if ($(window.parent.document).find('iframe').attr('src').slice(0,edit_use_case_page_url.length) == edit_use_case_page_url){
                             // 回退ifame页面
@@ -383,7 +385,8 @@
                         // 用例名称为空的情况
                         console.log(response);
                     }else{
-                        alert(response.error_info);
+                        window.parent.toastr.info(response.error_info);
+                        // alert(response.error_info);
                     };
 
                 },

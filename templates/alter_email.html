@@ -76,7 +76,7 @@
             success: function (response) {
                 if (response.flag === 0) {
                     // 修改成功的动画
-
+                    window.parent.toastr.success('修改邮箱配置成功,');
                     // 刷新iframe页面
                     $(window.parent.document).find('iframe')[0].contentWindow.location.reload();
 
@@ -86,7 +86,8 @@
                     }
 
                 } else {
-                    alert(response.error_info);
+                    window.parent.toastr.info(response.error_info);
+                    // alert(response.error_info);
                 }
 
             }

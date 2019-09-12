@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="/static/bootstrap-3.3.7-dist/css/bootstrap.css">
+
 </head>
 <body>
 
@@ -111,7 +112,7 @@
                 success: function (response) {
                     if (response.flag == 0){
                         // 删除成功的动画效果
-
+                        window.parent.toastr.success('删除用例成功!');
                         // iframe标签页面刷新
                         $(window.parent.document).find('iframe')[0].contentWindow.location.reload(true);
                     }else if (response.flag == 1){
@@ -142,11 +143,9 @@
                 contentType:false,  //不设置数据类型
                 success: function (response) {
                     if (response.flag == 0){
-                        // 之后换成弹窗，2秒后消失
-                        alert("开始执行用例");
-
+                        window.parent.toastr.success('开始执行用例.');
                     }else{
-                        alert(response.error_info);
+                        window.parent.toastr.info(response.error_info);
                     }
                 }
 

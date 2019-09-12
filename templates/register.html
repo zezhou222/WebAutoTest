@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="/static/css/custom.css">
     <!-- Favicon-->
     <link rel="shortcut icon" href="/static/img/favicon.ico">
+    <link rel="stylesheet" href="/static/css/toastr.min.css">
 </head>
 <body>
 <div class="page login-page">
@@ -89,6 +90,7 @@
 <script src="/static/vendor/jquery.cookie/jquery.cookie.js"></script>
 <script src="/static/vendor/chart.js/Chart.min.js"></script>
 <script src="/static/vendor/jquery-validation/jquery.validate.min.js"></script>
+<script src="/static/js/toastr.min.js"></script>
 <!-- Main File-->
 <script src="/static/js/front.js"></script>
 
@@ -115,11 +117,14 @@
                 success: function (response) {
                     if (response.flag == 0){
                         // 可加注册成功的动画
-
+                        toastr.success('注册成功!');
                         // 跳转至登陆页面
-                        location.href = login_url;
+                        setTimeout(function () {
+                            location.href = login_url;
+                        }, 2000);
                     }else{
-                        alert(response.error_info);
+                        toastr.info(response.error_info);
+                        // alert(response.error_info);
                     }
 
                 }
