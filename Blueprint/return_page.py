@@ -1,5 +1,5 @@
 from flask import (Blueprint, render_template, session, request)
-from sqlalchemy.sql import or_
+from sqlalchemy.sql import or_, and_
 from lib.global_func import get_db
 from lib.models import (Userinfo, Use_case)
 from lib.paging import Paging
@@ -45,12 +45,25 @@ def forget_pwd():
 
 @app.route(rule='/get_use_case_page/')
 def use_case_page():
+    opt = request.args.get('opt')
+    search_content = request.args.get('search_content')
+
     db = get_db()
     username = session.get('login_user')
     user_obj = db.query(Userinfo).filter(Userinfo.username == username).first()
 
     # 查询数据，获取数据总数，放置分页器
-    usecase_objs = db.query(Use_case).filter(or_(Use_case.user_id == user_obj.id, Use_case.uc_type == 'public'))
+    if not opt:
+        usecase_objs = db.query(Use_case).filter(or_(Use_case.user_id == user_obj.id, Use_case.uc_type == 'public'))
+    else:
+        search_content = '%' + search_content.strip() + '%'
+        if opt == 'all':
+            usecase_objs = db.query(Use_case).filter(or_(Use_case.user_id == user_obj.id, Use_case.uc_type == 'public'),Use_case.name.like(search_content))
+        elif opt == 'public':
+            usecase_objs = db.query(Use_case).filter(Use_case.uc_type == 'public', Use_case.name.like(search_content))
+        elif opt == 'general':
+            usecase_objs = db.query(Use_case).filter(Use_case.user_id == user_obj.id, Use_case.uc_type == 'general',Use_case.name.like(search_content))
+
     data_sum = usecase_objs.count()
     page = Paging(request, request.args.get('page', 1), data_sum, show_num=3)
 
