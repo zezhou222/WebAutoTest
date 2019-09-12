@@ -63,7 +63,7 @@ def accept_execel_file():
         # 读取excel表数据
         use_case_data = read_excel_data(file_path)
 
-        # 删除excel表
+        # 删除excel表，可以考虑每晚定时删除无用的数据(提高效率)
         os.remove(file_path)
 
         # 检测是否和公共用例重名

@@ -20,12 +20,62 @@
 
 4. 用例执行后发送执行报告至用户的邮箱 
 
-5. 定时执行用例(待做)
+5. 通过excel文件导入用例数据
+
+6. 定时执行用例(待做)
 
 
 ### 表结构：
 
 ![](https://i.imgur.com/OErI72S.png)
+
+
+#### 表介绍：
+1.	用例表(use_case)
+	
+	字段：id,name,type, desc,send\_report,user\_id
+
+	关联：
+	
+	（1）user_id字段多对一关联至userinfo表的id字段(表示这个用例是哪个用户创建的)
+
+2.	用例的执行结果表(use\_case\_result)
+
+	字段：id,status,execute\_time,end\_time,use\_case\_id,user\_id,screen\_shot\_flag
+
+	关联：
+	
+	(1)	use_case_id字段多对一关联至use_case表的id字段(表示用例的结果是哪个用例的)
+
+	(2)	user_id字段多对一关联至userinfo表的id字段(表示是谁执行的这个用例，因为用例分公用和私有的，所有人都可以执行公用的，并拿到执行结果)
+
+3.	用户表(userinfo)
+	
+	字段：id,username,password,email,create\_time,send\_mail
+
+4.	步骤表(use\_case\_step)
+
+	字段：id,step\_method\_name,step\_name,step\_length,step\_case
+
+5.	用例的步骤表(step_detail)
+
+	字段：id,uc_id ,params,execute
+
+
+6.	用例结果及步骤对应的表(result_step)
+
+	字段：id,uc\_result\_id,step\_id,status,error\_info,parent_step\_id,run\_time,screen\_shot
+
+
+	关联：
+
+
+	(1) uc_result_id多对一关联use\_case\_result表的id字段(表示是那一用例结果的小步骤结果)
+
+	(2)	step_id多对一关联steo\_detail表的id字段(表示是哪小步骤的执行结果)
+
+	(3)	parent_step_id多对一关联step\_detail表的id字段(表示公共用例执行的是哪一步骤)
+
 
 
 ### Web端效果(图片形式)：
