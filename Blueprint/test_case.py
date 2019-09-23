@@ -96,7 +96,6 @@ class TestCase(MethodView):
         # 获取用例id
         uc_id = request.form.get('use_case_id')
         db = get_db()
-
         # 删除用例逻辑，由于sqlalchemy没有级联删除，只能从没有建立外键的表删起来
 
         # 1. 先找出用例的步骤详情

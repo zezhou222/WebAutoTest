@@ -33,18 +33,27 @@ def save_data_to_db(db, objs):
     :param objs: 数据列表
     :return:
     """
-    db.add_all(objs)
-    db.flush()
-    db.commit()
-    # db.close()
+    try:
+        db.add_all(objs)
+        # db.flush()
+        db.commit()
+    except Exception as e:
+        print('数据库保存操作执行有误:', e)
+        db.rollback()
+    db.close()
 
 
 # 删除数据
 def del_db_data(db, objs):
-    ret = objs.delete()
-    # 删除操作需要commit才能作用到数据库
-    db.commit()
-    # db.close()
+    ret = 0
+    try:
+        ret = objs.delete()
+        # 删除操作需要commit才能作用到数据库
+        db.commit()
+    except Exception as e:
+        print('数据库删除操作执行有误:', e)
+        db.rollback()
+    db.close()
     # 返回删除的数量
     return ret
 
