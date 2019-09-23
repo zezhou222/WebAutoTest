@@ -108,8 +108,8 @@
 - 启动步骤
 	1. 安装项目需要的模块(最好在虚拟环境中安装)
 		
-		注: 由于我没在虚拟环境中，所以提供的模块文件里的内容比较多.
-
+		注：web端和selenium端各自有自己的requirements.txt文件
+		
 		pip install -r requirements.txt
 
 	2. 创建mysql库
