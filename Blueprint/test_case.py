@@ -2,7 +2,7 @@ from flask import (Blueprint, request, jsonify, session)
 from flask.views import MethodView
 from lib.flask_form import UseCaseForm
 from sqlalchemy.sql import or_
-from lib.models import (Use_case_step, Userinfo, Use_case, Step_detail, Use_case_result, Result_step)
+from lib.models import (Use_case_step, Userinfo, Use_case, Step_detail, Use_case_result, Result_step, Project)
 from lib.global_func import (get_db, save_data_to_db, del_db_data, send_to_selenium)
 from lib.use_case_func import (check_public_uc_name, check_general_uc_name, add_uc_data)
 
@@ -37,15 +37,26 @@ def get_public_use_case():
     return jsonify(public_uc_data)
 
 
-@app.route(rule='/get_execute_step/')
+@app.route(rule='/api/get_execute_step/')
 def get_use_case_step_data():
     db = get_db()
     uc_id = request.args.get('use_case_id')
     use_case_obj = db.query(Use_case).filter(Use_case.id == uc_id).first()
     step_objs = db.query(Step_detail).filter(Step_detail.uc_id == uc_id, Step_detail.delete_status == 0).all()
-    data = {'name': use_case_obj.name, 'uc_type': use_case_obj.uc_type, 'desc': use_case_obj.desc, 'step': []}
+    data = {'name': use_case_obj.name, 'project_id': use_case_obj.project_id, 'uc_type': use_case_obj.uc_type, 'desc': use_case_obj.desc, 'step': []}
     for obj in step_objs:
         data['step'].append(obj.params)
+
+    return jsonify(data)
+
+
+@app.route(rule='/api/get_project_data/')
+def get_project_data():
+    db = get_db()
+    project_objs = db.query(Project).all()
+    data = []
+    for obj in project_objs:
+        data.append({'id': obj.id, 'project_name': obj.project_name, 'project_description': obj.project_description})
 
     return jsonify(data)
 

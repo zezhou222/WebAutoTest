@@ -28,13 +28,49 @@ class Userinfo(Model):
 
     password = Column(String(32), nullable=False)
 
-    email = Column(String(20), nullable=True)
+    email = Column(String(20), nullable=False)
 
     create_time = Column(DateTime, nullable=False, default=datetime.now())
     # 正向，反向查找时候用
     user2uc = relationship('Use_case', backref="uc2user")
     # 是否发送邮件，默认发送
     send_mail = Column(Boolean, default=1)
+    # 正向通过u2r字段，反向通过r2u字段
+    u2r = relationship("Role", backref="r2u", secondary='user_role')
+
+
+class Role(Model):
+    __tablename__ = 'role'
+
+    id = Column(Integer, primary_key=True, autoincrement=True)
+
+    role_name = Column(String(50), nullable=False)
+
+    role_description = Column(String(200), nullable=True)
+
+
+class User_Role(Model):
+    __tablename__ = 'user_role'
+
+    id = Column(Integer, primary_key=True)
+
+    user_id = Column(Integer, ForeignKey('userinfo.id'), nullable=False)
+
+    role_id = Column(Integer, ForeignKey('role.id'), nullable=False)
+
+
+project_name_length = 50
+project_description_length = 200
+
+
+class Project(Model):
+    __tablename__ = 'project'
+
+    id = Column(Integer, primary_key=True, autoincrement=True)
+
+    project_name = Column(String(project_name_length), nullable=False)
+
+    project_description = Column(String(project_description_length), nullable=False)
 
 
 class Use_case(Model):
@@ -53,6 +89,10 @@ class Use_case(Model):
     uc2step_detail = relationship("Step_detail", backref="step_detail2uc")
     # 正向查找执行结果
     uc2ucr = relationship("Use_case_result", backref="ucr2uc")
+    # 外键关联项目表，表示这个用例属于哪个项目的
+    project_id = Column(Integer, ForeignKey('project.id'), nullable=False)
+    # 正向查找所属项目
+    uc2pro = relationship("Project", backref="pro2uc")
 
 
 class Use_case_result(Model):

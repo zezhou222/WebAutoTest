@@ -34,7 +34,7 @@ var edit_use_case_page_url = server_ip + '/use_case_operate/?opt=edit';
 var edit_use_case_url = server_ip + '/use_case/edit/';
 
 // 获取用例的执行步骤的url
-var get_execute_step_url = server_ip + '/get_execute_step/';
+var get_execute_step_url = server_ip + '/api/get_execute_step/';
 
 // 获取步骤选项的url
 var get_step_url = server_ip + '/get_step_options/';
@@ -77,3 +77,6 @@ var import_use_case_data_page_url = server_ip + '/import_use_case_data/';
 
 // 发送excel文件的url
 var send_excel_file_url = server_ip + '/accept_excel_file/';
+
+// 项目数据的url
+var get_project_data_url = server_ip + '/api/get_project_data/';

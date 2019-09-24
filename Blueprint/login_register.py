@@ -1,6 +1,6 @@
 from flask import (Blueprint, request, session, jsonify, make_response)
 from lib.global_func import (get_md5, get_db, save_data_to_db, make_random_code)
-from lib.models import Userinfo
+from lib.models import (Userinfo, Role)
 from lib.send_mail import MyEmail
 from settings import sender, sender_username, sender_password
 
@@ -35,7 +35,7 @@ def register():
     data["password"] = get_md5(data["username"], data["password"])
 
     # 保存数据至数据库
-    save_data_to_db(db, [Userinfo(**data)])
+    save_data_to_db(db, [Userinfo(**data, u2r=[db.query(Role).filter(Role.role_name == 'staff').first()])])
 
     return jsonify(ret)
 

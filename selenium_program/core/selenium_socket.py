@@ -189,13 +189,14 @@ class SeleniumServer(socketserver.BaseRequestHandler):
 
     def send_step_result(self, user_id, uc_id, uc_result_id):
         # 查数据库数据
-        self.cursor.execute('select t1.username,t1.email, t2.name,t2.desc,t3.params,t3.execute,t4.status,t4.execute_time,t5.status,t5.error_info,t5.run_time,t5.step_id,t5.uc_result_id,t5.parent_step_id,t5.screen_shot from userinfo as t1 inner join use_case as t2 inner join step_detail as t3 inner join use_case_result as t4 inner join result_step as t5 on t1.id=t2.user_id and t1.id=t4.user_id and t3.uc_id=t2.id and t4.use_case_id=t2.id and t5.uc_result_id=t4.id and t5.step_id=t3.id where t1.id=%s and t2.id=%s and t4.id=%s;', args=(user_id, uc_id, uc_result_id))
+        self.cursor.execute('select t1.username,t1.email, t2.name,t2.desc,t3.params,t3.execute,t4.status,t4.execute_time,t5.status,t5.error_info,t5.run_time,t5.step_id,t5.uc_result_id,t5.parent_step_id,t5.screen_shot,t6.project_name from userinfo as t1 inner join use_case as t2 inner join step_detail as t3 inner join use_case_result as t4 inner join result_step as t5 inner join project as t6 on t1.id=t2.user_id and t1.id=t4.user_id and t3.uc_id=t2.id and t4.use_case_id=t2.id and t5.uc_result_id=t4.id and t5.step_id=t3.id where t1.id=%s and t2.id=%s and t4.id=%s and t2.project_id=t6.id;', args=(user_id, uc_id, uc_result_id))
         result = self.cursor.fetchall()
 
         # 格式化初始数据
         receiver_email = result[0].get('email')
         username = result[0].get('username')
         uc_name = result[0].get('name')
+        project_name = result[0].get('project_name')
         uc_desc = result[0].get('desc')
         execute_time = str(result[0].get('execute_time'))
         status = result[0].get('status')

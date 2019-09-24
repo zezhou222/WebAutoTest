@@ -27,6 +27,7 @@
 
                 <select name="opt" id="opt" class="form-control pull-right" style="width: 100px;">
                     <option value="all" selected>全部</option>
+                    <option value="project">项目</option>
                     <option value="public">公共</option>
                     <option value="general">普通</option>
                 </select>
@@ -41,6 +42,7 @@
             <tr>
                 <td width="50">序号</td>
                 <td width="100">用例名称</td>
+                <td width="100">所属项目</td>
                 <td width="100">用例类型</td>
                 <td>用例步骤（||分割每一小步骤，@@分割每一小步骤的参数）</td>
                 <td width="150">用例描述</td>
@@ -52,6 +54,7 @@
             <tr>
                 <td>{{ loop.index }}</td>
                 <td>{{ obj.name }}</td>
+                <td>{{ obj.uc2pro.project_name }}</td>
                 <td>
                     {% if obj.uc_type == 'public' %}
                     公共用例

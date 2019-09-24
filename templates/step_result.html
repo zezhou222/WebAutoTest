@@ -18,6 +18,7 @@
     <div class="row" style="height: 300px;">
         <div class="col-md-4" id="tt">
             <h5><b>用例名称：</b>{{ uc_obj.name }}</h5>
+            <h5><b>所属项目：</b>{{ uc_obj.uc2pro.project_name }}</h5>
             <h5><b>用例描述：</b>{{ uc_obj.desc }}</h5>
             <h5><b>执行的用户：</b>{{ username }}</h5>
             <h5><b>用例的执行时间：</b>{{ uc_result_obj.execute_time }}</h5>

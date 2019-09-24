@@ -1,7 +1,7 @@
 from flask import (Blueprint, render_template, session, request)
 from sqlalchemy.sql import or_, and_
 from lib.global_func import get_db
-from lib.models import (Userinfo, Use_case)
+from lib.models import (Userinfo, Use_case, Project)
 from lib.paging import Paging
 from lib.flask_form import UseCaseForm
 
@@ -64,6 +64,12 @@ def use_case_page():
         search_content = '%' + search_content.strip() + '%'
         if opt == 'all':
             usecase_objs = db.query(Use_case).filter(or_(Use_case.user_id == user_obj.id, Use_case.uc_type == 'public'),Use_case.name.like(search_content))
+        elif opt == 'project':
+            project_objs = db.query(Project).filter(Project.project_name.like(search_content)).all()
+            project_ids = []
+            for obj in project_objs:
+                project_ids.append(obj.id)
+            usecase_objs = db.query(Use_case).filter(Use_case.project_id.in_(project_ids))
         elif opt == 'public':
             usecase_objs = db.query(Use_case).filter(Use_case.uc_type == 'public', Use_case.name.like(search_content))
         elif opt == 'general':
@@ -90,3 +96,15 @@ def use_case_operate():
     else:
         use_case_id = data['use_case_id']
         return render_template('add_use_case.html', form=form, opt=opt, use_case_id=use_case_id)
+
+
+# ---------------------------------管理者的----------------------------------------------
+
+@app.route(rule='/manager/')
+def return_manager_page():
+    return render_template('manager.html')
+
+
+@app.route(rule='/manager/project/add/')
+def add_project_page():
+    return render_template('add_project.html')

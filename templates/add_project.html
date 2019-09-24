@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/static/bootstrap-3.3.7-dist/css/bootstrap.css">
+</head>
+<body style="width: 98%;padding-top: 50px;">
+
+
+<form class="form-horizontal">
+    <div class="form-group">
+        <label for="project_name" class="col-md-2 control-label">项目名称</label>
+        <div class="col-md-3">
+            <input type="text" class="form-control" id="project_name" name="project_name">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="project_description" class="col-md-2 control-label">项目描述</label>
+        <div class="col-md-6">
+            <textarea id="project_description" name="project_description" cols="30" rows="6" class="form-control"></textarea>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-3 col-md-offset-2">
+            <input type="button" value="创建" class="btn btn-success" id="add_project_btn">
+        </div>
+    </div>
+</form>
+
+
+<script src="/static/js/jquery-3.4.1.js"></script>
+<script src="/static/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+
+<script src="/static/js/manager_settings.js"></script>
+<script>
+
+    function all_event() {
+        // 点击创建项目的事件
+        click_add_project_btn();
+    }
+
+    function check_project_data(name, desc) {
+        var flag = true;
+
+        if (name === '') {
+            flag = false;
+            window.parent.toastr.error('项目名称不可为空!');
+        }else if(name.length > 50){
+            flag = false;
+            window.parent.toastr.error('创建的项目名称过长！');
+        }else if(desc.length > 200){
+            flag = false;
+            window.parent.toastr.error('创建的项目描述过长！');
+        }
+
+        return flag;
+    }
+
+    function click_add_project_btn(){
+
+        $('#add_project_btn').click(function (e) {
+            var project_name = $('#project_name').val().trim();
+            var project_description = $('#project_description').val().trim();
+
+            // 验证数据
+            var flag = check_project_data(project_name, project_description);
+            if (!flag){
+                return;
+            }
+
+            // 提交数据
+            $.ajax({
+                url: project_url,
+                type: 'post',
+                data: {
+                    'project_name': project_name,
+                    'project_description': project_description
+                },
+                success: function (response) {
+                    // 提示添加成功
+                    window.parent.toastr.success(`${project_name}项目创建成功!`);
+                    // 刷新iframe页面
+                    $(window.parent.document).find('iframe')[0].contentWindow.location.reload();
+                },
+                error: function (xhr) {
+                    window.parent.toastr.error(JSON.parse(xhr.responseText)['error']);
+                }
+            });
+
+        });
+
+    }
+
+    all_event();
+
+</script>
+</body>
+</html>

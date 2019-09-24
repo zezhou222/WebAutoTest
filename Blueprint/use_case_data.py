@@ -6,9 +6,10 @@ from flask import (
     jsonify,
     session)
 
-from lib.global_func import (get_random_filename)
+from lib.global_func import (get_random_filename, get_db)
 from settings import (temp_path)
 from lib.use_case_func import (add_uc_data, check_public_uc_name)
+from lib.models import (Project)
 
 
 app = Blueprint(name='use_case_data', import_name='use_case_data')
@@ -26,6 +27,7 @@ def read_file_content(f, size, read_size=4096):
 
 
 def read_excel_data(file_path):
+    db = get_db()
     workbook = xlrd.open_workbook(file_path)
     sheet = workbook.sheet_by_index(0)
     dic = {}
@@ -33,9 +35,11 @@ def read_excel_data(file_path):
     for index in range(sheet.nrows):
         row_data = sheet.row_values(index)
         if index == 1:
+            project_obj = db.query(Project).filter(Project.project_name == row_data[1].strip()).first()
             dic['name'] = row_data[0]
-            dic['uc_type'] = row_data[1]
-            dic['desc'] = row_data[2]
+            dic['project_id'] = project_obj.id if project_obj else ''
+            dic['uc_type'] = row_data[2]
+            dic['desc'] = row_data[3]
         elif index >= 3:
             temp = []
             for data in row_data[:-1]:
@@ -69,8 +73,13 @@ def accept_execel_file():
         # 检测是否和公共用例重名
         flag = check_public_uc_name(use_case_data)
         if not flag:
-            # 添加用例数据
-            add_uc_data(use_case_data)
+            if use_case_data.get('project_id', '') != '':
+                # 添加用例数据
+                add_uc_data(use_case_data)
+            else:
+                ret['flag'] = 2
+                ret['error_info'] = '所属项目不存在!'
+                break
         else:
             ret['flag'] = 1
             ret['error_info'] = '用例名称和公共用例重名!'

@@ -25,6 +25,12 @@
         </div>
     </div>
     <div class="form-group">
+        <label class="col-md-2 control-label" for="project_id">属于项目</label>
+        <div class="col-md-2" id="project_div">
+
+        </div>
+    </div>
+    <div class="form-group">
         <label class="col-md-2 control-label" for="uc_type">用例类型</label>
         <div class="col-md-2">
             <select class="form-control" id="uc_type" name="uc_type">
@@ -97,6 +103,10 @@
     var open_browser_choice_label = '<select name="browser" id="" class="form-control"><option value="google">谷歌浏览器</option><option value="firefox">火狐浏览器</option></select>';
     // 编辑的用例id，编辑页面用
     var edit_use_case_id;
+    // 项目数据
+    var all_project_data;
+    // 项目选项标签
+    var project_label;
 </script>
 <script>
 
@@ -132,6 +142,16 @@
         var content = '<select name="public_use_case" class="form-control">';
         for (var i=0;i<all_public_use_case.length;i++){
             content += `<option value="${all_public_use_case[i].use_case_name}">${all_public_use_case[i].use_case_name}</option>`
+        }
+        content += '</select>';
+        return content;
+    }
+
+
+    function create_project_label() {
+        var content = '<select class="form-control" id="project_id" name="project_id">';
+        for (var i=0;i<all_project_data.length;i++){
+            content += `<option value="${all_project_data[i].id}">${all_project_data[i].project_name}</option>`
         }
         content += '</select>';
         return content;
@@ -176,6 +196,14 @@
                 use_case_label = create_option_label();
             }
         });
+        $.ajax({
+            url: get_project_data_url,
+            success: function (response) {
+                all_project_data = response;
+                project_label = create_project_label();
+                $('#project_div').append(project_label);
+            }
+        });
         // 编辑的初始化,渲染数据
         if ($(window.parent.document).find('iframe').attr('src').slice(0,edit_use_case_page_url.length) == edit_use_case_page_url){
             // 编辑用例的id
@@ -189,6 +217,8 @@
                     // console.log(response);
                     // 渲染用例名称
                     $('#name').val(response.name);
+                    // 渲染用例所属的项目
+                    $('#project_id').find(`option[value=${response.project_id}]`).prop('selected', true);
                     // 渲染用例类型
                     $('#uc_type').find(`option[value=${response.uc_type}]`).prop('selected', true);
                     // 渲染用例描述
@@ -329,6 +359,8 @@
             formdata.append('csrf_token', $('#csrf_token').val());
             // 添加用例名称
             formdata.append('name', $('#name').val());
+            // 用例属于哪个项目
+            formdata.append('project_id', $('#project_id').find('option:selected').val());
             // 添加用例类型
             formdata.append('uc_type', $('#uc_type').find('option:selected').val());
             // 添加用例描述

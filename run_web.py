@@ -1,7 +1,7 @@
 import re
 from flask_cors import CORS
 from flask import (Flask, request, session, redirect)
-from Blueprint import (test_case, return_page, login_register, use_case_result, use_case_data)
+from Blueprint import (test_case, return_page, login_register, use_case_result, use_case_data, project)
 from lib.connect_selenim_socket import ConnectSelenium
 
 
@@ -26,29 +26,31 @@ app.register_blueprint(login_register.app)
 app.register_blueprint(use_case_result.app)
 # 导入用例数据的
 app.register_blueprint(use_case_data.app)
+# 后台--项目的
+app.register_blueprint(project.app)
 
 
 # 简单的请求中间件
-@app.before_request
-def login_check():
-    white_list = ['/login/$', '/register/$', '/user_register/$', '/user_login/$', '/static/.+', '/favicon.ico', '/forget_password/$', '/send_forget_pwd_email/$', '/reset_pwd/$']
-    for rule in white_list:
-        ret = re.match(rule, request.path)
-        if ret:
-            return None
-
-    # 其他路径，检查session
-    # 如果没有session，就跳转至登陆界面
-    if not session.get('login_user', None):
-        # 记录用户要去的url，并重定向至登陆界面
-        session['request_url'] = request.path
-        return redirect('/login/')
-
-    # 如果有request_url，就让其跳转他之前要去的界面
-    if session.get('request_url'):
-        jump_url = session.pop('request_url')
-        # print(session, jump_url)
-        return redirect(jump_url)
+# @app.before_request
+# def login_check():
+#     white_list = ['/login/$', '/register/$', '/user_register/$', '/user_login/$', '/static/.+', '/favicon.ico', '/forget_password/$', '/send_forget_pwd_email/$', '/reset_pwd/$']
+#     for rule in white_list:
+#         ret = re.match(rule, request.path)
+#         if ret:
+#             return None
+#
+#     # 其他路径，检查session
+#     # 如果没有session，就跳转至登陆界面
+#     if not session.get('login_user', None):
+#         # 记录用户要去的url，并重定向至登陆界面
+#         session['request_url'] = request.path
+#         return redirect('/login/')
+#
+#     # 如果有request_url，就让其跳转他之前要去的界面
+#     if session.get('request_url'):
+#         jump_url = session.pop('request_url')
+#         # print(session, jump_url)
+#         return redirect(jump_url)
 
 
 if __name__ == '__main__':

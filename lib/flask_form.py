@@ -3,9 +3,12 @@ from flask_wtf import FlaskForm
 # 引入Form元素父类
 from wtforms import StringField, PasswordField, SelectField, TextAreaField
 # 引入Form验证父类
-from wtforms.validators import DataRequired, Length
-
-
+from wtforms.validators import DataRequired, Length, EqualTo
+# 一些验证数据
+from lib.models import (
+    project_name_length,
+    project_description_length
+)
 
 # 登录表单类,继承与Form类
 class BaseLogin(FlaskForm):
@@ -30,4 +33,12 @@ class UseCaseForm(FlaskForm):
     desc = TextAreaField('用例描述信息', validators=[Length(min=0, max=1024, message="不能超过1024个字符,")])
 
 
+# 目前没用上
+class ProjectForm(FlaskForm):
 
+    project_name = StringField(validators=[
+        DataRequired(message="项目名称不可为空!"),
+        Length(min=1, max=project_name_length, message="创建的项目名称过长！"),
+    ])
+
+    project_description = StringField(validators=[Length(min=0, max=project_description_length, message="创建的项目描述过长！")])
