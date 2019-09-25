@@ -80,3 +80,6 @@ var send_excel_file_url = server_ip + '/accept_excel_file/';
 
 // 项目数据的url
 var get_project_data_url = server_ip + '/api/get_project_data/';
+
+// 添加接口测试页面
+var add_interface_test_page_url = server_ip + '/interface_test/add/';

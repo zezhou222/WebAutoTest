@@ -51,7 +51,7 @@ class Project_opt(MethodView):
 
     def post(self):
         db = get_db()
-        status_code = 200
+        status_code = 201
         ret = {}
 
         data = request.form.to_dict()

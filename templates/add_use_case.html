@@ -25,7 +25,7 @@
         </div>
     </div>
     <div class="form-group">
-        <label class="col-md-2 control-label" for="project_id">属于项目</label>
+        <label class="col-md-2 control-label" for="project_id">所属项目</label>
         <div class="col-md-2" id="project_div">
 
         </div>
@@ -83,6 +83,7 @@
 <script src="/static/js/jquery-3.4.1.js"></script>
 <script src="/static/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 
+<script src="/static/js/global_func.js"></script>
 <script src="/static/js/settings.js"></script>
 <script>
     // 步骤选项
@@ -142,16 +143,6 @@
         var content = '<select name="public_use_case" class="form-control">';
         for (var i=0;i<all_public_use_case.length;i++){
             content += `<option value="${all_public_use_case[i].use_case_name}">${all_public_use_case[i].use_case_name}</option>`
-        }
-        content += '</select>';
-        return content;
-    }
-
-
-    function create_project_label() {
-        var content = '<select class="form-control" id="project_id" name="project_id">';
-        for (var i=0;i<all_project_data.length;i++){
-            content += `<option value="${all_project_data[i].id}">${all_project_data[i].project_name}</option>`
         }
         content += '</select>';
         return content;
@@ -444,6 +435,7 @@
             new_tr.children().eq(1).find('select').val(now_tr.children().eq(1).find('select option:selected').val());
             // tr下下标为2的有可能是select标签也有可能是input标签，如果是input标签找不到就添加不成
             new_tr.children().eq(2).find('select').val(now_tr.children().eq(2).find('select option:selected').val());
+
             // 在当前点击的标签上面添加
             now_tr.prev().before(new_tr);
             // 删除点击上移的
@@ -467,6 +459,7 @@
             // select被选中的单独赋值一下。
             new_tr.children().eq(1).find('select').val(now_tr.children().eq(1).find('select option:selected').val());
             new_tr.children().eq(2).find('select').val(now_tr.children().eq(2).find('select option:selected').val());
+
             // 在当前点击的标签下面添加
             now_tr.next().after(new_tr);
             // 删除点击下移的

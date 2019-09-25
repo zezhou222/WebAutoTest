@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/static/bootstrap-3.3.7-dist/css/bootstrap.css">
+    <style>
+        .params_content_style {
+            height: 230px;
+            overflow-y: scroll;
+        }
+
+        .move_btn_style {
+            width: 30px;
+        }
+
+        .move_btn_style span {
+            position: relative;
+            left: -3px;
+        }
+
+    </style>
+</head>
+<body style="width: 98%;">
+
+<div class="form-horizontal" style="padding-top: 50px;">
+
+    <!-- 接口的名称 -->
+    <div class="form-group">
+        <label for="name" class="col-md-2 control-label">接口名称</label>
+        <div class="col-md-3">
+            <input type="text" class="form-control" id="name" name="name">
+        </div>
+    </div>
+    <!-- 接口所属项目 -->
+    <div class="form-group">
+        <label class="col-md-2 control-label" for="project_id">所属项目</label>
+        <div class="col-md-3" id="project_div">
+
+        </div>
+    </div>
+    <!-- 公例还是私例 -->
+    <div class="form-group">
+        <label class="col-md-2 control-label" for="uc_type">接口类型</label>
+        <div class="col-md-3">
+            <select class="form-control" id="uc_type" name="uc_type">
+                <option value="general" selected>普通接口</option>
+                <option value="public">公用接口</option>
+            </select>
+        </div>
+        <!--<span class="help-block">注：公用接口所有人都可以看到并测试。</span>-->
+    </div>
+
+    <!-- 接口的介绍 -->
+    <div class="form-group">
+        <label for="interface_description" class="col-md-2 control-label">接口描述</label>
+        <div class="col-md-5">
+            <textarea row="3" col="30" id="interface_description" name="interface_description"
+                      class="form-control"></textarea>
+        </div>
+    </div>
+
+    <!-- 测试的接口 -->
+    <div class="form-group">
+        <label for="" class="col-md-2 control-label">请求URL</label>
+        <div class="col-md-6">
+            <div class="input-group">
+                <div class="input-group-btn">
+                    <select class="form-control pull-right" style="width: 100px;">
+                        <option value="get" selected>GET</option>
+                        <option value="post">POST</option>
+                        <option value="put">PUT</option>
+                        <option value="delete">DELETE</option>
+                    </select>
+                </div>
+                <input type="text" class="form-control" placeholder="例：http://www.baidu.com">
+                <span class="input-group-btn">
+                <button class="btn btn-default" type="button"> Test </button>
+            </span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 接口测试的提交参数(分表格输入和直接输入参数) -->
+    <div class="form-group">
+        <br>
+        <div class="col-md-6 col-md-offset-2">
+            <input type="button" class="btn btn-success btn-xs" value="新增" id="add_request_params">
+            <input type="button" class="btn btn-danger btn-xs" value="删除" id="del_request_params">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-md-2 control-label">请求参数</label>
+        <div class="col-md-10 request_params_content">
+            <table class="table table-hover">
+                <thead>
+                <tr>
+                    <td width="20"><input type="checkbox" class="all_choice"></td>
+                    <td width="220">Key</td>
+                    <td width="300">Value</td>
+                    <td>Description</td>
+                    <td width="50">执行</td>
+                    <td>操作</td>
+                </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- headers参数 -->
+    <div class="form-group">
+        <br>
+        <div class="col-md-6 col-md-offset-2">
+            <input type="button" class="btn btn-success btn-xs" value="新增" id="add_header_params">
+            <input type="button" class="btn btn-danger btn-xs" value="删除" id="del_header_params">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-md-2 control-label">头部参数</label>
+        <div class="col-md-10 header_params_content">
+            <table class="table table-hover">
+                <thead>
+                <tr>
+                    <td width="20"><input type="checkbox" class="all_choice"></td>
+                    <td width="260">Key</td>
+                    <td width="260">Value</td>
+                    <td>Description</td>
+                    <td width="50">执行</td>
+                    <td>操作</td>
+                </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+
+        <br>
+
+    </div>
+
+    <!-- 显示测试结果 -->
+    <div class="form-group">
+        <label for="interface_test_result" class="col-md-2 control-label">测试结果</label>
+        <div class="col-md-9">
+            <textarea name="interface_test_result" id="interface_test_result" cols="30" rows="8" class="form-control"></textarea>
+        </div>
+    </div>
+
+    <!-- 保存测试的接口数据 -->
+    <div class="form-group">
+        <div class="col-md-9 col-md-offset-2">
+            <input type="button" class="btn btn-success" value="添加">
+            <input type="button" class="btn btn-primary pull-right" value="重置" id="reset_btn">
+        </div>
+    </div>
+
+</div>
+
+<script src="/static/js/jquery-3.4.1.js"></script>
+<script src="/static/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+
+<script src="/static/js/global_func.js"></script>
+<script src="/static/js/settings.js"></script>
+<script>
+    // 项目数据
+    var all_project_data;
+    // 项目选项标签
+    var project_label;
+</script>
+<script>
+
+    function all_event() {
+        // 添加请求参数的事件
+        click_add_request_params();
+        // 删除请求参数的事件
+        click_del_request_params();
+        // 全选参数的事件(通用的)
+        click_all_choice_event();
+        // 上移
+        click_step_move_up_button_event();
+        // 下移
+        click_step_move_down_button_event();
+        // 添加头部参数的事件
+        click_add_header_params();
+        // 删除头部参数的事件
+        click_del_header_params();
+        // 点击重置按钮的事件(刷新下页面)
+        click_reset_btn_event();
+    }
+
+    // 初始化操作，从服务端获取数据
+    (function () {
+        $.ajax({
+            url: get_project_data_url,
+            success: function (response) {
+                all_project_data = response;
+                project_label = create_project_label();
+                $('#project_div').append(project_label);
+            }
+        });
+    })();
+
+    function create_row_request_data() {
+        var content = `<tr>
+                    <td><input type="checkbox" name="choice"></td>
+                    <td><input type="text" class="form-control"></td>
+                    <td><input type="text" class="form-control"></td>
+                    <td><input type="text" class="form-control"></td>
+                    <td><input type="checkbox" checked></td>
+                    <td>
+                        <button type="button" class="btn btn-default btn-sm col-md-5 step_move_up move_btn_style">
+                            <span class="glyphicon glyphicon glyphicon-arrow-up text-success" aria-hidden="true"></span>
+                        </button>
+                        <button type="button" class="btn btn-default btn-sm col-md-5 col-md-offset-2 step_move_down move_btn_style">
+                            <span class="glyphicon glyphicon glyphicon-arrow-down text-primary" aria-hidden="true"></span>
+                        </button>
+                    </td>
+                </tr>`
+        return content;
+    }
+
+    function click_add_request_params() {
+
+        $('#add_request_params').click(function (e) {
+            var label = create_row_request_data();
+            // 插入一条行数据
+            $('.request_params_content tbody').append(label);
+
+            // 判断参数内容高度，如果超过某值，添加下拉条
+            if ($('.request_params_content')[0].clientHeight >= 230) {
+                $('.request_params_content').addClass('params_content_style');
+            }
+
+        });
+
+    }
+
+    function click_del_request_params() {
+
+        $('#del_request_params').click(function (e) {
+            // 删除标签
+            $(this).parent().parent().next().find('input[name=choice]:checked').parent().parent().remove();
+
+            // 动态删除样式
+            if ($('.request_params_content').hasClass('params_content_style')) {
+                var height = 30;
+                $('.request_params_content').find('tbody tr').each(function (index,ele) {
+                    height += ele.clientHeight;
+                });
+                // 判断参数内容低于230，删除之前添加的值
+                if (height < 230) {
+                    $('.request_params_content').removeClass('params_content_style');
+                }
+            }
+
+        });
+    }
+
+    function click_all_choice_event() {
+
+        $('.all_choice').change(function (e) {
+            $(this).parent().parent().parent().next().find('input[name=choice]').prop('checked', $(this).prop('checked'));
+        });
+
+    }
+
+    function click_step_move_up_button_event() {
+
+        $('tbody').on('click', '.step_move_up', function (e) {
+            var now_tr = $(this).parent().parent();
+            // 判断上方是否有标签
+            if (!now_tr.prev().length) {
+                return
+            }
+            // 克隆一份标签
+            var new_tr = now_tr.clone(true);
+            // 在当前点击的标签上面添加
+            now_tr.prev().before(new_tr);
+            // 删除点击上移的
+            now_tr.remove();
+        });
+
+    }
+
+    function click_step_move_down_button_event() {
+
+        $('tbody').on('click', '.step_move_down', function (e) {
+            var now_tr = $(this).parent().parent();
+            // 判断下方是否有标签
+            if (!now_tr.next().length) {
+                return
+            }
+            // 克隆一份标签
+            var new_tr = now_tr.clone(true);
+            // 在当前点击的标签下面添加
+            now_tr.next().after(new_tr);
+            // 删除点击下移的
+            now_tr.remove();
+        });
+
+    };
+
+    function click_add_header_params(){
+
+        $('#add_header_params').click(function (e) {
+            var label = create_row_request_data();
+            // 插入一条行数据
+            $('.header_params_content tbody').append(label);
+
+            // 判断参数内容高度，如果超过某值，添加下拉条
+            if ($('.header_params_content')[0].clientHeight >= 230) {
+                $('.header_params_content').addClass('params_content_style');
+            }
+
+        });
+
+    }
+
+    function click_del_header_params(){
+
+        $('#del_header_params').click(function (e) {
+            // 删除标签
+            $(this).parent().parent().next().find('input[name=choice]:checked').parent().parent().remove();
+
+            // 动态删除样式
+            if ($('.header_params_content').hasClass('params_content_style')) {
+                var height = 30;
+                $('.header_params_content').find('tbody tr').each(function (index,ele) {
+                    height += ele.clientHeight;
+                });
+                // 判断参数内容低于230，删除之前添加的值
+                if (height < 230) {
+                    $('.header_params_content').removeClass('params_content_style');
+                }
+            }
+
+        });
+
+    }
+
+    function click_reset_btn_event(){
+
+        $('#reset_btn').click(function () {
+            $(window.parent.document).find('iframe')[0].contentWindow.location.reload();
+        });
+
+    }
+
+    all_event();
+
+</script>
+</body>
+</html>

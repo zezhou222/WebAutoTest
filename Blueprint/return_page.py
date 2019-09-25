@@ -48,6 +48,11 @@ def import_use_case_data():
     return render_template('import_use_case_data.html')
 
 
+@app.route(rule='/interface_test/add/')
+def interface_test():
+    return render_template('add_interface_test.html')
+
+
 @app.route(rule='/get_use_case_page/')
 def use_case_page():
     opt = request.args.get('opt')

@@ -170,9 +170,26 @@
 
             <!-- Sidebar Navidation Menus--><span class="heading">Main</span>
             <ul class="list-unstyled">
-                <li class="active"><a href="javascript:void(0);" id="use_case_test_btn" flag="use_case_test">用例测试</a></li>
-                <li><a href="javascript:void(0);" id="add_use_case_btn" flag="add_use_case">添加用例</a></li>
-                <li><a href="javascript:void(0);" id="import_use_case_data_btn" flag="import_use_case_data">导入用例数据</a></li>
+                <li>
+                    <a href="#use_case_test_ul" aria-expanded="true" data-toggle="collapse">
+                        用例测试
+                    </a>
+                    <ul class="list-unstyled collapse" id="use_case_test_ul">
+                        <li><a href="javascript:void(0);" flag="use_case_test">用例测试</a></li>
+                        <li><a href="javascript:void(0);" flag="add_use_case">添加用例</a></li>
+                        <li><a href="javascript:void(0);" flag="import_use_case_data">导入用例数据</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#interface_test_ul" aria-expanded="true" data-toggle="collapse">
+                        接口测试
+                    </a>
+                    <ul class="list-unstyled collapse" id="interface_test_ul">
+                        <li><a href="javascript:void(0);" flag="#">接口测试</a></li>
+                        <li><a href="javascript:void(0);" flag="add_interface_test">添加\临时接口测试</a></li>
+                    </ul>
+                </li>
             </ul>
             <span class="heading">Extras</span>
             <ul class="list-unstyled">
@@ -219,6 +236,7 @@
         'alter_pwd': alter_password_url,
         'alter_email': alter_email_url,
         'import_use_case_data': import_use_case_data_page_url,
+        'add_interface_test': add_interface_test_page_url,
     };
 
 </script>
@@ -240,7 +258,8 @@
         $('#email_addr').text($.cookie('email'))
         // 用例界面展示
         $('iframe').attr('src', use_case_url);
-        $('iframe').attr('height', window.innerHeight);
+        // $('iframe').attr('height', $($('iframe')[0].contentWindow.document).find('body')[0].clientHeight);
+        $('iframe').attr('height', window.innerHeight-135);
     })();
 
     function click_logout_event() {
@@ -264,12 +283,14 @@
     function click_menu_add_active_event(){
 
         $('.list-unstyled').on('click','li',function (e) {
-            // 移除所有的li标签的active类值
-            $('.list-unstyled').find('li').removeClass('active');
-            // 给点击的li标签添加类值active
-            $(this).addClass('active');
             // 设置子页面title
-            $('#child_option_title').text($(this).find('a').text());
+            if ($(this).find('li').length === 0){
+                // 移除所有的li标签的active类值
+                $('.list-unstyled').find('li').removeClass('active');
+                // 给点击的li标签添加类值active
+                $(this).addClass('active');
+                $('#child_option_title').text($(this).find('a').text());
+            }
         })
 
     }

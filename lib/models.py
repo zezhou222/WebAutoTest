@@ -72,6 +72,8 @@ class Project(Model):
 
     project_description = Column(String(project_description_length), nullable=False)
 
+    create_time = Column(DateTime, nullable=False, default=datetime.now())
+
 
 class Use_case(Model):
     __tablename__ = 'use_case'
