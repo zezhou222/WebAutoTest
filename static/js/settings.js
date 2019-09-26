@@ -83,3 +83,9 @@ var get_project_data_url = server_ip + '/api/get_project_data/';
 
 // 添加接口测试页面
 var add_interface_test_page_url = server_ip + '/interface_test/add/';
+
+// 临时的接口测试url
+var temp_interface_test_url = server_ip + '/api/temp_execute_interface_test/';
+
+// 接口测试的url(增，删，改，查)
+var interface_test_url = server_ip + '/api/interface_test/';

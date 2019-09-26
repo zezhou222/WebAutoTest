@@ -270,8 +270,9 @@
                 type: 'get',
                 success: function (response) {
 
-                    if (response.flag == 0){
-                        location.reload();
+                    if (response.flag === 0){
+                        location.href = login_url;
+                        // location.reload();
                     }
 
                 }
@@ -282,11 +283,11 @@
 
     function click_menu_add_active_event(){
 
-        $('.list-unstyled').on('click','li',function (e) {
+        $('.page-content .list-unstyled').on('click','li',function (e) {
             // 设置子页面title
             if ($(this).find('li').length === 0){
                 // 移除所有的li标签的active类值
-                $('.list-unstyled').find('li').removeClass('active');
+                $('.page-content .list-unstyled').find('li').removeClass('active');
                 // 给点击的li标签添加类值active
                 $(this).addClass('active');
                 $('#child_option_title').text($(this).find('a').text());

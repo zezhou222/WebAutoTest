@@ -29,7 +29,7 @@
     <div class="form-group">
         <label for="name" class="col-md-2 control-label">接口名称</label>
         <div class="col-md-3">
-            <input type="text" class="form-control" id="name" name="name">
+            <input type="text" class="form-control" id="interface_name">
         </div>
     </div>
     <!-- 接口所属项目 -->
@@ -41,11 +41,11 @@
     </div>
     <!-- 公例还是私例 -->
     <div class="form-group">
-        <label class="col-md-2 control-label" for="uc_type">接口类型</label>
+        <label class="col-md-2 control-label" for="interface_type">接口类型</label>
         <div class="col-md-3">
-            <select class="form-control" id="uc_type" name="uc_type">
-                <option value="general" selected>普通接口</option>
-                <option value="public">公用接口</option>
+            <select class="form-control" id="interface_type">
+                <option value="0" selected>普通接口</option>
+                <option value="1">公用接口</option>
             </select>
         </div>
         <!--<span class="help-block">注：公用接口所有人都可以看到并测试。</span>-->
@@ -55,8 +55,7 @@
     <div class="form-group">
         <label for="interface_description" class="col-md-2 control-label">接口描述</label>
         <div class="col-md-5">
-            <textarea row="3" col="30" id="interface_description" name="interface_description"
-                      class="form-control"></textarea>
+            <textarea row="3" col="30" id="interface_description" class="form-control"></textarea>
         </div>
     </div>
 
@@ -66,16 +65,16 @@
         <div class="col-md-6">
             <div class="input-group">
                 <div class="input-group-btn">
-                    <select class="form-control pull-right" style="width: 100px;">
+                    <select class="form-control pull-right" style="width: 100px;" id="request_type">
                         <option value="get" selected>GET</option>
                         <option value="post">POST</option>
                         <option value="put">PUT</option>
                         <option value="delete">DELETE</option>
                     </select>
                 </div>
-                <input type="text" class="form-control" placeholder="例：http://www.baidu.com">
+                <input type="text" class="form-control" placeholder="例：http://www.baidu.com" id="request_url">
                 <span class="input-group-btn">
-                <button class="btn btn-default" type="button"> Test </button>
+                <button class="btn btn-default" type="button" id="test_btn"> Test </button>
             </span>
             </div>
         </div>
@@ -153,7 +152,7 @@
     <!-- 保存测试的接口数据 -->
     <div class="form-group">
         <div class="col-md-9 col-md-offset-2">
-            <input type="button" class="btn btn-success" value="添加">
+            <input type="button" class="btn btn-success" value="添加" id="save_interface_data_btn">
             <input type="button" class="btn btn-primary pull-right" value="重置" id="reset_btn">
         </div>
     </div>
@@ -190,6 +189,10 @@
         click_del_header_params();
         // 点击重置按钮的事件(刷新下页面)
         click_reset_btn_event();
+        // 点击临时测试的事件
+        click_test_btn_event();
+        // 点击添加接口测试数据的事件
+        click_save_interface_data_btn_event();
     }
 
     // 初始化操作，从服务端获取数据
@@ -346,6 +349,100 @@
 
         $('#reset_btn').click(function () {
             $(window.parent.document).find('iframe')[0].contentWindow.location.reload();
+        });
+
+    }
+
+    function get_params(cls_val) {
+        var ret = [];
+        $(cls_val).find('tbody tr').each(function (index, ele) {
+            var dic = {};
+            var input_ele = $(ele).children().find('input');
+            dic['key'] = input_ele.eq(1).val().trim();
+            dic['value'] = input_ele.eq(2).val().trim();
+            dic['description'] = input_ele.eq(3).val().trim();
+            dic['execute'] = input_ele.eq(4).prop('checked') === true ? 1:0;
+
+            if (dic['key'] !== '' && dic['value'] !== ''){
+                ret.push(dic);
+            }
+        });
+
+        return ret;
+    };
+
+
+    function click_test_btn_event(){
+
+        $('#test_btn').click(function (e) {
+            var data = {};
+            data['request_type'] = $('#request_type').find('option:selected').val();
+            data['request_url'] = $('#request_url').val().trim();
+            data['request_params'] = get_params('.request_params_content');
+            data['header_params'] = get_params('.header_params_content');
+
+            data = JSON.stringify(data);
+
+            var xhr = new XMLHttpRequest();
+            xhr.open('post', temp_interface_test_url, true);
+
+            // 传输完毕的监测
+            xhr.onload = function (e){
+                // console.log(JSON.parse(xhr.response));
+
+                $('#interface_test_result').val(xhr.response);
+
+                // 取消按钮的禁用
+                $('#test_btn').text('Test');
+                $('#test_btn').removeAttr('disabled');
+            };
+
+            // 开始发送后的事件
+            xhr.onloadstart = function (e){
+                // 修改临时测试的按钮样式
+                $('#test_btn').text('is testing.');
+                $('#test_btn').attr('disabled', 'disabled');
+                $('#interface_test_result').val('getting data of interface testing.please wait a moment.')
+            };
+
+            xhr.send(data);
+
+        });
+
+    }
+
+    function click_save_interface_data_btn_event(){
+
+        $('#save_interface_data_btn').click(function (e) {
+            var data = {};
+            data['interface_name'] = $('#interface_name').val();
+            data['project_id'] = $('#project_id').find('option:selected').val();
+            data['interface_type'] = $('#interface_type').find('option:selected').val();
+            data['interface_description'] = $('#interface_description').val();
+            data['request_type'] = $('#request_type').find('option:selected').val();
+            data['request_url'] = $('#request_url').val().trim();
+            data['request_params'] = get_params('.request_params_content');
+            data['header_params'] = get_params('.header_params_content');
+            console.log(data);
+
+            data = JSON.stringify(data);
+            // 提交数据
+            $.ajax({
+                url: interface_test_url,
+                type: 'post',
+                data: data,
+                contentType: false,
+                success: function (response) {
+                    window.parent.toastr.success('添加成功!');
+                    // 添加成功刷新页面
+                    // $(window.parent.document).find('iframe')[0].contentWindow.location.reload();
+                },
+                error: function (xhr) {
+                    window.parent.toastr.success(xhr.response);
+                    console.log('error: ', xhr.response);
+                }
+            });
+
         });
 
     }

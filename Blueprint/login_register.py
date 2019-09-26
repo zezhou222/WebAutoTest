@@ -27,7 +27,7 @@ def register():
     # 验证用户名是否存在
     flag = check_username_exists(data.get('username'))
     if flag:
-        ret = {'flag': 1, 'error_info': '%s用户名已经被注册' % username}
+        ret = {'flag': 1, 'error_info': '%s already registered.' % username}
         return jsonify(ret)
 
     # 保存数据
@@ -64,7 +64,7 @@ def login():
 
     else:
         ret['flag'] = 1
-        ret['error_info'] = '用户名或密码错误'
+        ret['error_info'] = 'username or password error.'
 
     return jsonify(ret)
 
@@ -96,7 +96,7 @@ def alter_pwd():
             db.commit()
         else:
             ret['flag'] = 2
-            ret['error_info'] = '密码有误！'
+            ret['error_info'] = 'the password error!'
     return jsonify(ret)
 
 
@@ -132,7 +132,7 @@ def send_forget_pwd_email():
     obj = db.query(Userinfo).filter(Userinfo.username == request.args.get('username')).first()
     if obj is None:
         ret['flag'] = 1
-        ret['error_info'] = '该用户名不存在!'
+        ret['error_info'] = "the username don't exists!"
         return jsonify(ret)
 
     # 获取随机验证码

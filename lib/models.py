@@ -159,3 +159,43 @@ class Result_step(Model):
     run_time = Column(DECIMAL(10, 5))
     # 截图的文件名(仅文件名)
     screen_shot = Column(String(36))
+
+
+class Params(Model):
+
+    __tablename__ = 'params'
+
+    id = Column(Integer, primary_key=True)
+    # 请求参数或者是头部参数(header)
+    params_type = Column(String(10), default='request')
+
+    key = Column(String(100), nullable=False)
+
+    value = Column(String(100), nullable=False)
+
+    description = Column(String(100))
+    # 1携带参数，0不携带
+    execute = Column(Boolean, default=1)
+
+    interface_test_id = Column(Integer, ForeignKey('interface_test.id'), nullable=False)
+
+
+class Interface_test(Model):
+
+    __tablename__ = 'interface_test'
+
+    id = Column(Integer, primary_key=True)
+
+    interface_name = Column(String(100), nullable=False)
+    # 0是普通接口测试数据，1是公共接口测试数据
+    interface_type = Column(Boolean, default=0)
+
+    interface_description = Column(String(300))
+
+    request_type = Column(String(10), nullable=False)
+
+    request_url = Column(String(300), nullable=False)
+
+    project_id = Column(Integer, ForeignKey('project.id'))
+
+    user_id = Column(Integer, ForeignKey('userinfo.id'))
