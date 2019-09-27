@@ -195,7 +195,10 @@ def execute_use_case():
     try:
         send_to_selenium({'opt': 'execute_use_case', 'data': {'use_case_id': to_execute_uc_id, 'user_id': user_obj.id, 'send_mail': user_obj.send_mail}})
     except ConnectionResetError:
+        # 让其重新连接，但不再发数据
+        send_to_selenium({}, conn_flag=True)
+        # 告诉前端这次请求失败
         ret['flag'] = 1
-        ret['error_info'] = "和selenium服务器已经断开了连接."
+        ret['error_info'] = "执行失败! 请稍后重试."
 
     return jsonify(ret)

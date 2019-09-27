@@ -49,8 +49,16 @@ def import_use_case_data():
 
 
 @app.route(rule='/interface_test/add/')
-def interface_test():
-    return render_template('add_interface_test.html')
+def interface_test_add():
+    return render_template('add_interface_test.html', interface_test_id=None)
+
+
+@app.route(rule='/interface_test/edit/<int:interface_test_id>/')
+def interface_test_edit(interface_test_id=None):
+    if interface_test_id is None:
+        return {'error': 'not found the page.'}, 404
+
+    return render_template('add_interface_test.html', interface_test_id=interface_test_id)
 
 
 @app.route(rule='/get_use_case_page/')

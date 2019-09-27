@@ -12,8 +12,8 @@ class ConnectSelenium(object):
             cls.__flag = super().__new__(cls)
         return cls.__flag
 
-    def __init__(self):
-        if 'sk' not in self.__dict__:
+    def __init__(self, flag=False):
+        if 'sk' not in self.__dict__ or flag:
             sk = socket.socket()
             sk.connect((selenium_sk_ip, int(selenium_sk_port)))
             self.sk = sk

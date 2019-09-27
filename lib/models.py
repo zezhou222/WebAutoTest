@@ -74,6 +74,8 @@ class Project(Model):
 
     create_time = Column(DateTime, nullable=False, default=datetime.now())
 
+    user_id = Column(Integer, ForeignKey('userinfo.id'))
+
 
 class Use_case(Model):
     __tablename__ = 'use_case'
@@ -95,6 +97,8 @@ class Use_case(Model):
     project_id = Column(Integer, ForeignKey('project.id'), nullable=False)
     # 正向查找所属项目
     uc2pro = relationship("Project", backref="pro2uc")
+
+    create_time = Column(DateTime, default=datetime.now())
 
 
 class Use_case_result(Model):
@@ -188,7 +192,7 @@ class Interface_test(Model):
 
     interface_name = Column(String(100), nullable=False)
     # 0是普通接口测试数据，1是公共接口测试数据
-    interface_type = Column(Boolean, default=0)
+    interface_type = Column(String(10), default='general')
 
     interface_description = Column(String(300))
 
@@ -199,3 +203,26 @@ class Interface_test(Model):
     project_id = Column(Integer, ForeignKey('project.id'))
 
     user_id = Column(Integer, ForeignKey('userinfo.id'))
+    # 正向查找所属项目
+    inter2pro = relationship("Project", backref="pro2inter")
+
+    create_time = Column(DateTime, default=datetime.now())
+
+
+class InterfaceTestResult(Model):
+
+    __tablename__ = 'interface_test_result'
+
+    id = Column(Integer, primary_key=True)
+
+    status = Column(String(15), default='executing')
+
+    result = Column(String(5000), nullable=True)
+
+    execute_time = Column(DateTime, default=datetime.now())
+
+    end_time = Column(DateTime, nullable=True)
+
+    user_id = Column(Integer, ForeignKey('userinfo.id'), nullable=False)
+
+    interface_test_id = Column(Integer, ForeignKey('interface_test.id'), nullable=False)

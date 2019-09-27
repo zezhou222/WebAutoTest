@@ -59,11 +59,13 @@ def del_db_data(db, objs):
 
 
 # 给selenium的程序发送字典数据
-def send_to_selenium(data):
-    obj = ConnectSelenium()
-    sk = obj.get_sk()
-    sk.send(json.dumps(data).encode('utf-8'))
-
+def send_to_selenium(data, conn_flag=False):
+    if not conn_flag:
+        obj = ConnectSelenium(conn_flag)
+        sk = obj.get_sk()
+        sk.send(json.dumps(data).encode('utf-8'))
+    else:
+        ConnectSelenium(conn_flag)
 
 # 生成随机验证码
 def make_random_code():

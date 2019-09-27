@@ -227,6 +227,8 @@ class SeleniumServer(socketserver.BaseRequestHandler):
         # 发送
         email_obj.send_mail()
 
+    def execute_interface_test(self, data):
+        print(data)
 
     # 客户端连接成功会先到这个方法
     def handle(self):

@@ -84,8 +84,17 @@ var get_project_data_url = server_ip + '/api/get_project_data/';
 // 添加接口测试页面
 var add_interface_test_page_url = server_ip + '/interface_test/add/';
 
+// 编辑接口测试的页面url
+var edit_interface_test_page_url = server_ip + '/interface_test/edit/';
+
 // 临时的接口测试url
 var temp_interface_test_url = server_ip + '/api/temp_execute_interface_test/';
 
 // 接口测试的url(增，删，改，查)
 var interface_test_url = server_ip + '/api/interface_test/';
+
+// 编辑时候获取数据的
+var get_interface_test_data =  server_ip + '/api/get_interface_test/';
+
+// 执行接口测试的url
+var execute_interface_test_url = server_ip + '/api/execute_interface_test/';

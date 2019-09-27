@@ -4,42 +4,208 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="/static/bootstrap-3.3.7-dist/css/bootstrap.css">
+
 </head>
 <body>
 
-<div class="container-fluid">
+
+<div class="container-fluid" style="padding: 10px 30px;">
 
     <div class="row">
 
-        <!-- 历史接口测试记录的搜索框 -->
-        <div class="input-group">
-            <div class="input-group-btn">
-                <select name="opt" id="opt" class="form-control pull-right" style="width: 80px;">
+        <form id="search_form">
+            <div class="col-md-3 pull-right" style="padding-left: 2px;">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="" id="search_content">
+                    <span class="input-group-btn">
+                        <input type="button" value="Search" class="btn btn-primary" id="search_btn">
+                     </span>
+                </div><!-- /input-group -->
+            </div><!-- /.col-lg-6 -->
+
+            <div class="col-md-2 pull-right" style="padding-right: 0;">
+
+                <select name="opt" id="opt" class="form-control pull-right" style="width: 100px;">
                     <option value="all" selected>全部</option>
                     <option value="project">项目</option>
                     <option value="public">公共</option>
                     <option value="general">普通</option>
                 </select>
-            </div><!-- /btn-group -->
-            <input type="text" class="form-control" placeholder="">
-            <span class="input-group-btn">
-                    <button class="btn btn-default" type="button">Search</button>
-                </span>
-        </div><!-- /input-group -->
 
+            </div>
+        </form>
     </div>
 
-    <!-- 接口数据展示 -->
     <div class="row">
+        <table class="table table-striped table-hover tab">
+            <thead>
+            <tr>
+                <td width="50">序号</td>
+                <td width="100">接口测试名称</td>
+                <td width="100">所属项目</td>
+                <td width="100">接口类型</td>
+                <td>请求的url</td>
+                <td width="200">接口描述</td>
+                <td width="100">操作</td>
+            </tr>
+            </thead>
+            <tbody>
+            {% for obj in interface_objs %}
+            <tr>
+                <td>{{ loop.index }}</td>
+                <td>{{ obj.interface_name }}</td>
+                <td>{{ obj.inter2pro.project_name }}</td>
+                <td>
+                    {% if obj.interface_type == 'public' %}
+                    公共接口数据
+                    {% else %}
+                    个人接口数据
+                    {% endif %}
+                </td>
+                <td>
+                    {{ obj.request_type }}--{{ obj.request_url }}
+                </td>
+                <td>{{ obj.interface_description }}</td>
+                <td interface_test_id="{{ obj.id }}">
+                    <p>
+                        <button class="btn btn-primary btn-xs execute_btn">测试</button>
+                    </p>
+                    <p>
+                        <button class="btn btn-primary btn-xs execute_result">测试结果</button>
+                    </p>
+                    <!-- 用例分公共的私有的，公共的不可以编辑和删除操作 -->
+                    {% if obj.user_id == now_user_id %}
+                    <p>
+                        <button class="btn btn-primary btn-xs edit_btn">编辑</button>
+                    </p>
+                    <p>
+                        <button class="btn btn-danger btn-xs del_btn">删除</button>
+                    </p>
+                    {% endif %}
+                </td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
 
-
+        <!-- 分页器 -->
+        {{ page.make_label()|safe }}
     </div>
 
 </div>
 
+
 <script src="/static/js/jquery-3.4.1.js"></script>
 <script src="/static/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+
+<script src="/static/js/settings.js"></script>
 <script>
+
+    function all_event() {
+        // 点击删除某个用例的事件
+        click_del_use_case_event();
+        // 点击执行某个用例的事件
+        click_execute_event();
+        // 点击执行结果得事件
+        click_execute_result_event();
+        // 点击编辑用例的事件
+        click_edit_use_case_event();
+        // 搜索的事件
+        click_search_btn_event();
+    }
+
+    function click_del_use_case_event() {
+
+        $('.del_btn').click(function (e) {
+            // 获取用例id
+            var interface_test_id = $(this).parent().parent().attr('interface_test_id');
+
+            // 发送delete请求
+            $.ajax({
+                url: interface_test_url,
+                type: 'delete',
+                data: {'interface_test_id': interface_test_id},
+                success: function (response) {
+                    // 删除成功的动画效果
+                    window.parent.toastr.success('删除成功!');
+                    // iframe标签页面刷新
+                    $(window.parent.document).find('iframe')[0].contentWindow.location.reload(true);
+                },
+                error: function (xhr) {
+                    window.parent.toastr.error(JSON.parse(xhr.responseText)['error']);
+                }
+
+            });
+
+        });
+
+    }
+
+    function click_execute_event() {
+
+        $('tbody').on('click', '.execute_btn', function (e) {
+            // 获取用例id
+            var interface_test_id = $(this).parent().parent().attr('interface_test_id');
+            var new_url = execute_interface_test_url + interface_test_id + '/';
+            // 发送ajax请求
+            $.ajax({
+                url: new_url,
+                type: 'get',
+                success: function (response) {
+                    window.parent.toastr.success('开始接口测试.');
+                },
+                error: function (xhr) {
+                    window.parent.toastr.error(JSON.parse(xhr.responseText)['error']);
+                }
+            });
+
+        });
+
+    }
+
+    function click_execute_result_event() {
+
+        $('tbody').on('click', '.execute_result', function (e) {
+
+            // 获取用例id
+            var use_case_id = $(this).parent().parent().attr('use_case_id');
+            // 拼接url
+            var new_url = get_use_case_result_url + '?use_case_id=' + use_case_id;
+            // 首页的iframe请求结果页面
+            $(window.parent.document).find('iframe').attr('src', new_url)
+
+        })
+
+    }
+
+    function click_edit_use_case_event() {
+
+        $('tbody').on('click', '.edit_btn', function (e) {
+
+            // 获取用例id
+            var interface_test_id = $(this).parent().parent().attr('interface_test_id');
+            // 拼接url
+            var new_url = edit_interface_test_page_url + interface_test_id + '/';
+            // 首页的iframe请求结果页面
+            $(window.parent.document).find('iframe').attr('src', new_url)
+
+        })
+
+    }
+
+    function click_search_btn_event(){
+
+        $('#search_btn').click(function (e) {
+            var opt = $('#opt').find('option:selected').val();
+            var search_content = $('#search_content').val();
+            var new_url = `${interface_test_url}?opt=${opt}&&search_content=${search_content}`;
+            // 让其请求新的url
+            $(window.parent.document).find('iframe').attr('src', new_url);
+        });
+
+    }
+
+    all_event();
 
 </script>
 </body>

@@ -44,8 +44,8 @@
         <label class="col-md-2 control-label" for="interface_type">接口类型</label>
         <div class="col-md-3">
             <select class="form-control" id="interface_type">
-                <option value="0" selected>普通接口</option>
-                <option value="1">公用接口</option>
+                <option value="general" selected>普通接口</option>
+                <option value="public">公用接口</option>
             </select>
         </div>
         <!--<span class="help-block">注：公用接口所有人都可以看到并测试。</span>-->
@@ -66,10 +66,10 @@
             <div class="input-group">
                 <div class="input-group-btn">
                     <select class="form-control pull-right" style="width: 100px;" id="request_type">
-                        <option value="get" selected>GET</option>
-                        <option value="post">POST</option>
-                        <option value="put">PUT</option>
-                        <option value="delete">DELETE</option>
+                        <option value="GET" selected>GET</option>
+                        <option value="POST">POST</option>
+                        <option value="PUT">PUT</option>
+                        <option value="DELETE">DELETE</option>
                     </select>
                 </div>
                 <input type="text" class="form-control" placeholder="例：http://www.baidu.com" id="request_url">
@@ -152,7 +152,7 @@
     <!-- 保存测试的接口数据 -->
     <div class="form-group">
         <div class="col-md-9 col-md-offset-2">
-            <input type="button" class="btn btn-success" value="添加" id="save_interface_data_btn">
+            <input type="button" class="btn btn-success" value="保存" id="save_interface_data_btn">
             <input type="button" class="btn btn-primary pull-right" value="重置" id="reset_btn">
         </div>
     </div>
@@ -169,6 +169,9 @@
     var all_project_data;
     // 项目选项标签
     var project_label;
+    // 编辑的id
+    var edit_interface_test_id = {{ interface_test_id }};
+
 </script>
 <script>
 
@@ -191,7 +194,7 @@
         click_reset_btn_event();
         // 点击临时测试的事件
         click_test_btn_event();
-        // 点击添加接口测试数据的事件
+        // 点击添加接口测试数据的事件(编辑也走该事件)
         click_save_interface_data_btn_event();
     }
 
@@ -205,6 +208,53 @@
                 $('#project_div').append(project_label);
             }
         });
+        // 获取编辑的接口数据
+        if (typeof edit_interface_test_id !== 'undefined'){
+            var new_url = get_interface_test_data + edit_interface_test_id + '/';
+            $.ajax({
+                url: new_url,
+                type: 'get',
+                success: function (response) {
+                    // 渲染数据
+                    $('#interface_name').val(response['interface_name']);
+                    $('#project_id').find(`option[value=${response['project_id']}]`).prop('selected', true);
+                    $('#interface_type').find(`option[value=${response['interface_type']}]`).prop('selected', true);
+                    $('#interface_description').val(response['interface_description']);
+                    $('#request_type').find(`option[value=${'request_type'}]`).prop('selected', true);
+                    $('#request_url').val(response['request_url']);
+
+                    for (var i=0;i<response['request_params'].length;i++){
+                        var request_params = response['request_params'][i];
+                        // 先创建一行数据
+                        $('.request_params_content tbody').append(create_row_request_data());
+                        // 渲染
+                        var tr_ele = $('.request_params_content tbody').children().eq(i);
+                        tr_ele.find('input').eq(1).val(request_params['key']);
+                        tr_ele.find('input').eq(2).val(request_params['value']);
+                        tr_ele.find('input').eq(3).val(request_params['description']);
+                        tr_ele.find('input').eq(4).prop('checked', request_params['execute']);
+                    };
+
+                    for (var i=0;i<response['header_params'].length;i++){
+                        var header_params = response['header_params'][i];
+                        // 先创建一行数据
+                        $('.header_params_content tbody').append(create_row_request_data());
+                        // 渲染
+                        var tr_ele = $('.header_params_content tbody').children().eq(i);
+                        tr_ele.find('input').eq(1).val(header_params['key']);
+                        tr_ele.find('input').eq(2).val(header_params['value']);
+                        tr_ele.find('input').eq(3).val(header_params['description']);
+                        tr_ele.find('input').eq(4).prop('checked', header_params['execute']);
+                    };
+
+                },
+                error: function (xhr) {
+                    console.log(xhr.response);
+                }
+            });
+
+        };
+
     })();
 
     function create_row_request_data() {
@@ -426,20 +476,32 @@
             console.log(data);
 
             data = JSON.stringify(data);
+
+            var request_type = 'post';
+            // 走编辑的请求
+            if (typeof edit_interface_test_id !== 'undefined'){
+                request_type = 'put';
+            }
             // 提交数据
             $.ajax({
                 url: interface_test_url,
-                type: 'post',
+                type: request_type,
                 data: data,
                 contentType: false,
                 success: function (response) {
-                    window.parent.toastr.success('添加成功!');
-                    // 添加成功刷新页面
-                    // $(window.parent.document).find('iframe')[0].contentWindow.location.reload();
+                    if (request_type == 'post'){
+                        window.parent.toastr.success('添加成功!');
+                        // 添加成功刷新页面
+                        // $(window.parent.document).find('iframe')[0].contentWindow.location.reload();
+                    }else{
+                        window.parent.toastr.success(`接口数据保存成功!`);
+                        window.history.back();
+                    }
+
                 },
                 error: function (xhr) {
-                    window.parent.toastr.success(xhr.response);
-                    console.log('error: ', xhr.response);
+                    window.parent.toastr.error(JSON.parse(xhr.responseText)['error']);
+                    console.log('error: ', JSON.parse(xhr.responseText)['error']);
                 }
             });
 

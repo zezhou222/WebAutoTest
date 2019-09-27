@@ -2,7 +2,7 @@ from flask import (
     Blueprint,
     request,
     # jsonify,
-)
+    session)
 from flask.views import MethodView
 
 from lib.global_func import (
@@ -64,6 +64,7 @@ class Project_opt(MethodView):
         if not flag:
             return {'error': error}, 422
         # 添加项目数据
+        data['user_id'] = session.get('user_id')
         save_data_to_db(db, [Project(**data)])
 
         return ret, status_code
