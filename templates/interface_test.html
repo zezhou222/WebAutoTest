@@ -168,9 +168,9 @@
         $('tbody').on('click', '.execute_result', function (e) {
 
             // 获取用例id
-            var use_case_id = $(this).parent().parent().attr('use_case_id');
+            var interface_test_id = $(this).parent().parent().attr('interface_test_id');
             // 拼接url
-            var new_url = get_use_case_result_url + '?use_case_id=' + use_case_id;
+            var new_url = interface_test_result_url + interface_test_id + '/';
             // 首页的iframe请求结果页面
             $(window.parent.document).find('iframe').attr('src', new_url)
 

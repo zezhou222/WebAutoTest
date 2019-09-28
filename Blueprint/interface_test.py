@@ -4,7 +4,7 @@ from flask import (Blueprint, request, jsonify, session, render_template)
 from flask.views import MethodView
 from sqlalchemy import or_
 
-from lib.models import (Params, Interface_test, Userinfo, Project, InterfaceTestResult)
+from lib.models import (Params, Interface_test, Userinfo, Project, Interface_test_result)
 from lib.global_func import get_db, send_to_selenium
 from lib.myrequest import MyRequest
 from lib.paging import Paging
@@ -137,7 +137,6 @@ class InterfaceTest(MethodView):
                 temp_obj.append(Params(**dic))
             db.add_all(temp_obj)
             db.commit()
-            db.close()
         except Exception as err:
             # 添加数据出错执行回滚操作
             print('添加接口数据出错：', err)
@@ -158,7 +157,7 @@ class InterfaceTest(MethodView):
 
         try:
             # (1) 删除接口测试结果
-            db.query(InterfaceTestResult).filter(InterfaceTestResult.interface_test_id == interface_test_id).delete()
+            db.query(Interface_test_result).filter(Interface_test_result.interface_test_id == interface_test_id).delete()
             db.commit()
             # (2) 删除接口参数
             db.query(Params).filter(Params.interface_test_id == interface_test_id).delete()
@@ -166,7 +165,6 @@ class InterfaceTest(MethodView):
             # (3) 删除接口测试数据
             db.query(Interface_test).filter(Interface_test.id == interface_test_id).delete()
             db.commit()
-            db.close()
         except Exception as error:
             db.rollback()
             print('删除接口测试数据失败: ', error)
@@ -182,3 +180,38 @@ class InterfaceTest(MethodView):
 
 
 app.add_url_rule(rule='/api/interface_test/', endpoint='interface_test', view_func=InterfaceTest.as_view(name='interface_test'))
+
+
+class InterfaceTestResult(MethodView):
+
+    def get(self, interface_test_id):
+        db = get_db()
+        inter_obj = db.query(Interface_test).filter(Interface_test.id == interface_test_id).first()
+
+        result_objs = db.query(Interface_test_result).filter(Interface_test_result.interface_test_id == interface_test_id)
+        # 倒序
+        result_objs = result_objs.order_by(Interface_test_result.id.desc())
+        # 分页
+        data_sum = result_objs.count()
+        page = Paging(request, request.args.get('page', 1), data_sum, show_num=5)
+
+        # 取数据
+        result_objs = result_objs[page.start: page.end]
+
+        return render_template('interface_test_result.html', result_objs=result_objs, inter_obj=inter_obj, page=page)
+
+    def delete(self, interface_test_id):
+        result_id = interface_test_id
+        db = get_db()
+        try:
+            db.query(Interface_test_result).filter(Interface_test_result.id == result_id).delete()
+            db.commit()
+        except Exception as error:
+            db.rollback()
+            print('删除接口测试结果失败：', error)
+            return {'error': '删除失败!'}, 500
+
+        return {}, 204
+
+
+app.add_url_rule(rule='/api/interface_test_result/<int:interface_test_id>/', endpoint='interface_test_result', view_func=InterfaceTestResult.as_view(name='interface_test_result'))

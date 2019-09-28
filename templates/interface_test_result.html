@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/static/bootstrap-3.3.7-dist/css/bootstrap.css">
+</head>
+<body>
+
+<div class="container-fluid" style="padding: 10px 30px;">
+    <div class="row">
+        <h5 class="text-center"><b>接口测试名称：</b>{{ inter_obj.interface_name }}</h5>
+        <h5 class="text-center"><b>接口测试描述：</b>{{ inter_obj.interface_description }}</h5>
+        <h5 class="text-center"><b>请求类型：</b>{{ inter_obj.request_type }}</h5>
+        <h5 class="text-center"><b>请求URL：</b>{{ inter_obj.request_url }}</h5>
+    </div>
+    <div class="row">
+        <button type="button" class="btn btn-default pull-right" id="refresh_page">
+            <span class="glyphicon glyphicon-refresh" aria-hidden="true"></span>
+        </button>
+    </div>
+    <div class="row">
+        <table class="table table-striped table-hover">
+            <thead>
+            <tr>
+                <td width="50">序号</td>
+                <td>执行状态</td>
+                <td>开始时间</td>
+                <td>结束时间</td>
+                <td>执行状态码</td>
+                <td width="500">执行结果</td>
+                <td>操作</td>
+            </tr>
+            </thead>
+            <tbody>
+            {% for obj in result_objs %}
+                <tr>
+                    <td>{{ loop.index }}</td>
+                    {% if obj.state == 'executing' %}
+                        <td style="color: #0000e6">{{ obj.state }}</td>
+                    {% elif obj.state == 'success' %}
+                        <td style="color: #00e600">{{ obj.state }}</td>
+                    {% else %}
+                        <td style="color: #f00000">{{ obj.state }}</td>
+                    {% endif %}
+                    <td>{{ obj.execute_time }}</td>
+                    <td>
+                    {% if obj.state != 'executing' %}
+                        {{ obj.end_time }}
+                    {% endif %}
+                    </td>
+                    <td>
+                    {% if obj.state != 'executing' %}
+                        {{ obj.state_code }}
+                    {% endif %}
+                    </td>
+                    <td>
+                    {% if obj.state != 'executing' %}
+                        <textarea name="" id="" cols="" rows="5" class="form-control">{{ obj.result }}</textarea>
+                    {% endif %}
+                    </td>
+                    <td interface_test_result_id="{{ obj.id }}">
+                        {% if obj.state != 'executing' %}
+                            <button class="btn btn-success btn-xs del_result_btn">删除记录</button>
+                        {% endif %}
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <div class="row">
+        <!-- 生成页码标签 -->
+        {{ page.make_label()|safe }}
+    </div>
+
+</div>
+
+<script src="/static/js/jquery-3.4.1.js"></script>
+<script src="/static/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+
+<script src="/static/js/settings.js"></script>
+<script>
+
+    function all_event() {
+        // 刷新页面事件
+        click_refresh_page_button_event();
+        // 删除记录的事件
+        click_del_result_event();
+    }
+
+    function click_refresh_page_button_event(){
+
+        $('#refresh_page').click(function (e) {
+            // 刷新iframe
+            $(window.parent.document).find('iframe')[0].contentWindow.location.reload();
+        });
+
+    }
+
+    function click_del_result_event(){
+
+        $('tbody').on('click', '.del_result_btn', function (e) {
+            // 获取用例结果id
+            var interface_test_result_id = $(this).parent().attr('interface_test_result_id');
+            var new_url = interface_test_result_url + interface_test_result_id + '/';
+            $.ajax({
+                url: new_url,
+                type: 'delete',
+                success: function (response) {
+                    // 删除成功的动画
+                    window.parent.toastr.success('删除成功!');
+                    //刷新当前iframe请求
+                    $(window.parent.document).find('iframe')[0].contentWindow.location.reload();
+                },
+                error: function (xhr) {
+                    window.parent.toastr.error(JSON.parse(xhr.responseText)['error']);
+                }
+
+            });
+
+        })
+
+    }
+
+    all_event();
+
+</script>
+</body>
+</html>

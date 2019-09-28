@@ -3,6 +3,8 @@ import socketserver
 import json
 from datetime import datetime
 import time
+
+import requests
 from jinja2 import Template
 from concurrent.futures import ThreadPoolExecutor
 from lib.global_func import (get_cursor, commit_data)
@@ -227,8 +229,57 @@ class SeleniumServer(socketserver.BaseRequestHandler):
         # 发送
         email_obj.send_mail()
 
+    def my_request(self,data):
+        # 初始化参数
+        request_method = data[0].get('request_type')
+        request_url = data[0].get('request_url')
+        request_params = {}
+        header_params = {}
+        for dic in data:
+            if dic.get('execute') == 1:
+                if dic.get('params_type') == 'request':
+                    request_params[dic.get('key')] = dic.get('value')
+                elif dic.get('params_type') == 'header':
+                    header_params[dic.get('key')] = dic.get('value')
+
+        # 请求
+        if request_method.upper() == 'GET':
+            response = requests.request(request_method, request_url, params=request_params, headers=header_params, timeout=30)
+        else:
+            response = requests.request(request_method, request_url, data=request_params, headers=header_params, timeout=30)
+
+        # 返回响应结果
+        return response.content, response.status_code
+
     def execute_interface_test(self, data):
-        print(data)
+        print('执行的接口测试数据：', data)
+        interface_test_id = data.get('interface_test_id')
+        user_id = data.get('user_id')
+        execute_time = datetime.now()
+
+        # 初始接口测试结果数据(让客户端能先看到正在执行)
+        self.cursor.execute('insert into interface_test_result(state,execute_time,user_id,interface_test_id) value(%s,%s,%s,%s);', args=('executing', execute_time, user_id, interface_test_id))
+
+        # 获取新增数据的自增id(为之后更改执行结果做准备)
+        interface_test_result_id = self.cursor.lastrowid
+        print('接口测试新增数据的id为: ', interface_test_result_id)
+        # 提交数据，写入硬盘
+        commit_data()
+
+        # 查询接口测试数据
+        self.cursor.execute('select t1.request_type,t1.request_url,t2.params_type,t2.key,t2.value,t2.execute from interface_test as t1 left join params as t2 on t1.id=t2.interface_test_id where t1.id=%s;', args=(interface_test_id,))
+        select_result = self.cursor.fetchall()
+
+        # 执行接口测试
+        print('查询结果：', select_result)
+        result, code = self.my_request(select_result)
+        print('接口测试结果: %s\n状态码：%s' % (result, code))
+        end_time = datetime.now()
+
+        # 修改接口测试结果
+        state = 'success' if str(code)[0] == '2' else 'failed'
+        self.cursor.execute('update interface_test_result set state=%s,state_code=%s,end_time=%s,result=%s where id=%s;', args=(state, code, end_time, result[:5000], interface_test_result_id))
+        commit_data()
 
     # 客户端连接成功会先到这个方法
     def handle(self):

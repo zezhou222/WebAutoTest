@@ -220,7 +220,7 @@
                     $('#project_id').find(`option[value=${response['project_id']}]`).prop('selected', true);
                     $('#interface_type').find(`option[value=${response['interface_type']}]`).prop('selected', true);
                     $('#interface_description').val(response['interface_description']);
-                    $('#request_type').find(`option[value=${'request_type'}]`).prop('selected', true);
+                    $('#request_type').find(`option[value=${response['request_type']}`).prop('selected', true);
                     $('#request_url').val(response['request_url']);
 
                     for (var i=0;i<response['request_params'].length;i++){

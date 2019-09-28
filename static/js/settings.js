@@ -98,3 +98,6 @@ var get_interface_test_data =  server_ip + '/api/get_interface_test/';
 
 // 执行接口测试的url
 var execute_interface_test_url = server_ip + '/api/execute_interface_test/';
+
+// 获取接口测试结果的，删除结果的
+var interface_test_result_url = server_ip + '/api/interface_test_result/';

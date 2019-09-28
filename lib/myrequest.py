@@ -8,10 +8,12 @@ class MyRequest(object):
         self.url = data.get('request_url').strip()
         self.params = {}
         for dic in data.get('request_params'):
-            self.params[dic['key']] = dic['value']
+            if dic.get('execute') == 1:
+                self.params[dic['key']] = dic['value']
         self.headers = {}
         for dic in data.get('header_params'):
-            self.headers[dic['key']] = dic['value']
+            if dic.get('execute') == 1:
+                self.headers[dic['key']] = dic['value']
 
     def start(self):
         if self.method == 'get':

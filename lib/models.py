@@ -209,13 +209,15 @@ class Interface_test(Model):
     create_time = Column(DateTime, default=datetime.now())
 
 
-class InterfaceTestResult(Model):
+class Interface_test_result(Model):
 
     __tablename__ = 'interface_test_result'
 
     id = Column(Integer, primary_key=True)
 
-    status = Column(String(15), default='executing')
+    state = Column(String(15), default='executing')
+
+    state_code = Column(Integer, nullable=True)
 
     result = Column(String(5000), nullable=True)
 
