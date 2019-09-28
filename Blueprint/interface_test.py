@@ -122,8 +122,8 @@ class InterfaceTest(MethodView):
         # 验证数据,待填
 
         # 保存数据
-        db = get_db()
         try:
+            db = get_db()
             inter_obj = Interface_test(**interface_test_data)
             db.add(inter_obj)
             db.flush()
@@ -175,6 +175,36 @@ class InterfaceTest(MethodView):
     def put(self):
         interface_test_data = json.loads(request.data)
         print(interface_test_data)
+        edit_interface_test_id = interface_test_data.pop('edit_interface_test_id')
+        request_params = interface_test_data.pop('request_params')
+        header_params = interface_test_data.pop('header_params')
+        interface_test_data['user_id'] = session.get('user_id')
+
+        # 验证数据
+
+        # 更新数据
+        try:
+            db = get_db()
+            # (1) 更新接口测试数据
+            db.query(Interface_test).filter(Interface_test.id == edit_interface_test_id).update(interface_test_data)
+            # (2) 删除旧的接口参数数据
+            db.query(Params).filter(Params.interface_test_id == edit_interface_test_id).delete()
+            # (3) 添加新的接口参数数据
+            temp_obj = []
+            for dic in request_params:
+                dic['interface_test_id'] = edit_interface_test_id
+                temp_obj.append(Params(**dic))
+            for dic in header_params:
+                dic['interface_test_id'] = edit_interface_test_id
+                dic['params_type'] = 'header'
+                temp_obj.append(Params(**dic))
+            db.add_all(temp_obj)
+            # (4) 提交
+            db.commit()
+        except Exception as error:
+            print('更新接口数据出错: ', error)
+            db.rollback()
+            return {'error': '编辑有误!'}, 500
 
         return {}, 201
 
