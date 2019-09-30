@@ -1,0 +1,75 @@
+<div>
+    <div>
+        <h5><b>接口测试名称：</b>{{ interface_name }}</h5>
+        <h5><b>接口测试描述：</b>{{ interface_description }}</h5>
+        <h5><b>所属项目：</b>{{ project_name }}</h5>
+        <h5><b>执行的用户：</b>{{ username }}</h5>
+        <h5><b>请求类型：</b>{{ request_type }}</h5>
+        <h5><b>请求URL：</b>{{ request_url }}</h5>
+        <h5><b>执行状态：</b>
+            {% if state == 'failed' %}
+            <span style="color: #ec0000;">{{ state }}</span>
+            {% else %}
+            <span style="color: #00d600;">{{ state }}</span>
+            {% endif %}
+        </h5>
+        <h5><b>响应状态码：</b>{{ state_code }}</h5>
+        <h5><b>执行时间：</b>{{ execute_time }}</h5>
+        <h5><b>结束时间：</b>{{ end_time }}</h5>
+    </div>
+
+</div>
+
+{% if request_params|length() != 0 %}
+<h3>请求参数：</h3>
+<div>
+    <table border="1">
+        <thead>
+            <tr>
+                <td>key</td>
+                <td>value</td>
+                <td>description</td>
+            </tr>
+        </thead>
+        <tbody>
+        {% for dic in request_params %}
+        <tr>
+            <td>{{ dic.key }}</td>
+            <td>{{ dic.value }}</td>
+            <td>{{ dic.description }}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endif %}
+
+{% if header_params|length() != 0 %}
+<h3>请求头参数：</h3>
+<div>
+    <table border="1">
+        <thead>
+            <tr>
+                <td>key</td>
+                <td>value</td>
+                <td>description</td>
+            </tr>
+        </thead>
+        <tbody>
+        {% for dic in header_params %}
+        <tr>
+            <td>{{ dic.key }}</td>
+            <td>{{ dic.value }}</td>
+            <td>{{ dic.description }}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endif %}
+
+<br>
+<hr>
+
+<h3>执行结果：</h3>
+<textarea name="" id="" rows="20" style="width: 100%">{{ execute_result }}</textarea>

@@ -36,9 +36,13 @@ def execute_interface_test(interface_test_id=None):
     if interface_test_id == None:
         return {'error': '无效的请求'}, 404
 
-    # print(interface_test_id)
+    db = get_db()
+    user_id = session.get('user_id')
+    user_obj = db.query(Userinfo).filter(Userinfo.id == user_id).first()
+    print("执行内容：%s, 执行的用户id：%s, 执行的接口测试id：%s" % ('interface_test', user_obj.id, interface_test_id))
+
     try:
-        send_to_selenium({'opt': 'execute_interface_test', 'data': {'interface_test_id': interface_test_id, 'user_id': session.get('user_id')}})
+        send_to_selenium({'opt': 'execute_interface_test', 'data': {'interface_test_id': interface_test_id, 'user_id': session.get('user_id'), 'send_mail': user_obj.send_mail}})
     except ConnectionResetError as error:
         # 让其重新连接，但不再发数据
         send_to_selenium({}, conn_flag=True)
@@ -122,8 +126,8 @@ class InterfaceTest(MethodView):
         # 验证数据,待填
 
         # 保存数据
+        db = get_db()
         try:
-            db = get_db()
             inter_obj = Interface_test(**interface_test_data)
             db.add(inter_obj)
             db.flush()
@@ -183,8 +187,8 @@ class InterfaceTest(MethodView):
         # 验证数据
 
         # 更新数据
+        db = get_db()
         try:
-            db = get_db()
             # (1) 更新接口测试数据
             db.query(Interface_test).filter(Interface_test.id == edit_interface_test_id).update(interface_test_data)
             # (2) 删除旧的接口参数数据

@@ -9,7 +9,8 @@ from jinja2 import Template
 from concurrent.futures import ThreadPoolExecutor
 from lib.global_func import (get_cursor, commit_data)
 from core.selenium_operate import SeleniumOperate
-from conf.settings import (thread_count, step_result_template_path, sender, sender_username, sender_password, screen_shot_path)
+from conf.settings import (thread_count, step_result_template_path, sender, sender_username, sender_password,
+                           screen_shot_path, inteface_test_template_path)
 from lib.send_mail import MyEmail
 
 
@@ -186,10 +187,10 @@ class SeleniumServer(socketserver.BaseRequestHandler):
         # 用例执行完，添加完，判断是否发送邮件
         send_mail = data.get('send_mail')
         if send_mail:
-            self.send_step_result(user_id, uc_id, uc_result_id)
+            self.send_use_case_step_result(user_id, uc_id, uc_result_id)
 
 
-    def send_step_result(self, user_id, uc_id, uc_result_id):
+    def send_use_case_step_result(self, user_id, uc_id, uc_result_id):
         # 查数据库数据
         self.cursor.execute('select t1.username,t1.email, t2.name,t2.desc,t3.params,t3.execute,t4.status,t4.execute_time,t5.status,t5.error_info,t5.run_time,t5.step_id,t5.uc_result_id,t5.parent_step_id,t5.screen_shot,t6.project_name from userinfo as t1 inner join use_case as t2 inner join step_detail as t3 inner join use_case_result as t4 inner join result_step as t5 inner join project as t6 on t1.id=t2.user_id and t1.id=t4.user_id and t3.uc_id=t2.id and t4.use_case_id=t2.id and t5.uc_result_id=t4.id and t5.step_id=t3.id where t1.id=%s and t2.id=%s and t4.id=%s and t2.project_id=t6.id;', args=(user_id, uc_id, uc_result_id))
         result = self.cursor.fetchall()
@@ -221,7 +222,7 @@ class SeleniumServer(socketserver.BaseRequestHandler):
 
         # 发送邮件
         email_obj = MyEmail(sender=sender, receiver=receiver_email, username=sender_username, password=sender_password)
-        email_obj.create_email(mail_title='%s的执行报告' % uc_name)
+        email_obj.create_email(mail_title='%s的用例测试报告' % uc_name)
         email_obj.email_text(template_ret, content_type='html')
         # 添加图片附件
         for file_path in screen_shot_files:
@@ -273,13 +274,64 @@ class SeleniumServer(socketserver.BaseRequestHandler):
         # 执行接口测试
         print('查询结果：', select_result)
         result, code = self.my_request(select_result)
-        print('接口测试结果: %s\n状态码：%s' % (result, code))
+        # print('接口测试结果: %s' % result)
+        print('接口测试状态码：%s' % code)
         end_time = datetime.now()
 
         # 修改接口测试结果
         state = 'success' if str(code)[0] == '2' else 'failed'
         self.cursor.execute('update interface_test_result set state=%s,state_code=%s,end_time=%s,result=%s where id=%s;', args=(state, code, end_time, result[:5000], interface_test_result_id))
         commit_data()
+
+        # 用例执行完，添加完，判断是否发送邮件
+        send_mail = data.get('send_mail')
+        if send_mail:
+            self.send_interface_test_result(user_id, interface_test_id, interface_test_result_id)
+
+    def send_interface_test_result(self, user_id, interface_test_id, interface_test_result_id):
+        self.cursor.execute('select t1.id,t1.interface_name,t1.interface_type,t1.interface_description,t1.request_type,t1.request_url,t4.project_name,t2.params_type,t2.key,t2.value,t2.description,t2.execute,t3.state,t3.state_code,t3.result,t3.execute_time,t3.end_time,t5.username,t5.email from interface_test as t1 left join params as t2 on t1.id=t2.interface_test_id left join interface_test_result as t3 on t1.id=t3.interface_test_id left join project as t4 on t1.project_id=t4.id left join userinfo as t5 on t1.user_id=t5.id  where t1.id=%s and t3.id=%s;', args=(interface_test_id, interface_test_result_id))
+        result = self.cursor.fetchall()
+        # print(result)
+        # 格式化数据
+        username = result[0].get('username')
+        receiver_email = result[0].get('email')
+        project_name = result[0].get('project_name')
+        interface_name = result[0].get('interface_name')
+        interface_description = result[0].get('interface_description')
+        request_type = result[0].get('request_type')
+        request_url = result[0].get('request_url')
+        state = result[0].get('state')
+        state_code = result[0].get('state_code')
+        execute_result = result[0].get('result')
+        execute_time = str(result[0].get('execute_time'))
+        end_time = str(result[0].get('end_time'))
+        request_params = []
+        header_params = []
+        for dic in result:
+            if dic.get('execute') == 1:
+                if dic.get('params_type') == 'request':
+                    request_params.append({'key': dic.get('key'), 'value': dic.get('value'), 'description': dic.get('description')})
+                elif dic.get('params_type') == 'header':
+                    header_params.append({'key': dic.get('key'), 'value': dic.get('value'), 'description': dic.get('description')})
+                else:
+                    raise ValueError('发送接口测试报告--格式化数据出错!')
+
+        # 读取模板文件进行渲染
+        with open(inteface_test_template_path, 'r', encoding='utf-8') as f:
+            data = f.read()
+        template = Template(data)
+        template_ret = template.render(locals())
+
+        # 查看渲染的数据
+        # with open('temp.html', mode='w') as f:
+        #     f.write(template_ret)
+
+        # 发送邮件
+        email_obj = MyEmail(sender=sender, receiver=receiver_email, username=sender_username, password=sender_password)
+        email_obj.create_email(mail_title='%s的接口测试报告' % interface_name)
+        email_obj.email_text(template_ret, content_type='html')
+        # 发送
+        email_obj.send_mail()
 
     # 客户端连接成功会先到这个方法
     def handle(self):

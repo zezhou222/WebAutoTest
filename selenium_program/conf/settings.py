@@ -15,8 +15,10 @@ db_charset = 'utf8'
 # 开几个线程也表示了能同时执行几个用例
 thread_count = 5
 
-# 执行结果的模板页面路径
+# 执行用例结果的模板页面路径
 step_result_template_path = os.path.join(project_path, 'file', 'step_result.html')
+# 接口测试结果的模板页面路径
+inteface_test_template_path = os.path.join(project_path, 'file', 'interface_test_result.html')
 
 # 发送邮件的配置
 sender = '523198313@qq.com'

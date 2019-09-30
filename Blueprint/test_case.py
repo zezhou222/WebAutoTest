@@ -186,10 +186,10 @@ def execute_use_case():
     ret = {'flag': 0}
 
     db = get_db()
-    username = session.get('login_user')
-    user_obj = db.query(Userinfo).filter(Userinfo.username == username).first()
+    user_id = session.get('user_id')
+    user_obj = db.query(Userinfo).filter(Userinfo.id == user_id).first()
     to_execute_uc_id = request.form.get('use_case_id')
-    print("执行的用户id：%s, 执行的用例id：%s" % (user_obj.id, to_execute_uc_id))
+    print("执行内容：%s, 执行的用户id：%s, 执行的用例id：%s" % ('use_case_test', user_obj.id, to_execute_uc_id))
 
     # 要执行的用例，及各种数据发送至selenium端，让其执行用例(web端和执行端拆开)
     try:
