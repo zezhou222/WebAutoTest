@@ -11,11 +11,14 @@ from lib.global_func import (get_cursor, commit_data)
 from core.selenium_operate import SeleniumOperate
 from conf.settings import (thread_count, step_result_template_path, sender, sender_username, sender_password,
                            screen_shot_path, inteface_test_template_path)
+from lib.log import get_logger
 from lib.send_mail import MyEmail
 
 
 # 开启线程池
 thread = ThreadPoolExecutor(thread_count)
+# 日志对象
+logger = get_logger()
 
 
 class SeleniumServer(socketserver.BaseRequestHandler):
@@ -46,7 +49,8 @@ class SeleniumServer(socketserver.BaseRequestHandler):
 
         # 循环操作selenium步骤
         for dic in result:
-            print('小步骤：', dic)
+            logger.debug('小步骤：', dic)
+
             # 单个步骤结果
             single_status = 1
             # 错误信息
@@ -111,7 +115,7 @@ class SeleniumServer(socketserver.BaseRequestHandler):
             try:
                 ret = getattr(self.selenium_obj, step_method)(all_step)
             except Exception as error:
-                print('执行%s步骤出问题，错误信息:%s' % (dic.get('params'), error))
+                logger.warning('执行%s步骤出问题，错误信息:%s' % (dic.get('params'), error))
                 # 修改状态标志
                 whole_status = 'failed'
                 single_status = 0
@@ -158,7 +162,8 @@ class SeleniumServer(socketserver.BaseRequestHandler):
 
         # 获取新增数据的自增id
         uc_result_id = self.cursor.lastrowid
-        print('新增数据的id为: ', uc_result_id)
+        logger.debug('新增用例数据的id为: %s' % uc_result_id)
+
         # 提交数据
         commit_data()
 
@@ -171,8 +176,8 @@ class SeleniumServer(socketserver.BaseRequestHandler):
         # 执行全部步骤！！存放result_step表的数据，单个小步骤执行的结果及错误信息，以及全局的标志
         execute_data, whole_status, screen_shot_flag = self.execute_use_case_step(result, uc_result_id)
 
-        print('小步骤的执行结果:', execute_data)
-        print('小步骤的执行状态:', whole_status, screen_shot_flag)
+        logger.debug('小步骤的执行结果: %s' % execute_data)
+        logger.debug('小步骤的执行状态: %s  %s' % (whole_status, screen_shot_flag))
 
         # 结束时间
         end_time = datetime.now()
@@ -253,7 +258,8 @@ class SeleniumServer(socketserver.BaseRequestHandler):
         return response.content, response.status_code
 
     def execute_interface_test(self, data):
-        print('执行的接口测试数据：', data)
+        logger.debug('执行的接口测试数据：%s' % data)
+
         interface_test_id = data.get('interface_test_id')
         user_id = data.get('user_id')
         execute_time = datetime.now()
@@ -263,7 +269,8 @@ class SeleniumServer(socketserver.BaseRequestHandler):
 
         # 获取新增数据的自增id(为之后更改执行结果做准备)
         interface_test_result_id = self.cursor.lastrowid
-        print('接口测试新增数据的id为: ', interface_test_result_id)
+        logger.debug('接口测试新增数据的id为: %s' % interface_test_result_id)
+
         # 提交数据，写入硬盘
         commit_data()
 
@@ -272,10 +279,10 @@ class SeleniumServer(socketserver.BaseRequestHandler):
         select_result = self.cursor.fetchall()
 
         # 执行接口测试
-        print('查询结果：', select_result)
+        logger.debug('查询结果：%s' % select_result)
         result, code = self.my_request(select_result)
-        # print('接口测试结果: %s' % result)
-        print('接口测试状态码：%s' % code)
+        # logger.debug('接口测试结果: %s' % result)
+        logger.debug('接口测试状态码：%s' % code)
         end_time = datetime.now()
 
         # 修改接口测试结果
@@ -291,7 +298,8 @@ class SeleniumServer(socketserver.BaseRequestHandler):
     def send_interface_test_result(self, user_id, interface_test_id, interface_test_result_id):
         self.cursor.execute('select t1.id,t1.interface_name,t1.interface_type,t1.interface_description,t1.request_type,t1.request_url,t4.project_name,t2.params_type,t2.key,t2.value,t2.description,t2.execute,t3.state,t3.state_code,t3.result,t3.execute_time,t3.end_time,t5.username,t5.email from interface_test as t1 left join params as t2 on t1.id=t2.interface_test_id left join interface_test_result as t3 on t1.id=t3.interface_test_id left join project as t4 on t1.project_id=t4.id left join userinfo as t5 on t1.user_id=t5.id  where t1.id=%s and t3.id=%s;', args=(interface_test_id, interface_test_result_id))
         result = self.cursor.fetchall()
-        # print(result)
+        # logger.debug('发送接口测试结果的数据：%s' % result)
+
         # 格式化数据
         username = result[0].get('username')
         receiver_email = result[0].get('email')
@@ -341,7 +349,8 @@ class SeleniumServer(socketserver.BaseRequestHandler):
         self.selenium_obj = SeleniumOperate()
         # 数据库的操作句柄
         self.cursor = get_cursor()
-        print(addr, '连接--')
+
+        logger.info('%s %s' % (addr, '连接--'))
         while 1:
             # 接收内容
             try:
@@ -352,7 +361,7 @@ class SeleniumServer(socketserver.BaseRequestHandler):
             if content == b'':
                 break
 
-            print('发送的数据:', content)
+            logger.debug('接收的数据: %s' % content)
             # 执行操作方法
             content = json.loads(content.decode('utf-8'))
             opt = content.get('opt')
@@ -364,7 +373,8 @@ class SeleniumServer(socketserver.BaseRequestHandler):
             else:
                 break
 
-        print(addr, '断开连接--')
+        logger.info("%s %s" % (addr, '断开连接--'))
+
         conn.close()
 
 

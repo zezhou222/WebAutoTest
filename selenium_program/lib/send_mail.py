@@ -4,6 +4,10 @@ from email.header import Header
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
+from lib.log import get_logger
+
+logger = get_logger()
+
 
 class MyEmail(object):
 
@@ -50,14 +54,14 @@ class MyEmail(object):
             smtpObj.login(self.username, self.password)
             # 给qq邮箱发送用户名和授权码，进行验证，如果账号没有授权会返回smtplib.SMTPAuthenticationError
         except smtplib.SMTPAuthenticationError:
-            print('请检查用户名和授权码是否添加正确！')
+            logger.error('连接邮件服务器--请检查用户名和授权码是否添加正确！')
             return
         else:
             self.smtpObj = smtpObj
 
     def send_mail(self):
         self.smtpObj.sendmail(self.sender, self.receiver, self.message.as_string())  # 发送一封邮件
-        print("(%s) 邮件发送成功！！！" % self.mail_title)
+        logger.debug("(%s) 邮件发送成功！！！" % self.mail_title)
 
     def __del__(self):
         self.smtpObj.close()

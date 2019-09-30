@@ -6,13 +6,15 @@ from flask import (
     jsonify,
     session)
 
-from lib.global_func import (get_random_filename, get_db)
+from lib.global_func import (get_random_filename, get_db, get_logger)
 from settings import (temp_path)
 from lib.use_case_func import (add_uc_data, check_public_uc_name)
 from lib.models import (Project)
 
 
 app = Blueprint(name='use_case_data', import_name='use_case_data')
+
+logger = get_logger()
 
 
 def read_file_content(f, size, read_size=4096):

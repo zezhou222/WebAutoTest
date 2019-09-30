@@ -1,0 +1,8 @@
+[2019-09-30 17:40:11,591] INFO in _internal-122: 127.0.0.1 - - [30/Sep/2019 17:40:11] "GET /index/ HTTP/1.1" 200 -
+[2019-09-30 17:40:11,858] INFO in _internal-122: 127.0.0.1 - - [30/Sep/2019 17:40:11] "GET /get_use_case_page/ HTTP/1.1" 200 -
+[2019-09-30 17:40:12,033] INFO in _internal-122: 127.0.0.1 - - [30/Sep/2019 17:40:12] "GET /static/img/favicon.ico HTTP/1.1" 200 -
+[2019-09-30 17:40:24,477] INFO in _internal-122: 127.0.0.1 - - [30/Sep/2019 17:40:24] "GET /api/interface_test/ HTTP/1.1" 200 -
+[2019-09-30 17:40:25,615] DEBUG in interface_test-50: 执行内容：interface_test, 执行的用户id：1, 执行的接口测试id：13
+[2019-09-30 17:40:25,616] INFO in _internal-122: 127.0.0.1 - - [30/Sep/2019 17:40:25] "GET /api/execute_interface_test/13/ HTTP/1.1" 202 -
+[2019-09-30 17:40:26,447] DEBUG in login_register-60: 登陆数据: {'username': 'admin', 'password': 'admin'}
+[2019-09-30 17:40:26,458] INFO in _internal-122: 127.0.0.1 - - [30/Sep/2019 17:40:26] "POST /user_login/ HTTP/1.1" 200 -

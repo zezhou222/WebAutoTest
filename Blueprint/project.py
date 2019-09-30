@@ -8,7 +8,9 @@ from flask.views import MethodView
 from lib.global_func import (
     get_db,
     save_data_to_db,
+    get_logger
 )
+
 from lib.models import (
     Project,
     project_name_length,
@@ -17,6 +19,8 @@ from lib.models import (
 
 
 app = Blueprint(name='project', import_name=__name__)
+
+logger = get_logger()
 
 
 class Project_opt(MethodView):

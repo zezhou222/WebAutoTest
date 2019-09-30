@@ -2,12 +2,15 @@ from flask import (Blueprint, request, jsonify, session)
 from flask.views import MethodView
 from lib.flask_form import UseCaseForm
 from sqlalchemy.sql import or_
+
 from lib.models import (Use_case_step, Userinfo, Use_case, Step_detail, Use_case_result, Result_step, Project)
-from lib.global_func import (get_db, save_data_to_db, del_db_data, send_to_selenium)
+from lib.global_func import (get_db, save_data_to_db, del_db_data, send_to_selenium, get_logger)
 from lib.use_case_func import (check_public_uc_name, check_general_uc_name, add_uc_data)
 
 
 app = Blueprint(name='test_case', import_name=__name__)
+
+logger = get_logger()
 
 
 @app.route(rule='/get_step_options/')
@@ -20,7 +23,7 @@ def get_use_case_step():
     step_data = {}
     for obj in objs:
         step_data[obj.step_method_name] = {'step_name': obj.step_name, 'step_length': obj.step_length}
-    # print(step_data)
+    logger.debug('获取步骤选项数据: %s' % step_data)
     return jsonify(step_data)
 
 
@@ -189,7 +192,8 @@ def execute_use_case():
     user_id = session.get('user_id')
     user_obj = db.query(Userinfo).filter(Userinfo.id == user_id).first()
     to_execute_uc_id = request.form.get('use_case_id')
-    print("执行内容：%s, 执行的用户id：%s, 执行的用例id：%s" % ('use_case_test', user_obj.id, to_execute_uc_id))
+
+    logger.debug("执行内容：%s, 执行的用户id：%s, 执行的用例id：%s" % ('use_case_test', user_obj.id, to_execute_uc_id))
 
     # 要执行的用例，及各种数据发送至selenium端，让其执行用例(web端和执行端拆开)
     try:

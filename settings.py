@@ -25,3 +25,9 @@ sender_password = 'ycfnekkursixcaif'
 
 # 临时文件夹路径
 temp_path = os.path.join(project_path, 'temp')
+
+# web日志路径
+web_log_path = os.path.join(project_path, 'temp', 'web_log.txt')
+# 日志级别
+# 级别：debug, info, warning, error, critical
+web_log_level = 'debug'

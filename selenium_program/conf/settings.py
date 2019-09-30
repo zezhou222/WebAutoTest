@@ -31,3 +31,9 @@ screen_shot_path = os.path.join(os.path.dirname(project_path), 'static', 'screen
 # 查找标签相关的
 find_ele_timeout_time = 5
 find_ele_per_second = 0.5
+
+# selenium端日志路径
+log_path = os.path.join(project_path, 'temp', 'log.txt')
+# 日志级别
+# 级别：debug, info, warning, error, critical
+log_level = 'debug'

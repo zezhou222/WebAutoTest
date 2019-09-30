@@ -1,12 +1,14 @@
 from flask import (Blueprint, render_template, session, request)
 from sqlalchemy.sql import or_, and_
-from lib.global_func import get_db
+from lib.global_func import get_db, get_logger
 from lib.models import (Userinfo, Use_case, Project)
 from lib.paging import Paging
 from lib.flask_form import UseCaseForm
 
 
 app = Blueprint(name='return_page', import_name=__name__)
+
+logger = get_logger()
 
 
 @app.route(rule='/login/')

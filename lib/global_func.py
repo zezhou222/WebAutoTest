@@ -83,5 +83,10 @@ def get_random_filename():
     return md5.hexdigest() + '.png'
 
 
+def get_logger():
+    from run_web import main_app
+    return main_app.logger
+
+
 if __name__ == '__main__':
     print(make_random_code())

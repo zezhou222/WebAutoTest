@@ -1,10 +1,20 @@
+import logging
 from flask import (Blueprint, request, session, jsonify, make_response)
-from lib.global_func import (get_md5, get_db, save_data_to_db, make_random_code)
+from lib.global_func import (
+    get_md5,
+    get_db,
+    save_data_to_db,
+    make_random_code,
+    get_logger
+)
 from lib.models import (Userinfo, Role)
 from lib.send_mail import MyEmail
 from settings import sender, sender_username, sender_password
 
+
 app = Blueprint(name='login_register', import_name=__name__)
+
+logger = get_logger()
 
 
 def check_username_exists(username):
@@ -22,6 +32,8 @@ def register():
     # 获取数据
     data = request.form.to_dict()
     username = data.get('username')
+
+    logger.debug('注册数据: %s' % data)
 
     # 验证数据
     # 验证用户名是否存在
@@ -44,6 +56,8 @@ def register():
 def login():
     ret = {'flag': 0}
     data = request.form.to_dict()
+
+    logger.debug('登陆数据: %s' % data)
 
     # 验证数据
     db = get_db()
@@ -83,6 +97,9 @@ def alter_pwd():
     user_id = session.get('user_id')
     username = session.get('login_user')
     data = request.form.to_dict()
+
+    logger.debug('修改密码数据: %s' % data)
+
     if data.get('new_pwd1') != data.get('new_pwd2'):
         ret['flag'] = 1
         ret['error_info'] = '???'

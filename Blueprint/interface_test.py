@@ -5,16 +5,23 @@ from flask.views import MethodView
 from sqlalchemy import or_
 
 from lib.models import (Params, Interface_test, Userinfo, Project, Interface_test_result)
-from lib.global_func import get_db, send_to_selenium
+from lib.global_func import (
+    get_db,
+    send_to_selenium,
+    get_logger,
+)
 from lib.myrequest import MyRequest
 from lib.paging import Paging
 
-app = Blueprint(name="interface_test", import_name=__name__)
+interface_test_app = Blueprint(name="interface_test", import_name=__name__)
+# 日志的
+logger = get_logger()
 
 
-@app.route(rule='/api/temp_execute_interface_test/', methods=['post'])
+@interface_test_app.route(rule='/api/temp_execute_interface_test/', methods=['post'])
 def temp_interface_test():
     data = json.loads(request.data)
+    logger.debug('临时执行接口测试数据: %s' % data)
     try:
         obj = MyRequest(data)
         response = obj.start()
@@ -31,15 +38,16 @@ def temp_interface_test():
         return "request timeout.", 406
 
 
-@app.route(rule='/api/execute_interface_test/<int:interface_test_id>/')
+@interface_test_app.route(rule='/api/execute_interface_test/<int:interface_test_id>/')
 def execute_interface_test(interface_test_id=None):
     if interface_test_id == None:
         return {'error': '无效的请求'}, 404
 
     db = get_db()
+    logger = get_logger()
     user_id = session.get('user_id')
     user_obj = db.query(Userinfo).filter(Userinfo.id == user_id).first()
-    print("执行内容：%s, 执行的用户id：%s, 执行的接口测试id：%s" % ('interface_test', user_obj.id, interface_test_id))
+    logger.debug("执行内容：%s, 执行的用户id：%s, 执行的接口测试id：%s" % ('interface_test', user_obj.id, interface_test_id))
 
     try:
         send_to_selenium({'opt': 'execute_interface_test', 'data': {'interface_test_id': interface_test_id, 'user_id': session.get('user_id'), 'send_mail': user_obj.send_mail}})
@@ -47,13 +55,13 @@ def execute_interface_test(interface_test_id=None):
         # 让其重新连接，但不再发数据
         send_to_selenium({}, conn_flag=True)
         # 告诉前端这次请求失败
-        print('连接selenium失败.', error)
+        logger.warning('连接selenium失败. %s' % error)
         return {'error': '执行失败! 请稍后重试.'}, 500
 
     return {}, 202
 
 
-@app.route(rule='/api/get_interface_test/<int:interface_test_id>/')
+@interface_test_app.route(rule='/api/get_interface_test/<int:interface_test_id>/')
 def get_interface_test_data(interface_test_id):
     if interface_test_id is None:
         return {'error': 'not found.'}, 404
@@ -143,7 +151,7 @@ class InterfaceTest(MethodView):
             db.commit()
         except Exception as err:
             # 添加数据出错执行回滚操作
-            print('添加接口数据出错：', err)
+            logger.error('添加接口数据出错: %s' % err)
             db.rollback()
             return {'error': '添加出错！'}, 422
 
@@ -171,14 +179,16 @@ class InterfaceTest(MethodView):
             db.commit()
         except Exception as error:
             db.rollback()
-            print('删除接口测试数据失败: ', error)
+            logger.error('删除接口测试数据失败: %s' % error)
             return {'error': '删除失败!'}, 500
 
         return {}, 204
 
     def put(self):
         interface_test_data = json.loads(request.data)
-        print(interface_test_data)
+
+        logger.debug('接口测试的更新数据提交内容: %s' % interface_test_data)
+
         edit_interface_test_id = interface_test_data.pop('edit_interface_test_id')
         request_params = interface_test_data.pop('request_params')
         header_params = interface_test_data.pop('header_params')
@@ -206,14 +216,14 @@ class InterfaceTest(MethodView):
             # (4) 提交
             db.commit()
         except Exception as error:
-            print('更新接口数据出错: ', error)
+            logger.error('更新接口数据出错: %s' % error)
             db.rollback()
             return {'error': '编辑有误!'}, 500
 
         return {}, 201
 
 
-app.add_url_rule(rule='/api/interface_test/', endpoint='interface_test', view_func=InterfaceTest.as_view(name='interface_test'))
+interface_test_app.add_url_rule(rule='/api/interface_test/', endpoint='interface_test', view_func=InterfaceTest.as_view(name='interface_test'))
 
 
 class InterfaceTestResult(MethodView):
@@ -242,10 +252,10 @@ class InterfaceTestResult(MethodView):
             db.commit()
         except Exception as error:
             db.rollback()
-            print('删除接口测试结果失败：', error)
+            logger.error('删除接口测试结果失败：%s' % error)
             return {'error': '删除失败!'}, 500
 
         return {}, 204
 
 
-app.add_url_rule(rule='/api/interface_test_result/<int:interface_test_id>/', endpoint='interface_test_result', view_func=InterfaceTestResult.as_view(name='interface_test_result'))
+interface_test_app.add_url_rule(rule='/api/interface_test_result/<int:interface_test_id>/', endpoint='interface_test_result', view_func=InterfaceTestResult.as_view(name='interface_test_result'))

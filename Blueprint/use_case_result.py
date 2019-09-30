@@ -1,11 +1,13 @@
 from flask import (Blueprint, render_template, session, request, jsonify)
 from flask.views import MethodView
 from lib.models import (Use_case_result, Use_case, Result_step, Step_detail)
-from lib.global_func import (get_db, del_db_data)
+from lib.global_func import (get_db, del_db_data, get_logger)
 from lib.paging import Paging
 
 
 app = Blueprint(name='use_case_result', import_name=__name__)
+
+logger = get_logger()
 
 
 class UseCaseResult(MethodView):
