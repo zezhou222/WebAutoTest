@@ -1,6 +1,6 @@
 import json
 import requests
-from flask import (Blueprint, request, jsonify, session, render_template)
+from flask import (Blueprint, request, session, render_template, jsonify)
 from flask.views import MethodView
 from sqlalchemy import or_
 
@@ -16,6 +16,20 @@ from lib.paging import Paging
 interface_test_app = Blueprint(name="interface_test", import_name=__name__)
 # 日志的
 logger = get_logger()
+
+
+@interface_test_app.route(rule='/api/interface_test/myself/all/')
+def get_my_interface_data():
+    user_id = session.get('user_id')
+    project_id = request.args.get('project_id')
+    db = get_db()
+    objs = db.query(Interface_test).filter(Interface_test.user_id == user_id, Interface_test.project_id == project_id).all()
+    response_data = []
+    for obj in objs:
+        response_data.append({'id': obj.id, 'data': obj.interface_name})
+    logger.debug('自己所有的用例数据: %s' % response_data)
+
+    return jsonify(response_data)
 
 
 @interface_test_app.route(rule='/api/temp_execute_interface_test/', methods=['post'])

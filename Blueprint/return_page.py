@@ -63,6 +63,11 @@ def interface_test_edit(interface_test_id=None):
     return render_template('add_interface_test.html', interface_test_id=interface_test_id)
 
 
+@app.route(rule='/crontab/add/')
+def crontab_add():
+    return render_template('add_crontab.html')
+
+
 @app.route(rule='/get_use_case_page/')
 def use_case_page():
     opt = request.args.get('opt')

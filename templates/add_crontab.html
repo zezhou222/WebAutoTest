@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/static/bootstrap-3.3.7-dist/css/bootstrap.css">
+    <style>
+        .step_content{
+            height: 270px;
+            /*border: 1px solid red;*/
+            overflow-y: scroll;
+        }
+    </style>
+</head>
+<body style="width: 98%;">
+
+
+<form class="form-horizontal" style="padding-top: 50px;">
+
+    <div class="form-group">
+        <label for="task_name" class="col-md-2 control-label">任务名称</label>
+        <div class="col-md-3">
+            <input type="text" class="form-control" id="task_name" name="task_name">
+        </div>
+    </div>
+
+    <!-- 项目选择 -->
+    <div class="form-group">
+        <label class="col-md-2 control-label" for="project_id">项目选择</label>
+        <div class="col-md-3" id="project_div">
+
+        </div>
+    </div>
+
+    <!-- 测试类型(执行用例的还是接口的) -->
+    <div class="form-group">
+        <label class="col-md-2 control-label" for="test_type">测试类型</label>
+        <div class="col-md-3">
+            <select class="form-control" id="test_type">
+                <option value="use_case_test" selected>用例测试</option>
+                <option value="interface_test">接口测试</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- 显示该项目的所有用例或接口 -->
+    <div class="form-group">
+        <label class="col-md-2 control-label" for="test_data_id">测试数据</label>
+        <div class="col-md-3" id="test_data_div">
+
+        </div>
+    </div>
+
+    <!-- 任务类型(一次性、间隔、定时) -->
+    <div class="form-group">
+        <label class="col-md-2 control-label" for="task_type">任务类型</label>
+        <div class="col-md-3">
+            <select class="form-control" id="task_type">
+                <option value="crontab_task" selected>定时任务</option>
+                <option value="interval_task">间隔任务</option>
+                <option value="once_task">一次性任务</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- 不同的任务类型显示不同选择内容 -->
+    <div class="form-group">
+        <label class="col-md-2 control-label">执行时间</label>
+        <div class="col-md-5" id="execute_time_div">
+            <!-- 间隔任务标签 -->
+            <!--<div class="col-md-6" style="padding: 0 0;">-->
+                <!--<select class="form-control" id="execute_time">-->
+                    <!--<option value="seconds" selected>每秒</option>-->
+                    <!--<option value="minutes">每分</option>-->
+                    <!--<option value="hours">每时</option>-->
+                    <!--<option value="days">每天</option>-->
+                    <!--<option value="weeks">每周</option>-->
+                <!--</select>-->
+            <!--</div>-->
+            <!--<div class="col-md-6" style="padding: 0 0;">-->
+                <!--<input type="text" class="form-control">-->
+            <!--</div>-->
+
+            <!-- 一次性任务标签 -->
+            <!--<div class="col-md-6" style="padding: 0 0;">-->
+                <!--<input type="date" class="form-control">-->
+            <!--</div>-->
+            <!--<div class="col-md-2" style="padding: 0 0;">-->
+
+            <!--</div>-->
+            <!--<div class="col-md-2" style="padding: 0 0;">-->
+
+            <!--</div>-->
+            <!--<div class="col-md-2" style="padding: 0 0;">-->
+
+            <!--</div>-->
+
+
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="task_description" class="col-md-2 control-label">任务描述</label>
+        <div class="col-md-6">
+            <textarea id="task_description" name="task_description" rows="3" class="form-control"></textarea>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-9 col-md-offset-2">
+            <input type="button" class="btn btn-success" id="add_task_button" value="保存">
+        </div>
+    </div>
+
+</form>
+
+<script src="/static/js/jquery-3.4.1.js"></script>
+<script src="/static/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+
+<script src="/static/js/global_func.js"></script>
+<script src="/static/js/settings.js"></script>
+<script>
+    // 项目数据
+    var all_project_data;
+    // 项目选项标签
+    var project_label;
+
+    // // 用例数据
+    // var all_use_case_data;
+    // // 用例的标签
+    // var use_case_label;
+    //
+    // // 接口数据
+    // var all_interface_data;
+    // // 接口的标签
+    // var interface_label;
+
+    // 间隔任务的执行时间标签
+    var interval_task_label='<div class="col-md-2" style="padding: 0 0;"><select class="form-control" id="execute_time"><option value="seconds" selected>每秒</option><option value="minutes">每分</option><option value="hours">每时</option><option value="days">每天</option><option value="weeks">每周</option></select></div><div class="col-md-2" style="padding: 0 0;"><input type="text" class="form-control"></div><div class="col-md-4"><span class="help-block"> 注:输入1-59的整数</span></div>';
+
+    // 一次性任务的执行时间标签
+    var hour_label;
+    var minute_label;
+    var second_label;
+    var once_task_label;
+
+</script>
+<script>
+
+    function all_event() {
+        // 监测测试类型标签的变化，进行测试数据的变化
+        test_type_change();
+        // 监测任务类型的变化，进行执行时间的标签的变化
+        task_type_change();
+        // 监测项目的变化
+        project_change();
+    }
+
+    // 生成测试数据的标签
+    function create_test_data_label(data) {
+        var content = '<select id="test_data_id" class="form-control">';
+        for (var index=0;index<data.length;index++){
+            content += `<option value="${data[index]['id']}">${data[index]["data"]}</option>`
+        }
+        content += '</select>';
+        return content;
+    }
+
+    function create_hour_minute_second_label(id="hour",count=24) {
+        var content = `<select id=${id} class="form-control">`;
+
+        var flag = '点';
+        if (id === 'minute'){
+            flag = '分';
+        }else if(id === 'second'){
+            flag = '秒';
+        }
+
+        for (var i=0;i<count;i++){
+            content += `<option value="${i}">${i}${flag}</option>`;
+        }
+        content += '</select>';
+        return content;
+    }
+
+    // 定时任务执行的测试数据标签添加
+    function init_test_data_tabel(test_type_ele) {
+        var project_id = $('#project_id').find('option:selected').val();
+        var test_type = test_type_ele.find('option:selected').val();
+
+        if (test_type === 'use_case_test'){
+            var url = get_my_use_case_data_url;
+        }else if (test_type === 'interface_test'){
+            var url = get_my_interface_data_url;
+        }
+
+        // 用例数据
+        $.ajax({
+                url: url + '?project_id=' + project_id,
+                success: function (response) {
+                    // console.log('数据: ',response);
+
+                    // 先删除
+                    $('#test_data_div').children().remove();
+
+                    // 再添加
+                    var label = create_test_data_label(response);
+                    if (test_type === 'use_case_test'){
+                        $('#test_data_div').append(label);
+                    }else if (test_type === 'interface_test'){
+                        $('#test_data_div').append(label);
+                    }
+
+                }
+        });
+
+    }
+
+    // 初始化操作，从服务端获取数据
+    (function () {
+        // 请求项目数据
+        $.ajax({
+            url: get_project_data_url,
+            success: function (response) {
+                all_project_data = response;
+                project_label = create_project_label();
+                $('#project_div').append(project_label);
+
+                // 先让其显示一个测试数据
+                init_test_data_tabel($('#test_type'));
+            }
+        });
+
+        // 创建小时标签
+        hour_label = create_hour_minute_second_label();
+        // 创建分钟标签
+        minute_label = create_hour_minute_second_label(id='minute', count=60);
+        // 创建秒标签
+        second_label = create_hour_minute_second_label(id='second', count=60);
+        // 一次性任务标签
+        once_task_label = `<div class="col-md-4" style="padding: 0 0;"><input type="date" class="form-control"></div><div class="col-md-2" style="padding: 0 0;">${hour_label}</div><div class="col-md-2" style="padding: 0 0;">${minute_label}</div><div class="col-md-2" style="padding: 0 0;">${second_label}</div>`;
+
+    })();
+
+    function test_type_change(){
+
+        $('#test_type').change(function () {
+            init_test_data_tabel($(this));
+        });
+
+    }
+
+    function task_type_change(){
+
+        $('#task_type').change(function () {
+            var task_type = $(this).find('option:selected').val();
+            // 先删除
+            $('#execute_time_div').children().remove();
+
+            // 如果之前有获取过，则直接渲染即可
+            if (task_type === 'interval_task'){
+                $('#execute_time_div').append(interval_task_label);
+            }else if (task_type === 'once_task'){
+                $('#execute_time_div').append(once_task_label);
+            }else{
+
+            }
+
+        });
+
+    }
+
+    function project_change(){
+
+        $('#project_div').on('change', '#project_id', function () {
+           init_test_data_tabel($('#test_type'));
+        });
+
+    }
+
+    all_event();
+
+</script>
+</body>
+</html>

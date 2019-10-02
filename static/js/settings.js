@@ -101,3 +101,12 @@ var execute_interface_test_url = server_ip + '/api/execute_interface_test/';
 
 // 获取接口测试结果的，删除结果的
 var interface_test_result_url = server_ip + '/api/interface_test_result/';
+
+// 定时任务的添加界面
+var add_crontab_page_url = server_ip + '/crontab/add/';
+
+// 所有自己的用例
+var get_my_use_case_data_url = server_ip + '/api/use_case/myself/all/';
+
+// 所有自己的接口
+var get_my_interface_data_url = server_ip + '/api/interface_test/myself/all/';

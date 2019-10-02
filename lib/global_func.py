@@ -67,6 +67,7 @@ def send_to_selenium(data, conn_flag=False):
     else:
         ConnectSelenium(conn_flag)
 
+
 # 生成随机验证码
 def make_random_code():
     # 验证码取值列表

@@ -40,6 +40,20 @@ def get_public_use_case():
     return jsonify(public_uc_data)
 
 
+@app.route(rule='/api/use_case/myself/all/')
+def get_my_use_case():
+    user_id = session.get('user_id')
+    project_id = request.args.get('project_id')
+    db = get_db()
+    objs = db.query(Use_case).filter(Use_case.user_id == user_id, Use_case.project_id == project_id).all()
+    response_data = []
+    for obj in objs:
+        response_data.append({'id': obj.id, 'data': obj.name})
+    logger.debug('自己所有的用例数据: %s' % response_data)
+
+    return jsonify(response_data)
+
+
 @app.route(rule='/api/get_execute_step/')
 def get_use_case_step_data():
     db = get_db()

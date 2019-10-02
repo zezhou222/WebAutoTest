@@ -110,21 +110,21 @@
                                 class="fa fa-envelope-o"></i><span class="badge bg-orange badge-corner">10</span></a>
                             <ul aria-labelledby="notifications" class="dropdown-menu">
                                 <li><a rel="nofollow" href="#" class="dropdown-item d-flex">
-                                    <div class="msg-profile"><img src="/static/img/avatar-1.jpg" alt="..."
+                                    <div class="msg-profile"><img src="/static/img/avatar/avatar-1.jpg" alt="..."
                                                                   class="img-fluid rounded-circle"></div>
                                     <div class="msg-body">
                                         <h3 class="h5">Jason Doe</h3><span>Sent You Message</span>
                                     </div>
                                 </a></li>
                                 <li><a rel="nofollow" href="#" class="dropdown-item d-flex">
-                                    <div class="msg-profile"><img src="/static/img/avatar-2.jpg" alt="..."
+                                    <div class="msg-profile"><img src="/static/img/avatar/avatar-2.jpg" alt="..."
                                                                   class="img-fluid rounded-circle"></div>
                                     <div class="msg-body">
                                         <h3 class="h5">Frank Williams</h3><span>Sent You Message</span>
                                     </div>
                                 </a></li>
                                 <li><a rel="nofollow" href="#" class="dropdown-item d-flex">
-                                    <div class="msg-profile"><img src="/static/img/avatar-3.jpg" alt="..."
+                                    <div class="msg-profile"><img src="/static/img/avatar/avatar-3.jpg" alt="..."
                                                                   class="img-fluid rounded-circle"></div>
                                     <div class="msg-body">
                                         <h3 class="h5">Ashley Wood</h3><span>Sent You Message</span>
@@ -160,7 +160,7 @@
         <nav class="side-navbar">
             <!-- Sidebar Header-->
             <div class="sidebar-header d-flex align-items-center">
-                <div class="avatar"><img src="/static/img/avatar-1.jpg" alt="..." class="img-fluid rounded-circle">
+                <div class="avatar"><img src="/static/img/avatar/suolong.jpg" alt="头像" class="img-fluid rounded-circle">
                 </div>
                 <div class="title">
                     <h1 class="h4" id="username_show"></h1>
@@ -188,6 +188,16 @@
                     <ul class="list-unstyled collapse" id="interface_test_ul">
                         <li><a href="javascript:void(0);" flag="interface_test_page">接口测试</a></li>
                         <li><a href="javascript:void(0);" flag="add_interface_test">添加\临时接口测试</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#crontab_ul" aria-expanded="true" data-toggle="collapse">
+                        定时任务
+                    </a>
+                    <ul class="list-unstyled collapse" id="crontab_ul">
+                        <li><a href="javascript:void(0);" flag="interface_test_page">定时任务</a></li>
+                        <li><a href="javascript:void(0);" flag="add_crontab">添加定时任务</a></li>
                     </ul>
                 </li>
             </ul>
@@ -238,6 +248,7 @@
         'import_use_case_data': import_use_case_data_page_url,
         'add_interface_test': add_interface_test_page_url,
         'interface_test_page': interface_test_url,
+        'add_crontab': add_crontab_page_url,
     };
 
 </script>

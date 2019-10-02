@@ -1,10 +1,9 @@
-import re
 from flask_cors import CORS
-from flask import (Flask, request, session, redirect)
+from flask import Flask
 from logging.config import dictConfig
 from settings import web_log_level, web_log_path
 
-if web_log_level.upper() == 'DEBUG' or web_log_level.upper() == 'INFO' or web_log_level.upper() == 'WARNING' or web_log_level.upper() == 'ERROR' or web_log_level.upper() == 'CRITICAL':
+if web_log_level.upper() in ['DEBUG', 'INFO', 'WARNING', 'ERROR', 'CRITICAL']:
     web_log_level = web_log_level.upper()
 else:
     print('日志级别有误，默认设置为DBUUG！%s' % web_log_level)
@@ -37,7 +36,8 @@ main_app = Flask(import_name=__name__)
 
 # 由于循环导入的问题，所以有些只能在main中写
 if __name__ == '__main__':
-
+    import re
+    from flask import (request, session, redirect)
     from Blueprint import (test_case, return_page, login_register, use_case_result, use_case_data, project, interface_test)
     from lib.connect_selenim_socket import ConnectSelenium
 
