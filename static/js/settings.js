@@ -110,3 +110,6 @@ var get_my_use_case_data_url = server_ip + '/api/use_case/myself/all/';
 
 // 所有自己的接口
 var get_my_interface_data_url = server_ip + '/api/interface_test/myself/all/';
+
+// 定时任务增删改查的api接口
+var crontab_url = server_ip + '/api/crontab/';

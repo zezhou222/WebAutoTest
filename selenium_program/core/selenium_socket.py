@@ -1,6 +1,7 @@
 import os
 import socketserver
 import json
+import struct
 from datetime import datetime
 import time
 
@@ -190,7 +191,9 @@ class SeleniumServer(socketserver.BaseRequestHandler):
         commit_data()
 
         # 用例执行完，添加完，判断是否发送邮件
-        send_mail = data.get('send_mail')
+        self.cursor.execute('select send_mail from userinfo where id=%s;', args=(user_id,))
+        send_mail = self.cursor.fetchone().get('send_mail')
+        # send_mail = data.get('send_mail')
         if send_mail:
             self.send_use_case_step_result(user_id, uc_id, uc_result_id)
 
@@ -291,7 +294,9 @@ class SeleniumServer(socketserver.BaseRequestHandler):
         commit_data()
 
         # 用例执行完，添加完，判断是否发送邮件
-        send_mail = data.get('send_mail')
+        self.cursor.execute('select send_mail from userinfo where id=%s;', args=(user_id,))
+        send_mail = self.cursor.fetchone().get('send_mail')
+        # send_mail = data.get('send_mail')
         if send_mail:
             self.send_interface_test_result(user_id, interface_test_id, interface_test_result_id)
 
@@ -341,6 +346,17 @@ class SeleniumServer(socketserver.BaseRequestHandler):
         # 发送
         email_obj.send_mail()
 
+    def recv_content(self, conn):
+        # 先取4个字节内容得到消息长度的bytes类型
+        msg_len_b = conn.recv(4)
+        # 把这4个字节内容转换成整型，得到消息的长度
+        # 转换后是一个元祖类型，取第一个元素
+        msg_len = struct.unpack('i', msg_len_b)[0]
+        # 以得到的消息长度接收内容
+        msg = conn.recv(msg_len)
+        # print(msg.decode('utf-8'))
+        return json.loads(msg.decode('utf-8'))
+
     # 客户端连接成功会先到这个方法
     def handle(self):
         conn = self.request  # 客户端的通道
@@ -354,7 +370,7 @@ class SeleniumServer(socketserver.BaseRequestHandler):
         while 1:
             # 接收内容
             try:
-                content = conn.recv(1024)
+                content = self.recv_content(conn)
             except ConnectionResetError:
                 break
                 
@@ -363,7 +379,6 @@ class SeleniumServer(socketserver.BaseRequestHandler):
 
             logger.debug('接收的数据: %s' % content)
             # 执行操作方法
-            content = json.loads(content.decode('utf-8'))
             opt = content.get('opt')
             if hasattr(self, opt):
                 # 调用操作

@@ -228,3 +228,34 @@ class Interface_test_result(Model):
     user_id = Column(Integer, ForeignKey('userinfo.id'), nullable=False)
 
     interface_test_id = Column(Integer, ForeignKey('interface_test.id'), nullable=False)
+
+
+class Crontab(Model):
+
+    __tablename__ = 'crontab'
+
+    id = Column(Integer, primary_key=True)
+
+    task_name = Column(String(100), nullable=False)
+
+    project_id = Column(Integer, ForeignKey('project.id'), nullable=False)
+
+    cron2pro = relationship("Project")
+
+    test_type = Column(String(20), nullable=False)
+
+    test_data_id = Column(Integer, nullable=False)
+
+    # cron2use_case = relationship("Use_case")
+    #
+    # cron2inter = relationship('Interface_test')
+
+    task_type = Column(String(20), nullable=False)
+
+    execute_time = Column(String(50), nullable=False)
+
+    task_description = Column(String(200), nullable=True)
+
+    user_id = Column(Integer, ForeignKey('userinfo.id'), nullable=False)
+
+    task_id_name = Column(String(32), nullable=False)

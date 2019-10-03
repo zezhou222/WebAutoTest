@@ -38,8 +38,9 @@ main_app = Flask(import_name=__name__)
 if __name__ == '__main__':
     import re
     from flask import (request, session, redirect)
-    from Blueprint import (test_case, return_page, login_register, use_case_result, use_case_data, project, interface_test)
+    from Blueprint import (test_case, return_page, login_register, use_case_result, use_case_data, project, interface_test, crontab)
     from lib.connect_selenim_socket import ConnectSelenium
+    from lib.connect_crontab_socket import ConnectCrontab
 
     # 解决跨域
     CORS(main_app)
@@ -66,6 +67,8 @@ if __name__ == '__main__':
     main_app.register_blueprint(project.app)
     # 接口测试相关的
     main_app.register_blueprint(interface_test.interface_test_app)
+    # 定时任务的
+    main_app.register_blueprint(crontab.app)
 
     # 简单的请求中间件
     # @app.before_request
@@ -93,9 +96,10 @@ if __name__ == '__main__':
     try:
         # 通过socket连接Selenium
         ConnectSelenium()
+        ConnectCrontab()
     except ConnectionRefusedError as e:
         logger.error(e)
-        logger.error('请先启动执行selenium的程序。')
+        logger.error('请先启动好执行程序。')
     else:
         # 运行web
         main_app.run(host="0.0.0.0", port=9000)

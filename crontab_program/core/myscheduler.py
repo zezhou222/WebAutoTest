@@ -10,6 +10,14 @@ from conf.settings import (
     mongodb_database,
     mongodb_job_table,
 )
+from lib.global_func import (
+    send_to_selenium,
+    # commit_data,
+    send_content,
+    get_logger
+)
+
+logger = get_logger()
 
 
 class MyScheduler(object):
@@ -49,18 +57,57 @@ class MyScheduler(object):
             self.scheduler = scheduler
 
     def add_task(self, data):
-        # 拿到任务的数据的id
+        task_id = data.get('task_id_name')
+        task_type = data.get('task_type')
+        execute_time = data.get('execute_time')
+        test_data_id = data.get('test_data_id')
+        test_type = data.get('test_type')
+        user_id = data.get('user_id')
 
-        # 查询数据库，查询执行任务的内容
+        args = [{'opt': 'execute_' + test_type, 'data': {test_type + '_id': test_data_id, 'user_id': user_id}}]
 
-        # 添加任务(任务的id在上一查询步骤中)
-        pass
+        if task_type == 'interval_task':
+            t = execute_time.split('-')
+            params = {'trigger': 'interval', t[0]: int(t[1]), 'id': task_id, 'func': send_to_selenium , 'args': args}
+        elif task_type == 'once_task':
+            params = {'trigger': 'date', 'run_date': execute_time,  'id': task_id, 'func': send_to_selenium, 'args': args}
+        elif task_type == 'crontab_task':
+            t = execute_time.split(' ')
+            params = {'trigger': 'cron', 'minute': t[0], 'hour': t[1], 'day': t[2], 'month': t[3], 'week': t[4], 'id': task_id, 'func': send_to_selenium, 'args': args}
+
+        # 添加任务
+        try:
+            self.scheduler.add_job(**params)
+            # raise TypeError('????')
+        except Exception as error:
+            # 删除job
+            self.scheduler.remove_job(job_id=task_id)
+            # 发送后端结果
+            logger.debug('添加job失败，失败原因: %s' % error)
+            send_content(self.conn, {'add_flag': 1})
+            return
+
+        # 保存数据
+        # self.cursor.execute('insert into crontab(task_name,project_id,test_type,test_data_id,task_type,execute_time,task_description,user_id,task_id_name) value(%s,%s,%s,%s,%s,%s,%s,%s,%s);', args=(data['task_name'],data['project_id'],test_type,test_data_id,task_type,execute_time,data['task_description'],user_id,data['task_id_name']))
+        # commit_data()
+
+        # 发送结果
+        send_content(self.conn, {'add_flag': 0})
 
     def del_task(self, data):
-        # 由于是异步的，所以web后端应该是直接连接mongodb删除持久化的数据
+        crontab_id = data.get('crontab_id')
+        task_id = data.get('task_id')
 
-        # 这要做的仅是删除内存中的任务(会报错apscheduler.jobstores.base.JobLookupError)
-        pass
+        try:
+            self.scheduler.remove_job(job_id=task_id)
+        except Exception as error:
+            # 发送后端结果
+            logger.debug('删除job失败，失败原因: %s' % error)
+            send_content(self.conn, {'del_flag': 1})
+            return
+
+        # 发送结果
+        send_content(self.conn, {'del_flag': 0})
 
     def update_task(self, data):
         # 由于默认修改只能是修改触发器，不能修改执行的内容，所以采用删除新建的方式进行

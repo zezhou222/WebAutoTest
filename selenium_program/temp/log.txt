@@ -90,3 +90,729 @@
 [2019-10-02 23:35:56,801] INFO in selenium_socket-376: ('127.0.0.1', 62168) 断开连接--
 [2019-10-02 23:35:57,555] INFO in selenium_socket-353: ('127.0.0.1', 62574) 连接--
 [2019-10-02 23:35:58,125] INFO in selenium_socket-353: ('127.0.0.1', 62578) 连接--
+[2019-10-02 23:50:04,901] INFO in selenium_socket-376: ('127.0.0.1', 62578) 断开连接--
+[2019-10-02 23:50:05,537] INFO in selenium_socket-353: ('127.0.0.1', 64588) 连接--
+[2019-10-02 23:51:15,902] INFO in selenium_socket-376: ('127.0.0.1', 64588) 断开连接--
+[2019-10-02 23:51:15,903] INFO in selenium_socket-376: ('127.0.0.1', 62574) 断开连接--
+[2019-10-03 11:56:53,936] INFO in selenium_socket-353: ('127.0.0.1', 56952) 连接--
+[2019-10-03 11:56:56,628] INFO in selenium_socket-353: ('127.0.0.1', 56956) 连接--
+[2019-10-03 14:59:17,055] INFO in selenium_socket-376: ('127.0.0.1', 56952) 断开连接--
+[2019-10-03 14:59:17,058] INFO in selenium_socket-376: ('127.0.0.1', 56956) 断开连接--
+[2019-10-03 14:59:18,199] INFO in selenium_socket-353: ('127.0.0.1', 62395) 连接--
+[2019-10-03 14:59:18,847] INFO in selenium_socket-353: ('127.0.0.1', 62397) 连接--
+[2019-10-03 15:04:17,827] INFO in selenium_socket-376: ('127.0.0.1', 62397) 断开连接--
+[2019-10-03 15:04:17,827] INFO in selenium_socket-376: ('127.0.0.1', 62395) 断开连接--
+[2019-10-03 15:04:18,903] INFO in selenium_socket-353: ('127.0.0.1', 62699) 连接--
+[2019-10-03 15:04:19,423] INFO in selenium_socket-353: ('127.0.0.1', 62702) 连接--
+[2019-10-03 15:04:49,087] INFO in selenium_socket-376: ('127.0.0.1', 62699) 断开连接--
+[2019-10-03 15:04:49,096] INFO in selenium_socket-376: ('127.0.0.1', 62702) 断开连接--
+[2019-10-03 15:04:59,070] INFO in selenium_socket-353: ('127.0.0.1', 62736) 连接--
+[2019-10-03 15:04:59,604] INFO in selenium_socket-353: ('127.0.0.1', 62739) 连接--
+[2019-10-03 15:10:28,971] INFO in selenium_socket-376: ('127.0.0.1', 62736) 断开连接--
+[2019-10-03 15:10:28,971] INFO in selenium_socket-376: ('127.0.0.1', 62739) 断开连接--
+[2019-10-03 15:10:29,651] INFO in selenium_socket-353: ('127.0.0.1', 63085) 连接--
+[2019-10-03 15:10:30,255] INFO in selenium_socket-353: ('127.0.0.1', 63088) 连接--
+[2019-10-03 15:12:04,942] INFO in selenium_socket-376: ('127.0.0.1', 63088) 断开连接--
+[2019-10-03 15:12:04,942] INFO in selenium_socket-376: ('127.0.0.1', 63085) 断开连接--
+[2019-10-03 15:12:05,933] INFO in selenium_socket-353: ('127.0.0.1', 63182) 连接--
+[2019-10-03 15:12:06,460] INFO in selenium_socket-353: ('127.0.0.1', 63186) 连接--
+[2019-10-03 15:12:30,432] INFO in selenium_socket-376: ('127.0.0.1', 63182) 断开连接--
+[2019-10-03 15:12:30,441] INFO in selenium_socket-376: ('127.0.0.1', 63186) 断开连接--
+[2019-10-03 15:12:31,031] INFO in selenium_socket-353: ('127.0.0.1', 63210) 连接--
+[2019-10-03 15:12:31,769] INFO in selenium_socket-353: ('127.0.0.1', 63212) 连接--
+[2019-10-03 15:16:21,008] INFO in selenium_socket-376: ('127.0.0.1', 63212) 断开连接--
+[2019-10-03 15:16:22,591] INFO in selenium_socket-353: ('127.0.0.1', 63420) 连接--
+[2019-10-03 15:25:56,677] INFO in selenium_socket-376: ('127.0.0.1', 63420) 断开连接--
+[2019-10-03 15:25:56,679] INFO in selenium_socket-376: ('127.0.0.1', 63210) 断开连接--
+[2019-10-03 15:25:58,427] INFO in selenium_socket-353: ('127.0.0.1', 63911) 连接--
+[2019-10-03 15:25:59,980] INFO in selenium_socket-353: ('127.0.0.1', 63915) 连接--
+[2019-10-03 15:27:41,272] INFO in selenium_socket-376: ('127.0.0.1', 63915) 断开连接--
+[2019-10-03 15:27:42,898] INFO in selenium_socket-353: ('127.0.0.1', 64008) 连接--
+[2019-10-03 15:31:42,980] INFO in selenium_socket-376: ('127.0.0.1', 64008) 断开连接--
+[2019-10-03 15:31:44,405] INFO in selenium_socket-353: ('127.0.0.1', 64259) 连接--
+[2019-10-03 15:33:20,918] INFO in selenium_socket-376: ('127.0.0.1', 64259) 断开连接--
+[2019-10-03 15:33:22,379] INFO in selenium_socket-353: ('127.0.0.1', 64341) 连接--
+[2019-10-03 15:33:52,167] INFO in selenium_socket-376: ('127.0.0.1', 64341) 断开连接--
+[2019-10-03 15:33:53,798] INFO in selenium_socket-353: ('127.0.0.1', 64369) 连接--
+[2019-10-03 15:57:43,853] INFO in selenium_socket-376: ('127.0.0.1', 64369) 断开连接--
+[2019-10-03 15:57:44,571] INFO in selenium_socket-353: ('127.0.0.1', 49616) 连接--
+[2019-10-03 15:57:51,983] INFO in selenium_socket-376: ('127.0.0.1', 49616) 断开连接--
+[2019-10-03 15:57:52,703] INFO in selenium_socket-353: ('127.0.0.1', 49625) 连接--
+[2019-10-03 15:58:16,835] INFO in selenium_socket-376: ('127.0.0.1', 49625) 断开连接--
+[2019-10-03 15:58:17,482] INFO in selenium_socket-353: ('127.0.0.1', 49650) 连接--
+[2019-10-03 15:58:28,094] INFO in selenium_socket-376: ('127.0.0.1', 49650) 断开连接--
+[2019-10-03 15:58:28,818] INFO in selenium_socket-353: ('127.0.0.1', 49673) 连接--
+[2019-10-03 15:58:38,297] INFO in selenium_socket-376: ('127.0.0.1', 49673) 断开连接--
+[2019-10-03 15:58:38,999] INFO in selenium_socket-353: ('127.0.0.1', 49687) 连接--
+[2019-10-03 15:58:58,945] INFO in selenium_socket-376: ('127.0.0.1', 49687) 断开连接--
+[2019-10-03 15:58:59,686] INFO in selenium_socket-353: ('127.0.0.1', 49717) 连接--
+[2019-10-03 16:00:06,439] INFO in selenium_socket-376: ('127.0.0.1', 49717) 断开连接--
+[2019-10-03 16:00:06,996] INFO in selenium_socket-353: ('127.0.0.1', 49797) 连接--
+[2019-10-03 16:00:23,688] INFO in selenium_socket-376: ('127.0.0.1', 49797) 断开连接--
+[2019-10-03 16:00:24,243] INFO in selenium_socket-353: ('127.0.0.1', 49819) 连接--
+[2019-10-03 16:00:43,002] INFO in selenium_socket-376: ('127.0.0.1', 49819) 断开连接--
+[2019-10-03 16:00:43,548] INFO in selenium_socket-353: ('127.0.0.1', 49843) 连接--
+[2019-10-03 16:00:52,977] INFO in selenium_socket-376: ('127.0.0.1', 49843) 断开连接--
+[2019-10-03 16:00:53,511] INFO in selenium_socket-353: ('127.0.0.1', 49853) 连接--
+[2019-10-03 16:01:14,352] INFO in selenium_socket-376: ('127.0.0.1', 49853) 断开连接--
+[2019-10-03 16:01:14,959] INFO in selenium_socket-353: ('127.0.0.1', 49879) 连接--
+[2019-10-03 16:01:35,840] INFO in selenium_socket-376: ('127.0.0.1', 49879) 断开连接--
+[2019-10-03 16:01:36,401] INFO in selenium_socket-353: ('127.0.0.1', 49907) 连接--
+[2019-10-03 16:03:44,226] INFO in selenium_socket-376: ('127.0.0.1', 49907) 断开连接--
+[2019-10-03 16:03:44,893] INFO in selenium_socket-353: ('127.0.0.1', 50078) 连接--
+[2019-10-03 16:04:07,823] INFO in selenium_socket-376: ('127.0.0.1', 50078) 断开连接--
+[2019-10-03 16:04:08,442] INFO in selenium_socket-353: ('127.0.0.1', 50139) 连接--
+[2019-10-03 16:07:11,901] INFO in selenium_socket-376: ('127.0.0.1', 50139) 断开连接--
+[2019-10-03 16:07:12,545] INFO in selenium_socket-353: ('127.0.0.1', 50379) 连接--
+[2019-10-03 16:08:44,123] INFO in selenium_socket-376: ('127.0.0.1', 50379) 断开连接--
+[2019-10-03 16:08:44,886] INFO in selenium_socket-376: ('127.0.0.1', 63911) 断开连接--
+[2019-10-03 16:36:50,258] INFO in selenium_socket-353: ('127.0.0.1', 52598) 连接--
+[2019-10-03 16:36:50,896] INFO in selenium_socket-353: ('127.0.0.1', 52603) 连接--
+[2019-10-03 16:38:11,293] INFO in selenium_socket-376: ('127.0.0.1', 52603) 断开连接--
+[2019-10-03 16:38:11,294] INFO in selenium_socket-376: ('127.0.0.1', 52598) 断开连接--
+[2019-10-03 16:38:12,171] INFO in selenium_socket-353: ('127.0.0.1', 52848) 连接--
+[2019-10-03 16:38:12,811] INFO in selenium_socket-353: ('127.0.0.1', 52851) 连接--
+[2019-10-03 16:39:13,851] INFO in selenium_socket-376: ('127.0.0.1', 52848) 断开连接--
+[2019-10-03 16:39:13,864] INFO in selenium_socket-376: ('127.0.0.1', 52851) 断开连接--
+[2019-10-03 16:39:14,700] INFO in selenium_socket-353: ('127.0.0.1', 52939) 连接--
+[2019-10-03 16:39:15,359] INFO in selenium_socket-353: ('127.0.0.1', 52942) 连接--
+[2019-10-03 16:40:13,939] INFO in selenium_socket-376: ('127.0.0.1', 52942) 断开连接--
+[2019-10-03 16:40:14,548] INFO in selenium_socket-353: ('127.0.0.1', 53034) 连接--
+[2019-10-03 16:40:43,240] INFO in selenium_socket-376: ('127.0.0.1', 53034) 断开连接--
+[2019-10-03 16:40:43,240] INFO in selenium_socket-376: ('127.0.0.1', 52939) 断开连接--
+[2019-10-03 16:40:43,896] INFO in selenium_socket-353: ('127.0.0.1', 53069) 连接--
+[2019-10-03 16:40:44,518] INFO in selenium_socket-353: ('127.0.0.1', 53071) 连接--
+[2019-10-03 16:41:12,706] INFO in selenium_socket-376: ('127.0.0.1', 53071) 断开连接--
+[2019-10-03 16:41:13,346] INFO in selenium_socket-353: ('127.0.0.1', 53103) 连接--
+[2019-10-03 16:41:21,743] INFO in selenium_socket-376: ('127.0.0.1', 53103) 断开连接--
+[2019-10-03 16:41:22,323] INFO in selenium_socket-353: ('127.0.0.1', 53115) 连接--
+[2019-10-03 16:44:39,592] INFO in selenium_socket-376: ('127.0.0.1', 53115) 断开连接--
+[2019-10-03 16:44:39,592] INFO in selenium_socket-376: ('127.0.0.1', 53069) 断开连接--
+[2019-10-03 16:44:40,184] INFO in selenium_socket-353: ('127.0.0.1', 53489) 连接--
+[2019-10-03 16:44:40,766] INFO in selenium_socket-353: ('127.0.0.1', 53491) 连接--
+[2019-10-03 16:48:01,565] INFO in selenium_socket-376: ('127.0.0.1', 53491) 断开连接--
+[2019-10-03 16:48:02,199] INFO in selenium_socket-353: ('127.0.0.1', 53767) 连接--
+[2019-10-03 16:51:44,153] INFO in selenium_socket-376: ('127.0.0.1', 53767) 断开连接--
+[2019-10-03 16:51:44,707] INFO in selenium_socket-353: ('127.0.0.1', 54040) 连接--
+[2019-10-03 16:54:26,714] INFO in selenium_socket-376: ('127.0.0.1', 54040) 断开连接--
+[2019-10-03 16:54:27,449] INFO in selenium_socket-353: ('127.0.0.1', 54241) 连接--
+[2019-10-03 16:55:01,439] INFO in selenium_socket-376: ('127.0.0.1', 53489) 断开连接--
+[2019-10-03 16:55:01,439] INFO in selenium_socket-376: ('127.0.0.1', 54241) 断开连接--
+[2019-10-03 16:55:02,048] INFO in selenium_socket-353: ('127.0.0.1', 54294) 连接--
+[2019-10-03 16:55:02,622] INFO in selenium_socket-353: ('127.0.0.1', 54297) 连接--
+[2019-10-03 16:55:08,520] INFO in selenium_socket-376: ('127.0.0.1', 54294) 断开连接--
+[2019-10-03 16:55:08,531] INFO in selenium_socket-376: ('127.0.0.1', 54297) 断开连接--
+[2019-10-03 16:55:09,163] INFO in selenium_socket-353: ('127.0.0.1', 54307) 连接--
+[2019-10-03 16:55:09,745] INFO in selenium_socket-353: ('127.0.0.1', 54309) 连接--
+[2019-10-03 16:59:27,764] INFO in selenium_socket-376: ('127.0.0.1', 54309) 断开连接--
+[2019-10-03 16:59:28,493] INFO in selenium_socket-353: ('127.0.0.1', 54604) 连接--
+[2019-10-03 17:01:04,834] INFO in selenium_socket-376: ('127.0.0.1', 54307) 断开连接--
+[2019-10-03 17:01:04,843] INFO in selenium_socket-376: ('127.0.0.1', 54604) 断开连接--
+[2019-10-03 17:01:05,828] INFO in selenium_socket-353: ('127.0.0.1', 54715) 连接--
+[2019-10-03 17:01:06,428] INFO in selenium_socket-353: ('127.0.0.1', 54718) 连接--
+[2019-10-03 17:09:02,606] INFO in selenium_socket-376: ('127.0.0.1', 54718) 断开连接--
+[2019-10-03 17:09:03,299] INFO in selenium_socket-353: ('127.0.0.1', 55277) 连接--
+[2019-10-03 17:26:19,428] DEBUG in selenium_socket-364: 接收的数据: b'{"opt": "execute_interface_test", "data": {"interface_test_id": 1, "user_id": 1, "send_mail": true}}'
+[2019-10-03 17:26:19,464] DEBUG in selenium_socket-261: 执行的接口测试数据：{'interface_test_id': 1, 'user_id': 1, 'send_mail': True}
+[2019-10-03 17:26:19,470] DEBUG in selenium_socket-272: 接口测试新增数据的id为: 1
+[2019-10-03 17:26:19,478] DEBUG in selenium_socket-282: 查询结果：[{'request_type': 'GET', 'request_url': 'http://127.0.0.1:9000/login/', 'params_type': None, 'key': None, 'value': None, 'execute': None}]
+[2019-10-03 17:26:19,508] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-03 17:26:19,513] DEBUG in connectionpool-437: http://127.0.0.1:9000 "GET /login/ HTTP/1.1" 200 5722
+[2019-10-03 17:26:19,514] DEBUG in selenium_socket-285: 接口测试状态码：200
+[2019-10-03 17:26:21,893] DEBUG in send_mail-64: (登陆接口的接口测试报告) 邮件发送成功！！！
+[2019-10-03 17:30:16,719] INFO in selenium_socket-376: ('127.0.0.1', 54715) 断开连接--
+[2019-10-03 17:30:16,739] INFO in selenium_socket-376: ('127.0.0.1', 55277) 断开连接--
+[2019-10-03 17:30:17,654] INFO in selenium_socket-353: ('127.0.0.1', 56457) 连接--
+[2019-10-03 17:30:18,218] INFO in selenium_socket-353: ('127.0.0.1', 56459) 连接--
+[2019-10-03 17:30:48,223] INFO in selenium_socket-357: ('127.0.0.1', 56542) 连接--
+[2019-10-03 17:30:48,865] INFO in selenium_socket-357: ('127.0.0.1', 56546) 连接--
+[2019-10-03 17:30:52,905] DEBUG in selenium_socket-368: 接收的数据: b'{"opt": "execute_interface_test", "data": {"interface_test_id": 1, "user_id": 1}}'
+[2019-10-03 17:30:52,906] DEBUG in selenium_socket-263: 执行的接口测试数据：{'interface_test_id': 1, 'user_id': 1}
+[2019-10-03 17:30:52,906] DEBUG in selenium_socket-274: 接口测试新增数据的id为: 2
+[2019-10-03 17:30:52,923] DEBUG in selenium_socket-284: 查询结果：[{'request_type': 'GET', 'request_url': 'http://127.0.0.1:9000/login/', 'params_type': None, 'key': None, 'value': None, 'execute': None}]
+[2019-10-03 17:30:52,926] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-03 17:30:52,940] DEBUG in connectionpool-437: http://127.0.0.1:9000 "GET /login/ HTTP/1.1" 200 5722
+[2019-10-03 17:30:52,941] DEBUG in selenium_socket-287: 接口测试状态码：200
+[2019-10-03 17:30:55,075] DEBUG in send_mail-64: (登陆接口的接口测试报告) 邮件发送成功！！！
+[2019-10-03 17:34:32,446] INFO in selenium_socket-380: ('127.0.0.1', 56542) 断开连接--
+[2019-10-03 17:34:32,455] INFO in selenium_socket-380: ('127.0.0.1', 56546) 断开连接--
+[2019-10-03 17:34:33,045] INFO in selenium_socket-357: ('127.0.0.1', 56789) 连接--
+[2019-10-03 17:34:33,668] INFO in selenium_socket-357: ('127.0.0.1', 56791) 连接--
+[2019-10-03 17:35:12,336] INFO in selenium_socket-380: ('127.0.0.1', 56791) 断开连接--
+[2019-10-03 17:35:12,346] INFO in selenium_socket-380: ('127.0.0.1', 56789) 断开连接--
+[2019-10-03 17:35:12,933] INFO in selenium_socket-357: ('127.0.0.1', 56836) 连接--
+[2019-10-03 17:35:13,489] INFO in selenium_socket-357: ('127.0.0.1', 56838) 连接--
+[2019-10-03 17:35:24,882] INFO in selenium_socket-380: ('127.0.0.1', 56838) 断开连接--
+[2019-10-03 17:35:24,883] INFO in selenium_socket-380: ('127.0.0.1', 56836) 断开连接--
+[2019-10-03 17:35:25,521] INFO in selenium_socket-357: ('127.0.0.1', 56856) 连接--
+[2019-10-03 17:35:26,168] INFO in selenium_socket-357: ('127.0.0.1', 56858) 连接--
+[2019-10-03 17:36:26,348] INFO in selenium_socket-380: ('127.0.0.1', 56856) 断开连接--
+[2019-10-03 17:36:26,348] INFO in selenium_socket-380: ('127.0.0.1', 56858) 断开连接--
+[2019-10-03 17:36:27,001] INFO in selenium_socket-357: ('127.0.0.1', 56980) 连接--
+[2019-10-03 17:36:27,662] INFO in selenium_socket-357: ('127.0.0.1', 56983) 连接--
+[2019-10-03 17:37:25,196] INFO in selenium_socket-380: ('127.0.0.1', 56983) 断开连接--
+[2019-10-03 17:37:25,197] INFO in selenium_socket-380: ('127.0.0.1', 56980) 断开连接--
+[2019-10-03 17:37:25,893] INFO in selenium_socket-357: ('127.0.0.1', 57048) 连接--
+[2019-10-03 17:37:26,564] INFO in selenium_socket-357: ('127.0.0.1', 57051) 连接--
+[2019-10-03 17:38:21,087] INFO in selenium_socket-380: ('127.0.0.1', 57051) 断开连接--
+[2019-10-03 17:38:21,087] INFO in selenium_socket-380: ('127.0.0.1', 57048) 断开连接--
+[2019-10-03 17:38:21,783] INFO in selenium_socket-357: ('127.0.0.1', 57110) 连接--
+[2019-10-03 17:38:22,915] INFO in selenium_socket-357: ('127.0.0.1', 57113) 连接--
+[2019-10-03 17:39:00,849] INFO in selenium_socket-380: ('127.0.0.1', 57113) 断开连接--
+[2019-10-03 17:39:00,851] INFO in selenium_socket-380: ('127.0.0.1', 57110) 断开连接--
+[2019-10-03 17:39:01,531] INFO in selenium_socket-357: ('127.0.0.1', 57160) 连接--
+[2019-10-03 17:39:02,156] INFO in selenium_socket-357: ('127.0.0.1', 57163) 连接--
+[2019-10-03 17:39:33,905] INFO in selenium_socket-380: ('127.0.0.1', 57163) 断开连接--
+[2019-10-03 17:39:33,906] INFO in selenium_socket-380: ('127.0.0.1', 57160) 断开连接--
+[2019-10-03 17:39:34,654] INFO in selenium_socket-357: ('127.0.0.1', 57199) 连接--
+[2019-10-03 17:39:35,286] INFO in selenium_socket-357: ('127.0.0.1', 57201) 连接--
+[2019-10-03 17:40:16,075] INFO in selenium_socket-380: ('127.0.0.1', 57199) 断开连接--
+[2019-10-03 17:40:16,085] INFO in selenium_socket-380: ('127.0.0.1', 57201) 断开连接--
+[2019-10-03 17:40:16,884] INFO in selenium_socket-357: ('127.0.0.1', 57249) 连接--
+[2019-10-03 17:40:17,730] INFO in selenium_socket-357: ('127.0.0.1', 57252) 连接--
+[2019-10-03 17:41:03,420] INFO in selenium_socket-380: ('127.0.0.1', 57249) 断开连接--
+[2019-10-03 17:41:03,432] INFO in selenium_socket-380: ('127.0.0.1', 57252) 断开连接--
+[2019-10-03 17:41:04,145] INFO in selenium_socket-357: ('127.0.0.1', 57299) 连接--
+[2019-10-03 17:41:05,058] INFO in selenium_socket-357: ('127.0.0.1', 57302) 连接--
+[2019-10-03 17:43:52,299] INFO in selenium_socket-380: ('127.0.0.1', 57302) 断开连接--
+[2019-10-03 17:43:52,300] INFO in selenium_socket-380: ('127.0.0.1', 57299) 断开连接--
+[2019-10-03 17:43:52,968] INFO in selenium_socket-357: ('127.0.0.1', 57480) 连接--
+[2019-10-03 17:43:53,630] INFO in selenium_socket-357: ('127.0.0.1', 57483) 连接--
+[2019-10-03 17:44:34,166] INFO in selenium_socket-380: ('127.0.0.1', 57480) 断开连接--
+[2019-10-03 17:44:34,173] INFO in selenium_socket-380: ('127.0.0.1', 57483) 断开连接--
+[2019-10-03 17:44:34,845] INFO in selenium_socket-357: ('127.0.0.1', 57529) 连接--
+[2019-10-03 17:44:35,543] INFO in selenium_socket-357: ('127.0.0.1', 57532) 连接--
+[2019-10-03 17:45:39,175] INFO in selenium_socket-357: ('127.0.0.1', 57599) 连接--
+[2019-10-03 17:45:39,175] DEBUG in selenium_socket-368: 接收的数据: b'{"opt": "execute_interface_test", "data": {"interface_test_id": "1", "user_id": 1}}'
+[2019-10-03 17:45:39,175] DEBUG in selenium_socket-263: 执行的接口测试数据：{'interface_test_id': '1', 'user_id': 1}
+[2019-10-03 17:45:39,176] DEBUG in selenium_socket-274: 接口测试新增数据的id为: 3
+[2019-10-03 17:45:39,178] DEBUG in selenium_socket-284: 查询结果：[{'request_type': 'GET', 'request_url': 'http://127.0.0.1:9000/login/', 'params_type': None, 'key': None, 'value': None, 'execute': None}]
+[2019-10-03 17:45:39,179] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-03 17:45:39,188] DEBUG in connectionpool-437: http://127.0.0.1:9000 "GET /login/ HTTP/1.1" 200 5722
+[2019-10-03 17:45:39,188] DEBUG in selenium_socket-287: 接口测试状态码：200
+[2019-10-03 17:45:41,336] DEBUG in send_mail-64: (登陆接口的接口测试报告) 邮件发送成功！！！
+[2019-10-03 17:46:39,176] DEBUG in selenium_socket-368: 接收的数据: b'{"opt": "execute_interface_test", "data": {"interface_test_id": "1", "user_id": 1}}'
+[2019-10-03 17:46:39,177] DEBUG in selenium_socket-263: 执行的接口测试数据：{'interface_test_id': '1', 'user_id': 1}
+[2019-10-03 17:46:39,178] DEBUG in selenium_socket-274: 接口测试新增数据的id为: 4
+[2019-10-03 17:46:39,190] DEBUG in selenium_socket-284: 查询结果：[{'request_type': 'GET', 'request_url': 'http://127.0.0.1:9000/login/', 'params_type': None, 'key': None, 'value': None, 'execute': None}]
+[2019-10-03 17:46:39,193] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-03 17:46:39,209] DEBUG in connectionpool-437: http://127.0.0.1:9000 "GET /login/ HTTP/1.1" 200 5722
+[2019-10-03 17:46:39,211] DEBUG in selenium_socket-287: 接口测试状态码：200
+[2019-10-03 17:46:41,089] DEBUG in send_mail-64: (登陆接口的接口测试报告) 邮件发送成功！！！
+[2019-10-03 17:47:39,176] DEBUG in selenium_socket-368: 接收的数据: b'{"opt": "execute_interface_test", "data": {"interface_test_id": "1", "user_id": 1}}'
+[2019-10-03 17:47:39,177] DEBUG in selenium_socket-263: 执行的接口测试数据：{'interface_test_id': '1', 'user_id': 1}
+[2019-10-03 17:47:39,180] DEBUG in selenium_socket-274: 接口测试新增数据的id为: 5
+[2019-10-03 17:47:39,192] DEBUG in selenium_socket-284: 查询结果：[{'request_type': 'GET', 'request_url': 'http://127.0.0.1:9000/login/', 'params_type': None, 'key': None, 'value': None, 'execute': None}]
+[2019-10-03 17:47:39,195] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-03 17:47:39,200] DEBUG in connectionpool-437: http://127.0.0.1:9000 "GET /login/ HTTP/1.1" 200 5722
+[2019-10-03 17:47:39,201] DEBUG in selenium_socket-287: 接口测试状态码：200
+[2019-10-03 17:47:41,425] DEBUG in send_mail-64: (登陆接口的接口测试报告) 邮件发送成功！！！
+[2019-10-03 18:03:52,929] INFO in selenium_socket-380: ('127.0.0.1', 57599) 断开连接--
+[2019-10-03 18:03:55,627] INFO in selenium_socket-380: ('127.0.0.1', 57532) 断开连接--
+[2019-10-03 18:03:56,130] INFO in selenium_socket-380: ('127.0.0.1', 57529) 断开连接--
+[2019-10-03 18:03:58,402] INFO in selenium_socket-357: ('127.0.0.1', 58839) 连接--
+[2019-10-03 18:04:00,406] INFO in selenium_socket-357: ('127.0.0.1', 58843) 连接--
+[2019-10-03 18:06:00,016] INFO in selenium_socket-357: ('127.0.0.1', 58992) 连接--
+[2019-10-03 18:06:00,016] DEBUG in selenium_socket-368: 接收的数据: b'{"opt": "execute_interface_test", "data": {"interface_test_id": "1", "user_id": 1}}'
+[2019-10-03 18:06:00,017] DEBUG in selenium_socket-263: 执行的接口测试数据：{'interface_test_id': '1', 'user_id': 1}
+[2019-10-03 18:06:00,019] DEBUG in selenium_socket-274: 接口测试新增数据的id为: 6
+[2019-10-03 18:06:00,026] DEBUG in selenium_socket-284: 查询结果：[{'request_type': 'GET', 'request_url': 'http://127.0.0.1:9000/login/', 'params_type': None, 'key': None, 'value': None, 'execute': None}]
+[2019-10-03 18:06:00,030] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-03 18:06:00,051] DEBUG in connectionpool-437: http://127.0.0.1:9000 "GET /login/ HTTP/1.1" 200 5722
+[2019-10-03 18:06:00,052] DEBUG in selenium_socket-287: 接口测试状态码：200
+[2019-10-03 18:06:02,315] DEBUG in send_mail-64: (登陆接口的接口测试报告) 邮件发送成功！！！
+[2019-10-03 18:07:03,311] DEBUG in selenium_socket-368: 接收的数据: b'{"opt": "execute_interface_test", "data": {"interface_test_id": "1", "user_id": 1}}'
+[2019-10-03 18:07:03,312] DEBUG in selenium_socket-263: 执行的接口测试数据：{'interface_test_id': '1', 'user_id': 1}
+[2019-10-03 18:07:03,313] DEBUG in selenium_socket-274: 接口测试新增数据的id为: 7
+[2019-10-03 18:07:03,348] DEBUG in selenium_socket-284: 查询结果：[{'request_type': 'GET', 'request_url': 'http://127.0.0.1:9000/login/', 'params_type': None, 'key': None, 'value': None, 'execute': None}]
+[2019-10-03 18:07:03,353] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-03 18:07:03,369] DEBUG in connectionpool-437: http://127.0.0.1:9000 "GET /login/ HTTP/1.1" 200 5722
+[2019-10-03 18:07:03,371] DEBUG in selenium_socket-287: 接口测试状态码：200
+[2019-10-03 18:07:05,412] DEBUG in send_mail-64: (登陆接口的接口测试报告) 邮件发送成功！！！
+[2019-10-03 18:09:28,183] INFO in selenium_socket-380: ('127.0.0.1', 58839) 断开连接--
+[2019-10-03 18:09:28,183] INFO in selenium_socket-380: ('127.0.0.1', 58843) 断开连接--
+[2019-10-03 18:09:30,317] INFO in selenium_socket-357: ('127.0.0.1', 59210) 连接--
+[2019-10-03 18:09:32,345] INFO in selenium_socket-357: ('127.0.0.1', 59214) 连接--
+[2019-10-03 18:10:47,765] INFO in selenium_socket-380: ('127.0.0.1', 59210) 断开连接--
+[2019-10-03 18:10:47,774] INFO in selenium_socket-380: ('127.0.0.1', 59214) 断开连接--
+[2019-10-03 18:12:14,423] INFO in selenium_socket-357: ('127.0.0.1', 59382) 连接--
+[2019-10-03 18:12:16,502] INFO in selenium_socket-357: ('127.0.0.1', 59386) 连接--
+[2019-10-03 18:15:00,013] DEBUG in selenium_socket-368: 接收的数据: b'{"opt": "execute_interface_test", "data": {"interface_test_id": "1", "user_id": 1}}'
+[2019-10-03 18:15:00,014] DEBUG in selenium_socket-263: 执行的接口测试数据：{'interface_test_id': '1', 'user_id': 1}
+[2019-10-03 18:15:00,016] DEBUG in selenium_socket-274: 接口测试新增数据的id为: 8
+[2019-10-03 18:15:00,028] DEBUG in selenium_socket-284: 查询结果：[{'request_type': 'GET', 'request_url': 'http://127.0.0.1:9000/login/', 'params_type': None, 'key': None, 'value': None, 'execute': None}]
+[2019-10-03 18:15:00,031] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-03 18:15:00,044] DEBUG in connectionpool-437: http://127.0.0.1:9000 "GET /login/ HTTP/1.1" 200 5722
+[2019-10-03 18:15:00,045] DEBUG in selenium_socket-287: 接口测试状态码：200
+[2019-10-03 18:15:02,719] DEBUG in send_mail-64: (登陆接口的接口测试报告) 邮件发送成功！！！
+[2019-10-03 18:26:20,991] INFO in selenium_socket-380: ('127.0.0.1', 59386) 断开连接--
+[2019-10-03 18:26:23,005] INFO in selenium_socket-357: ('127.0.0.1', 60274) 连接--
+[2019-10-03 18:43:13,694] INFO in selenium_socket-380: ('127.0.0.1', 60274) 断开连接--
+[2019-10-03 18:43:15,565] INFO in selenium_socket-357: ('127.0.0.1', 61317) 连接--
+[2019-10-03 18:44:07,859] INFO in selenium_socket-380: ('127.0.0.1', 61317) 断开连接--
+[2019-10-03 18:44:09,671] INFO in selenium_socket-357: ('127.0.0.1', 61381) 连接--
+[2019-10-03 18:47:57,547] INFO in selenium_socket-380: ('127.0.0.1', 61381) 断开连接--
+[2019-10-03 18:47:59,410] INFO in selenium_socket-357: ('127.0.0.1', 61671) 连接--
+[2019-10-03 18:50:29,151] INFO in selenium_socket-369: ('127.0.0.1', 61815) 连接--
+[2019-10-03 18:50:30,688] INFO in selenium_socket-369: ('127.0.0.1', 61820) 连接--
+[2019-10-03 18:50:35,548] DEBUG in selenium_socket-381: 接收的数据: {"opt": "execute_interface_test", "data": {"interface_test_id": 1, "user_id": 1}}
+[2019-10-03 18:51:08,256] INFO in selenium_socket-369: ('127.0.0.1', 61866) 连接--
+[2019-10-03 18:51:09,910] INFO in selenium_socket-369: ('127.0.0.1', 61870) 连接--
+[2019-10-03 18:51:11,020] DEBUG in selenium_socket-381: 接收的数据: {"opt": "execute_interface_test", "data": {"interface_test_id": 1, "user_id": 1}}
+[2019-10-03 18:51:11,021] DEBUG in selenium_socket-264: 执行的接口测试数据：{'interface_test_id': 1, 'user_id': 1}
+[2019-10-03 18:51:11,023] DEBUG in selenium_socket-275: 接口测试新增数据的id为: 9
+[2019-10-03 18:51:11,035] DEBUG in selenium_socket-285: 查询结果：[{'request_type': 'GET', 'request_url': 'http://127.0.0.1:9000/login/', 'params_type': None, 'key': None, 'value': None, 'execute': None}]
+[2019-10-03 18:51:11,045] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-03 18:51:11,074] DEBUG in connectionpool-437: http://127.0.0.1:9000 "GET /login/ HTTP/1.1" 200 5722
+[2019-10-03 18:51:11,077] DEBUG in selenium_socket-288: 接口测试状态码：200
+[2019-10-03 18:51:11,384] DEBUG in selenium_socket-381: 接收的数据: {"opt": "execute_interface_test", "data": {"interface_test_id": 1, "user_id": 1}}
+[2019-10-03 18:51:11,389] DEBUG in selenium_socket-264: 执行的接口测试数据：{'interface_test_id': 1, 'user_id': 1}
+[2019-10-03 18:51:11,392] DEBUG in selenium_socket-275: 接口测试新增数据的id为: 10
+[2019-10-03 18:51:11,405] DEBUG in selenium_socket-285: 查询结果：[{'request_type': 'GET', 'request_url': 'http://127.0.0.1:9000/login/', 'params_type': None, 'key': None, 'value': None, 'execute': None}]
+[2019-10-03 18:51:11,420] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-03 18:51:11,429] DEBUG in connectionpool-437: http://127.0.0.1:9000 "GET /login/ HTTP/1.1" 200 5722
+[2019-10-03 18:51:11,435] DEBUG in selenium_socket-288: 接口测试状态码：200
+[2019-10-03 18:51:13,446] DEBUG in send_mail-64: (登陆接口的接口测试报告) 邮件发送成功！！！
+[2019-10-03 18:51:13,472] DEBUG in send_mail-64: (登陆接口的接口测试报告) 邮件发送成功！！！
+[2019-10-03 18:57:58,732] INFO in selenium_socket-393: ('127.0.0.1', 61870) 断开连接--
+[2019-10-03 18:58:00,382] INFO in selenium_socket-369: ('127.0.0.1', 62257) 连接--
+[2019-10-03 18:59:16,901] INFO in selenium_socket-393: ('127.0.0.1', 62257) 断开连接--
+[2019-10-03 18:59:18,921] INFO in selenium_socket-369: ('127.0.0.1', 62334) 连接--
+[2019-10-03 19:06:42,344] INFO in selenium_socket-393: ('127.0.0.1', 61866) 断开连接--
+[2019-10-03 19:06:42,345] INFO in selenium_socket-393: ('127.0.0.1', 62334) 断开连接--
+[2019-10-03 19:06:44,714] INFO in selenium_socket-369: ('127.0.0.1', 62752) 连接--
+[2019-10-03 19:06:46,666] INFO in selenium_socket-369: ('127.0.0.1', 62755) 连接--
+[2019-10-03 19:06:51,682] INFO in selenium_socket-393: ('127.0.0.1', 62755) 断开连接--
+[2019-10-03 19:06:51,683] INFO in selenium_socket-393: ('127.0.0.1', 62752) 断开连接--
+[2019-10-03 19:06:53,373] INFO in selenium_socket-369: ('127.0.0.1', 62763) 连接--
+[2019-10-03 19:06:55,009] INFO in selenium_socket-369: ('127.0.0.1', 62767) 连接--
+[2019-10-03 19:08:21,895] INFO in selenium_socket-369: ('127.0.0.1', 62868) 连接--
+[2019-10-03 19:08:21,923] DEBUG in selenium_socket-381: 接收的数据: t": "execute_interface_test", "data": {"interface_test_id": "1", "user_id": 1}}
+[2019-10-03 19:09:04,892] INFO in selenium_socket-369: ('127.0.0.1', 62913) 连接--
+[2019-10-03 19:09:06,508] INFO in selenium_socket-369: ('127.0.0.1', 62916) 连接--
+[2019-10-03 19:09:12,792] INFO in selenium_socket-369: ('127.0.0.1', 62927) 连接--
+[2019-10-03 19:09:14,569] INFO in selenium_socket-369: ('127.0.0.1', 62931) 连接--
+[2019-10-03 19:09:21,884] INFO in selenium_socket-369: ('127.0.0.1', 62945) 连接--
+[2019-10-03 19:09:28,426] INFO in selenium_socket-391: ('127.0.0.1', 62931) 断开连接--
+[2019-10-03 19:09:28,427] INFO in selenium_socket-391: ('127.0.0.1', 62927) 断开连接--
+[2019-10-03 19:09:30,331] INFO in selenium_socket-369: ('127.0.0.1', 62957) 连接--
+[2019-10-03 19:09:31,796] INFO in selenium_socket-369: ('127.0.0.1', 62960) 连接--
+[2019-10-03 19:11:13,720] INFO in selenium_socket-391: ('127.0.0.1', 62960) 断开连接--
+[2019-10-03 19:11:15,442] INFO in selenium_socket-369: ('127.0.0.1', 63058) 连接--
+[2019-10-03 19:11:35,807] INFO in selenium_socket-391: ('127.0.0.1', 63058) 断开连接--
+[2019-10-03 19:11:37,417] INFO in selenium_socket-369: ('127.0.0.1', 63078) 连接--
+[2019-10-03 19:14:10,822] INFO in selenium_socket-369: ('127.0.0.1', 63235) 连接--
+[2019-10-03 19:14:11,545] INFO in selenium_socket-369: ('127.0.0.1', 63238) 连接--
+[2019-10-03 19:16:12,006] INFO in selenium_socket-369: ('127.0.0.1', 63414) 连接--
+[2019-10-03 19:18:23,366] INFO in selenium_socket-369: ('127.0.0.1', 63561) 连接--
+[2019-10-03 19:18:24,130] INFO in selenium_socket-369: ('127.0.0.1', 63565) 连接--
+[2019-10-03 19:19:39,069] INFO in selenium_socket-391: ('127.0.0.1', 63565) 断开连接--
+[2019-10-03 19:19:39,670] INFO in selenium_socket-369: ('127.0.0.1', 63634) 连接--
+[2019-10-03 19:19:44,037] INFO in selenium_socket-369: ('127.0.0.1', 63642) 连接--
+[2019-10-03 19:19:44,723] INFO in selenium_socket-369: ('127.0.0.1', 63646) 连接--
+[2019-10-03 19:20:12,002] INFO in selenium_socket-369: ('127.0.0.1', 63677) 连接--
+[2019-10-03 19:20:12,002] DEBUG in selenium_socket-380: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '1', 'user_id': 1}}
+[2019-10-03 19:20:12,003] DEBUG in selenium_socket-264: 执行的接口测试数据：{'interface_test_id': '1', 'user_id': 1}
+[2019-10-03 19:20:12,003] DEBUG in selenium_socket-275: 接口测试新增数据的id为: 11
+[2019-10-03 19:20:12,021] DEBUG in selenium_socket-285: 查询结果：[{'request_type': 'GET', 'request_url': 'http://127.0.0.1:9000/login/', 'params_type': None, 'key': None, 'value': None, 'execute': None}]
+[2019-10-03 19:20:12,023] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-03 19:20:12,040] DEBUG in connectionpool-437: http://127.0.0.1:9000 "GET /login/ HTTP/1.1" 200 5722
+[2019-10-03 19:20:12,040] DEBUG in selenium_socket-288: 接口测试状态码：200
+[2019-10-03 19:20:14,495] DEBUG in send_mail-64: (登陆接口的接口测试报告) 邮件发送成功！！！
+[2019-10-03 19:20:47,080] DEBUG in selenium_socket-380: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '1', 'user_id': 1}}
+[2019-10-03 19:20:47,080] DEBUG in selenium_socket-264: 执行的接口测试数据：{'interface_test_id': '1', 'user_id': 1}
+[2019-10-03 19:20:47,081] DEBUG in selenium_socket-275: 接口测试新增数据的id为: 12
+[2019-10-03 19:20:47,087] DEBUG in selenium_socket-285: 查询结果：[{'request_type': 'GET', 'request_url': 'http://127.0.0.1:9000/login/', 'params_type': None, 'key': None, 'value': None, 'execute': None}]
+[2019-10-03 19:20:47,088] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-03 19:20:47,099] DEBUG in connectionpool-437: http://127.0.0.1:9000 "GET /login/ HTTP/1.1" 200 5722
+[2019-10-03 19:20:47,100] DEBUG in selenium_socket-288: 接口测试状态码：200
+[2019-10-03 19:20:49,476] DEBUG in send_mail-64: (登陆接口的接口测试报告) 邮件发送成功！！！
+[2019-10-03 19:21:12,003] DEBUG in selenium_socket-380: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '1', 'user_id': 1}}
+[2019-10-03 19:21:12,004] DEBUG in selenium_socket-264: 执行的接口测试数据：{'interface_test_id': '1', 'user_id': 1}
+[2019-10-03 19:21:12,004] DEBUG in selenium_socket-275: 接口测试新增数据的id为: 13
+[2019-10-03 19:21:12,014] DEBUG in selenium_socket-285: 查询结果：[{'request_type': 'GET', 'request_url': 'http://127.0.0.1:9000/login/', 'params_type': None, 'key': None, 'value': None, 'execute': None}]
+[2019-10-03 19:21:12,015] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-03 19:21:12,027] DEBUG in connectionpool-437: http://127.0.0.1:9000 "GET /login/ HTTP/1.1" 200 5722
+[2019-10-03 19:21:12,027] DEBUG in selenium_socket-288: 接口测试状态码：200
+[2019-10-03 19:21:13,943] DEBUG in send_mail-64: (登陆接口的接口测试报告) 邮件发送成功！！！
+[2019-10-03 19:23:00,016] DEBUG in selenium_socket-380: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '1', 'user_id': 1}}
+[2019-10-03 19:23:00,016] DEBUG in selenium_socket-264: 执行的接口测试数据：{'interface_test_id': '1', 'user_id': 1}
+[2019-10-03 19:23:00,016] DEBUG in selenium_socket-275: 接口测试新增数据的id为: 14
+[2019-10-03 19:23:00,024] DEBUG in selenium_socket-285: 查询结果：[{'request_type': 'GET', 'request_url': 'http://127.0.0.1:9000/login/', 'params_type': None, 'key': None, 'value': None, 'execute': None}]
+[2019-10-03 19:23:00,025] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-03 19:23:00,029] DEBUG in connectionpool-437: http://127.0.0.1:9000 "GET /login/ HTTP/1.1" 200 5722
+[2019-10-03 19:23:00,030] DEBUG in selenium_socket-288: 接口测试状态码：200
+[2019-10-03 19:23:02,588] DEBUG in send_mail-64: (登陆接口的接口测试报告) 邮件发送成功！！！
+[2019-10-03 19:24:00,010] DEBUG in selenium_socket-380: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '1', 'user_id': 1}}
+[2019-10-03 19:24:00,010] DEBUG in selenium_socket-264: 执行的接口测试数据：{'interface_test_id': '1', 'user_id': 1}
+[2019-10-03 19:24:00,011] DEBUG in selenium_socket-275: 接口测试新增数据的id为: 15
+[2019-10-03 19:24:00,016] DEBUG in selenium_socket-285: 查询结果：[{'request_type': 'GET', 'request_url': 'http://127.0.0.1:9000/login/', 'params_type': None, 'key': None, 'value': None, 'execute': None}]
+[2019-10-03 19:24:00,018] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-03 19:24:00,029] DEBUG in connectionpool-437: http://127.0.0.1:9000 "GET /login/ HTTP/1.1" 200 5722
+[2019-10-03 19:24:00,030] DEBUG in selenium_socket-288: 接口测试状态码：200
+[2019-10-03 19:24:04,468] DEBUG in send_mail-64: (登陆接口的接口测试报告) 邮件发送成功！！！
+[2019-10-03 19:25:00,013] DEBUG in selenium_socket-380: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '1', 'user_id': 1}}
+[2019-10-03 19:25:00,013] DEBUG in selenium_socket-264: 执行的接口测试数据：{'interface_test_id': '1', 'user_id': 1}
+[2019-10-03 19:25:00,013] DEBUG in selenium_socket-275: 接口测试新增数据的id为: 16
+[2019-10-03 19:25:00,022] DEBUG in selenium_socket-285: 查询结果：[{'request_type': 'GET', 'request_url': 'http://127.0.0.1:9000/login/', 'params_type': None, 'key': None, 'value': None, 'execute': None}]
+[2019-10-03 19:25:00,026] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-03 19:25:00,042] DEBUG in connectionpool-437: http://127.0.0.1:9000 "GET /login/ HTTP/1.1" 200 5722
+[2019-10-03 19:25:00,043] DEBUG in selenium_socket-288: 接口测试状态码：200
+[2019-10-03 19:25:02,680] DEBUG in send_mail-64: (登陆接口的接口测试报告) 邮件发送成功！！！
+[2019-10-03 19:26:00,012] DEBUG in selenium_socket-380: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '1', 'user_id': 1}}
+[2019-10-03 19:26:00,012] DEBUG in selenium_socket-264: 执行的接口测试数据：{'interface_test_id': '1', 'user_id': 1}
+[2019-10-03 19:26:00,013] DEBUG in selenium_socket-275: 接口测试新增数据的id为: 17
+[2019-10-03 19:26:00,025] DEBUG in selenium_socket-285: 查询结果：[{'request_type': 'GET', 'request_url': 'http://127.0.0.1:9000/login/', 'params_type': None, 'key': None, 'value': None, 'execute': None}]
+[2019-10-03 19:26:00,026] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-03 19:26:00,038] DEBUG in connectionpool-437: http://127.0.0.1:9000 "GET /login/ HTTP/1.1" 200 5722
+[2019-10-03 19:26:00,039] DEBUG in selenium_socket-288: 接口测试状态码：200
+[2019-10-03 19:26:02,640] DEBUG in send_mail-64: (登陆接口的接口测试报告) 邮件发送成功！！！
+[2019-10-03 19:27:00,014] DEBUG in selenium_socket-380: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '1', 'user_id': 1}}
+[2019-10-03 19:27:00,015] DEBUG in selenium_socket-264: 执行的接口测试数据：{'interface_test_id': '1', 'user_id': 1}
+[2019-10-03 19:27:00,016] DEBUG in selenium_socket-275: 接口测试新增数据的id为: 18
+[2019-10-03 19:27:00,041] DEBUG in selenium_socket-285: 查询结果：[{'request_type': 'GET', 'request_url': 'http://127.0.0.1:9000/login/', 'params_type': None, 'key': None, 'value': None, 'execute': None}]
+[2019-10-03 19:27:00,042] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-03 19:27:00,045] DEBUG in connectionpool-437: http://127.0.0.1:9000 "GET /login/ HTTP/1.1" 200 5722
+[2019-10-03 19:27:00,046] DEBUG in selenium_socket-288: 接口测试状态码：200
+[2019-10-03 19:27:02,206] DEBUG in send_mail-64: (登陆接口的接口测试报告) 邮件发送成功！！！
+[2019-10-03 19:28:00,019] DEBUG in selenium_socket-380: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '1', 'user_id': 1}}
+[2019-10-03 19:28:00,019] DEBUG in selenium_socket-264: 执行的接口测试数据：{'interface_test_id': '1', 'user_id': 1}
+[2019-10-03 19:28:00,020] DEBUG in selenium_socket-275: 接口测试新增数据的id为: 19
+[2019-10-03 19:28:00,031] DEBUG in selenium_socket-285: 查询结果：[{'request_type': 'GET', 'request_url': 'http://127.0.0.1:9000/login/', 'params_type': None, 'key': None, 'value': None, 'execute': None}]
+[2019-10-03 19:28:00,034] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-03 19:28:00,036] DEBUG in connectionpool-437: http://127.0.0.1:9000 "GET /login/ HTTP/1.1" 200 5722
+[2019-10-03 19:28:00,036] DEBUG in selenium_socket-288: 接口测试状态码：200
+[2019-10-03 19:28:02,313] DEBUG in send_mail-64: (登陆接口的接口测试报告) 邮件发送成功！！！
+[2019-10-03 19:29:00,007] DEBUG in selenium_socket-380: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '1', 'user_id': 1}}
+[2019-10-03 19:29:00,009] DEBUG in selenium_socket-264: 执行的接口测试数据：{'interface_test_id': '1', 'user_id': 1}
+[2019-10-03 19:29:00,012] DEBUG in selenium_socket-275: 接口测试新增数据的id为: 20
+[2019-10-03 19:29:00,019] DEBUG in selenium_socket-285: 查询结果：[{'request_type': 'GET', 'request_url': 'http://127.0.0.1:9000/login/', 'params_type': None, 'key': None, 'value': None, 'execute': None}]
+[2019-10-03 19:29:00,020] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-03 19:29:00,022] DEBUG in connectionpool-437: http://127.0.0.1:9000 "GET /login/ HTTP/1.1" 200 5722
+[2019-10-03 19:29:00,023] DEBUG in selenium_socket-288: 接口测试状态码：200
+[2019-10-03 19:29:02,199] DEBUG in send_mail-64: (登陆接口的接口测试报告) 邮件发送成功！！！
+[2019-10-03 19:30:00,014] DEBUG in selenium_socket-380: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '1', 'user_id': 1}}
+[2019-10-03 19:30:00,014] DEBUG in selenium_socket-264: 执行的接口测试数据：{'interface_test_id': '1', 'user_id': 1}
+[2019-10-03 19:30:00,015] DEBUG in selenium_socket-275: 接口测试新增数据的id为: 21
+[2019-10-03 19:30:00,023] DEBUG in selenium_socket-285: 查询结果：[{'request_type': 'GET', 'request_url': 'http://127.0.0.1:9000/login/', 'params_type': None, 'key': None, 'value': None, 'execute': None}]
+[2019-10-03 19:30:00,025] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-03 19:30:00,027] DEBUG in connectionpool-437: http://127.0.0.1:9000 "GET /login/ HTTP/1.1" 200 5722
+[2019-10-03 19:30:00,028] DEBUG in selenium_socket-288: 接口测试状态码：200
+[2019-10-03 19:30:02,628] DEBUG in send_mail-64: (登陆接口的接口测试报告) 邮件发送成功！！！
+[2019-10-03 19:31:00,013] DEBUG in selenium_socket-380: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '1', 'user_id': 1}}
+[2019-10-03 19:31:00,013] DEBUG in selenium_socket-264: 执行的接口测试数据：{'interface_test_id': '1', 'user_id': 1}
+[2019-10-03 19:31:00,014] DEBUG in selenium_socket-275: 接口测试新增数据的id为: 22
+[2019-10-03 19:31:00,021] DEBUG in selenium_socket-285: 查询结果：[{'request_type': 'GET', 'request_url': 'http://127.0.0.1:9000/login/', 'params_type': None, 'key': None, 'value': None, 'execute': None}]
+[2019-10-03 19:31:00,022] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-03 19:31:00,037] DEBUG in connectionpool-437: http://127.0.0.1:9000 "GET /login/ HTTP/1.1" 200 5722
+[2019-10-03 19:31:00,038] DEBUG in selenium_socket-288: 接口测试状态码：200
+[2019-10-03 19:31:02,163] DEBUG in send_mail-64: (登陆接口的接口测试报告) 邮件发送成功！！！
+[2019-10-03 19:32:00,016] DEBUG in selenium_socket-380: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '1', 'user_id': 1}}
+[2019-10-03 19:32:00,016] DEBUG in selenium_socket-264: 执行的接口测试数据：{'interface_test_id': '1', 'user_id': 1}
+[2019-10-03 19:32:00,017] DEBUG in selenium_socket-275: 接口测试新增数据的id为: 23
+[2019-10-03 19:32:00,023] DEBUG in selenium_socket-285: 查询结果：[{'request_type': 'GET', 'request_url': 'http://127.0.0.1:9000/login/', 'params_type': None, 'key': None, 'value': None, 'execute': None}]
+[2019-10-03 19:32:00,024] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-03 19:32:00,038] DEBUG in connectionpool-437: http://127.0.0.1:9000 "GET /login/ HTTP/1.1" 200 5722
+[2019-10-03 19:32:00,038] DEBUG in selenium_socket-288: 接口测试状态码：200
+[2019-10-03 19:32:02,436] DEBUG in send_mail-64: (登陆接口的接口测试报告) 邮件发送成功！！！
+[2019-10-03 19:33:00,016] DEBUG in selenium_socket-380: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '1', 'user_id': 1}}
+[2019-10-03 19:33:00,016] DEBUG in selenium_socket-264: 执行的接口测试数据：{'interface_test_id': '1', 'user_id': 1}
+[2019-10-03 19:33:00,017] DEBUG in selenium_socket-275: 接口测试新增数据的id为: 24
+[2019-10-03 19:33:00,023] DEBUG in selenium_socket-285: 查询结果：[{'request_type': 'GET', 'request_url': 'http://127.0.0.1:9000/login/', 'params_type': None, 'key': None, 'value': None, 'execute': None}]
+[2019-10-03 19:33:00,024] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-03 19:33:00,039] DEBUG in connectionpool-437: http://127.0.0.1:9000 "GET /login/ HTTP/1.1" 200 5722
+[2019-10-03 19:33:00,039] DEBUG in selenium_socket-288: 接口测试状态码：200
+[2019-10-03 19:33:02,570] DEBUG in send_mail-64: (登陆接口的接口测试报告) 邮件发送成功！！！
+[2019-10-03 19:34:00,014] DEBUG in selenium_socket-380: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '1', 'user_id': 1}}
+[2019-10-03 19:34:00,014] DEBUG in selenium_socket-264: 执行的接口测试数据：{'interface_test_id': '1', 'user_id': 1}
+[2019-10-03 19:34:00,016] DEBUG in selenium_socket-275: 接口测试新增数据的id为: 25
+[2019-10-03 19:34:00,043] DEBUG in selenium_socket-285: 查询结果：[{'request_type': 'GET', 'request_url': 'http://127.0.0.1:9000/login/', 'params_type': None, 'key': None, 'value': None, 'execute': None}]
+[2019-10-03 19:34:00,044] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-03 19:34:00,056] DEBUG in connectionpool-437: http://127.0.0.1:9000 "GET /login/ HTTP/1.1" 200 5722
+[2019-10-03 19:34:00,057] DEBUG in selenium_socket-288: 接口测试状态码：200
+[2019-10-03 19:34:02,075] DEBUG in send_mail-64: (登陆接口的接口测试报告) 邮件发送成功！！！
+[2019-10-03 19:35:00,015] DEBUG in selenium_socket-380: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '1', 'user_id': 1}}
+[2019-10-03 19:35:00,015] DEBUG in selenium_socket-264: 执行的接口测试数据：{'interface_test_id': '1', 'user_id': 1}
+[2019-10-03 19:35:00,015] DEBUG in selenium_socket-275: 接口测试新增数据的id为: 26
+[2019-10-03 19:35:00,036] DEBUG in selenium_socket-285: 查询结果：[{'request_type': 'GET', 'request_url': 'http://127.0.0.1:9000/login/', 'params_type': None, 'key': None, 'value': None, 'execute': None}]
+[2019-10-03 19:35:00,039] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-03 19:35:00,052] DEBUG in connectionpool-437: http://127.0.0.1:9000 "GET /login/ HTTP/1.1" 200 5722
+[2019-10-03 19:35:00,052] DEBUG in selenium_socket-288: 接口测试状态码：200
+[2019-10-03 19:35:03,245] DEBUG in send_mail-64: (登陆接口的接口测试报告) 邮件发送成功！！！
+[2019-10-03 19:36:00,017] DEBUG in selenium_socket-380: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '1', 'user_id': 1}}
+[2019-10-03 19:36:00,017] DEBUG in selenium_socket-264: 执行的接口测试数据：{'interface_test_id': '1', 'user_id': 1}
+[2019-10-03 19:36:00,020] DEBUG in selenium_socket-275: 接口测试新增数据的id为: 27
+[2019-10-03 19:36:00,032] DEBUG in selenium_socket-285: 查询结果：[{'request_type': 'GET', 'request_url': 'http://127.0.0.1:9000/login/', 'params_type': None, 'key': None, 'value': None, 'execute': None}]
+[2019-10-03 19:36:00,035] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-03 19:36:00,043] DEBUG in connectionpool-437: http://127.0.0.1:9000 "GET /login/ HTTP/1.1" 200 5722
+[2019-10-03 19:36:00,044] DEBUG in selenium_socket-288: 接口测试状态码：200
+[2019-10-03 19:36:02,599] DEBUG in send_mail-64: (登陆接口的接口测试报告) 邮件发送成功！！！
+[2019-10-03 19:37:00,013] DEBUG in selenium_socket-380: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '1', 'user_id': 1}}
+[2019-10-03 19:37:00,014] DEBUG in selenium_socket-264: 执行的接口测试数据：{'interface_test_id': '1', 'user_id': 1}
+[2019-10-03 19:37:00,015] DEBUG in selenium_socket-275: 接口测试新增数据的id为: 28
+[2019-10-03 19:37:00,027] DEBUG in selenium_socket-285: 查询结果：[{'request_type': 'GET', 'request_url': 'http://127.0.0.1:9000/login/', 'params_type': None, 'key': None, 'value': None, 'execute': None}]
+[2019-10-03 19:37:00,028] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-03 19:37:00,030] DEBUG in connectionpool-437: http://127.0.0.1:9000 "GET /login/ HTTP/1.1" 200 5722
+[2019-10-03 19:37:00,030] DEBUG in selenium_socket-288: 接口测试状态码：200
+[2019-10-03 19:37:02,688] DEBUG in send_mail-64: (登陆接口的接口测试报告) 邮件发送成功！！！
+[2019-10-03 19:48:52,338] INFO in selenium_socket-391: ('127.0.0.1', 63677) 断开连接--
+[2019-10-03 19:49:18,127] INFO in selenium_socket-369: ('127.0.0.1', 49365) 连接--
+[2019-10-03 19:49:18,965] INFO in selenium_socket-369: ('127.0.0.1', 49370) 连接--
+[2019-10-03 19:50:23,583] INFO in selenium_socket-391: ('127.0.0.1', 49370) 断开连接--
+[2019-10-03 19:50:23,583] INFO in selenium_socket-391: ('127.0.0.1', 49365) 断开连接--
+[2019-10-03 19:50:24,253] INFO in selenium_socket-369: ('127.0.0.1', 49458) 连接--
+[2019-10-03 19:50:24,909] INFO in selenium_socket-369: ('127.0.0.1', 49461) 连接--
+[2019-10-03 19:51:29,578] INFO in selenium_socket-391: ('127.0.0.1', 49461) 断开连接--
+[2019-10-03 19:51:29,578] INFO in selenium_socket-391: ('127.0.0.1', 49458) 断开连接--
+[2019-10-03 19:51:30,397] INFO in selenium_socket-369: ('127.0.0.1', 49532) 连接--
+[2019-10-03 19:51:31,022] INFO in selenium_socket-369: ('127.0.0.1', 49536) 连接--
+[2019-10-03 19:52:10,242] INFO in selenium_socket-391: ('127.0.0.1', 49532) 断开连接--
+[2019-10-03 19:52:10,253] INFO in selenium_socket-391: ('127.0.0.1', 49536) 断开连接--
+[2019-10-03 19:52:10,906] INFO in selenium_socket-369: ('127.0.0.1', 49581) 连接--
+[2019-10-03 19:52:11,524] INFO in selenium_socket-369: ('127.0.0.1', 49584) 连接--
+[2019-10-03 19:53:57,920] INFO in selenium_socket-391: ('127.0.0.1', 49581) 断开连接--
+[2019-10-03 19:53:57,921] INFO in selenium_socket-391: ('127.0.0.1', 49584) 断开连接--
+[2019-10-03 19:53:58,589] INFO in selenium_socket-369: ('127.0.0.1', 49694) 连接--
+[2019-10-03 19:53:59,208] INFO in selenium_socket-369: ('127.0.0.1', 49698) 连接--
+[2019-10-03 19:59:12,953] INFO in selenium_socket-369: ('127.0.0.1', 49976) 连接--
+[2019-10-03 19:59:12,953] DEBUG in selenium_socket-380: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '1', 'user_id': 1}}
+[2019-10-03 19:59:12,953] DEBUG in selenium_socket-264: 执行的接口测试数据：{'interface_test_id': '1', 'user_id': 1}
+[2019-10-03 19:59:12,954] DEBUG in selenium_socket-275: 接口测试新增数据的id为: 29
+[2019-10-03 19:59:12,960] DEBUG in selenium_socket-285: 查询结果：[{'request_type': 'GET', 'request_url': 'http://127.0.0.1:9000/login/', 'params_type': None, 'key': None, 'value': None, 'execute': None}]
+[2019-10-03 19:59:12,962] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-03 19:59:12,970] DEBUG in connectionpool-437: http://127.0.0.1:9000 "GET /login/ HTTP/1.1" 200 5722
+[2019-10-03 19:59:12,970] DEBUG in selenium_socket-288: 接口测试状态码：200
+[2019-10-03 19:59:15,221] DEBUG in send_mail-64: (登陆接口的接口测试报告) 邮件发送成功！！！
+[2019-10-03 20:04:12,954] DEBUG in selenium_socket-380: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '1', 'user_id': 1}}
+[2019-10-03 20:04:12,954] DEBUG in selenium_socket-264: 执行的接口测试数据：{'interface_test_id': '1', 'user_id': 1}
+[2019-10-03 20:04:12,955] DEBUG in selenium_socket-275: 接口测试新增数据的id为: 30
+[2019-10-03 20:04:12,990] DEBUG in selenium_socket-285: 查询结果：[{'request_type': 'GET', 'request_url': 'http://127.0.0.1:9000/login/', 'params_type': None, 'key': None, 'value': None, 'execute': None}]
+[2019-10-03 20:04:12,991] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-03 20:04:12,993] DEBUG in connectionpool-437: http://127.0.0.1:9000 "GET /login/ HTTP/1.1" 200 5722
+[2019-10-03 20:04:12,994] DEBUG in selenium_socket-288: 接口测试状态码：200
+[2019-10-03 20:04:15,117] DEBUG in send_mail-64: (登陆接口的接口测试报告) 邮件发送成功！！！
+[2019-10-03 20:09:12,953] DEBUG in selenium_socket-380: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '1', 'user_id': 1}}
+[2019-10-03 20:09:12,953] DEBUG in selenium_socket-264: 执行的接口测试数据：{'interface_test_id': '1', 'user_id': 1}
+[2019-10-03 20:09:12,954] DEBUG in selenium_socket-275: 接口测试新增数据的id为: 31
+[2019-10-03 20:09:12,965] DEBUG in selenium_socket-285: 查询结果：[{'request_type': 'GET', 'request_url': 'http://127.0.0.1:9000/login/', 'params_type': None, 'key': None, 'value': None, 'execute': None}]
+[2019-10-03 20:09:12,966] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-03 20:09:12,978] DEBUG in connectionpool-437: http://127.0.0.1:9000 "GET /login/ HTTP/1.1" 200 5722
+[2019-10-03 20:09:12,978] DEBUG in selenium_socket-288: 接口测试状态码：200
+[2019-10-03 20:09:15,030] DEBUG in send_mail-64: (登陆接口的接口测试报告) 邮件发送成功！！！
+[2019-10-03 20:14:12,953] DEBUG in selenium_socket-380: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '1', 'user_id': 1}}
+[2019-10-03 20:14:12,953] DEBUG in selenium_socket-264: 执行的接口测试数据：{'interface_test_id': '1', 'user_id': 1}
+[2019-10-03 20:14:12,954] DEBUG in selenium_socket-275: 接口测试新增数据的id为: 32
+[2019-10-03 20:14:12,961] DEBUG in selenium_socket-285: 查询结果：[{'request_type': 'GET', 'request_url': 'http://127.0.0.1:9000/login/', 'params_type': None, 'key': None, 'value': None, 'execute': None}]
+[2019-10-03 20:14:12,962] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-03 20:14:12,973] DEBUG in connectionpool-437: http://127.0.0.1:9000 "GET /login/ HTTP/1.1" 200 5722
+[2019-10-03 20:14:12,974] DEBUG in selenium_socket-288: 接口测试状态码：200
+[2019-10-03 20:14:14,737] DEBUG in send_mail-64: (登陆接口的接口测试报告) 邮件发送成功！！！
+[2019-10-03 20:19:12,953] DEBUG in selenium_socket-380: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '1', 'user_id': 1}}
+[2019-10-03 20:19:12,954] DEBUG in selenium_socket-264: 执行的接口测试数据：{'interface_test_id': '1', 'user_id': 1}
+[2019-10-03 20:19:12,954] DEBUG in selenium_socket-275: 接口测试新增数据的id为: 33
+[2019-10-03 20:19:12,965] DEBUG in selenium_socket-285: 查询结果：[{'request_type': 'GET', 'request_url': 'http://127.0.0.1:9000/login/', 'params_type': None, 'key': None, 'value': None, 'execute': None}]
+[2019-10-03 20:19:12,967] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-03 20:19:12,969] DEBUG in connectionpool-437: http://127.0.0.1:9000 "GET /login/ HTTP/1.1" 200 5722
+[2019-10-03 20:19:12,970] DEBUG in selenium_socket-288: 接口测试状态码：200
+[2019-10-03 20:19:14,910] DEBUG in send_mail-64: (登陆接口的接口测试报告) 邮件发送成功！！！
+[2019-10-03 20:24:12,955] DEBUG in selenium_socket-380: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '1', 'user_id': 1}}
+[2019-10-03 20:24:12,955] DEBUG in selenium_socket-264: 执行的接口测试数据：{'interface_test_id': '1', 'user_id': 1}
+[2019-10-03 20:24:12,956] DEBUG in selenium_socket-275: 接口测试新增数据的id为: 34
+[2019-10-03 20:24:12,963] DEBUG in selenium_socket-285: 查询结果：[{'request_type': 'GET', 'request_url': 'http://127.0.0.1:9000/login/', 'params_type': None, 'key': None, 'value': None, 'execute': None}]
+[2019-10-03 20:24:12,964] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-03 20:24:12,976] DEBUG in connectionpool-437: http://127.0.0.1:9000 "GET /login/ HTTP/1.1" 200 5722
+[2019-10-03 20:24:12,976] DEBUG in selenium_socket-288: 接口测试状态码：200
+[2019-10-03 20:24:14,920] DEBUG in send_mail-64: (登陆接口的接口测试报告) 邮件发送成功！！！
+[2019-10-03 20:29:12,958] DEBUG in selenium_socket-380: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '1', 'user_id': 1}}
+[2019-10-03 20:29:12,959] DEBUG in selenium_socket-264: 执行的接口测试数据：{'interface_test_id': '1', 'user_id': 1}
+[2019-10-03 20:29:12,961] DEBUG in selenium_socket-275: 接口测试新增数据的id为: 35
+[2019-10-03 20:29:12,969] DEBUG in selenium_socket-285: 查询结果：[{'request_type': 'GET', 'request_url': 'http://127.0.0.1:9000/login/', 'params_type': None, 'key': None, 'value': None, 'execute': None}]
+[2019-10-03 20:29:12,970] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-03 20:29:12,974] DEBUG in connectionpool-437: http://127.0.0.1:9000 "GET /login/ HTTP/1.1" 200 5722
+[2019-10-03 20:29:12,977] DEBUG in selenium_socket-288: 接口测试状态码：200
+[2019-10-03 20:29:15,045] DEBUG in send_mail-64: (登陆接口的接口测试报告) 邮件发送成功！！！
+[2019-10-03 20:34:12,961] DEBUG in selenium_socket-380: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '1', 'user_id': 1}}
+[2019-10-03 20:34:12,961] DEBUG in selenium_socket-264: 执行的接口测试数据：{'interface_test_id': '1', 'user_id': 1}
+[2019-10-03 20:34:12,962] DEBUG in selenium_socket-275: 接口测试新增数据的id为: 36
+[2019-10-03 20:34:12,985] DEBUG in selenium_socket-285: 查询结果：[{'request_type': 'GET', 'request_url': 'http://127.0.0.1:9000/login/', 'params_type': None, 'key': None, 'value': None, 'execute': None}]
+[2019-10-03 20:34:12,987] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-03 20:34:12,991] DEBUG in connectionpool-437: http://127.0.0.1:9000 "GET /login/ HTTP/1.1" 200 5722
+[2019-10-03 20:34:12,992] DEBUG in selenium_socket-288: 接口测试状态码：200
+[2019-10-03 20:34:15,255] DEBUG in send_mail-64: (登陆接口的接口测试报告) 邮件发送成功！！！
+[2019-10-03 20:39:12,967] DEBUG in selenium_socket-380: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '1', 'user_id': 1}}
+[2019-10-03 20:39:12,969] DEBUG in selenium_socket-264: 执行的接口测试数据：{'interface_test_id': '1', 'user_id': 1}
+[2019-10-03 20:39:12,971] DEBUG in selenium_socket-275: 接口测试新增数据的id为: 37
+[2019-10-03 20:39:12,979] DEBUG in selenium_socket-285: 查询结果：[{'request_type': 'GET', 'request_url': 'http://127.0.0.1:9000/login/', 'params_type': None, 'key': None, 'value': None, 'execute': None}]
+[2019-10-03 20:39:12,984] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-03 20:39:12,991] DEBUG in connectionpool-437: http://127.0.0.1:9000 "GET /login/ HTTP/1.1" 200 5722
+[2019-10-03 20:39:12,994] DEBUG in selenium_socket-288: 接口测试状态码：200
+[2019-10-03 20:39:15,107] DEBUG in send_mail-64: (登陆接口的接口测试报告) 邮件发送成功！！！
+[2019-10-03 20:40:21,978] INFO in selenium_socket-391: ('127.0.0.1', 49698) 断开连接--
+[2019-10-03 20:40:23,903] INFO in selenium_socket-369: ('127.0.0.1', 52627) 连接--
+[2019-10-03 20:44:12,967] DEBUG in selenium_socket-380: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '1', 'user_id': 1}}
+[2019-10-03 20:44:12,968] DEBUG in selenium_socket-264: 执行的接口测试数据：{'interface_test_id': '1', 'user_id': 1}
+[2019-10-03 20:44:12,970] DEBUG in selenium_socket-275: 接口测试新增数据的id为: 38
+[2019-10-03 20:44:12,983] DEBUG in selenium_socket-285: 查询结果：[{'request_type': 'GET', 'request_url': 'http://127.0.0.1:9000/login/', 'params_type': None, 'key': None, 'value': None, 'execute': None}]
+[2019-10-03 20:44:12,987] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-03 20:44:12,997] DEBUG in connectionpool-437: http://127.0.0.1:9000 "GET /login/ HTTP/1.1" 200 5722
+[2019-10-03 20:44:12,998] DEBUG in selenium_socket-288: 接口测试状态码：200
+[2019-10-03 20:44:15,137] DEBUG in send_mail-64: (登陆接口的接口测试报告) 邮件发送成功！！！
+[2019-10-03 20:49:12,963] DEBUG in selenium_socket-380: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '1', 'user_id': 1}}
+[2019-10-03 20:49:12,964] DEBUG in selenium_socket-264: 执行的接口测试数据：{'interface_test_id': '1', 'user_id': 1}
+[2019-10-03 20:49:12,966] DEBUG in selenium_socket-275: 接口测试新增数据的id为: 39
+[2019-10-03 20:49:12,976] DEBUG in selenium_socket-285: 查询结果：[{'request_type': 'GET', 'request_url': 'http://127.0.0.1:9000/login/', 'params_type': None, 'key': None, 'value': None, 'execute': None}]
+[2019-10-03 20:49:12,980] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-03 20:49:12,988] DEBUG in connectionpool-437: http://127.0.0.1:9000 "GET /login/ HTTP/1.1" 200 5722
+[2019-10-03 20:49:12,990] DEBUG in selenium_socket-288: 接口测试状态码：200
+[2019-10-03 20:49:14,857] DEBUG in send_mail-64: (登陆接口的接口测试报告) 邮件发送成功！！！
+[2019-10-03 20:49:49,100] INFO in selenium_socket-391: ('127.0.0.1', 52627) 断开连接--
+[2019-10-03 20:49:51,004] INFO in selenium_socket-369: ('127.0.0.1', 53294) 连接--
+[2019-10-03 20:53:31,840] INFO in selenium_socket-391: ('127.0.0.1', 53294) 断开连接--
+[2019-10-03 20:53:33,588] INFO in selenium_socket-369: ('127.0.0.1', 53513) 连接--
+[2019-10-03 20:54:12,972] DEBUG in selenium_socket-380: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '1', 'user_id': 1}}
+[2019-10-03 20:54:12,973] DEBUG in selenium_socket-264: 执行的接口测试数据：{'interface_test_id': '1', 'user_id': 1}
+[2019-10-03 20:54:12,974] DEBUG in selenium_socket-275: 接口测试新增数据的id为: 40
+[2019-10-03 20:54:12,982] DEBUG in selenium_socket-285: 查询结果：[{'request_type': 'GET', 'request_url': 'http://127.0.0.1:9000/login/', 'params_type': None, 'key': None, 'value': None, 'execute': None}]
+[2019-10-03 20:54:12,985] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-03 20:54:13,003] DEBUG in connectionpool-437: http://127.0.0.1:9000 "GET /login/ HTTP/1.1" 200 5722
+[2019-10-03 20:54:13,005] DEBUG in selenium_socket-288: 接口测试状态码：200
+[2019-10-03 20:54:15,178] DEBUG in send_mail-64: (登陆接口的接口测试报告) 邮件发送成功！！！
+[2019-10-03 20:55:51,683] INFO in selenium_socket-391: ('127.0.0.1', 53513) 断开连接--
+[2019-10-03 20:59:12,961] DEBUG in selenium_socket-380: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '1', 'user_id': 1}}
+[2019-10-03 20:59:12,962] DEBUG in selenium_socket-264: 执行的接口测试数据：{'interface_test_id': '1', 'user_id': 1}
+[2019-10-03 20:59:12,964] DEBUG in selenium_socket-275: 接口测试新增数据的id为: 41
+[2019-10-03 20:59:12,972] DEBUG in selenium_socket-285: 查询结果：[{'request_type': 'GET', 'request_url': 'http://127.0.0.1:9000/login/', 'params_type': None, 'key': None, 'value': None, 'execute': None}]
+[2019-10-03 20:59:12,975] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-03 21:04:12,962] DEBUG in selenium_socket-380: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '1', 'user_id': 1}}
+[2019-10-03 21:04:12,963] DEBUG in selenium_socket-264: 执行的接口测试数据：{'interface_test_id': '1', 'user_id': 1}
+[2019-10-03 21:04:12,965] DEBUG in selenium_socket-275: 接口测试新增数据的id为: 42
+[2019-10-03 21:04:12,997] DEBUG in selenium_socket-285: 查询结果：[{'request_type': 'GET', 'request_url': 'http://127.0.0.1:9000/login/', 'params_type': None, 'key': None, 'value': None, 'execute': None}]
+[2019-10-03 21:04:13,001] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-03 21:09:12,964] DEBUG in selenium_socket-380: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '1', 'user_id': 1}}
+[2019-10-03 21:09:12,965] DEBUG in selenium_socket-264: 执行的接口测试数据：{'interface_test_id': '1', 'user_id': 1}
+[2019-10-03 21:09:12,967] DEBUG in selenium_socket-275: 接口测试新增数据的id为: 43
+[2019-10-03 21:09:12,975] DEBUG in selenium_socket-285: 查询结果：[{'request_type': 'GET', 'request_url': 'http://127.0.0.1:9000/login/', 'params_type': None, 'key': None, 'value': None, 'execute': None}]
+[2019-10-03 21:09:12,979] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-03 21:13:44,531] INFO in selenium_socket-369: ('127.0.0.1', 54802) 连接--
+[2019-10-03 21:13:46,349] INFO in selenium_socket-369: ('127.0.0.1', 54807) 连接--
+[2019-10-03 21:14:12,965] DEBUG in selenium_socket-380: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '1', 'user_id': 1}}
+[2019-10-03 21:14:12,966] DEBUG in selenium_socket-264: 执行的接口测试数据：{'interface_test_id': '1', 'user_id': 1}
+[2019-10-03 21:14:12,967] DEBUG in selenium_socket-275: 接口测试新增数据的id为: 44
+[2019-10-03 21:14:12,983] DEBUG in selenium_socket-285: 查询结果：[{'request_type': 'GET', 'request_url': 'http://127.0.0.1:9000/login/', 'params_type': None, 'key': None, 'value': None, 'execute': None}]
+[2019-10-03 21:14:13,001] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-03 21:14:13,032] DEBUG in connectionpool-437: http://127.0.0.1:9000 "GET /login/ HTTP/1.1" 200 5722
+[2019-10-03 21:14:13,033] DEBUG in selenium_socket-288: 接口测试状态码：200
+[2019-10-03 21:14:15,379] DEBUG in send_mail-64: (登陆接口的接口测试报告) 邮件发送成功！！！
+[2019-10-03 21:14:39,889] INFO in selenium_socket-391: ('127.0.0.1', 54807) 断开连接--
+[2019-10-03 21:14:39,890] INFO in selenium_socket-391: ('127.0.0.1', 54802) 断开连接--
+[2019-10-03 21:14:41,889] INFO in selenium_socket-369: ('127.0.0.1', 54911) 连接--
+[2019-10-03 21:14:43,692] INFO in selenium_socket-369: ('127.0.0.1', 54918) 连接--
+[2019-10-03 21:16:05,964] INFO in selenium_socket-391: ('127.0.0.1', 54911) 断开连接--
+[2019-10-03 21:16:05,968] INFO in selenium_socket-391: ('127.0.0.1', 54918) 断开连接--
+[2019-10-03 21:16:08,218] INFO in selenium_socket-369: ('127.0.0.1', 55050) 连接--
+[2019-10-03 21:16:09,993] INFO in selenium_socket-369: ('127.0.0.1', 55054) 连接--
+[2019-10-03 21:17:02,999] INFO in selenium_socket-391: ('127.0.0.1', 55054) 断开连接--
+[2019-10-03 21:17:03,001] INFO in selenium_socket-391: ('127.0.0.1', 55050) 断开连接--
+[2019-10-03 21:17:04,774] INFO in selenium_socket-369: ('127.0.0.1', 55159) 连接--
+[2019-10-03 21:17:06,407] INFO in selenium_socket-369: ('127.0.0.1', 55164) 连接--
+[2019-10-03 21:17:34,345] INFO in selenium_socket-391: ('127.0.0.1', 55159) 断开连接--
+[2019-10-03 21:17:34,346] INFO in selenium_socket-391: ('127.0.0.1', 55164) 断开连接--
+[2019-10-03 21:17:36,296] INFO in selenium_socket-369: ('127.0.0.1', 55243) 连接--
+[2019-10-03 21:17:38,061] INFO in selenium_socket-369: ('127.0.0.1', 55250) 连接--
+[2019-10-03 21:19:12,964] DEBUG in selenium_socket-380: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '1', 'user_id': 1}}
+[2019-10-03 21:19:12,965] DEBUG in selenium_socket-264: 执行的接口测试数据：{'interface_test_id': '1', 'user_id': 1}
+[2019-10-03 21:19:12,966] DEBUG in selenium_socket-275: 接口测试新增数据的id为: 45
+[2019-10-03 21:19:12,979] DEBUG in selenium_socket-285: 查询结果：[{'request_type': 'GET', 'request_url': 'http://127.0.0.1:9000/login/', 'params_type': None, 'key': None, 'value': None, 'execute': None}]
+[2019-10-03 21:19:12,983] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-03 21:19:12,995] DEBUG in connectionpool-437: http://127.0.0.1:9000 "GET /login/ HTTP/1.1" 200 5722
+[2019-10-03 21:19:12,996] DEBUG in selenium_socket-288: 接口测试状态码：200
+[2019-10-03 21:19:15,153] DEBUG in send_mail-64: (登陆接口的接口测试报告) 邮件发送成功！！！
+[2019-10-03 21:19:55,351] INFO in selenium_socket-391: ('127.0.0.1', 55250) 断开连接--
+[2019-10-03 21:19:56,874] INFO in selenium_socket-369: ('127.0.0.1', 55506) 连接--
+[2019-10-03 21:22:34,158] INFO in selenium_socket-391: ('127.0.0.1', 55506) 断开连接--
+[2019-10-03 21:22:34,159] INFO in selenium_socket-391: ('127.0.0.1', 55243) 断开连接--
+[2019-10-03 21:22:36,048] INFO in selenium_socket-369: ('127.0.0.1', 55719) 连接--
+[2019-10-03 21:22:37,556] INFO in selenium_socket-369: ('127.0.0.1', 55724) 连接--
+[2019-10-03 21:24:12,967] DEBUG in selenium_socket-380: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '1', 'user_id': 1}}
+[2019-10-03 21:24:12,968] DEBUG in selenium_socket-264: 执行的接口测试数据：{'interface_test_id': '1', 'user_id': 1}
+[2019-10-03 21:24:12,970] DEBUG in selenium_socket-275: 接口测试新增数据的id为: 46
+[2019-10-03 21:24:12,981] DEBUG in selenium_socket-285: 查询结果：[{'request_type': 'GET', 'request_url': 'http://127.0.0.1:9000/login/', 'params_type': None, 'key': None, 'value': None, 'execute': None}]
+[2019-10-03 21:24:12,983] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-03 21:24:12,998] DEBUG in connectionpool-437: http://127.0.0.1:9000 "GET /login/ HTTP/1.1" 200 5722
+[2019-10-03 21:24:13,000] DEBUG in selenium_socket-288: 接口测试状态码：200
+[2019-10-03 21:24:15,062] DEBUG in send_mail-64: (登陆接口的接口测试报告) 邮件发送成功！！！
+[2019-10-03 21:29:12,958] DEBUG in selenium_socket-380: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '1', 'user_id': 1}}
+[2019-10-03 21:29:12,959] DEBUG in selenium_socket-264: 执行的接口测试数据：{'interface_test_id': '1', 'user_id': 1}
+[2019-10-03 21:29:12,961] DEBUG in selenium_socket-275: 接口测试新增数据的id为: 47
+[2019-10-03 21:29:12,970] DEBUG in selenium_socket-285: 查询结果：[{'request_type': 'GET', 'request_url': 'http://127.0.0.1:9000/login/', 'params_type': None, 'key': None, 'value': None, 'execute': None}]
+[2019-10-03 21:29:12,975] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-03 21:29:12,992] DEBUG in connectionpool-437: http://127.0.0.1:9000 "GET /login/ HTTP/1.1" 200 5722
+[2019-10-03 21:29:12,994] DEBUG in selenium_socket-288: 接口测试状态码：200
+[2019-10-03 21:29:15,002] DEBUG in send_mail-64: (登陆接口的接口测试报告) 邮件发送成功！！！
+[2019-10-03 21:30:07,950] INFO in selenium_socket-391: ('127.0.0.1', 55724) 断开连接--
+[2019-10-03 21:30:07,952] INFO in selenium_socket-391: ('127.0.0.1', 55719) 断开连接--
+[2019-10-03 21:30:10,715] INFO in selenium_socket-369: ('127.0.0.1', 56369) 连接--
+[2019-10-03 21:30:13,001] INFO in selenium_socket-369: ('127.0.0.1', 56375) 连接--
+[2019-10-03 21:32:46,457] INFO in selenium_socket-391: ('127.0.0.1', 56375) 断开连接--
+[2019-10-03 21:32:48,056] INFO in selenium_socket-369: ('127.0.0.1', 56593) 连接--
+[2019-10-03 21:34:12,977] DEBUG in selenium_socket-380: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '1', 'user_id': 1}}
+[2019-10-03 21:34:12,978] DEBUG in selenium_socket-264: 执行的接口测试数据：{'interface_test_id': '1', 'user_id': 1}
+[2019-10-03 21:34:12,980] DEBUG in selenium_socket-275: 接口测试新增数据的id为: 48
+[2019-10-03 21:34:12,992] DEBUG in selenium_socket-285: 查询结果：[{'request_type': 'GET', 'request_url': 'http://127.0.0.1:9000/login/', 'params_type': None, 'key': None, 'value': None, 'execute': None}]
+[2019-10-03 21:34:12,996] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-03 21:34:13,012] DEBUG in connectionpool-437: http://127.0.0.1:9000 "GET /login/ HTTP/1.1" 200 5722
+[2019-10-03 21:34:13,014] DEBUG in selenium_socket-288: 接口测试状态码：200
+[2019-10-03 21:34:15,277] DEBUG in send_mail-64: (登陆接口的接口测试报告) 邮件发送成功！！！
+[2019-10-03 21:37:56,599] INFO in selenium_socket-391: ('127.0.0.1', 56593) 断开连接--
+[2019-10-03 21:37:58,531] INFO in selenium_socket-369: ('127.0.0.1', 57022) 连接--
+[2019-10-03 21:39:12,973] DEBUG in selenium_socket-380: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '1', 'user_id': 1}}
+[2019-10-03 21:39:12,974] DEBUG in selenium_socket-264: 执行的接口测试数据：{'interface_test_id': '1', 'user_id': 1}
+[2019-10-03 21:39:12,976] DEBUG in selenium_socket-275: 接口测试新增数据的id为: 49
+[2019-10-03 21:39:12,995] DEBUG in selenium_socket-285: 查询结果：[{'request_type': 'GET', 'request_url': 'http://127.0.0.1:9000/login/', 'params_type': None, 'key': None, 'value': None, 'execute': None}]
+[2019-10-03 21:39:12,999] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-03 21:39:13,026] DEBUG in connectionpool-437: http://127.0.0.1:9000 "GET /login/ HTTP/1.1" 200 5722
+[2019-10-03 21:39:13,027] DEBUG in selenium_socket-288: 接口测试状态码：200
+[2019-10-03 21:39:14,909] DEBUG in send_mail-64: (登陆接口的接口测试报告) 邮件发送成功！！！
+[2019-10-03 21:39:39,805] INFO in selenium_socket-391: ('127.0.0.1', 57022) 断开连接--
+[2019-10-03 21:39:41,595] INFO in selenium_socket-369: ('127.0.0.1', 57164) 连接--
+[2019-10-03 21:43:04,414] INFO in selenium_socket-391: ('127.0.0.1', 57164) 断开连接--
+[2019-10-03 21:43:06,218] INFO in selenium_socket-369: ('127.0.0.1', 57312) 连接--
+[2019-10-03 21:43:19,317] INFO in selenium_socket-391: ('127.0.0.1', 56369) 断开连接--
+[2019-10-03 21:43:19,323] INFO in selenium_socket-391: ('127.0.0.1', 57312) 断开连接--
+[2019-10-03 21:43:21,299] INFO in selenium_socket-369: ('127.0.0.1', 57321) 连接--
+[2019-10-03 21:43:23,227] INFO in selenium_socket-369: ('127.0.0.1', 57325) 连接--
+[2019-10-03 21:44:12,962] DEBUG in selenium_socket-380: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '1', 'user_id': 1}}
+[2019-10-03 21:44:12,963] DEBUG in selenium_socket-264: 执行的接口测试数据：{'interface_test_id': '1', 'user_id': 1}
+[2019-10-03 21:44:12,964] DEBUG in selenium_socket-275: 接口测试新增数据的id为: 50
+[2019-10-03 21:44:12,972] DEBUG in selenium_socket-285: 查询结果：[{'request_type': 'GET', 'request_url': 'http://127.0.0.1:9000/login/', 'params_type': None, 'key': None, 'value': None, 'execute': None}]
+[2019-10-03 21:44:12,975] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-03 21:44:12,994] DEBUG in connectionpool-437: http://127.0.0.1:9000 "GET /login/ HTTP/1.1" 200 5722
+[2019-10-03 21:44:12,995] DEBUG in selenium_socket-288: 接口测试状态码：200
+[2019-10-03 21:44:15,183] DEBUG in send_mail-64: (登陆接口的接口测试报告) 邮件发送成功！！！
+[2019-10-03 21:47:09,459] INFO in selenium_socket-391: ('127.0.0.1', 57325) 断开连接--
+[2019-10-03 21:47:11,257] INFO in selenium_socket-369: ('127.0.0.1', 57445) 连接--
+[2019-10-03 21:49:11,119] INFO in selenium_socket-391: ('127.0.0.1', 57445) 断开连接--
+[2019-10-03 21:49:12,875] INFO in selenium_socket-369: ('127.0.0.1', 57507) 连接--
+[2019-10-03 21:49:12,960] DEBUG in selenium_socket-380: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '1', 'user_id': 1}}
+[2019-10-03 21:49:12,960] DEBUG in selenium_socket-264: 执行的接口测试数据：{'interface_test_id': '1', 'user_id': 1}
+[2019-10-03 21:49:12,962] DEBUG in selenium_socket-275: 接口测试新增数据的id为: 51
+[2019-10-03 21:49:12,965] DEBUG in selenium_socket-285: 查询结果：[{'request_type': 'GET', 'request_url': 'http://127.0.0.1:9000/login/', 'params_type': None, 'key': None, 'value': None, 'execute': None}]
+[2019-10-03 21:49:12,969] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-03 21:49:13,995] DEBUG in connectionpool-437: http://127.0.0.1:9000 "GET /login/ HTTP/1.1" 200 5722
+[2019-10-03 21:49:13,997] DEBUG in selenium_socket-288: 接口测试状态码：200
+[2019-10-03 21:49:16,027] DEBUG in send_mail-64: (登陆接口的接口测试报告) 邮件发送成功！！！
+[2019-10-03 21:49:29,946] INFO in selenium_socket-391: ('127.0.0.1', 57507) 断开连接--
+[2019-10-03 21:49:31,647] INFO in selenium_socket-369: ('127.0.0.1', 57515) 连接--
+[2019-10-03 21:52:00,059] INFO in selenium_socket-391: ('127.0.0.1', 57515) 断开连接--
+[2019-10-03 21:52:00,060] INFO in selenium_socket-391: ('127.0.0.1', 57321) 断开连接--
+[2019-10-03 21:52:02,063] INFO in selenium_socket-369: ('127.0.0.1', 57542) 连接--
+[2019-10-03 21:52:02,721] INFO in selenium_socket-391: ('127.0.0.1', 49976) 断开连接--
+[2019-10-03 21:52:03,967] INFO in selenium_socket-369: ('127.0.0.1', 57545) 连接--
+[2019-10-03 21:52:06,432] INFO in selenium_socket-391: ('127.0.0.1', 57545) 断开连接--
+[2019-10-03 21:52:06,433] INFO in selenium_socket-391: ('127.0.0.1', 57542) 断开连接--
+[2019-10-03 21:52:08,210] INFO in selenium_socket-369: ('127.0.0.1', 57548) 连接--
+[2019-10-03 21:52:09,816] INFO in selenium_socket-369: ('127.0.0.1', 57551) 连接--
+[2019-10-03 21:56:09,670] INFO in selenium_socket-391: ('127.0.0.1', 57551) 断开连接--
+[2019-10-03 21:56:10,237] INFO in selenium_socket-369: ('127.0.0.1', 57628) 连接--
+[2019-10-03 21:57:24,841] INFO in selenium_socket-391: ('127.0.0.1', 57548) 断开连接--
+[2019-10-03 21:57:24,841] INFO in selenium_socket-391: ('127.0.0.1', 57628) 断开连接--

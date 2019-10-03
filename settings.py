@@ -31,3 +31,7 @@ web_log_path = os.path.join(project_path, 'temp', 'web_log.txt')
 # 日志级别
 # 级别：debug, info, warning, error, critical
 web_log_level = 'debug'
+
+# crontab的socket的ip和端口
+crontab_sk_ip = '127.0.0.1'
+crontab_sk_port = 9002

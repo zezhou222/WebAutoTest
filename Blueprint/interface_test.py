@@ -64,7 +64,7 @@ def execute_interface_test(interface_test_id=None):
     logger.debug("执行内容：%s, 执行的用户id：%s, 执行的接口测试id：%s" % ('interface_test', user_obj.id, interface_test_id))
 
     try:
-        send_to_selenium({'opt': 'execute_interface_test', 'data': {'interface_test_id': interface_test_id, 'user_id': session.get('user_id'), 'send_mail': user_obj.send_mail}})
+        send_to_selenium({'opt': 'execute_interface_test', 'data': {'interface_test_id': interface_test_id, 'user_id': session.get('user_id')}})
     except ConnectionResetError as error:
         # 让其重新连接，但不再发数据
         send_to_selenium({}, conn_flag=True)

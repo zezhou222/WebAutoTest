@@ -69,7 +69,7 @@
         <div class="col-md-5" id="execute_time_div">
             <!-- 间隔任务标签 -->
             <!--<div class="col-md-6" style="padding: 0 0;">-->
-                <!--<select class="form-control" id="execute_time">-->
+                <!--<select class="form-control">-->
                     <!--<option value="seconds" selected>每秒</option>-->
                     <!--<option value="minutes">每分</option>-->
                     <!--<option value="hours">每时</option>-->
@@ -95,7 +95,13 @@
 
             <!--</div>-->
 
-
+            <!-- 定时任务标签 -->
+            <div>
+                <input type="text" class="form-control">
+            </div>
+            <div>
+                <span class="help-block" style="margin-bottom: 0;">格式：分 时 日 月 周</span>
+            </div>
         </div>
     </div>
 
@@ -136,13 +142,16 @@
     // var interface_label;
 
     // 间隔任务的执行时间标签
-    var interval_task_label='<div class="col-md-2" style="padding: 0 0;"><select class="form-control" id="execute_time"><option value="seconds" selected>每秒</option><option value="minutes">每分</option><option value="hours">每时</option><option value="days">每天</option><option value="weeks">每周</option></select></div><div class="col-md-2" style="padding: 0 0;"><input type="text" class="form-control"></div><div class="col-md-4"><span class="help-block"> 注:输入1-59的整数</span></div>';
+    var interval_task_label='<div class="col-md-2" style="padding: 0 0;"><select class="form-control"><option value="seconds" selected>每秒</option><option value="minutes">每分</option><option value="hours">每时</option><option value="days">每天</option><option value="weeks">每周</option></select></div><div class="col-md-2" style="padding: 0 0;"><input type="text" class="form-control"></div><div class="col-md-4"><span class="help-block"> 注:输入1-59的整数</span></div>';
 
     // 一次性任务的执行时间标签
     var hour_label;
     var minute_label;
     var second_label;
     var once_task_label;
+
+    // 定时任务的标签
+    var crontab_task_label='<div><input type="text" class="form-control"></div><div><span class="help-block" style="margin-bottom: 0;">格式：分 时 日 月 周</span></div>';
 
 </script>
 <script>
@@ -154,6 +163,8 @@
         task_type_change();
         // 监测项目的变化
         project_change();
+        // 添加的事件
+        click_add_task_button_event();
     }
 
     // 生成测试数据的标签
@@ -263,7 +274,7 @@
             }else if (task_type === 'once_task'){
                 $('#execute_time_div').append(once_task_label);
             }else{
-
+                $('#execute_time_div').append(crontab_task_label);
             }
 
         });
@@ -276,6 +287,95 @@
            init_test_data_tabel($('#test_type'));
         });
 
+    }
+
+    function get_execute_time(data) {
+        var execute_time = '';
+        if (data['task_type'] === 'once_task'){
+            var temp = [];
+            $('#execute_time_div').children().each(function (index,ele) {
+                if (index === 0){
+                    execute_time += $(ele).find('input').val() + ' ';
+                }else{
+                    temp.push($(ele).find('option:selected').val());
+                }
+            });
+            execute_time += temp.join(':');
+
+            // 验证时间，不可以小于当前时间
+            var t1 = new Date(execute_time);
+            if (t1.getTime() < (new Date()).getTime()){
+                window.parent.toastr.error('执行时间不能小于当前时间!');
+                return [false]
+            }
+
+        }else if (data['task_type'] === 'interval_task'){
+            var interval_type = $('#execute_time_div').children().eq(0).find('option:selected').val();
+            var interval_time = $('#execute_time_div').children().eq(1).find('input').val().trim();
+            interval_time = parseInt(interval_time);
+            // 验证t2值
+            if (interval_time !== 'NaN' && interval_time > 0 && interval_time < 60){
+                interval_time = String(interval_time);
+            }else{
+                window.parent.toastr.error('执行时间格式有误！');
+                return [false]
+            }
+
+            execute_time += [interval_type,interval_time].join('-');
+        }else{
+            execute_time += $('#execute_time_div').children().eq(0).find('input').val().trim();
+
+            // 简单验证，按空格分割是否是长度为5
+            if (execute_time.split(' ').length !== 5){
+                window.parent.toastr.error('执行时间格式有误！');
+                return [false]
+            }
+
+        }
+
+        return [true,execute_time];
+    }
+
+    function click_add_task_button_event(){
+        
+        $('#add_task_button').click(function () {
+            // 取数据
+            var data = {};
+            data['task_name'] = $('#task_name').val().trim();
+            data['project_id'] = $('#project_id').find('option:selected').val();
+            data['test_type'] = $('#test_type').find('option:selected').val();
+            data['test_data_id'] = $('#test_data_id').find('option:selected').val();
+            data['task_type'] = $('#task_type').find('option:selected').val();
+            data['task_description'] = $('#task_description').val().trim();
+
+            var temp = get_execute_time(data);
+            var flag = temp[0];
+            if (!flag){
+                return
+            }
+            data['execute_time'] = temp[1];
+
+            // 提交数据
+            console.log(data);
+            data = JSON.stringify(data);
+
+            $.ajax({
+                url: crontab_url,
+                type: 'post',
+                data: data,
+                contentType: false,
+                success: function (response) {
+                    window.parent.toastr.success(`${$('#task_name').val().trim()}定时任务添加成功!`);
+                },
+                error: function (xhr) {
+                    window.parent.toastr.error(JSON.parse(xhr.responseText)['error']);
+                    console.log('添加定时任务出错!', xhr.responseText);
+                },
+            });
+
+            window.parent.toastr.info(`${$('#task_name').val().trim()}定时任务添加中!`);
+        });
+        
     }
 
     all_event();
