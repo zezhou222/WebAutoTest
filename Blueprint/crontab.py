@@ -6,8 +6,6 @@ from flask import (
     request,
     render_template)
 from flask.views import MethodView
-from sqlalchemy import or_
-
 from lib.global_func import (
     get_db,
     get_logger,
@@ -33,6 +31,25 @@ def get_task_id(user, name):
     md5 = hashlib.md5(user.encode('utf-8'))
     md5.update(name.encode('utf-8'))
     return md5.hexdigest()
+
+
+@app.route(rule='/api/get_crontab/<int:crontab_id>/')
+def get_crontab_data(crontab_id):
+    if crontab_id is None:
+        return {'error': 'not found.'}, 404
+
+    dic = {}
+    db = get_db()
+    obj = db.query(Crontab).filter(Crontab.id == crontab_id).first()
+    dic['task_name'] = obj.task_name
+    dic['project_id'] = obj.project_id
+    dic['test_type'] = obj.test_type
+    dic['test_data_id'] = obj.test_data_id
+    dic['task_type'] = obj.task_type
+    dic['execute_time'] = obj.execute_time
+    dic['task_description'] = obj.task_description
+
+    return dic
 
 
 class CrontabView(MethodView):
@@ -144,7 +161,7 @@ class CrontabView(MethodView):
 
         # 发送crontab程序，删除任务
         try:
-            send_to_crontab({'opt': 'del_task', 'data': {'crontab_id': crontab_id, 'task_id': obj.task_id_name}})
+            send_to_crontab({'opt': 'del_task', 'data': {'crontab_id': crontab_id, 'task_id_name': obj.task_id_name}})
         except ConnectionAbortedError as error:
             logger.warning('连接crontab失败. %s' % error)
             # 重连
@@ -165,7 +182,42 @@ class CrontabView(MethodView):
         return {}, 204
 
     def put(self):
-        pass
+        data = json.loads(request.data)
+        # print(data)
+        edit_crontab_id = data.pop('edit_crontab_id')
+        logger.debug('编辑的任务id: %s' % edit_crontab_id)
+
+        db = get_db()
+        obj = db.query(Crontab).filter(Crontab.id == edit_crontab_id).first()
+
+        data['crontab_id'] = edit_crontab_id
+        data['task_id_name'] = obj.task_id_name
+        data['user_id'] = session.get('user_id')
+        # 发送crontab程序，删除任务
+        try:
+            send_to_crontab({'opt': 'update_task', 'data': data})
+        except ConnectionAbortedError as error:
+            logger.warning('连接crontab失败. %s' % error)
+            # 重连
+            send_to_crontab({}, conn_flag=True)
+            return {'更新任务失败!'}, 500
+
+        # 接收删除任务的结果
+        sk = get_sk()
+        update_result = recv_content(sk)
+        logger.debug('更新任务的返回结果：%s' % update_result)
+        if update_result.get('update_flag') != 0:
+            return {'error': '更新任务失败!'}, 500
+
+
+        data.pop('crontab_id')
+        data.pop('task_id_name')
+        data.pop('user_id')
+        # 更新数据
+        db.query(Crontab).filter(Crontab.id == edit_crontab_id).update(data)
+        db.commit()
+
+        return {}, 201
 
 
 app.add_url_rule(rule='/api/crontab/', endpoint='crontab', view_func=CrontabView.as_view(name='crontab'))

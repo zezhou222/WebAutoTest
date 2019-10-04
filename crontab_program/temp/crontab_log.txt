@@ -509,3 +509,593 @@ ConnectionAbortedError: [WinError 10053] 你的主机中的软件中止了一个
 [2019-10-03 21:56:10,237] INFO in crontab_socket-32: ('127.0.0.1', 57629) 连接--
 [2019-10-03 21:57:24,841] INFO in crontab_socket-59: ('127.0.0.1', 57549) 断开连接--
 [2019-10-03 21:57:24,841] INFO in crontab_socket-59: ('127.0.0.1', 57629) 断开连接--
+[2019-10-04 14:36:37,375] INFO in crontab_socket-32: ('127.0.0.1', 64768) 连接--
+[2019-10-04 14:36:38,122] INFO in crontab_socket-32: ('127.0.0.1', 64772) 连接--
+[2019-10-04 14:38:05,981] INFO in crontab_socket-59: ('127.0.0.1', 64772) 断开连接--
+[2019-10-04 14:38:05,982] INFO in crontab_socket-59: ('127.0.0.1', 64768) 断开连接--
+[2019-10-04 14:38:06,896] INFO in crontab_socket-32: ('127.0.0.1', 64841) 连接--
+[2019-10-04 14:38:07,499] INFO in crontab_socket-32: ('127.0.0.1', 64844) 连接--
+[2019-10-04 14:56:43,787] INFO in crontab_socket-59: ('127.0.0.1', 64844) 断开连接--
+[2019-10-04 14:56:44,405] INFO in crontab_socket-32: ('127.0.0.1', 65212) 连接--
+[2019-10-04 15:00:58,337] INFO in crontab_socket-59: ('127.0.0.1', 65212) 断开连接--
+[2019-10-04 15:00:58,976] INFO in crontab_socket-32: ('127.0.0.1', 65223) 连接--
+[2019-10-04 15:05:11,846] DEBUG in crontab_socket-44: 接收的数据: {'opt': 'add_task', 'data': {'task_name': 'test_task', 'project_id': '1', 'test_type': 'interface_test', 'test_data_id': '2', 'task_type': 'interval_task', 'task_description': '', 'execute_time': 'minutes-1', 'user_id': 1, 'task_id_name': 'cb918883b15d324a8189807e326c02a0'}}
+[2019-10-04 15:05:11,924] INFO in base-166: Scheduler started
+[2019-10-04 15:05:11,925] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 15:05:11,928] ERROR in mongodb-131: Unable to restore job "my_job1" -- removing it
+Traceback (most recent call last):
+  File "F:\python_project\autotest_crontab_env\lib\site-packages\apscheduler\util.py", line 300, in ref_to_obj
+    obj = getattr(obj, name)
+AttributeError: module '__main__' has no attribute 'myfunc'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\python_project\autotest_crontab_env\lib\site-packages\apscheduler\jobstores\mongodb.py", line 128, in _get_jobs
+    jobs.append(self._reconstitute_job(document['job_state']))
+  File "F:\python_project\autotest_crontab_env\lib\site-packages\apscheduler\jobstores\mongodb.py", line 117, in _reconstitute_job
+    job.__setstate__(job_state)
+  File "F:\python_project\autotest_crontab_env\lib\site-packages\apscheduler\job.py", line 272, in __setstate__
+    self.func = ref_to_obj(self.func_ref)
+  File "F:\python_project\autotest_crontab_env\lib\site-packages\apscheduler\util.py", line 303, in ref_to_obj
+    raise LookupError('Error resolving reference %s: error looking up object' % ref)
+LookupError: Error resolving reference __main__:myfunc: error looking up object
+[2019-10-04 15:05:11,986] DEBUG in base-1016: No jobs; waiting until a job is added
+[2019-10-04 15:05:11,986] INFO in base-881: Added job "send_to_selenium" to job store "default"
+[2019-10-04 15:05:11,987] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 15:05:11,988] DEBUG in base-1020: Next wakeup is due at 2019-10-04 15:06:11.968995+08:00 (in 59.981944 seconds)
+[2019-10-04 15:06:11,978] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 15:06:11,979] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:06:11 CST)" (scheduled at 2019-10-04 15:06:11.968995+08:00)
+[2019-10-04 15:06:11,981] INFO in base-144: Job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:07:11 CST)" executed successfully
+[2019-10-04 15:06:11,982] DEBUG in base-1020: Next wakeup is due at 2019-10-04 15:07:11.968995+08:00 (in 59.990543 seconds)
+[2019-10-04 15:07:11,981] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 15:07:11,982] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:07:11 CST)" (scheduled at 2019-10-04 15:07:11.968995+08:00)
+[2019-10-04 15:07:11,982] INFO in base-144: Job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:07:11 CST)" executed successfully
+[2019-10-04 15:07:11,984] DEBUG in base-1020: Next wakeup is due at 2019-10-04 15:08:11.968995+08:00 (in 59.987919 seconds)
+[2019-10-04 15:08:11,988] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 15:08:11,989] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:08:11 CST)" (scheduled at 2019-10-04 15:08:11.968995+08:00)
+[2019-10-04 15:08:11,989] INFO in base-144: Job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:08:11 CST)" executed successfully
+[2019-10-04 15:08:11,990] DEBUG in base-1020: Next wakeup is due at 2019-10-04 15:09:11.968995+08:00 (in 59.980568 seconds)
+[2019-10-04 15:09:11,979] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 15:09:11,981] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:09:11 CST)" (scheduled at 2019-10-04 15:09:11.968995+08:00)
+[2019-10-04 15:09:11,983] INFO in base-144: Job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:10:11 CST)" executed successfully
+[2019-10-04 15:09:11,985] DEBUG in base-1020: Next wakeup is due at 2019-10-04 15:10:11.968995+08:00 (in 59.989057 seconds)
+[2019-10-04 15:10:11,983] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 15:10:11,984] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:10:11 CST)" (scheduled at 2019-10-04 15:10:11.968995+08:00)
+[2019-10-04 15:10:11,985] INFO in base-144: Job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:11:11 CST)" executed successfully
+[2019-10-04 15:10:11,986] DEBUG in base-1020: Next wakeup is due at 2019-10-04 15:11:11.968995+08:00 (in 59.985244 seconds)
+[2019-10-04 15:10:50,947] INFO in crontab_socket-59: ('127.0.0.1', 65223) 断开连接--
+[2019-10-04 15:10:51,722] INFO in crontab_socket-32: ('127.0.0.1', 49368) 连接--
+[2019-10-04 15:11:11,990] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 15:11:11,991] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:11:11 CST)" (scheduled at 2019-10-04 15:11:11.968995+08:00)
+[2019-10-04 15:11:11,992] INFO in base-144: Job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:11:11 CST)" executed successfully
+[2019-10-04 15:11:11,993] DEBUG in base-1020: Next wakeup is due at 2019-10-04 15:12:11.968995+08:00 (in 59.978059 seconds)
+[2019-10-04 15:12:11,990] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 15:12:11,992] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:12:11 CST)" (scheduled at 2019-10-04 15:12:11.968995+08:00)
+[2019-10-04 15:12:11,993] INFO in base-144: Job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:12:11 CST)" executed successfully
+[2019-10-04 15:12:11,995] DEBUG in base-1020: Next wakeup is due at 2019-10-04 15:13:11.968995+08:00 (in 59.978476 seconds)
+[2019-10-04 15:13:11,981] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 15:13:11,983] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:13:11 CST)" (scheduled at 2019-10-04 15:13:11.968995+08:00)
+[2019-10-04 15:13:11,984] INFO in base-144: Job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:14:11 CST)" executed successfully
+[2019-10-04 15:13:11,986] DEBUG in base-1020: Next wakeup is due at 2019-10-04 15:14:11.968995+08:00 (in 59.987007 seconds)
+[2019-10-04 15:14:09,763] INFO in crontab_socket-59: ('127.0.0.1', 49368) 断开连接--
+[2019-10-04 15:14:10,685] INFO in crontab_socket-32: ('127.0.0.1', 49537) 连接--
+[2019-10-04 15:14:11,983] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 15:14:11,984] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:14:11 CST)" (scheduled at 2019-10-04 15:14:11.968995+08:00)
+[2019-10-04 15:14:11,984] INFO in base-144: Job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:15:11 CST)" executed successfully
+[2019-10-04 15:14:11,985] DEBUG in base-1020: Next wakeup is due at 2019-10-04 15:15:11.968995+08:00 (in 59.985667 seconds)
+[2019-10-04 15:14:56,566] INFO in crontab_socket-59: ('127.0.0.1', 49537) 断开连接--
+[2019-10-04 15:14:57,210] INFO in crontab_socket-32: ('127.0.0.1', 49600) 连接--
+[2019-10-04 15:15:11,986] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 15:15:11,987] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:15:11 CST)" (scheduled at 2019-10-04 15:15:11.968995+08:00)
+[2019-10-04 15:15:11,988] INFO in base-144: Job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:16:11 CST)" executed successfully
+[2019-10-04 15:15:11,990] DEBUG in base-1020: Next wakeup is due at 2019-10-04 15:16:11.968995+08:00 (in 59.982758 seconds)
+[2019-10-04 15:16:11,979] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 15:16:11,980] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:16:11 CST)" (scheduled at 2019-10-04 15:16:11.968995+08:00)
+[2019-10-04 15:16:11,980] INFO in base-144: Job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:17:11 CST)" executed successfully
+[2019-10-04 15:16:11,981] DEBUG in base-1020: Next wakeup is due at 2019-10-04 15:17:11.968995+08:00 (in 59.989983 seconds)
+[2019-10-04 15:17:11,982] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 15:17:11,983] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:17:11 CST)" (scheduled at 2019-10-04 15:17:11.968995+08:00)
+[2019-10-04 15:17:11,983] INFO in base-144: Job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:18:11 CST)" executed successfully
+[2019-10-04 15:17:11,984] DEBUG in base-1020: Next wakeup is due at 2019-10-04 15:18:11.968995+08:00 (in 59.986509 seconds)
+[2019-10-04 15:18:11,986] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 15:18:11,987] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:18:11 CST)" (scheduled at 2019-10-04 15:18:11.968995+08:00)
+[2019-10-04 15:18:11,988] INFO in base-144: Job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:19:11 CST)" executed successfully
+[2019-10-04 15:18:11,988] DEBUG in base-1020: Next wakeup is due at 2019-10-04 15:19:11.968995+08:00 (in 59.982740 seconds)
+[2019-10-04 15:18:53,328] INFO in crontab_socket-59: ('127.0.0.1', 49600) 断开连接--
+[2019-10-04 15:18:53,989] INFO in crontab_socket-32: ('127.0.0.1', 49839) 连接--
+[2019-10-04 15:19:11,876] INFO in crontab_socket-59: ('127.0.0.1', 49839) 断开连接--
+[2019-10-04 15:19:11,977] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 15:19:11,978] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:19:11 CST)" (scheduled at 2019-10-04 15:19:11.968995+08:00)
+[2019-10-04 15:19:11,978] INFO in base-144: Job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:20:11 CST)" executed successfully
+[2019-10-04 15:19:11,979] DEBUG in base-1020: Next wakeup is due at 2019-10-04 15:20:11.968995+08:00 (in 59.991582 seconds)
+[2019-10-04 15:19:12,448] INFO in crontab_socket-32: ('127.0.0.1', 49881) 连接--
+[2019-10-04 15:19:28,148] INFO in crontab_socket-59: ('127.0.0.1', 49881) 断开连接--
+[2019-10-04 15:19:28,709] INFO in crontab_socket-32: ('127.0.0.1', 49897) 连接--
+[2019-10-04 15:19:42,327] INFO in crontab_socket-59: ('127.0.0.1', 49897) 断开连接--
+[2019-10-04 15:19:42,911] INFO in crontab_socket-32: ('127.0.0.1', 49911) 连接--
+[2019-10-04 15:19:55,490] INFO in crontab_socket-59: ('127.0.0.1', 49911) 断开连接--
+[2019-10-04 15:19:56,116] INFO in crontab_socket-32: ('127.0.0.1', 49930) 连接--
+[2019-10-04 15:20:08,729] INFO in crontab_socket-59: ('127.0.0.1', 49930) 断开连接--
+[2019-10-04 15:20:09,360] INFO in crontab_socket-32: ('127.0.0.1', 49945) 连接--
+[2019-10-04 15:20:11,986] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 15:20:11,987] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:20:11 CST)" (scheduled at 2019-10-04 15:20:11.968995+08:00)
+[2019-10-04 15:20:11,988] INFO in base-144: Job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:21:11 CST)" executed successfully
+[2019-10-04 15:20:11,989] DEBUG in base-1020: Next wakeup is due at 2019-10-04 15:21:11.968995+08:00 (in 59.982580 seconds)
+[2019-10-04 15:20:34,456] INFO in crontab_socket-59: ('127.0.0.1', 49945) 断开连接--
+[2019-10-04 15:20:34,998] INFO in crontab_socket-32: ('127.0.0.1', 49970) 连接--
+[2019-10-04 15:21:11,978] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 15:21:11,979] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:21:11 CST)" (scheduled at 2019-10-04 15:21:11.968995+08:00)
+[2019-10-04 15:21:11,980] INFO in base-144: Job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:22:11 CST)" executed successfully
+[2019-10-04 15:21:11,981] DEBUG in base-1020: Next wakeup is due at 2019-10-04 15:22:11.968995+08:00 (in 59.990342 seconds)
+[2019-10-04 15:22:11,977] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 15:22:11,979] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:22:11 CST)" (scheduled at 2019-10-04 15:22:11.968995+08:00)
+[2019-10-04 15:22:11,980] INFO in base-144: Job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:23:11 CST)" executed successfully
+[2019-10-04 15:22:11,981] DEBUG in base-1020: Next wakeup is due at 2019-10-04 15:23:11.968995+08:00 (in 59.990575 seconds)
+[2019-10-04 15:23:11,985] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 15:23:11,986] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:23:11 CST)" (scheduled at 2019-10-04 15:23:11.968995+08:00)
+[2019-10-04 15:23:11,987] INFO in base-144: Job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:24:11 CST)" executed successfully
+[2019-10-04 15:23:11,987] DEBUG in base-1020: Next wakeup is due at 2019-10-04 15:24:11.968995+08:00 (in 59.983714 seconds)
+[2019-10-04 15:24:11,977] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 15:24:11,983] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:24:11 CST)" (scheduled at 2019-10-04 15:24:11.968995+08:00)
+[2019-10-04 15:24:11,986] INFO in base-144: Job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:25:11 CST)" executed successfully
+[2019-10-04 15:24:11,988] DEBUG in base-1020: Next wakeup is due at 2019-10-04 15:25:11.968995+08:00 (in 59.990812 seconds)
+[2019-10-04 15:25:11,992] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 15:25:11,995] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:25:11 CST)" (scheduled at 2019-10-04 15:25:11.968995+08:00)
+[2019-10-04 15:25:11,997] INFO in base-144: Job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:26:11 CST)" executed successfully
+[2019-10-04 15:25:11,999] DEBUG in base-1020: Next wakeup is due at 2019-10-04 15:26:11.968995+08:00 (in 59.975580 seconds)
+[2019-10-04 15:26:11,981] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 15:26:11,984] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:27:11 CST)" (scheduled at 2019-10-04 15:26:11.968995+08:00)
+[2019-10-04 15:26:11,985] INFO in base-144: Job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:27:11 CST)" executed successfully
+[2019-10-04 15:26:11,985] DEBUG in base-1020: Next wakeup is due at 2019-10-04 15:27:11.968995+08:00 (in 59.987197 seconds)
+[2019-10-04 15:26:36,775] INFO in crontab_socket-59: ('127.0.0.1', 49970) 断开连接--
+[2019-10-04 15:26:36,776] INFO in crontab_socket-59: ('127.0.0.1', 64841) 断开连接--
+[2019-10-04 15:26:38,732] INFO in crontab_socket-32: ('127.0.0.1', 50369) 连接--
+[2019-10-04 15:26:40,331] INFO in crontab_socket-32: ('127.0.0.1', 50374) 连接--
+[2019-10-04 15:27:11,987] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 15:27:11,990] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:28:11 CST)" (scheduled at 2019-10-04 15:27:11.968995+08:00)
+[2019-10-04 15:27:11,991] INFO in base-144: Job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:28:11 CST)" executed successfully
+[2019-10-04 15:27:11,991] DEBUG in base-1020: Next wakeup is due at 2019-10-04 15:28:11.968995+08:00 (in 59.981516 seconds)
+[2019-10-04 15:28:11,980] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 15:28:11,982] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:29:11 CST)" (scheduled at 2019-10-04 15:28:11.968995+08:00)
+[2019-10-04 15:28:11,983] INFO in base-144: Job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:29:11 CST)" executed successfully
+[2019-10-04 15:28:11,984] DEBUG in base-1020: Next wakeup is due at 2019-10-04 15:29:11.968995+08:00 (in 59.988027 seconds)
+[2019-10-04 15:28:53,270] INFO in crontab_socket-59: ('127.0.0.1', 50374) 断开连接--
+[2019-10-04 15:28:53,271] INFO in crontab_socket-59: ('127.0.0.1', 50369) 断开连接--
+[2019-10-04 15:28:55,802] INFO in crontab_socket-32: ('127.0.0.1', 50523) 连接--
+[2019-10-04 15:28:57,533] INFO in crontab_socket-32: ('127.0.0.1', 50527) 连接--
+[2019-10-04 15:29:11,985] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 15:29:11,988] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:30:11 CST)" (scheduled at 2019-10-04 15:29:11.968995+08:00)
+[2019-10-04 15:29:11,990] INFO in base-144: Job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:30:11 CST)" executed successfully
+[2019-10-04 15:29:11,991] DEBUG in base-1020: Next wakeup is due at 2019-10-04 15:30:11.968995+08:00 (in 59.983560 seconds)
+[2019-10-04 15:30:11,981] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 15:30:11,984] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:31:11 CST)" (scheduled at 2019-10-04 15:30:11.968995+08:00)
+[2019-10-04 15:30:11,985] INFO in base-144: Job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:31:11 CST)" executed successfully
+[2019-10-04 15:30:11,986] DEBUG in base-1020: Next wakeup is due at 2019-10-04 15:31:11.968995+08:00 (in 59.987255 seconds)
+[2019-10-04 15:31:11,979] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 15:31:11,982] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:32:11 CST)" (scheduled at 2019-10-04 15:31:11.968995+08:00)
+[2019-10-04 15:31:11,982] INFO in base-144: Job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:32:11 CST)" executed successfully
+[2019-10-04 15:31:11,984] DEBUG in base-1020: Next wakeup is due at 2019-10-04 15:32:11.968995+08:00 (in 59.989275 seconds)
+[2019-10-04 15:32:11,984] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 15:32:11,986] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:33:11 CST)" (scheduled at 2019-10-04 15:32:11.968995+08:00)
+[2019-10-04 15:32:11,988] INFO in base-144: Job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:33:11 CST)" executed successfully
+[2019-10-04 15:32:11,988] DEBUG in base-1020: Next wakeup is due at 2019-10-04 15:33:11.968995+08:00 (in 59.984119 seconds)
+[2019-10-04 15:33:11,979] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 15:33:11,982] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:34:11 CST)" (scheduled at 2019-10-04 15:33:11.968995+08:00)
+[2019-10-04 15:33:11,983] INFO in base-144: Job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:34:11 CST)" executed successfully
+[2019-10-04 15:33:11,984] DEBUG in base-1020: Next wakeup is due at 2019-10-04 15:34:11.968995+08:00 (in 59.989743 seconds)
+[2019-10-04 15:34:11,979] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 15:34:11,983] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:35:11 CST)" (scheduled at 2019-10-04 15:34:11.968995+08:00)
+[2019-10-04 15:34:11,985] INFO in base-144: Job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:35:11 CST)" executed successfully
+[2019-10-04 15:34:11,985] DEBUG in base-1020: Next wakeup is due at 2019-10-04 15:35:11.968995+08:00 (in 59.989108 seconds)
+[2019-10-04 15:35:11,981] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 15:35:11,983] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:36:11 CST)" (scheduled at 2019-10-04 15:35:11.968995+08:00)
+[2019-10-04 15:35:11,985] INFO in base-144: Job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:36:11 CST)" executed successfully
+[2019-10-04 15:35:11,986] DEBUG in base-1020: Next wakeup is due at 2019-10-04 15:36:11.968995+08:00 (in 59.987750 seconds)
+[2019-10-04 15:36:07,914] INFO in crontab_socket-59: ('127.0.0.1', 50523) 断开连接--
+[2019-10-04 15:36:07,916] INFO in crontab_socket-59: ('127.0.0.1', 50527) 断开连接--
+[2019-10-04 15:36:10,169] INFO in crontab_socket-32: ('127.0.0.1', 50922) 连接--
+[2019-10-04 15:36:11,986] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 15:36:11,990] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:37:11 CST)" (scheduled at 2019-10-04 15:36:11.968995+08:00)
+[2019-10-04 15:36:11,991] INFO in base-144: Job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:37:11 CST)" executed successfully
+[2019-10-04 15:36:11,992] DEBUG in base-1020: Next wakeup is due at 2019-10-04 15:37:11.968995+08:00 (in 59.981830 seconds)
+[2019-10-04 15:36:12,270] INFO in crontab_socket-32: ('127.0.0.1', 50930) 连接--
+[2019-10-04 15:37:11,979] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 15:37:11,982] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:38:11 CST)" (scheduled at 2019-10-04 15:37:11.968995+08:00)
+[2019-10-04 15:37:11,983] INFO in base-144: Job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:38:11 CST)" executed successfully
+[2019-10-04 15:37:11,984] DEBUG in base-1020: Next wakeup is due at 2019-10-04 15:38:11.968995+08:00 (in 59.989137 seconds)
+[2019-10-04 15:38:11,979] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 15:38:11,984] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:39:11 CST)" (scheduled at 2019-10-04 15:38:11.968995+08:00)
+[2019-10-04 15:38:11,986] INFO in base-144: Job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:39:11 CST)" executed successfully
+[2019-10-04 15:38:11,988] DEBUG in base-1020: Next wakeup is due at 2019-10-04 15:39:11.968995+08:00 (in 59.988202 seconds)
+[2019-10-04 15:39:11,982] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 15:39:11,986] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:40:11 CST)" (scheduled at 2019-10-04 15:39:11.968995+08:00)
+[2019-10-04 15:39:11,988] INFO in base-144: Job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:40:11 CST)" executed successfully
+[2019-10-04 15:39:11,989] DEBUG in base-1020: Next wakeup is due at 2019-10-04 15:40:11.968995+08:00 (in 59.986031 seconds)
+[2019-10-04 15:40:11,985] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 15:40:11,988] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:41:11 CST)" (scheduled at 2019-10-04 15:40:11.968995+08:00)
+[2019-10-04 15:40:11,990] INFO in base-144: Job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:41:11 CST)" executed successfully
+[2019-10-04 15:40:11,991] DEBUG in base-1020: Next wakeup is due at 2019-10-04 15:41:11.968995+08:00 (in 59.983293 seconds)
+[2019-10-04 15:41:11,980] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 15:41:11,986] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:42:11 CST)" (scheduled at 2019-10-04 15:41:11.968995+08:00)
+[2019-10-04 15:41:11,988] INFO in base-144: Job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:42:11 CST)" executed successfully
+[2019-10-04 15:41:11,990] DEBUG in base-1020: Next wakeup is due at 2019-10-04 15:42:11.968995+08:00 (in 59.987483 seconds)
+[2019-10-04 15:42:11,995] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 15:42:11,999] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:43:11 CST)" (scheduled at 2019-10-04 15:42:11.968995+08:00)
+[2019-10-04 15:42:12,002] INFO in base-144: Job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:43:11 CST)" executed successfully
+[2019-10-04 15:42:12,003] DEBUG in base-1020: Next wakeup is due at 2019-10-04 15:43:11.968995+08:00 (in 59.972614 seconds)
+[2019-10-04 15:43:11,999] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 15:43:12,003] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:44:11 CST)" (scheduled at 2019-10-04 15:43:11.968995+08:00)
+[2019-10-04 15:43:12,005] INFO in base-144: Job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:44:11 CST)" executed successfully
+[2019-10-04 15:43:12,006] DEBUG in base-1020: Next wakeup is due at 2019-10-04 15:44:11.968995+08:00 (in 59.969202 seconds)
+[2019-10-04 15:44:11,986] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 15:44:11,989] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:45:11 CST)" (scheduled at 2019-10-04 15:44:11.968995+08:00)
+[2019-10-04 15:44:11,992] DEBUG in base-1020: Next wakeup is due at 2019-10-04 15:45:11.968995+08:00 (in 59.981963 seconds)
+[2019-10-04 15:44:11,992] INFO in base-144: Job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:45:11 CST)" executed successfully
+[2019-10-04 15:45:11,979] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 15:45:11,982] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:46:11 CST)" (scheduled at 2019-10-04 15:45:11.968995+08:00)
+[2019-10-04 15:45:11,983] INFO in base-144: Job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:46:11 CST)" executed successfully
+[2019-10-04 15:45:11,984] DEBUG in base-1020: Next wakeup is due at 2019-10-04 15:46:11.968995+08:00 (in 59.988620 seconds)
+[2019-10-04 15:46:11,978] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 15:46:11,980] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:47:11 CST)" (scheduled at 2019-10-04 15:46:11.968995+08:00)
+[2019-10-04 15:46:11,982] INFO in base-144: Job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:47:11 CST)" executed successfully
+[2019-10-04 15:46:11,983] DEBUG in base-1020: Next wakeup is due at 2019-10-04 15:47:11.968995+08:00 (in 59.990127 seconds)
+[2019-10-04 15:47:11,986] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 15:47:11,990] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:48:11 CST)" (scheduled at 2019-10-04 15:47:11.968995+08:00)
+[2019-10-04 15:47:11,991] INFO in base-144: Job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:48:11 CST)" executed successfully
+[2019-10-04 15:47:11,993] DEBUG in base-1020: Next wakeup is due at 2019-10-04 15:48:11.968995+08:00 (in 59.981547 seconds)
+[2019-10-04 15:48:11,980] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 15:48:11,984] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:49:11 CST)" (scheduled at 2019-10-04 15:48:11.968995+08:00)
+[2019-10-04 15:48:11,986] INFO in base-144: Job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:49:11 CST)" executed successfully
+[2019-10-04 15:48:11,987] DEBUG in base-1020: Next wakeup is due at 2019-10-04 15:49:11.968995+08:00 (in 59.988289 seconds)
+[2019-10-04 15:49:11,991] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 15:49:11,995] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:50:11 CST)" (scheduled at 2019-10-04 15:49:11.968995+08:00)
+[2019-10-04 15:49:11,997] INFO in base-144: Job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:50:11 CST)" executed successfully
+[2019-10-04 15:49:11,997] DEBUG in base-1020: Next wakeup is due at 2019-10-04 15:50:11.968995+08:00 (in 59.976831 seconds)
+[2019-10-04 15:50:11,979] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 15:50:11,982] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:51:11 CST)" (scheduled at 2019-10-04 15:50:11.968995+08:00)
+[2019-10-04 15:50:11,983] INFO in base-144: Job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:51:11 CST)" executed successfully
+[2019-10-04 15:50:11,984] DEBUG in base-1020: Next wakeup is due at 2019-10-04 15:51:11.968995+08:00 (in 59.989011 seconds)
+[2019-10-04 15:51:11,985] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 15:51:11,989] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:52:11 CST)" (scheduled at 2019-10-04 15:51:11.968995+08:00)
+[2019-10-04 15:51:11,990] INFO in base-144: Job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:52:11 CST)" executed successfully
+[2019-10-04 15:51:11,991] DEBUG in base-1020: Next wakeup is due at 2019-10-04 15:52:11.968995+08:00 (in 59.983406 seconds)
+[2019-10-04 15:52:11,979] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 15:52:11,982] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:53:11 CST)" (scheduled at 2019-10-04 15:52:11.968995+08:00)
+[2019-10-04 15:52:11,983] INFO in base-144: Job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:53:11 CST)" executed successfully
+[2019-10-04 15:52:11,984] DEBUG in base-1020: Next wakeup is due at 2019-10-04 15:53:11.968995+08:00 (in 59.988534 seconds)
+[2019-10-04 15:52:58,628] INFO in crontab_socket-59: ('127.0.0.1', 50930) 断开连接--
+[2019-10-04 15:53:00,108] INFO in crontab_socket-32: ('127.0.0.1', 52218) 连接--
+[2019-10-04 15:53:11,978] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 15:53:11,981] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:54:11 CST)" (scheduled at 2019-10-04 15:53:11.968995+08:00)
+[2019-10-04 15:53:11,982] INFO in base-144: Job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:54:11 CST)" executed successfully
+[2019-10-04 15:53:11,983] DEBUG in base-1020: Next wakeup is due at 2019-10-04 15:54:11.968995+08:00 (in 59.990269 seconds)
+[2019-10-04 15:54:11,984] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 15:54:11,986] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:55:11 CST)" (scheduled at 2019-10-04 15:54:11.968995+08:00)
+[2019-10-04 15:54:11,988] INFO in base-144: Job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:55:11 CST)" executed successfully
+[2019-10-04 15:54:11,988] DEBUG in base-1020: Next wakeup is due at 2019-10-04 15:55:11.968995+08:00 (in 59.983713 seconds)
+[2019-10-04 15:54:20,483] INFO in crontab_socket-59: ('127.0.0.1', 52218) 断开连接--
+[2019-10-04 15:54:22,101] INFO in crontab_socket-32: ('127.0.0.1', 52290) 连接--
+[2019-10-04 15:54:39,749] INFO in crontab_socket-59: ('127.0.0.1', 52290) 断开连接--
+[2019-10-04 15:54:41,251] INFO in crontab_socket-32: ('127.0.0.1', 52308) 连接--
+[2019-10-04 15:55:06,754] INFO in crontab_socket-59: ('127.0.0.1', 52308) 断开连接--
+[2019-10-04 15:55:06,756] INFO in crontab_socket-59: ('127.0.0.1', 50922) 断开连接--
+[2019-10-04 15:55:08,320] INFO in crontab_socket-32: ('127.0.0.1', 52333) 连接--
+[2019-10-04 15:55:09,684] INFO in crontab_socket-32: ('127.0.0.1', 52338) 连接--
+[2019-10-04 15:55:11,978] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 15:55:11,981] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:56:11 CST)" (scheduled at 2019-10-04 15:55:11.968995+08:00)
+[2019-10-04 15:55:11,983] INFO in base-144: Job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:56:11 CST)" executed successfully
+[2019-10-04 15:55:11,984] DEBUG in base-1020: Next wakeup is due at 2019-10-04 15:56:11.968995+08:00 (in 59.989914 seconds)
+[2019-10-04 15:56:11,988] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 15:56:11,991] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:57:11 CST)" (scheduled at 2019-10-04 15:56:11.968995+08:00)
+[2019-10-04 15:56:11,993] INFO in base-144: Job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:57:11 CST)" executed successfully
+[2019-10-04 15:56:11,994] DEBUG in base-1020: Next wakeup is due at 2019-10-04 15:57:11.968995+08:00 (in 59.980006 seconds)
+[2019-10-04 15:56:33,940] INFO in crontab_socket-59: ('127.0.0.1', 52338) 断开连接--
+[2019-10-04 15:56:33,941] INFO in crontab_socket-59: ('127.0.0.1', 52333) 断开连接--
+[2019-10-04 15:56:35,596] INFO in crontab_socket-32: ('127.0.0.1', 52508) 连接--
+[2019-10-04 15:56:37,070] INFO in crontab_socket-32: ('127.0.0.1', 52512) 连接--
+[2019-10-04 15:57:11,980] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 15:57:11,982] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:58:11 CST)" (scheduled at 2019-10-04 15:57:11.968995+08:00)
+[2019-10-04 15:57:11,984] INFO in base-144: Job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:58:11 CST)" executed successfully
+[2019-10-04 15:57:11,984] DEBUG in base-1020: Next wakeup is due at 2019-10-04 15:58:11.968995+08:00 (in 59.987963 seconds)
+[2019-10-04 15:57:43,939] INFO in crontab_socket-59: ('127.0.0.1', 52512) 断开连接--
+[2019-10-04 15:57:43,940] INFO in crontab_socket-59: ('127.0.0.1', 52508) 断开连接--
+[2019-10-04 15:57:46,192] INFO in crontab_socket-32: ('127.0.0.1', 52650) 连接--
+[2019-10-04 15:57:47,655] INFO in crontab_socket-32: ('127.0.0.1', 52655) 连接--
+[2019-10-04 15:58:11,981] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 15:58:11,984] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:59:11 CST)" (scheduled at 2019-10-04 15:58:11.968995+08:00)
+[2019-10-04 15:58:11,985] INFO in base-144: Job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 15:59:11 CST)" executed successfully
+[2019-10-04 15:58:11,986] DEBUG in base-1020: Next wakeup is due at 2019-10-04 15:59:11.968995+08:00 (in 59.987570 seconds)
+[2019-10-04 15:58:38,687] INFO in crontab_socket-59: ('127.0.0.1', 52655) 断开连接--
+[2019-10-04 15:58:38,688] INFO in crontab_socket-59: ('127.0.0.1', 52650) 断开连接--
+[2019-10-04 15:58:40,367] INFO in crontab_socket-32: ('127.0.0.1', 52738) 连接--
+[2019-10-04 15:58:41,457] INFO in crontab_socket-32: ('127.0.0.1', 52741) 连接--
+[2019-10-04 15:59:11,982] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 15:59:11,985] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 16:00:11 CST)" (scheduled at 2019-10-04 15:59:11.968995+08:00)
+[2019-10-04 15:59:11,986] INFO in base-144: Job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 16:00:11 CST)" executed successfully
+[2019-10-04 15:59:11,987] DEBUG in base-1020: Next wakeup is due at 2019-10-04 16:00:11.968995+08:00 (in 59.985576 seconds)
+[2019-10-04 16:00:11,986] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 16:00:11,989] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 16:01:11 CST)" (scheduled at 2019-10-04 16:00:11.968995+08:00)
+[2019-10-04 16:00:11,991] INFO in base-144: Job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 16:01:11 CST)" executed successfully
+[2019-10-04 16:00:11,992] DEBUG in base-1020: Next wakeup is due at 2019-10-04 16:01:11.968995+08:00 (in 59.982453 seconds)
+[2019-10-04 16:00:37,161] INFO in crontab_socket-59: ('127.0.0.1', 52741) 断开连接--
+[2019-10-04 16:00:38,592] INFO in crontab_socket-32: ('127.0.0.1', 52889) 连接--
+[2019-10-04 16:01:11,980] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 16:01:11,982] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 16:02:11 CST)" (scheduled at 2019-10-04 16:01:11.968995+08:00)
+[2019-10-04 16:01:11,984] INFO in base-144: Job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 16:02:11 CST)" executed successfully
+[2019-10-04 16:01:11,984] DEBUG in base-1020: Next wakeup is due at 2019-10-04 16:02:11.968995+08:00 (in 59.988695 seconds)
+[2019-10-04 16:02:11,982] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 16:02:11,984] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 16:03:11 CST)" (scheduled at 2019-10-04 16:02:11.968995+08:00)
+[2019-10-04 16:02:11,986] INFO in base-144: Job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 16:03:11 CST)" executed successfully
+[2019-10-04 16:02:11,986] DEBUG in base-1020: Next wakeup is due at 2019-10-04 16:03:11.968995+08:00 (in 59.986254 seconds)
+[2019-10-04 16:03:11,983] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 16:03:11,986] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 16:04:11 CST)" (scheduled at 2019-10-04 16:03:11.968995+08:00)
+[2019-10-04 16:03:11,988] INFO in base-144: Job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 16:04:11 CST)" executed successfully
+[2019-10-04 16:03:11,989] DEBUG in base-1020: Next wakeup is due at 2019-10-04 16:04:11.968995+08:00 (in 59.984748 seconds)
+[2019-10-04 16:04:11,978] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 16:04:11,982] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 16:05:11 CST)" (scheduled at 2019-10-04 16:04:11.968995+08:00)
+[2019-10-04 16:04:11,983] INFO in base-144: Job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 16:05:11 CST)" executed successfully
+[2019-10-04 16:04:11,984] DEBUG in base-1020: Next wakeup is due at 2019-10-04 16:05:11.968995+08:00 (in 59.990109 seconds)
+[2019-10-04 16:05:11,980] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 16:05:11,982] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 16:06:11 CST)" (scheduled at 2019-10-04 16:05:11.968995+08:00)
+[2019-10-04 16:05:11,983] INFO in base-144: Job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 16:06:11 CST)" executed successfully
+[2019-10-04 16:05:11,984] DEBUG in base-1020: Next wakeup is due at 2019-10-04 16:06:11.968995+08:00 (in 59.988562 seconds)
+[2019-10-04 16:05:40,672] INFO in crontab_socket-59: ('127.0.0.1', 52889) 断开连接--
+[2019-10-04 16:05:42,133] INFO in crontab_socket-32: ('127.0.0.1', 53153) 连接--
+[2019-10-04 16:06:11,981] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 16:06:11,985] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 16:07:11 CST)" (scheduled at 2019-10-04 16:06:11.968995+08:00)
+[2019-10-04 16:06:11,986] INFO in base-144: Job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 16:07:11 CST)" executed successfully
+[2019-10-04 16:06:11,987] DEBUG in base-1020: Next wakeup is due at 2019-10-04 16:07:11.968995+08:00 (in 59.986754 seconds)
+[2019-10-04 16:07:00,634] INFO in crontab_socket-59: ('127.0.0.1', 53153) 断开连接--
+[2019-10-04 16:07:02,262] INFO in crontab_socket-32: ('127.0.0.1', 53222) 连接--
+[2019-10-04 16:07:11,980] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 16:07:11,984] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 16:08:11 CST)" (scheduled at 2019-10-04 16:07:11.968995+08:00)
+[2019-10-04 16:07:11,985] INFO in base-144: Job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 16:08:11 CST)" executed successfully
+[2019-10-04 16:07:11,986] DEBUG in base-1020: Next wakeup is due at 2019-10-04 16:08:11.968995+08:00 (in 59.987845 seconds)
+[2019-10-04 16:08:11,985] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 16:08:11,988] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 16:09:11 CST)" (scheduled at 2019-10-04 16:08:11.968995+08:00)
+[2019-10-04 16:08:11,990] INFO in base-144: Job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 16:09:11 CST)" executed successfully
+[2019-10-04 16:08:11,992] DEBUG in base-1020: Next wakeup is due at 2019-10-04 16:09:11.968995+08:00 (in 59.983163 seconds)
+[2019-10-04 16:09:11,980] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 16:09:11,983] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 16:10:11 CST)" (scheduled at 2019-10-04 16:09:11.968995+08:00)
+[2019-10-04 16:09:11,985] INFO in base-144: Job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 16:10:11 CST)" executed successfully
+[2019-10-04 16:09:11,986] DEBUG in base-1020: Next wakeup is due at 2019-10-04 16:10:11.968995+08:00 (in 59.987829 seconds)
+[2019-10-04 16:10:11,991] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 16:10:11,993] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 16:11:11 CST)" (scheduled at 2019-10-04 16:10:11.968995+08:00)
+[2019-10-04 16:10:11,994] INFO in base-144: Job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 16:11:11 CST)" executed successfully
+[2019-10-04 16:10:11,995] DEBUG in base-1020: Next wakeup is due at 2019-10-04 16:11:11.968995+08:00 (in 59.977140 seconds)
+[2019-10-04 16:11:11,977] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 16:11:11,981] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 16:12:11 CST)" (scheduled at 2019-10-04 16:11:11.968995+08:00)
+[2019-10-04 16:11:11,982] INFO in base-144: Job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 16:12:11 CST)" executed successfully
+[2019-10-04 16:11:11,983] DEBUG in base-1020: Next wakeup is due at 2019-10-04 16:12:11.968995+08:00 (in 59.991399 seconds)
+[2019-10-04 16:12:11,978] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 16:12:11,982] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 16:13:11 CST)" (scheduled at 2019-10-04 16:12:11.968995+08:00)
+[2019-10-04 16:12:11,983] INFO in base-144: Job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 16:13:11 CST)" executed successfully
+[2019-10-04 16:12:11,984] DEBUG in base-1020: Next wakeup is due at 2019-10-04 16:13:11.968995+08:00 (in 59.989734 seconds)
+[2019-10-04 16:12:46,755] INFO in crontab_socket-59: ('127.0.0.1', 53222) 断开连接--
+[2019-10-04 16:12:48,266] INFO in crontab_socket-32: ('127.0.0.1', 53515) 连接--
+[2019-10-04 16:13:11,984] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 16:13:11,986] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 16:14:11 CST)" (scheduled at 2019-10-04 16:13:11.968995+08:00)
+[2019-10-04 16:13:11,987] INFO in base-144: Job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 16:14:11 CST)" executed successfully
+[2019-10-04 16:13:11,988] DEBUG in base-1020: Next wakeup is due at 2019-10-04 16:14:11.968995+08:00 (in 59.984798 seconds)
+[2019-10-04 16:14:11,983] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 16:14:11,985] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 16:15:11 CST)" (scheduled at 2019-10-04 16:14:11.968995+08:00)
+[2019-10-04 16:14:11,986] INFO in base-144: Job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 16:15:11 CST)" executed successfully
+[2019-10-04 16:14:11,987] DEBUG in base-1020: Next wakeup is due at 2019-10-04 16:15:11.968995+08:00 (in 59.985320 seconds)
+[2019-10-04 16:14:46,442] INFO in crontab_socket-59: ('127.0.0.1', 53515) 断开连接--
+[2019-10-04 16:14:48,025] INFO in crontab_socket-32: ('127.0.0.1', 53624) 连接--
+[2019-10-04 16:15:11,987] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 16:15:11,990] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 16:16:11 CST)" (scheduled at 2019-10-04 16:15:11.968995+08:00)
+[2019-10-04 16:15:11,992] INFO in base-144: Job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 16:16:11 CST)" executed successfully
+[2019-10-04 16:15:11,992] DEBUG in base-1020: Next wakeup is due at 2019-10-04 16:16:11.968995+08:00 (in 59.981318 seconds)
+[2019-10-04 16:16:11,978] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 16:16:11,981] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 16:17:11 CST)" (scheduled at 2019-10-04 16:16:11.968995+08:00)
+[2019-10-04 16:16:11,982] INFO in base-144: Job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 16:17:11 CST)" executed successfully
+[2019-10-04 16:16:11,982] DEBUG in base-1020: Next wakeup is due at 2019-10-04 16:17:11.968995+08:00 (in 59.989777 seconds)
+[2019-10-04 16:17:11,976] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 16:17:11,980] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 16:18:11 CST)" (scheduled at 2019-10-04 16:17:11.968995+08:00)
+[2019-10-04 16:17:11,983] INFO in base-144: Job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 16:18:11 CST)" executed successfully
+[2019-10-04 16:17:11,984] DEBUG in base-1020: Next wakeup is due at 2019-10-04 16:18:11.968995+08:00 (in 59.991656 seconds)
+[2019-10-04 16:18:11,980] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 16:18:11,983] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 16:19:11 CST)" (scheduled at 2019-10-04 16:18:11.968995+08:00)
+[2019-10-04 16:18:11,984] INFO in base-144: Job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 16:19:11 CST)" executed successfully
+[2019-10-04 16:18:11,985] DEBUG in base-1020: Next wakeup is due at 2019-10-04 16:19:11.968995+08:00 (in 59.988394 seconds)
+[2019-10-04 16:19:11,982] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 16:19:11,985] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 16:20:11 CST)" (scheduled at 2019-10-04 16:19:11.968995+08:00)
+[2019-10-04 16:19:11,987] INFO in base-144: Job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 16:20:11 CST)" executed successfully
+[2019-10-04 16:19:11,987] DEBUG in base-1020: Next wakeup is due at 2019-10-04 16:20:11.968995+08:00 (in 59.985638 seconds)
+[2019-10-04 16:20:11,984] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 16:20:11,987] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 16:21:11 CST)" (scheduled at 2019-10-04 16:20:11.968995+08:00)
+[2019-10-04 16:20:11,989] INFO in base-144: Job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 16:21:11 CST)" executed successfully
+[2019-10-04 16:20:11,989] DEBUG in base-1020: Next wakeup is due at 2019-10-04 16:21:11.968995+08:00 (in 59.984377 seconds)
+[2019-10-04 16:21:11,978] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 16:21:11,980] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 16:22:11 CST)" (scheduled at 2019-10-04 16:21:11.968995+08:00)
+[2019-10-04 16:21:11,981] INFO in base-144: Job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 16:22:11 CST)" executed successfully
+[2019-10-04 16:21:11,982] DEBUG in base-1020: Next wakeup is due at 2019-10-04 16:22:11.968995+08:00 (in 59.990915 seconds)
+[2019-10-04 16:22:11,976] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 16:22:11,978] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 16:23:11 CST)" (scheduled at 2019-10-04 16:22:11.968995+08:00)
+[2019-10-04 16:22:11,980] INFO in base-144: Job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 16:23:11 CST)" executed successfully
+[2019-10-04 16:22:11,980] DEBUG in base-1020: Next wakeup is due at 2019-10-04 16:23:11.968995+08:00 (in 59.992099 seconds)
+[2019-10-04 16:22:52,963] INFO in crontab_socket-59: ('127.0.0.1', 53624) 断开连接--
+[2019-10-04 16:22:52,964] INFO in crontab_socket-59: ('127.0.0.1', 52738) 断开连接--
+[2019-10-04 16:22:54,446] INFO in crontab_socket-32: ('127.0.0.1', 54053) 连接--
+[2019-10-04 16:22:55,895] INFO in crontab_socket-32: ('127.0.0.1', 54057) 连接--
+[2019-10-04 16:23:01,755] INFO in crontab_socket-32: ('127.0.0.1', 54065) 连接--
+[2019-10-04 16:23:03,085] INFO in crontab_socket-32: ('127.0.0.1', 54070) 连接--
+[2019-10-04 16:23:26,179] DEBUG in crontab_socket-44: 接收的数据: {'opt': 'update_task', 'data': {'task_name': 'test_task22', 'project_id': '1', 'test_type': 'interface_test', 'test_data_id': '2', 'task_type': 'interval_task', 'task_description': '123', 'execute_time': 'minutes-2', 'crontab_id': 15, 'task_id': 'cb918883b15d324a8189807e326c02a0'}}
+[2019-10-04 16:23:26,360] INFO in base-166: Scheduler started
+[2019-10-04 16:23:26,362] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 16:23:26,369] WARNING in base-120: Run time of job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 16:23:11 CST)" was missed by 0:00:14.400949
+[2019-10-04 16:23:26,376] DEBUG in base-1020: Next wakeup is due at 2019-10-04 16:24:11.968995+08:00 (in 45.605570 seconds)
+[2019-10-04 16:23:26,379] INFO in base-627: Removed job cb918883b15d324a8189807e326c02a0
+[2019-10-04 16:23:26,492] INFO in base-881: Added job "send_to_selenium" to job store "default"
+[2019-10-04 16:23:26,493] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 16:23:26,498] DEBUG in base-1020: Next wakeup is due at 2019-10-04 16:25:26.487256+08:00 (in 119.992460 seconds)
+[2019-10-04 16:24:46,533] DEBUG in crontab_socket-44: 接收的数据: {'opt': 'update_task', 'data': {'task_name': 'test_task444', 'project_id': '1', 'test_type': 'interface_test', 'test_data_id': '1', 'task_type': 'interval_task', 'task_description': '8888', 'execute_time': 'minutes-1', 'crontab_id': 15, 'task_id': 'cb918883b15d324a8189807e326c02a0'}}
+[2019-10-04 16:24:46,535] DEBUG in myscheduler-130: 更新任务时删除job失败，失败原因: 'No job by the id of cb918883b15d324a8189807e326c02a0 was found'
+[2019-10-04 16:25:26,497] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 16:25:26,499] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-04 16:25:26 CST)" (scheduled at 2019-10-04 16:25:26.487256+08:00)
+[2019-10-04 16:25:26,501] INFO in base-144: Job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-04 16:27:26 CST)" executed successfully
+[2019-10-04 16:25:26,504] DEBUG in base-1020: Next wakeup is due at 2019-10-04 16:27:26.487256+08:00 (in 119.989642 seconds)
+[2019-10-04 16:27:03,867] DEBUG in crontab_socket-44: 接收的数据: {'opt': 'add_task', 'data': {'task_name': 'test_task', 'project_id': '1', 'test_type': 'interface_test', 'test_data_id': '1', 'task_type': 'interval_task', 'task_description': '1111111111111111', 'execute_time': 'minutes-1', 'user_id': 1, 'task_id_name': 'cb918883b15d324a8189807e326c02a0'}}
+[2019-10-04 16:27:03,871] INFO in base-881: Added job "send_to_selenium" to job store "default"
+[2019-10-04 16:27:03,871] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 16:27:03,876] DEBUG in base-1020: Next wakeup is due at 2019-10-04 16:28:03.868614+08:00 (in 59.996491 seconds)
+[2019-10-04 16:27:34,201] DEBUG in crontab_socket-44: 接收的数据: {'opt': 'update_task', 'data': {'task_name': 'test_task2', 'project_id': '1', 'test_type': 'interface_test', 'test_data_id': '2', 'task_type': 'interval_task', 'task_description': '2222222222222222', 'execute_time': 'minutes-2', 'crontab_id': 16, 'task_id': 'cb918883b15d324a8189807e326c02a0'}}
+[2019-10-04 16:27:34,203] INFO in base-627: Removed job cb918883b15d324a8189807e326c02a0
+[2019-10-04 16:27:34,205] INFO in base-881: Added job "send_to_selenium" to job store "default"
+[2019-10-04 16:27:34,206] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 16:27:34,210] DEBUG in base-1020: Next wakeup is due at 2019-10-04 16:29:34.203761+08:00 (in 119.997483 seconds)
+[2019-10-04 16:29:34,214] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 16:29:34,217] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-04 16:29:34 CST)" (scheduled at 2019-10-04 16:29:34.203761+08:00)
+[2019-10-04 16:29:34,219] INFO in base-144: Job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-04 16:31:34 CST)" executed successfully
+[2019-10-04 16:29:34,220] DEBUG in base-1020: Next wakeup is due at 2019-10-04 16:31:34.203761+08:00 (in 119.989068 seconds)
+[2019-10-04 16:30:00,718] INFO in crontab_socket-59: ('127.0.0.1', 54070) 断开连接--
+[2019-10-04 16:30:02,021] INFO in crontab_socket-32: ('127.0.0.1', 54546) 连接--
+[2019-10-04 16:30:47,135] INFO in crontab_socket-32: ('127.0.0.1', 54593) 连接--
+[2019-10-04 16:30:48,869] INFO in crontab_socket-32: ('127.0.0.1', 54599) 连接--
+[2019-10-04 16:31:03,195] DEBUG in crontab_socket-44: 接收的数据: {'opt': 'add_task', 'data': {'task_name': 'test_task3', 'project_id': '1', 'test_type': 'interface_test', 'test_data_id': '1', 'task_type': 'interval_task', 'task_description': '???', 'execute_time': 'minutes-1', 'user_id': 1, 'task_id_name': 'df95e73275a15d982c6b47056a9861c4'}}
+[2019-10-04 16:31:03,411] INFO in base-166: Scheduler started
+[2019-10-04 16:31:03,412] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 16:31:03,416] DEBUG in base-1020: Next wakeup is due at 2019-10-04 16:31:34.203761+08:00 (in 30.791012 seconds)
+[2019-10-04 16:31:03,513] INFO in base-881: Added job "send_to_selenium" to job store "default"
+[2019-10-04 16:31:03,514] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 16:31:03,517] DEBUG in base-1020: Next wakeup is due at 2019-10-04 16:31:34.203761+08:00 (in 30.689739 seconds)
+[2019-10-04 16:31:34,214] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 16:31:34,217] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-04 16:31:34 CST)" (scheduled at 2019-10-04 16:31:34.203761+08:00)
+[2019-10-04 16:31:34,219] INFO in base-144: Job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-04 16:33:34 CST)" executed successfully
+[2019-10-04 16:31:34,221] DEBUG in base-1020: Next wakeup is due at 2019-10-04 16:32:03.511033+08:00 (in 29.296835 seconds)
+[2019-10-04 16:31:37,341] DEBUG in crontab_socket-44: 接收的数据: {'opt': 'update_task', 'data': {'task_name': 'test_task3-1', 'project_id': '1', 'test_type': 'interface_test', 'test_data_id': '2', 'task_type': 'interval_task', 'task_description': '???1111', 'execute_time': 'minutes-2', 'crontab_id': 17, 'task_id': 'df95e73275a15d982c6b47056a9861c4'}}
+[2019-10-04 16:31:37,344] INFO in base-627: Removed job df95e73275a15d982c6b47056a9861c4
+[2019-10-04 16:31:37,346] INFO in base-881: Added job "send_to_selenium" to job store "default"
+[2019-10-04 16:31:37,347] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 16:31:37,351] DEBUG in base-1020: Next wakeup is due at 2019-10-04 16:33:34.203761+08:00 (in 116.855842 seconds)
+[2019-10-04 16:33:04,182] INFO in crontab_socket-32: ('127.0.0.1', 54767) 连接--
+[2019-10-04 16:33:05,453] INFO in crontab_socket-32: ('127.0.0.1', 54772) 连接--
+[2019-10-04 16:33:06,860] DEBUG in crontab_socket-44: 接收的数据: {'opt': 'del_task', 'data': {'crontab_id': '17', 'task_id': 'df95e73275a15d982c6b47056a9861c4'}}
+[2019-10-04 16:33:06,986] INFO in base-166: Scheduler started
+[2019-10-04 16:33:06,987] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 16:33:06,991] DEBUG in base-1020: Next wakeup is due at 2019-10-04 16:33:34.203761+08:00 (in 27.215446 seconds)
+[2019-10-04 16:33:07,002] DEBUG in myscheduler-114: 删除job失败，失败原因: 'No job by the id of df95e73275a15d982c6b47056a9861c4 was found'
+[2019-10-04 16:33:09,456] DEBUG in crontab_socket-44: 接收的数据: {'opt': 'del_task', 'data': {'crontab_id': '17', 'task_id': 'df95e73275a15d982c6b47056a9861c4'}}
+[2019-10-04 16:33:09,458] DEBUG in myscheduler-114: 删除job失败，失败原因: 'No job by the id of df95e73275a15d982c6b47056a9861c4 was found'
+[2019-10-04 16:33:34,208] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 16:33:34,211] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-04 16:33:34 CST)" (scheduled at 2019-10-04 16:33:34.203761+08:00)
+[2019-10-04 16:33:34,213] INFO in base-144: Job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-04 16:35:34 CST)" executed successfully
+[2019-10-04 16:33:34,215] DEBUG in base-1020: Next wakeup is due at 2019-10-04 16:33:37.344911+08:00 (in 3.135948 seconds)
+[2019-10-04 16:33:37,352] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 16:33:37,353] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-04 16:33:37 CST)" (scheduled at 2019-10-04 16:33:37.344911+08:00)
+[2019-10-04 16:33:37,355] INFO in base-144: Job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-04 16:35:37 CST)" executed successfully
+[2019-10-04 16:33:37,356] DEBUG in base-1020: Next wakeup is due at 2019-10-04 16:35:34.203761+08:00 (in 116.851462 seconds)
+[2019-10-04 16:34:07,261] INFO in crontab_socket-32: ('127.0.0.1', 54838) 连接--
+[2019-10-04 16:34:08,545] INFO in crontab_socket-32: ('127.0.0.1', 54842) 连接--
+[2019-10-04 16:34:21,133] DEBUG in crontab_socket-44: 接收的数据: {'opt': 'add_task', 'data': {'task_name': 'test_task', 'project_id': '1', 'test_type': 'interface_test', 'test_data_id': '2', 'task_type': 'interval_task', 'task_description': '111111111', 'execute_time': 'minutes-1', 'user_id': 1, 'task_id_name': 'cb918883b15d324a8189807e326c02a0'}}
+[2019-10-04 16:34:21,423] INFO in base-166: Scheduler started
+[2019-10-04 16:34:21,424] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 16:34:21,431] DEBUG in base-1016: No jobs; waiting until a job is added
+[2019-10-04 16:34:21,526] INFO in base-881: Added job "send_to_selenium" to job store "default"
+[2019-10-04 16:34:21,527] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 16:34:21,531] DEBUG in base-1020: Next wakeup is due at 2019-10-04 16:35:21.523804+08:00 (in 59.995993 seconds)
+[2019-10-04 16:34:31,398] DEBUG in crontab_socket-44: 接收的数据: {'opt': 'update_task', 'data': {'task_name': 'test_task-1', 'project_id': '1', 'test_type': 'interface_test', 'test_data_id': '1', 'task_type': 'interval_task', 'task_description': '1111111112222222', 'execute_time': 'minutes-2', 'crontab_id': 18, 'task_id': 'cb918883b15d324a8189807e326c02a0'}}
+[2019-10-04 16:34:31,400] INFO in base-627: Removed job cb918883b15d324a8189807e326c02a0
+[2019-10-04 16:34:31,403] INFO in base-881: Added job "send_to_selenium" to job store "default"
+[2019-10-04 16:34:31,404] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 16:34:31,410] DEBUG in base-1020: Next wakeup is due at 2019-10-04 16:36:31.401384+08:00 (in 119.996500 seconds)
+[2019-10-04 16:35:56,943] INFO in crontab_socket-59: ('127.0.0.1', 54842) 断开连接--
+[2019-10-04 16:35:58,116] INFO in crontab_socket-32: ('127.0.0.1', 55000) 连接--
+[2019-10-04 16:36:20,097] INFO in crontab_socket-59: ('127.0.0.1', 55000) 断开连接--
+[2019-10-04 16:36:21,448] INFO in crontab_socket-32: ('127.0.0.1', 55023) 连接--
+[2019-10-04 16:36:31,413] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 16:36:31,416] DEBUG in base-1016: No jobs; waiting until a job is added
+[2019-10-04 16:38:05,334] INFO in crontab_socket-59: ('127.0.0.1', 55023) 断开连接--
+[2019-10-04 16:38:06,927] INFO in crontab_socket-32: ('127.0.0.1', 55120) 连接--
+[2019-10-04 16:38:08,553] INFO in crontab_socket-59: ('127.0.0.1', 55120) 断开连接--
+[2019-10-04 16:38:09,978] INFO in crontab_socket-32: ('127.0.0.1', 55126) 连接--
+[2019-10-04 16:38:11,392] INFO in crontab_socket-32: ('127.0.0.1', 55129) 连接--
+[2019-10-04 16:38:29,854] DEBUG in crontab_socket-44: 接收的数据: {'opt': 'add_task', 'data': {'task_name': 'test_task', 'project_id': '1', 'test_type': 'interface_test', 'test_data_id': '2', 'task_type': 'interval_task', 'task_description': '111', 'execute_time': 'minutes-1', 'user_id': 1, 'task_id_name': 'cb918883b15d324a8189807e326c02a0'}}
+[2019-10-04 16:38:30,105] INFO in base-166: Scheduler started
+[2019-10-04 16:38:30,106] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 16:38:30,112] DEBUG in base-1016: No jobs; waiting until a job is added
+[2019-10-04 16:38:30,198] INFO in base-881: Added job "send_to_selenium" to job store "default"
+[2019-10-04 16:38:30,199] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 16:38:30,201] DEBUG in base-1020: Next wakeup is due at 2019-10-04 16:39:30.197822+08:00 (in 59.998496 seconds)
+[2019-10-04 16:39:21,472] DEBUG in crontab_socket-44: 接收的数据: {'opt': 'update_task', 'data': {'task_name': 'test_task-1', 'project_id': '1', 'test_type': 'interface_test', 'test_data_id': '1', 'task_type': 'interval_task', 'task_description': '111-2222', 'execute_time': 'minutes-1', 'crontab_id': 19, 'task_id_name': 'cb918883b15d324a8189807e326c02a0', 'user_id': 1}}
+[2019-10-04 16:39:21,511] INFO in base-627: Removed job cb918883b15d324a8189807e326c02a0
+[2019-10-04 16:39:21,525] INFO in base-881: Added job "send_to_selenium" to job store "default"
+[2019-10-04 16:39:21,527] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 16:39:21,532] DEBUG in base-1020: Next wakeup is due at 2019-10-04 16:40:21.515019+08:00 (in 59.987429 seconds)
+[2019-10-04 16:39:50,609] INFO in crontab_socket-59: ('127.0.0.1', 55129) 断开连接--
+[2019-10-04 16:39:52,109] INFO in crontab_socket-32: ('127.0.0.1', 55276) 连接--
+[2019-10-04 16:39:56,296] INFO in crontab_socket-32: ('127.0.0.1', 55283) 连接--
+[2019-10-04 16:39:57,496] INFO in crontab_socket-32: ('127.0.0.1', 55287) 连接--
+[2019-10-04 16:40:16,280] DEBUG in crontab_socket-44: 接收的数据: {'opt': 'update_task', 'data': {'task_name': 'test_task-1', 'project_id': '1', 'test_type': 'interface_test', 'test_data_id': '1', 'task_type': 'interval_task', 'task_description': '111--222', 'execute_time': 'minutes-1', 'crontab_id': 19, 'task_id_name': 'cb918883b15d324a8189807e326c02a0', 'user_id': 1}}
+[2019-10-04 16:40:16,488] INFO in base-166: Scheduler started
+[2019-10-04 16:40:16,490] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 16:40:16,495] DEBUG in base-1020: Next wakeup is due at 2019-10-04 16:40:21.515019+08:00 (in 5.023732 seconds)
+[2019-10-04 16:40:16,497] INFO in base-627: Removed job cb918883b15d324a8189807e326c02a0
+[2019-10-04 16:40:16,598] INFO in base-881: Added job "send_to_selenium" to job store "default"
+[2019-10-04 16:40:16,598] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 16:40:16,601] DEBUG in base-1020: Next wakeup is due at 2019-10-04 16:41:16.595102+08:00 (in 59.996000 seconds)
+[2019-10-04 16:41:16,599] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 16:41:16,604] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 16:41:16 CST)" (scheduled at 2019-10-04 16:41:16.595102+08:00)
+[2019-10-04 16:41:16,607] INFO in base-144: Job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 16:42:16 CST)" executed successfully
+[2019-10-04 16:41:16,610] DEBUG in base-1020: Next wakeup is due at 2019-10-04 16:42:16.595102+08:00 (in 59.995264 seconds)
+[2019-10-04 16:42:16,619] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 16:42:16,622] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 16:42:16 CST)" (scheduled at 2019-10-04 16:42:16.595102+08:00)
+[2019-10-04 16:42:16,624] INFO in base-144: Job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 16:43:16 CST)" executed successfully
+[2019-10-04 16:42:16,626] DEBUG in base-1020: Next wakeup is due at 2019-10-04 16:43:16.595102+08:00 (in 59.975138 seconds)
+[2019-10-04 16:43:16,604] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 16:43:16,607] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 16:43:16 CST)" (scheduled at 2019-10-04 16:43:16.595102+08:00)
+[2019-10-04 16:43:16,608] INFO in base-144: Job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 16:44:16 CST)" executed successfully
+[2019-10-04 16:43:16,611] DEBUG in base-1020: Next wakeup is due at 2019-10-04 16:44:16.595102+08:00 (in 59.989941 seconds)
+[2019-10-04 16:44:11,375] INFO in crontab_socket-59: ('127.0.0.1', 55283) 断开连接--
+[2019-10-04 16:44:11,435] INFO in crontab_socket-59: ('127.0.0.1', 55287) 断开连接--
+[2019-10-04 16:44:12,942] INFO in crontab_socket-32: ('127.0.0.1', 55868) 连接--
+[2019-10-04 16:44:14,448] INFO in crontab_socket-32: ('127.0.0.1', 55872) 连接--
+[2019-10-04 16:44:16,603] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 16:44:16,606] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 16:44:16 CST)" (scheduled at 2019-10-04 16:44:16.595102+08:00)
+[2019-10-04 16:44:16,608] INFO in base-144: Job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 16:45:16 CST)" executed successfully
+[2019-10-04 16:44:16,610] DEBUG in base-1020: Next wakeup is due at 2019-10-04 16:45:16.595102+08:00 (in 59.991036 seconds)
+[2019-10-04 16:44:40,372] DEBUG in crontab_socket-44: 接收的数据: {'opt': 'update_task', 'data': {'task_name': 'test_task-2', 'project_id': '1', 'test_type': 'interface_test', 'test_data_id': '2', 'task_type': 'interval_task', 'task_description': '111--222----333', 'execute_time': 'minutes-1', 'crontab_id': 19, 'task_id_name': 'cb918883b15d324a8189807e326c02a0', 'user_id': 1}}
+[2019-10-04 16:44:40,375] INFO in base-627: Removed job cb918883b15d324a8189807e326c02a0
+[2019-10-04 16:44:40,377] INFO in base-881: Added job "send_to_selenium" to job store "default"
+[2019-10-04 16:44:40,378] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 16:44:40,381] DEBUG in base-1020: Next wakeup is due at 2019-10-04 16:45:40.376494+08:00 (in 59.997044 seconds)
+[2019-10-04 16:45:40,383] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 16:45:40,386] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 16:45:40 CST)" (scheduled at 2019-10-04 16:45:40.376494+08:00)
+[2019-10-04 16:45:40,388] INFO in base-144: Job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 16:46:40 CST)" executed successfully
+[2019-10-04 16:45:40,390] DEBUG in base-1020: Next wakeup is due at 2019-10-04 16:46:40.376494+08:00 (in 59.992600 seconds)
+[2019-10-04 16:46:40,385] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 16:46:40,389] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 16:46:40 CST)" (scheduled at 2019-10-04 16:46:40.376494+08:00)
+[2019-10-04 16:46:40,390] INFO in base-144: Job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 16:47:40 CST)" executed successfully
+[2019-10-04 16:46:40,392] DEBUG in base-1020: Next wakeup is due at 2019-10-04 16:47:40.376494+08:00 (in 59.990589 seconds)
+[2019-10-04 16:47:40,392] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 16:47:40,395] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 16:47:40 CST)" (scheduled at 2019-10-04 16:47:40.376494+08:00)
+[2019-10-04 16:47:40,397] INFO in base-144: Job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 16:48:40 CST)" executed successfully
+[2019-10-04 16:47:40,399] DEBUG in base-1020: Next wakeup is due at 2019-10-04 16:48:40.376494+08:00 (in 59.983155 seconds)
+[2019-10-04 16:48:40,386] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 16:48:40,387] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 16:48:40 CST)" (scheduled at 2019-10-04 16:48:40.376494+08:00)
+[2019-10-04 16:48:40,388] INFO in base-144: Job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 16:49:40 CST)" executed successfully
+[2019-10-04 16:48:40,389] DEBUG in base-1020: Next wakeup is due at 2019-10-04 16:49:40.376494+08:00 (in 59.990081 seconds)
+[2019-10-04 16:49:40,389] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 16:49:40,390] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 16:49:40 CST)" (scheduled at 2019-10-04 16:49:40.376494+08:00)
+[2019-10-04 16:49:40,391] INFO in base-144: Job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 16:50:40 CST)" executed successfully
+[2019-10-04 16:49:40,392] DEBUG in base-1020: Next wakeup is due at 2019-10-04 16:50:40.376494+08:00 (in 59.986688 seconds)
+[2019-10-04 16:50:40,390] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 16:50:40,391] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 16:50:40 CST)" (scheduled at 2019-10-04 16:50:40.376494+08:00)
+[2019-10-04 16:50:40,392] INFO in base-144: Job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 16:50:40 CST)" executed successfully
+[2019-10-04 16:50:40,394] DEBUG in base-1020: Next wakeup is due at 2019-10-04 16:51:40.376494+08:00 (in 59.985773 seconds)
+[2019-10-04 16:51:40,393] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 16:51:40,394] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 16:51:40 CST)" (scheduled at 2019-10-04 16:51:40.376494+08:00)
+[2019-10-04 16:51:40,394] INFO in base-144: Job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 16:52:40 CST)" executed successfully
+[2019-10-04 16:51:40,395] DEBUG in base-1020: Next wakeup is due at 2019-10-04 16:52:40.376494+08:00 (in 59.983266 seconds)
+[2019-10-04 16:52:40,381] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 16:52:40,382] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 16:52:40 CST)" (scheduled at 2019-10-04 16:52:40.376494+08:00)
+[2019-10-04 16:52:40,383] INFO in base-144: Job "send_to_selenium (trigger: interval[0:01:00], next run at: 2019-10-04 16:53:40 CST)" executed successfully
+[2019-10-04 16:52:40,383] DEBUG in base-1020: Next wakeup is due at 2019-10-04 16:53:40.376494+08:00 (in 59.995005 seconds)
+[2019-10-04 16:53:07,787] DEBUG in crontab_socket-44: 接收的数据: {'opt': 'del_task', 'data': {'crontab_id': '19', 'task_id_name': 'cb918883b15d324a8189807e326c02a0'}}
+[2019-10-04 16:53:07,788] INFO in base-627: Removed job cb918883b15d324a8189807e326c02a0
+[2019-10-04 16:53:40,381] DEBUG in base-940: Looking for jobs to run
+[2019-10-04 16:53:40,382] DEBUG in base-1016: No jobs; waiting until a job is added
+[2019-10-04 17:12:12,552] INFO in crontab_socket-59: ('127.0.0.1', 55872) 断开连接--
+[2019-10-04 17:12:12,553] INFO in crontab_socket-59: ('127.0.0.1', 55868) 断开连接--

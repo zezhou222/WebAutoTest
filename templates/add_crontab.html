@@ -153,6 +153,9 @@
     // 定时任务的标签
     var crontab_task_label='<div><input type="text" class="form-control"></div><div><span class="help-block" style="margin-bottom: 0;">格式：分 时 日 月 周</span></div>';
 
+    // 编辑的id
+    var edit_crontab_id = {{ crontab_id }};
+
 </script>
 <script>
 
@@ -355,30 +358,68 @@
             }
             data['execute_time'] = temp[1];
 
+            var request_type = 'post';
+            // 走编辑的请求
+            if (typeof edit_crontab_id !== 'undefined'){
+                data['edit_crontab_id'] = edit_crontab_id;
+                request_type = 'put';
+            }
+
             // 提交数据
             console.log(data);
             data = JSON.stringify(data);
 
             $.ajax({
                 url: crontab_url,
-                type: 'post',
+                type: request_type,
                 data: data,
                 contentType: false,
                 success: function (response) {
-                    window.parent.toastr.success(`${$('#task_name').val().trim()}定时任务添加成功!`);
+                    if (request_type == 'post') {
+                        window.parent.toastr.success(`${$('#task_name').val().trim()}定时任务添加成功!`);
+                    }else{
+                        window.parent.toastr.success(`任务数据保存成功!`);
+                        window.history.back();
+                    }
                 },
                 error: function (xhr) {
                     window.parent.toastr.error(JSON.parse(xhr.responseText)['error']);
                     console.log('添加定时任务出错!', xhr.responseText);
                 },
             });
-
-            window.parent.toastr.info(`${$('#task_name').val().trim()}定时任务添加中!`);
+            if (request_type == 'post') {
+                window.parent.toastr.info(`${$('#task_name').val().trim()}定时任务添加中!`);
+            }else{
+                window.parent.toastr.info(`${$('#task_name').val().trim()}定时任务保存中!`);
+            }
         });
         
     }
 
     all_event();
+
+    (function () {
+
+        // 获取编辑的任务数据
+        if (typeof edit_crontab_id !== 'undefined') {
+            var new_url = get_crontab_data + edit_crontab_id + '/';
+            $.ajax({
+                url: new_url,
+                type: 'get',
+                success: function (response) {
+                    console.log(response);
+                    $('#task_name').val(response['task_name']);
+                    $('#task_description').val(response['task_description']);
+                    // 不稳定数据
+                    $('#project_id').find(`option[value=${response['project_id']}]`).prop('selected', true);
+                    // $('#test_type').find(`option[value=${response['test_type']}]`).prop('selected', true);
+                    // $('#task_type').find(`option[value=${response['task_type']}]`).prop('selected', true);
+                },
+            });
+
+        }
+
+    })();
 
 </script>
 </body>

@@ -105,6 +105,9 @@ var interface_test_result_url = server_ip + '/api/interface_test_result/';
 // 定时任务的添加界面
 var add_crontab_page_url = server_ip + '/crontab/add/';
 
+// 定时任务编辑的界面
+var edit_crontab_page_url = server_ip + '/crontab/edit/';
+
 // 所有自己的用例
 var get_my_use_case_data_url = server_ip + '/api/use_case/myself/all/';
 
@@ -113,3 +116,6 @@ var get_my_interface_data_url = server_ip + '/api/interface_test/myself/all/';
 
 // 定时任务增删改查的api接口
 var crontab_url = server_ip + '/api/crontab/';
+
+// 获取任务数据的url
+var get_crontab_data = server_ip + '/api/get_crontab/';

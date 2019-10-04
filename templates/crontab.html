@@ -109,7 +109,7 @@
         // 点击删除任务
         click_del_task_event();
         // 点击编辑用例的事件
-        click_edit_use_case_event();
+        click_edit_task_event();
         // 搜索的事件
         click_search_btn_event();
     }
@@ -142,14 +142,14 @@
     }
 
 
-    function click_edit_use_case_event() {
+    function click_edit_task_event() {
 
         $('tbody').on('click', '.edit_btn', function (e) {
 
             // 获取用例id
-            var interface_test_id = $(this).parent().parent().attr('interface_test_id');
+            var crontab_id = $(this).parent().parent().attr('crontab_id');
             // 拼接url
-            var new_url = edit_interface_test_page_url + interface_test_id + '/';
+            var new_url = edit_crontab_page_url + crontab_id + '/';
             // 首页的iframe请求结果页面
             $(window.parent.document).find('iframe').attr('src', new_url)
 

@@ -65,7 +65,15 @@ def interface_test_edit(interface_test_id=None):
 
 @app.route(rule='/crontab/add/')
 def crontab_add():
-    return render_template('add_crontab.html')
+    return render_template('add_crontab.html', crontab_id=None)
+
+
+@app.route(rule='/crontab/edit/<int:crontab_id>/')
+def crontab_edit(crontab_id):
+    if crontab_id is None:
+        return {'error': 'not found the page.'}, 404
+
+    return render_template('add_crontab.html', crontab_id=crontab_id)
 
 
 @app.route(rule='/get_use_case_page/')

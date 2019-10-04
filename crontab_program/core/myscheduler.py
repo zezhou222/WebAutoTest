@@ -56,7 +56,7 @@ class MyScheduler(object):
 
             self.scheduler = scheduler
 
-    def add_task(self, data):
+    def get_add_params(self, data):
         task_id = data.get('task_id_name')
         task_type = data.get('task_type')
         execute_time = data.get('execute_time')
@@ -68,12 +68,21 @@ class MyScheduler(object):
 
         if task_type == 'interval_task':
             t = execute_time.split('-')
-            params = {'trigger': 'interval', t[0]: int(t[1]), 'id': task_id, 'func': send_to_selenium , 'args': args}
+            params = {'trigger': 'interval', t[0]: int(t[1]), 'id': task_id, 'func': send_to_selenium, 'args': args}
         elif task_type == 'once_task':
-            params = {'trigger': 'date', 'run_date': execute_time,  'id': task_id, 'func': send_to_selenium, 'args': args}
+            params = {'trigger': 'date', 'run_date': execute_time, 'id': task_id, 'func': send_to_selenium,
+                      'args': args}
         elif task_type == 'crontab_task':
             t = execute_time.split(' ')
-            params = {'trigger': 'cron', 'minute': t[0], 'hour': t[1], 'day': t[2], 'month': t[3], 'week': t[4], 'id': task_id, 'func': send_to_selenium, 'args': args}
+            params = {'trigger': 'cron', 'minute': t[0], 'hour': t[1], 'day': t[2], 'month': t[3], 'week': t[4],
+                      'id': task_id, 'func': send_to_selenium, 'args': args}
+
+        return params
+
+    def add_task(self, data):
+        task_id = data.get('task_id_name')
+
+        params = self.get_add_params(data)
 
         # 添加任务
         try:
@@ -96,7 +105,7 @@ class MyScheduler(object):
 
     def del_task(self, data):
         crontab_id = data.get('crontab_id')
-        task_id = data.get('task_id')
+        task_id = data.get('task_id_name')
 
         try:
             self.scheduler.remove_job(job_id=task_id)
@@ -110,9 +119,31 @@ class MyScheduler(object):
         send_content(self.conn, {'del_flag': 0})
 
     def update_task(self, data):
-        # 由于默认修改只能是修改触发器，不能修改执行的内容，所以采用删除新建的方式进行
-
         # 删除任务
+        crontab_id = data.get('crontab_id')
+        task_id = data.get('task_id_name')
 
-        # 新建任务
-        pass
+        try:
+            self.scheduler.remove_job(job_id=task_id)
+        except Exception as error:
+            # 发送后端结果
+            logger.debug('更新任务时删除job失败，失败原因: %s' % error)
+            send_content(self.conn, {'update_flag': 1})
+            return
+        
+        # 添加任务
+        params = self.get_add_params(data)
+        
+        try:
+            self.scheduler.add_job(**params)
+            # raise TypeError('????')
+        except Exception as error:
+            # 删除job
+            self.scheduler.remove_job(job_id=task_id)
+            # 发送后端结果
+            logger.debug('更新job失败，失败原因: %s' % error)
+            send_content(self.conn, {'update_flag': 1})
+            return
+
+        # 发送结果
+        send_content(self.conn, {'update_flag': 0})
