@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="360ac1f5-6e4e-4126-9e78-3ee009677907" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/temp/crontab_log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/temp/crontab_log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../doc/项目的设计.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../doc/项目的设计.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../markdown_img/表结构.png" beforeDir="false" afterPath="$PROJECT_DIR$/../markdown_img/表结构.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../selenium_program/temp/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../selenium_program/temp/log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/web_log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../temp/web_log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../doc/项目的启动流程.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../doc/项目的启动流程.docx" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -181,7 +176,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="565" />
     <option name="y" value="55" />
     <option name="width" value="1160" />
