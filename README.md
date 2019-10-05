@@ -1,6 +1,6 @@
 ## Web自动化测试平台
 
-注：python写的小项目
+注：python写的小项目(Flask+Selenium+Requests+APScheduler等)
 
 **目的：**
     

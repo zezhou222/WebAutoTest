@@ -1350,3 +1350,261 @@ LookupError: Error resolving reference __main__:myfunc: error looking up object
 [2019-10-05 15:04:30,672] DEBUG in base-1020: Next wakeup is due at 2019-10-05 15:09:30.644640+08:00 (in 299.974813 seconds)
 [2019-10-05 15:13:23,348] INFO in crontab_socket-32: ('127.0.0.1', 59608) 连接--
 [2019-10-05 15:13:24,605] INFO in crontab_socket-32: ('127.0.0.1', 59612) 连接--
+[2019-10-05 15:14:41,687] INFO in crontab_socket-32: ('127.0.0.1', 59621) 连接--
+[2019-10-05 15:14:42,945] INFO in crontab_socket-32: ('127.0.0.1', 59624) 连接--
+[2019-10-05 15:15:12,002] DEBUG in crontab_socket-44: 接收的数据: {'opt': 'update_task', 'data': {'task_name': 'test_task', 'project_id': '1', 'test_type': 'interface_test', 'test_data_id': '1', 'task_type': 'interval_task', 'task_description': '11111', 'execute_time': 'minutes-2', 'crontab_id': 21, 'task_id_name': 'cb918883b15d324a8189807e326c02a0', 'user_id': 1}}
+[2019-10-05 15:15:12,208] INFO in base-166: Scheduler started
+[2019-10-05 15:15:12,209] DEBUG in base-940: Looking for jobs to run
+[2019-10-05 15:15:12,213] WARNING in base-120: Run time of job "send_to_selenium (trigger: interval[0:05:00], next run at: 2019-10-05 15:09:30 CST)" was missed by 0:05:41.568428
+[2019-10-05 15:15:12,214] WARNING in base-120: Run time of job "send_to_selenium (trigger: interval[0:05:00], next run at: 2019-10-05 15:09:30 CST)" was missed by 0:00:41.569495
+[2019-10-05 15:15:12,217] DEBUG in base-1020: Next wakeup is due at 2019-10-05 15:19:30.644640+08:00 (in 258.434584 seconds)
+[2019-10-05 15:15:12,225] DEBUG in base-940: Looking for jobs to run
+[2019-10-05 15:15:12,229] DEBUG in base-1020: Next wakeup is due at 2019-10-05 15:19:30.644640+08:00 (in 258.418535 seconds)
+[2019-10-05 15:19:30,658] DEBUG in base-940: Looking for jobs to run
+[2019-10-05 15:19:30,664] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 15:19:30 CST)" (scheduled at 2019-10-05 15:19:30.644640+08:00)
+[2019-10-05 15:19:30,666] INFO in base-144: Job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 15:21:30 CST)" executed successfully
+[2019-10-05 15:19:30,670] DEBUG in base-1020: Next wakeup is due at 2019-10-05 15:21:30.644640+08:00 (in 119.984766 seconds)
+[2019-10-05 15:20:12,396] DEBUG in crontab_socket-44: 接收的数据: {'opt': 'update_task', 'data': {'task_name': 'test_task', 'project_id': '1', 'test_type': 'interface_test', 'test_data_id': '3', 'task_type': 'interval_task', 'task_description': '11111', 'execute_time': 'minutes-2', 'crontab_id': 21, 'task_id_name': 'cb918883b15d324a8189807e326c02a0', 'user_id': 1}}
+[2019-10-05 15:20:12,402] DEBUG in base-940: Looking for jobs to run
+[2019-10-05 15:20:12,405] DEBUG in base-1020: Next wakeup is due at 2019-10-05 15:21:30.644640+08:00 (in 78.242063 seconds)
+[2019-10-05 15:21:30,660] DEBUG in base-940: Looking for jobs to run
+[2019-10-05 15:21:30,664] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 15:21:30 CST)" (scheduled at 2019-10-05 15:21:30.644640+08:00)
+[2019-10-05 15:21:30,666] INFO in base-144: Job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 15:23:30 CST)" executed successfully
+[2019-10-05 15:21:30,669] DEBUG in base-1020: Next wakeup is due at 2019-10-05 15:23:30.644640+08:00 (in 119.983407 seconds)
+[2019-10-05 15:23:30,656] DEBUG in base-940: Looking for jobs to run
+[2019-10-05 15:23:30,661] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 15:23:30 CST)" (scheduled at 2019-10-05 15:23:30.644640+08:00)
+[2019-10-05 15:23:30,664] INFO in base-144: Job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 15:25:30 CST)" executed successfully
+[2019-10-05 15:23:30,667] DEBUG in base-1020: Next wakeup is due at 2019-10-05 15:25:30.644640+08:00 (in 119.986672 seconds)
+[2019-10-05 15:25:30,664] DEBUG in base-940: Looking for jobs to run
+[2019-10-05 15:25:30,669] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 15:25:30 CST)" (scheduled at 2019-10-05 15:25:30.644640+08:00)
+[2019-10-05 15:25:30,672] INFO in base-144: Job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 15:27:30 CST)" executed successfully
+[2019-10-05 15:25:30,674] DEBUG in base-1020: Next wakeup is due at 2019-10-05 15:27:30.644640+08:00 (in 119.979382 seconds)
+[2019-10-05 15:27:30,658] DEBUG in base-940: Looking for jobs to run
+[2019-10-05 15:27:30,661] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 15:27:30 CST)" (scheduled at 2019-10-05 15:27:30.644640+08:00)
+[2019-10-05 15:27:30,663] INFO in base-144: Job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 15:29:30 CST)" executed successfully
+[2019-10-05 15:27:30,665] DEBUG in base-1020: Next wakeup is due at 2019-10-05 15:29:30.644640+08:00 (in 119.986003 seconds)
+[2019-10-05 15:29:30,669] DEBUG in base-940: Looking for jobs to run
+[2019-10-05 15:29:30,674] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 15:29:30 CST)" (scheduled at 2019-10-05 15:29:30.644640+08:00)
+[2019-10-05 15:29:30,676] INFO in base-144: Job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 15:31:30 CST)" executed successfully
+[2019-10-05 15:29:30,679] DEBUG in base-1020: Next wakeup is due at 2019-10-05 15:31:30.644640+08:00 (in 119.973902 seconds)
+[2019-10-05 15:31:30,657] DEBUG in base-940: Looking for jobs to run
+[2019-10-05 15:31:30,660] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 15:31:30 CST)" (scheduled at 2019-10-05 15:31:30.644640+08:00)
+[2019-10-05 15:31:30,661] INFO in base-144: Job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 15:33:30 CST)" executed successfully
+[2019-10-05 15:31:30,664] DEBUG in base-1020: Next wakeup is due at 2019-10-05 15:33:30.644640+08:00 (in 119.987298 seconds)
+[2019-10-05 15:33:30,660] DEBUG in base-940: Looking for jobs to run
+[2019-10-05 15:33:30,663] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 15:33:30 CST)" (scheduled at 2019-10-05 15:33:30.644640+08:00)
+[2019-10-05 15:33:30,666] INFO in base-144: Job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 15:35:30 CST)" executed successfully
+[2019-10-05 15:33:30,668] DEBUG in base-1020: Next wakeup is due at 2019-10-05 15:35:30.644640+08:00 (in 119.982709 seconds)
+[2019-10-05 15:35:30,655] DEBUG in base-940: Looking for jobs to run
+[2019-10-05 15:35:30,657] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 15:35:30 CST)" (scheduled at 2019-10-05 15:35:30.644640+08:00)
+[2019-10-05 15:35:30,658] INFO in base-144: Job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 15:37:30 CST)" executed successfully
+[2019-10-05 15:35:30,660] DEBUG in base-1020: Next wakeup is due at 2019-10-05 15:37:30.644640+08:00 (in 119.989562 seconds)
+[2019-10-05 15:37:30,654] DEBUG in base-940: Looking for jobs to run
+[2019-10-05 15:37:30,659] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 15:37:30 CST)" (scheduled at 2019-10-05 15:37:30.644640+08:00)
+[2019-10-05 15:37:30,661] INFO in base-144: Job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 15:39:30 CST)" executed successfully
+[2019-10-05 15:37:30,663] DEBUG in base-1020: Next wakeup is due at 2019-10-05 15:39:30.644640+08:00 (in 119.989500 seconds)
+[2019-10-05 15:39:30,658] DEBUG in base-940: Looking for jobs to run
+[2019-10-05 15:39:30,660] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 15:39:30 CST)" (scheduled at 2019-10-05 15:39:30.644640+08:00)
+[2019-10-05 15:39:30,661] INFO in base-144: Job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 15:41:30 CST)" executed successfully
+[2019-10-05 15:39:30,663] DEBUG in base-1020: Next wakeup is due at 2019-10-05 15:41:30.644640+08:00 (in 119.986494 seconds)
+[2019-10-05 15:41:30,656] DEBUG in base-940: Looking for jobs to run
+[2019-10-05 15:41:30,660] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 15:41:30 CST)" (scheduled at 2019-10-05 15:41:30.644640+08:00)
+[2019-10-05 15:41:30,662] INFO in base-144: Job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 15:43:30 CST)" executed successfully
+[2019-10-05 15:41:30,664] DEBUG in base-1020: Next wakeup is due at 2019-10-05 15:43:30.644640+08:00 (in 119.987559 seconds)
+[2019-10-05 15:43:30,659] DEBUG in base-940: Looking for jobs to run
+[2019-10-05 15:43:30,662] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 15:43:30 CST)" (scheduled at 2019-10-05 15:43:30.644640+08:00)
+[2019-10-05 15:43:30,663] INFO in base-144: Job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 15:45:30 CST)" executed successfully
+[2019-10-05 15:43:30,665] DEBUG in base-1020: Next wakeup is due at 2019-10-05 15:45:30.644640+08:00 (in 119.985200 seconds)
+[2019-10-05 15:45:30,662] DEBUG in base-940: Looking for jobs to run
+[2019-10-05 15:45:30,663] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 15:45:30 CST)" (scheduled at 2019-10-05 15:45:30.644640+08:00)
+[2019-10-05 15:45:30,664] INFO in base-144: Job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 15:47:30 CST)" executed successfully
+[2019-10-05 15:45:30,664] DEBUG in base-1020: Next wakeup is due at 2019-10-05 15:47:30.644640+08:00 (in 119.982213 seconds)
+[2019-10-05 15:47:30,650] DEBUG in base-940: Looking for jobs to run
+[2019-10-05 15:47:30,651] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 15:47:30 CST)" (scheduled at 2019-10-05 15:47:30.644640+08:00)
+[2019-10-05 15:47:30,652] INFO in base-144: Job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 15:49:30 CST)" executed successfully
+[2019-10-05 15:47:30,653] DEBUG in base-1020: Next wakeup is due at 2019-10-05 15:49:30.644640+08:00 (in 119.993681 seconds)
+[2019-10-05 15:49:30,660] DEBUG in base-940: Looking for jobs to run
+[2019-10-05 15:49:30,661] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 15:49:30 CST)" (scheduled at 2019-10-05 15:49:30.644640+08:00)
+[2019-10-05 15:49:30,662] INFO in base-144: Job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 15:51:30 CST)" executed successfully
+[2019-10-05 15:49:30,663] DEBUG in base-1020: Next wakeup is due at 2019-10-05 15:51:30.644640+08:00 (in 119.983801 seconds)
+[2019-10-05 15:51:30,650] DEBUG in base-940: Looking for jobs to run
+[2019-10-05 15:51:30,653] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 15:51:30 CST)" (scheduled at 2019-10-05 15:51:30.644640+08:00)
+[2019-10-05 15:51:30,654] INFO in base-144: Job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 15:53:30 CST)" executed successfully
+[2019-10-05 15:51:30,655] DEBUG in base-1020: Next wakeup is due at 2019-10-05 15:53:30.644640+08:00 (in 119.992165 seconds)
+[2019-10-05 15:53:30,661] DEBUG in base-940: Looking for jobs to run
+[2019-10-05 15:53:30,664] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 15:53:30 CST)" (scheduled at 2019-10-05 15:53:30.644640+08:00)
+[2019-10-05 15:53:30,664] INFO in base-144: Job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 15:55:30 CST)" executed successfully
+[2019-10-05 15:53:30,665] DEBUG in base-1020: Next wakeup is due at 2019-10-05 15:55:30.644640+08:00 (in 119.981665 seconds)
+[2019-10-05 15:55:30,651] DEBUG in base-940: Looking for jobs to run
+[2019-10-05 15:55:30,652] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 15:55:30 CST)" (scheduled at 2019-10-05 15:55:30.644640+08:00)
+[2019-10-05 15:55:30,653] INFO in base-144: Job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 15:57:30 CST)" executed successfully
+[2019-10-05 15:55:30,656] DEBUG in base-1020: Next wakeup is due at 2019-10-05 15:57:30.644640+08:00 (in 119.993153 seconds)
+[2019-10-05 15:57:30,654] DEBUG in base-940: Looking for jobs to run
+[2019-10-05 15:57:30,655] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 15:59:30 CST)" (scheduled at 2019-10-05 15:57:30.644640+08:00)
+[2019-10-05 15:57:30,655] INFO in base-144: Job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 15:59:30 CST)" executed successfully
+[2019-10-05 15:57:30,656] DEBUG in base-1020: Next wakeup is due at 2019-10-05 15:59:30.644640+08:00 (in 119.990281 seconds)
+[2019-10-05 15:59:30,657] DEBUG in base-940: Looking for jobs to run
+[2019-10-05 15:59:30,659] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 16:01:30 CST)" (scheduled at 2019-10-05 15:59:30.644640+08:00)
+[2019-10-05 15:59:30,659] INFO in base-144: Job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 16:01:30 CST)" executed successfully
+[2019-10-05 15:59:30,659] DEBUG in base-1020: Next wakeup is due at 2019-10-05 16:01:30.644640+08:00 (in 119.986722 seconds)
+[2019-10-05 16:01:30,656] DEBUG in base-940: Looking for jobs to run
+[2019-10-05 16:01:30,658] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 16:03:30 CST)" (scheduled at 2019-10-05 16:01:30.644640+08:00)
+[2019-10-05 16:01:30,658] INFO in base-144: Job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 16:03:30 CST)" executed successfully
+[2019-10-05 16:01:30,659] DEBUG in base-1020: Next wakeup is due at 2019-10-05 16:03:30.644640+08:00 (in 119.987674 seconds)
+[2019-10-05 16:03:30,660] DEBUG in base-940: Looking for jobs to run
+[2019-10-05 16:03:30,661] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 16:05:30 CST)" (scheduled at 2019-10-05 16:03:30.644640+08:00)
+[2019-10-05 16:03:30,662] INFO in base-144: Job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 16:05:30 CST)" executed successfully
+[2019-10-05 16:03:30,662] DEBUG in base-1020: Next wakeup is due at 2019-10-05 16:05:30.644640+08:00 (in 119.984084 seconds)
+[2019-10-05 16:05:30,662] DEBUG in base-940: Looking for jobs to run
+[2019-10-05 16:05:30,663] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 16:07:30 CST)" (scheduled at 2019-10-05 16:05:30.644640+08:00)
+[2019-10-05 16:05:30,664] INFO in base-144: Job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 16:07:30 CST)" executed successfully
+[2019-10-05 16:05:30,664] DEBUG in base-1020: Next wakeup is due at 2019-10-05 16:07:30.644640+08:00 (in 119.982350 seconds)
+[2019-10-05 16:07:30,650] DEBUG in base-940: Looking for jobs to run
+[2019-10-05 16:07:30,654] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 16:09:30 CST)" (scheduled at 2019-10-05 16:07:30.644640+08:00)
+[2019-10-05 16:07:30,654] INFO in base-144: Job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 16:09:30 CST)" executed successfully
+[2019-10-05 16:07:30,655] DEBUG in base-1020: Next wakeup is due at 2019-10-05 16:09:30.644640+08:00 (in 119.992839 seconds)
+[2019-10-05 16:09:30,660] DEBUG in base-940: Looking for jobs to run
+[2019-10-05 16:09:30,661] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 16:11:30 CST)" (scheduled at 2019-10-05 16:09:30.644640+08:00)
+[2019-10-05 16:09:30,662] INFO in base-144: Job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 16:11:30 CST)" executed successfully
+[2019-10-05 16:09:30,662] DEBUG in base-1020: Next wakeup is due at 2019-10-05 16:11:30.644640+08:00 (in 119.983790 seconds)
+[2019-10-05 16:11:30,650] DEBUG in base-940: Looking for jobs to run
+[2019-10-05 16:11:30,652] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 16:13:30 CST)" (scheduled at 2019-10-05 16:11:30.644640+08:00)
+[2019-10-05 16:11:30,652] INFO in base-144: Job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 16:13:30 CST)" executed successfully
+[2019-10-05 16:11:30,653] DEBUG in base-1020: Next wakeup is due at 2019-10-05 16:13:30.644640+08:00 (in 119.993882 seconds)
+[2019-10-05 16:13:30,650] DEBUG in base-940: Looking for jobs to run
+[2019-10-05 16:13:30,653] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 16:15:30 CST)" (scheduled at 2019-10-05 16:13:30.644640+08:00)
+[2019-10-05 16:13:30,653] INFO in base-144: Job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 16:15:30 CST)" executed successfully
+[2019-10-05 16:13:30,654] DEBUG in base-1020: Next wakeup is due at 2019-10-05 16:15:30.644640+08:00 (in 119.993420 seconds)
+[2019-10-05 16:15:30,651] DEBUG in base-940: Looking for jobs to run
+[2019-10-05 16:15:30,652] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 16:17:30 CST)" (scheduled at 2019-10-05 16:15:30.644640+08:00)
+[2019-10-05 16:15:30,652] INFO in base-144: Job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 16:17:30 CST)" executed successfully
+[2019-10-05 16:15:30,655] DEBUG in base-1020: Next wakeup is due at 2019-10-05 16:17:30.644640+08:00 (in 119.993509 seconds)
+[2019-10-05 16:17:30,652] DEBUG in base-940: Looking for jobs to run
+[2019-10-05 16:17:30,654] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 16:19:30 CST)" (scheduled at 2019-10-05 16:17:30.644640+08:00)
+[2019-10-05 16:17:30,655] INFO in base-144: Job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 16:19:30 CST)" executed successfully
+[2019-10-05 16:17:30,655] DEBUG in base-1020: Next wakeup is due at 2019-10-05 16:19:30.644640+08:00 (in 119.992344 seconds)
+[2019-10-05 16:19:30,651] DEBUG in base-940: Looking for jobs to run
+[2019-10-05 16:19:30,655] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 16:21:30 CST)" (scheduled at 2019-10-05 16:19:30.644640+08:00)
+[2019-10-05 16:19:30,656] INFO in base-144: Job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 16:21:30 CST)" executed successfully
+[2019-10-05 16:19:30,657] DEBUG in base-1020: Next wakeup is due at 2019-10-05 16:21:30.644640+08:00 (in 119.993431 seconds)
+[2019-10-05 16:21:30,653] DEBUG in base-940: Looking for jobs to run
+[2019-10-05 16:21:30,654] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 16:23:30 CST)" (scheduled at 2019-10-05 16:21:30.644640+08:00)
+[2019-10-05 16:21:30,655] INFO in base-144: Job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 16:23:30 CST)" executed successfully
+[2019-10-05 16:21:30,655] DEBUG in base-1020: Next wakeup is due at 2019-10-05 16:23:30.644640+08:00 (in 119.991196 seconds)
+[2019-10-05 16:23:30,659] DEBUG in base-940: Looking for jobs to run
+[2019-10-05 16:23:30,663] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 16:25:30 CST)" (scheduled at 2019-10-05 16:23:30.644640+08:00)
+[2019-10-05 16:23:30,663] INFO in base-144: Job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 16:25:30 CST)" executed successfully
+[2019-10-05 16:23:30,663] DEBUG in base-1020: Next wakeup is due at 2019-10-05 16:25:30.644640+08:00 (in 119.984317 seconds)
+[2019-10-05 16:25:30,656] DEBUG in base-940: Looking for jobs to run
+[2019-10-05 16:25:30,657] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 16:27:30 CST)" (scheduled at 2019-10-05 16:25:30.644640+08:00)
+[2019-10-05 16:25:30,658] INFO in base-144: Job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 16:27:30 CST)" executed successfully
+[2019-10-05 16:25:30,658] DEBUG in base-1020: Next wakeup is due at 2019-10-05 16:27:30.644640+08:00 (in 119.988221 seconds)
+[2019-10-05 16:27:30,660] DEBUG in base-940: Looking for jobs to run
+[2019-10-05 16:27:30,661] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 16:29:30 CST)" (scheduled at 2019-10-05 16:27:30.644640+08:00)
+[2019-10-05 16:27:30,661] INFO in base-144: Job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 16:29:30 CST)" executed successfully
+[2019-10-05 16:27:30,662] DEBUG in base-1020: Next wakeup is due at 2019-10-05 16:29:30.644640+08:00 (in 119.984395 seconds)
+[2019-10-05 16:29:30,661] DEBUG in base-940: Looking for jobs to run
+[2019-10-05 16:29:30,662] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 16:31:30 CST)" (scheduled at 2019-10-05 16:29:30.644640+08:00)
+[2019-10-05 16:29:30,662] INFO in base-144: Job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 16:31:30 CST)" executed successfully
+[2019-10-05 16:29:30,663] DEBUG in base-1020: Next wakeup is due at 2019-10-05 16:31:30.644640+08:00 (in 119.983350 seconds)
+[2019-10-05 16:31:30,649] DEBUG in base-940: Looking for jobs to run
+[2019-10-05 16:31:30,651] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 16:33:30 CST)" (scheduled at 2019-10-05 16:31:30.644640+08:00)
+[2019-10-05 16:31:30,651] INFO in base-144: Job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 16:33:30 CST)" executed successfully
+[2019-10-05 16:31:30,652] DEBUG in base-1020: Next wakeup is due at 2019-10-05 16:33:30.644640+08:00 (in 119.994840 seconds)
+[2019-10-05 16:33:30,649] DEBUG in base-940: Looking for jobs to run
+[2019-10-05 16:33:30,655] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 16:35:30 CST)" (scheduled at 2019-10-05 16:33:30.644640+08:00)
+[2019-10-05 16:33:30,656] INFO in base-144: Job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 16:35:30 CST)" executed successfully
+[2019-10-05 16:33:30,656] DEBUG in base-1020: Next wakeup is due at 2019-10-05 16:35:30.644640+08:00 (in 119.994865 seconds)
+[2019-10-05 16:35:30,654] DEBUG in base-940: Looking for jobs to run
+[2019-10-05 16:35:30,656] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 16:37:30 CST)" (scheduled at 2019-10-05 16:35:30.644640+08:00)
+[2019-10-05 16:35:30,656] INFO in base-144: Job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 16:37:30 CST)" executed successfully
+[2019-10-05 16:35:30,656] DEBUG in base-1020: Next wakeup is due at 2019-10-05 16:37:30.644640+08:00 (in 119.990087 seconds)
+[2019-10-05 16:37:30,656] DEBUG in base-940: Looking for jobs to run
+[2019-10-05 16:37:30,657] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 16:39:30 CST)" (scheduled at 2019-10-05 16:37:30.644640+08:00)
+[2019-10-05 16:37:30,658] INFO in base-144: Job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 16:39:30 CST)" executed successfully
+[2019-10-05 16:37:30,658] DEBUG in base-1020: Next wakeup is due at 2019-10-05 16:39:30.644640+08:00 (in 119.988385 seconds)
+[2019-10-05 16:39:30,658] DEBUG in base-940: Looking for jobs to run
+[2019-10-05 16:39:30,660] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 16:41:30 CST)" (scheduled at 2019-10-05 16:39:30.644640+08:00)
+[2019-10-05 16:39:30,660] INFO in base-144: Job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 16:41:30 CST)" executed successfully
+[2019-10-05 16:39:30,660] DEBUG in base-1020: Next wakeup is due at 2019-10-05 16:41:30.644640+08:00 (in 119.986110 seconds)
+[2019-10-05 16:41:30,659] DEBUG in base-940: Looking for jobs to run
+[2019-10-05 16:41:30,661] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 16:43:30 CST)" (scheduled at 2019-10-05 16:41:30.644640+08:00)
+[2019-10-05 16:41:30,661] INFO in base-144: Job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 16:43:30 CST)" executed successfully
+[2019-10-05 16:41:30,661] DEBUG in base-1020: Next wakeup is due at 2019-10-05 16:43:30.644640+08:00 (in 119.984727 seconds)
+[2019-10-05 16:43:30,649] DEBUG in base-940: Looking for jobs to run
+[2019-10-05 16:43:30,650] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 16:45:30 CST)" (scheduled at 2019-10-05 16:43:30.644640+08:00)
+[2019-10-05 16:43:30,651] DEBUG in base-1020: Next wakeup is due at 2019-10-05 16:45:30.644640+08:00 (in 119.994923 seconds)
+[2019-10-05 16:43:30,651] INFO in base-144: Job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 16:45:30 CST)" executed successfully
+[2019-10-05 16:45:30,649] DEBUG in base-940: Looking for jobs to run
+[2019-10-05 16:45:30,650] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 16:47:30 CST)" (scheduled at 2019-10-05 16:45:30.644640+08:00)
+[2019-10-05 16:45:30,651] INFO in base-144: Job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 16:47:30 CST)" executed successfully
+[2019-10-05 16:45:30,651] DEBUG in base-1020: Next wakeup is due at 2019-10-05 16:47:30.644640+08:00 (in 119.995512 seconds)
+[2019-10-05 16:47:30,661] DEBUG in base-940: Looking for jobs to run
+[2019-10-05 16:47:30,662] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 16:49:30 CST)" (scheduled at 2019-10-05 16:47:30.644640+08:00)
+[2019-10-05 16:47:30,663] INFO in base-144: Job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 16:49:30 CST)" executed successfully
+[2019-10-05 16:47:30,663] DEBUG in base-1020: Next wakeup is due at 2019-10-05 16:49:30.644640+08:00 (in 119.983522 seconds)
+[2019-10-05 16:49:30,649] DEBUG in base-940: Looking for jobs to run
+[2019-10-05 16:49:30,650] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 16:51:30 CST)" (scheduled at 2019-10-05 16:49:30.644640+08:00)
+[2019-10-05 16:49:30,650] INFO in base-144: Job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 16:51:30 CST)" executed successfully
+[2019-10-05 16:49:30,651] DEBUG in base-1020: Next wakeup is due at 2019-10-05 16:51:30.644640+08:00 (in 119.995448 seconds)
+[2019-10-05 16:51:30,649] DEBUG in base-940: Looking for jobs to run
+[2019-10-05 16:51:30,649] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 16:53:30 CST)" (scheduled at 2019-10-05 16:51:30.644640+08:00)
+[2019-10-05 16:51:30,650] INFO in base-144: Job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 16:53:30 CST)" executed successfully
+[2019-10-05 16:51:30,650] DEBUG in base-1020: Next wakeup is due at 2019-10-05 16:53:30.644640+08:00 (in 119.995542 seconds)
+[2019-10-05 16:53:30,649] DEBUG in base-940: Looking for jobs to run
+[2019-10-05 16:53:30,650] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 16:55:30 CST)" (scheduled at 2019-10-05 16:53:30.644640+08:00)
+[2019-10-05 16:53:30,651] INFO in base-144: Job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 16:55:30 CST)" executed successfully
+[2019-10-05 16:53:30,651] DEBUG in base-1020: Next wakeup is due at 2019-10-05 16:55:30.644640+08:00 (in 119.995450 seconds)
+[2019-10-05 16:55:30,649] DEBUG in base-940: Looking for jobs to run
+[2019-10-05 16:55:30,650] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 16:57:30 CST)" (scheduled at 2019-10-05 16:55:30.644640+08:00)
+[2019-10-05 16:55:30,650] INFO in base-144: Job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 16:57:30 CST)" executed successfully
+[2019-10-05 16:55:30,651] DEBUG in base-1020: Next wakeup is due at 2019-10-05 16:57:30.644640+08:00 (in 119.995366 seconds)
+[2019-10-05 16:57:30,648] DEBUG in base-940: Looking for jobs to run
+[2019-10-05 16:57:30,649] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 16:59:30 CST)" (scheduled at 2019-10-05 16:57:30.644640+08:00)
+[2019-10-05 16:57:30,649] INFO in base-144: Job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 16:59:30 CST)" executed successfully
+[2019-10-05 16:57:30,650] DEBUG in base-1020: Next wakeup is due at 2019-10-05 16:59:30.644640+08:00 (in 119.995643 seconds)
+[2019-10-05 16:59:30,648] DEBUG in base-940: Looking for jobs to run
+[2019-10-05 16:59:30,649] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 17:01:30 CST)" (scheduled at 2019-10-05 16:59:30.644640+08:00)
+[2019-10-05 16:59:30,649] INFO in base-144: Job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 17:01:30 CST)" executed successfully
+[2019-10-05 16:59:30,650] DEBUG in base-1020: Next wakeup is due at 2019-10-05 17:01:30.644640+08:00 (in 119.996134 seconds)
+[2019-10-05 17:01:30,649] DEBUG in base-940: Looking for jobs to run
+[2019-10-05 17:01:30,650] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 17:03:30 CST)" (scheduled at 2019-10-05 17:01:30.644640+08:00)
+[2019-10-05 17:01:30,650] INFO in base-144: Job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 17:03:30 CST)" executed successfully
+[2019-10-05 17:01:30,651] DEBUG in base-1020: Next wakeup is due at 2019-10-05 17:03:30.644640+08:00 (in 119.995295 seconds)
+[2019-10-05 17:03:30,649] DEBUG in base-940: Looking for jobs to run
+[2019-10-05 17:03:30,650] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 17:05:30 CST)" (scheduled at 2019-10-05 17:03:30.644640+08:00)
+[2019-10-05 17:03:30,651] INFO in base-144: Job "send_to_selenium (trigger: interval[0:02:00], next run at: 2019-10-05 17:05:30 CST)" executed successfully
+[2019-10-05 17:03:30,651] DEBUG in base-1020: Next wakeup is due at 2019-10-05 17:05:30.644640+08:00 (in 119.995418 seconds)
+[2019-10-05 17:04:58,818] DEBUG in crontab_socket-44: 接收的数据: {'opt': 'update_task', 'data': {'task_name': 'test_task', 'project_id': '1', 'test_type': 'interface_test', 'test_data_id': '3', 'task_type': 'interval_task', 'task_description': '11111', 'execute_time': 'minutes-30', 'crontab_id': 21, 'task_id_name': 'cb918883b15d324a8189807e326c02a0', 'user_id': 1}}
+[2019-10-05 17:04:58,821] DEBUG in base-940: Looking for jobs to run
+[2019-10-05 17:04:58,822] DEBUG in base-1020: Next wakeup is due at 2019-10-05 17:05:30.644640+08:00 (in 31.823142 seconds)
+[2019-10-05 17:05:30,659] DEBUG in base-940: Looking for jobs to run
+[2019-10-05 17:05:30,662] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:30:00], next run at: 2019-10-05 17:35:30 CST)" (scheduled at 2019-10-05 17:05:30.644640+08:00)
+[2019-10-05 17:05:30,663] INFO in base-144: Job "send_to_selenium (trigger: interval[0:30:00], next run at: 2019-10-05 17:35:30 CST)" executed successfully
+[2019-10-05 17:05:30,664] DEBUG in base-1020: Next wakeup is due at 2019-10-05 17:35:30.644640+08:00 (in 1799.984766 seconds)
+[2019-10-05 17:05:41,966] INFO in crontab_socket-59: ('127.0.0.1', 59624) 断开连接--
+[2019-10-05 17:05:41,967] INFO in crontab_socket-59: ('127.0.0.1', 59621) 断开连接--
+[2019-10-05 17:05:42,600] INFO in crontab_socket-32: ('127.0.0.1', 62030) 连接--
+[2019-10-05 17:05:43,175] INFO in crontab_socket-32: ('127.0.0.1', 62033) 连接--
+[2019-10-05 17:08:24,551] INFO in crontab_socket-59: ('127.0.0.1', 62033) 断开连接--
+[2019-10-05 17:08:25,180] INFO in crontab_socket-32: ('127.0.0.1', 62149) 连接--
+[2019-10-05 17:35:30,681] DEBUG in base-940: Looking for jobs to run
+[2019-10-05 17:35:30,685] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:30:00], next run at: 2019-10-05 18:05:30 CST)" (scheduled at 2019-10-05 17:35:30.644640+08:00)
+[2019-10-05 17:35:30,687] INFO in base-144: Job "send_to_selenium (trigger: interval[0:30:00], next run at: 2019-10-05 18:05:30 CST)" executed successfully
+[2019-10-05 17:35:30,688] DEBUG in base-1020: Next wakeup is due at 2019-10-05 18:05:30.644640+08:00 (in 1799.962557 seconds)
+[2019-10-05 18:05:30,669] DEBUG in base-940: Looking for jobs to run
+[2019-10-05 18:05:30,675] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:30:00], next run at: 2019-10-05 18:35:30 CST)" (scheduled at 2019-10-05 18:05:30.644640+08:00)
+[2019-10-05 18:05:30,677] INFO in base-144: Job "send_to_selenium (trigger: interval[0:30:00], next run at: 2019-10-05 18:35:30 CST)" executed successfully
+[2019-10-05 18:05:30,678] DEBUG in base-1020: Next wakeup is due at 2019-10-05 18:35:30.644640+08:00 (in 1799.974568 seconds)
+[2019-10-05 18:35:30,665] DEBUG in base-940: Looking for jobs to run
+[2019-10-05 18:35:30,667] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:30:00], next run at: 2019-10-05 19:05:30 CST)" (scheduled at 2019-10-05 18:35:30.644640+08:00)
+[2019-10-05 18:35:30,669] INFO in base-144: Job "send_to_selenium (trigger: interval[0:30:00], next run at: 2019-10-05 19:05:30 CST)" executed successfully
+[2019-10-05 18:35:30,670] DEBUG in base-1020: Next wakeup is due at 2019-10-05 19:05:30.644640+08:00 (in 1799.979162 seconds)
+[2019-10-05 19:05:30,662] DEBUG in base-940: Looking for jobs to run
+[2019-10-05 19:05:30,664] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:30:00], next run at: 2019-10-05 19:35:30 CST)" (scheduled at 2019-10-05 19:05:30.644640+08:00)
+[2019-10-05 19:05:30,664] INFO in base-144: Job "send_to_selenium (trigger: interval[0:30:00], next run at: 2019-10-05 19:35:30 CST)" executed successfully
+[2019-10-05 19:05:30,665] DEBUG in base-1020: Next wakeup is due at 2019-10-05 19:35:30.644640+08:00 (in 1799.981949 seconds)
+[2019-10-05 19:35:30,659] DEBUG in base-940: Looking for jobs to run
+[2019-10-05 19:35:30,663] INFO in base-123: Running job "send_to_selenium (trigger: interval[0:30:00], next run at: 2019-10-05 20:05:30 CST)" (scheduled at 2019-10-05 19:35:30.644640+08:00)
+[2019-10-05 19:35:30,663] INFO in base-144: Job "send_to_selenium (trigger: interval[0:30:00], next run at: 2019-10-05 20:05:30 CST)" executed successfully
+[2019-10-05 19:35:30,664] DEBUG in base-1020: Next wakeup is due at 2019-10-05 20:05:30.644640+08:00 (in 1799.983512 seconds)

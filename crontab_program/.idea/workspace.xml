@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="360ac1f5-6e4e-4126-9e78-3ee009677907" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../Blueprint/crontab.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Blueprint/crontab.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/myscheduler.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/myscheduler.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/temp/crontab_log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/temp/crontab_log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../doc/接口文档.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../doc/接口文档.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../doc/步骤使用介绍.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../doc/步骤使用介绍.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../selenium_program/core/selenium_socket.py" beforeDir="false" afterPath="$PROJECT_DIR$/../selenium_program/core/selenium_socket.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../doc/项目的设计.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../doc/项目的设计.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../markdown_img/表结构.png" beforeDir="false" afterPath="$PROJECT_DIR$/../markdown_img/表结构.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../selenium_program/temp/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../selenium_program/temp/log.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../temp/web_log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../temp/web_log.txt" afterDir="false" />
     </list>
@@ -327,14 +323,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49895614" visible="true" weight="0.117962465" />
       <window_info id="Structure" order="1" sideWeight="0.50104386" side_tool="true" weight="0.117962465" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.13656388" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.24229075" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />

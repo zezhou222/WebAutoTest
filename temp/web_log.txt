@@ -7099,3 +7099,48 @@
 [2019-10-05 17:08:26,023] INFO in _internal-122:  * Running on http://0.0.0.0:9000/ (Press CTRL+C to quit)
 [2019-10-05 17:35:30,711] DEBUG in login_register-60: 登陆数据: {'username': 'admin', 'password': 'admin'}
 [2019-10-05 17:35:30,760] INFO in _internal-122: 127.0.0.1 - - [05/Oct/2019 17:35:30] "POST /user_login/ HTTP/1.1" 200 -
+[2019-10-05 17:57:58,478] INFO in _internal-122: 127.0.0.1 - - [05/Oct/2019 17:57:58] "GET /api/interface_test_result/3/ HTTP/1.1" 200 -
+[2019-10-05 18:05:30,702] DEBUG in login_register-60: 登陆数据: {'username': 'admin', 'password': 'admin'}
+[2019-10-05 18:05:30,718] INFO in _internal-122: 127.0.0.1 - - [05/Oct/2019 18:05:30] "POST /user_login/ HTTP/1.1" 200 -
+[2019-10-05 18:22:18,377] INFO in _internal-122: 127.0.0.1 - - [05/Oct/2019 18:22:18] "GET /interface_test/add/ HTTP/1.1" 200 -
+[2019-10-05 18:22:18,497] INFO in _internal-122: 127.0.0.1 - - [05/Oct/2019 18:22:18] "GET /api/get_project_data/ HTTP/1.1" 200 -
+[2019-10-05 18:22:19,826] INFO in _internal-122: 127.0.0.1 - - [05/Oct/2019 18:22:19] "GET /api/crontab/ HTTP/1.1" 200 -
+[2019-10-05 18:22:20,555] INFO in _internal-122: 127.0.0.1 - - [05/Oct/2019 18:22:20] "GET /crontab/add/ HTTP/1.1" 200 -
+[2019-10-05 18:22:20,636] INFO in _internal-122: 127.0.0.1 - - [05/Oct/2019 18:22:20] "GET /api/get_project_data/ HTTP/1.1" 200 -
+[2019-10-05 18:22:20,667] DEBUG in test_case-52: 自己所有的用例数据: []
+[2019-10-05 18:22:20,669] INFO in _internal-122: 127.0.0.1 - - [05/Oct/2019 18:22:20] "GET /api/use_case/myself/all/?project_id=1 HTTP/1.1" 200 -
+[2019-10-05 18:22:22,455] INFO in _internal-122: 127.0.0.1 - - [05/Oct/2019 18:22:22] "GET /get_use_case_page/ HTTP/1.1" 200 -
+[2019-10-05 18:22:22,966] INFO in _internal-122: 127.0.0.1 - - [05/Oct/2019 18:22:22] "GET /use_case_operate/?opt=add HTTP/1.1" 200 -
+[2019-10-05 18:22:23,045] DEBUG in test_case-26: 获取步骤选项数据: {'open_webdriver': {'step_name': '打开浏览器', 'step_length': 3}, 'close_browser': {'step_name': '关闭浏览器', 'step_length': 2}, 'enlarge_window': {'step_name': '窗口最大化', 'step_length': 2}, 'open_url': {'step_name': '请求url', 'step_length': 3}, 'accept_alert': {'step_name': '弹窗确定', 'step_length': 2}, 'dismiss_alert': {'step_name': '弹窗取消', 'step_length': 2}, 'find_element_input_content': {'step_name': '定位标签输入内容', 'step_length': 5}, 'sleep_second': {'step_name': '停留多少秒', 'step_length': 3}, 'find_element_click': {'step_name': '查找元素单击操作', 'step_length': 4}, 'find_element_double_click': {'step_name': '查找元素双击操作', 'step_length': 4}, 'public_use_case': {'step_name': '公共用例', 'step_length': 3}, 'screen_shot': {'step_name': '截图', 'step_length': 2}, 'switch_window': {'step_name': '切换窗口', 'step_length': 3}, 'identifying_code': {'step_name': '识别验证码(字母数字)', 'step_length': 5}, 'input_identifying_code': {'step_name': '输入验证码', 'step_length': 4}, 'close_now_window': {'step_name': '关闭当前窗口', 'step_length': 2}, 'back': {'step_name': '回退', 'step_length': 2}, 'forward': {'step_name': '前进', 'step_length': 2}, 'switch_iframe': {'step_name': '切换至iframe标签', 'step_length': 4}, 'switch_main_dom': {'step_name': '切换至主文档(当在iframe标签中)', 'step_length': 2}, 'switch_parent_dom': {'step_name': '切换至父文档(多个iframe嵌套的情况下)', 'step_length': 2}}
+[2019-10-05 18:22:23,054] INFO in _internal-122: 127.0.0.1 - - [05/Oct/2019 18:22:23] "GET /get_step_options/ HTTP/1.1" 200 -
+[2019-10-05 18:22:23,063] INFO in _internal-122: 127.0.0.1 - - [05/Oct/2019 18:22:23] "GET /get_public_use_case/ HTTP/1.1" 200 -
+[2019-10-05 18:22:23,069] INFO in _internal-122: 127.0.0.1 - - [05/Oct/2019 18:22:23] "GET /api/get_project_data/ HTTP/1.1" 200 -
+[2019-10-05 18:22:23,353] INFO in _internal-122: 127.0.0.1 - - [05/Oct/2019 18:22:23] "GET /import_use_case_data/ HTTP/1.1" 200 -
+[2019-10-05 18:22:25,747] INFO in _internal-122: 127.0.0.1 - - [05/Oct/2019 18:22:25] "GET /api/crontab/ HTTP/1.1" 200 -
+[2019-10-05 18:35:30,685] DEBUG in login_register-60: 登陆数据: {'username': 'admin', 'password': 'admin'}
+[2019-10-05 18:35:30,693] INFO in _internal-122: 127.0.0.1 - - [05/Oct/2019 18:35:30] "POST /user_login/ HTTP/1.1" 200 -
+[2019-10-05 19:05:30,679] DEBUG in login_register-60: 登陆数据: {'username': 'admin', 'password': 'admin'}
+[2019-10-05 19:05:30,683] INFO in _internal-122: 127.0.0.1 - - [05/Oct/2019 19:05:30] "POST /user_login/ HTTP/1.1" 200 -
+[2019-10-05 19:29:19,219] INFO in _internal-122: 127.0.0.1 - - [05/Oct/2019 19:29:19] "GET /crontab/add/ HTTP/1.1" 200 -
+[2019-10-05 19:29:19,272] INFO in _internal-122: 127.0.0.1 - - [05/Oct/2019 19:29:19] "GET /api/get_project_data/ HTTP/1.1" 200 -
+[2019-10-05 19:29:19,284] DEBUG in test_case-52: 自己所有的用例数据: []
+[2019-10-05 19:29:19,284] INFO in _internal-122: 127.0.0.1 - - [05/Oct/2019 19:29:19] "GET /api/use_case/myself/all/?project_id=1 HTTP/1.1" 200 -
+[2019-10-05 19:29:20,101] INFO in _internal-122: 127.0.0.1 - - [05/Oct/2019 19:29:20] "GET /api/crontab/ HTTP/1.1" 200 -
+[2019-10-05 19:29:22,782] INFO in _internal-122: 127.0.0.1 - - [05/Oct/2019 19:29:22] "GET /api/interface_test/ HTTP/1.1" 200 -
+[2019-10-05 19:29:23,625] INFO in _internal-122: 127.0.0.1 - - [05/Oct/2019 19:29:23] "GET /api/crontab/ HTTP/1.1" 200 -
+[2019-10-05 19:33:57,138] INFO in _internal-122: 127.0.0.1 - - [05/Oct/2019 19:33:57] "GET /crontab/add/ HTTP/1.1" 200 -
+[2019-10-05 19:33:57,196] INFO in _internal-122: 127.0.0.1 - - [05/Oct/2019 19:33:57] "GET /api/get_project_data/ HTTP/1.1" 200 -
+[2019-10-05 19:33:57,209] DEBUG in test_case-52: 自己所有的用例数据: []
+[2019-10-05 19:33:57,210] INFO in _internal-122: 127.0.0.1 - - [05/Oct/2019 19:33:57] "GET /api/use_case/myself/all/?project_id=1 HTTP/1.1" 200 -
+[2019-10-05 19:33:57,616] INFO in _internal-122: 127.0.0.1 - - [05/Oct/2019 19:33:57] "GET /interface_test/add/ HTTP/1.1" 200 -
+[2019-10-05 19:33:57,663] INFO in _internal-122: 127.0.0.1 - - [05/Oct/2019 19:33:57] "GET /api/get_project_data/ HTTP/1.1" 200 -
+[2019-10-05 19:33:58,010] INFO in _internal-122: 127.0.0.1 - - [05/Oct/2019 19:33:58] "GET /api/interface_test/ HTTP/1.1" 200 -
+[2019-10-05 19:33:59,831] INFO in _internal-122: 127.0.0.1 - - [05/Oct/2019 19:33:59] "GET /get_use_case_page/ HTTP/1.1" 200 -
+[2019-10-05 19:34:00,178] INFO in _internal-122: 127.0.0.1 - - [05/Oct/2019 19:34:00] "GET /use_case_operate/?opt=add HTTP/1.1" 200 -
+[2019-10-05 19:34:00,217] DEBUG in test_case-26: 获取步骤选项数据: {'open_webdriver': {'step_name': '打开浏览器', 'step_length': 3}, 'close_browser': {'step_name': '关闭浏览器', 'step_length': 2}, 'enlarge_window': {'step_name': '窗口最大化', 'step_length': 2}, 'open_url': {'step_name': '请求url', 'step_length': 3}, 'accept_alert': {'step_name': '弹窗确定', 'step_length': 2}, 'dismiss_alert': {'step_name': '弹窗取消', 'step_length': 2}, 'find_element_input_content': {'step_name': '定位标签输入内容', 'step_length': 5}, 'sleep_second': {'step_name': '停留多少秒', 'step_length': 3}, 'find_element_click': {'step_name': '查找元素单击操作', 'step_length': 4}, 'find_element_double_click': {'step_name': '查找元素双击操作', 'step_length': 4}, 'public_use_case': {'step_name': '公共用例', 'step_length': 3}, 'screen_shot': {'step_name': '截图', 'step_length': 2}, 'switch_window': {'step_name': '切换窗口', 'step_length': 3}, 'identifying_code': {'step_name': '识别验证码(字母数字)', 'step_length': 5}, 'input_identifying_code': {'step_name': '输入验证码', 'step_length': 4}, 'close_now_window': {'step_name': '关闭当前窗口', 'step_length': 2}, 'back': {'step_name': '回退', 'step_length': 2}, 'forward': {'step_name': '前进', 'step_length': 2}, 'switch_iframe': {'step_name': '切换至iframe标签', 'step_length': 4}, 'switch_main_dom': {'step_name': '切换至主文档(当在iframe标签中)', 'step_length': 2}, 'switch_parent_dom': {'step_name': '切换至父文档(多个iframe嵌套的情况下)', 'step_length': 2}}
+[2019-10-05 19:34:00,223] INFO in _internal-122: 127.0.0.1 - - [05/Oct/2019 19:34:00] "GET /get_step_options/ HTTP/1.1" 200 -
+[2019-10-05 19:34:00,228] INFO in _internal-122: 127.0.0.1 - - [05/Oct/2019 19:34:00] "GET /get_public_use_case/ HTTP/1.1" 200 -
+[2019-10-05 19:34:00,229] INFO in _internal-122: 127.0.0.1 - - [05/Oct/2019 19:34:00] "GET /api/get_project_data/ HTTP/1.1" 200 -
+[2019-10-05 19:34:00,468] INFO in _internal-122: 127.0.0.1 - - [05/Oct/2019 19:34:00] "GET /import_use_case_data/ HTTP/1.1" 200 -
+[2019-10-05 19:35:30,677] DEBUG in login_register-60: 登陆数据: {'username': 'admin', 'password': 'admin'}
+[2019-10-05 19:35:30,696] INFO in _internal-122: 127.0.0.1 - - [05/Oct/2019 19:35:30] "POST /user_login/ HTTP/1.1" 200 -
