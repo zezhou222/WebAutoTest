@@ -1,8 +1,13 @@
+from apscheduler.jobstores.base import JobLookupError
 from pytz import timezone
 from pymongo import MongoClient
 from apscheduler.schedulers.background import BackgroundScheduler
 from apscheduler.jobstores.mongodb import MongoDBJobStore
 from apscheduler.executors.pool import ThreadPoolExecutor
+# from apscheduler.triggers.combining import AndTrigger
+from apscheduler.triggers.interval import IntervalTrigger
+from apscheduler.triggers.cron import CronTrigger
+from apscheduler.triggers.date import DateTrigger
 
 from conf.settings import (
     mongodb_host,
@@ -68,80 +73,72 @@ class MyScheduler(object):
 
         if task_type == 'interval_task':
             t = execute_time.split('-')
-            params = {'trigger': 'interval', t[0]: int(t[1]), 'id': task_id, 'func': send_to_selenium, 'args': args}
+            params = {'trigger': IntervalTrigger(**{t[0]: int(t[1])}), 'id': task_id, 'func': send_to_selenium, 'args': args}
         elif task_type == 'once_task':
-            params = {'trigger': 'date', 'run_date': execute_time, 'id': task_id, 'func': send_to_selenium,
-                      'args': args}
+            params = {'trigger': DateTrigger(**{'run_date': execute_time}), 'id': task_id, 'func': send_to_selenium, 'args': args}
         elif task_type == 'crontab_task':
             t = execute_time.split(' ')
-            params = {'trigger': 'cron', 'minute': t[0], 'hour': t[1], 'day': t[2], 'month': t[3], 'week': t[4],
-                      'id': task_id, 'func': send_to_selenium, 'args': args}
+            dic = {'minute': t[0], 'hour': t[1], 'day': t[2], 'month': t[3], 'week': t[4]}
+            params = {'trigger': CronTrigger(**dic), 'id': task_id, 'func': send_to_selenium, 'args': args}
 
         return params
 
     def add_task(self, data):
         task_id = data.get('task_id_name')
 
+        # 任务id以存在的判断
+        if self.scheduler.get_job(job_id=task_id):
+            # 发送后端结果
+            logger.error('添加job失败，已存在%s任务，执行异常.' % task_id)
+            send_content(self.conn, {'add_flag': 1})
+
         params = self.get_add_params(data)
 
         # 添加任务
         try:
             self.scheduler.add_job(**params)
-            # raise TypeError('????')
         except Exception as error:
             # 删除job
-            self.scheduler.remove_job(job_id=task_id)
+            if self.scheduler.get_job(job_id=task_id):
+                self.scheduler.remove_job(job_id=task_id)
             # 发送后端结果
-            logger.debug('添加job失败，失败原因: %s' % error)
+            logger.error('添加job失败，失败原因: %s' % error)
             send_content(self.conn, {'add_flag': 1})
             return
-
-        # 保存数据
-        # self.cursor.execute('insert into crontab(task_name,project_id,test_type,test_data_id,task_type,execute_time,task_description,user_id,task_id_name) value(%s,%s,%s,%s,%s,%s,%s,%s,%s);', args=(data['task_name'],data['project_id'],test_type,test_data_id,task_type,execute_time,data['task_description'],user_id,data['task_id_name']))
-        # commit_data()
 
         # 发送结果
         send_content(self.conn, {'add_flag': 0})
 
     def del_task(self, data):
-        crontab_id = data.get('crontab_id')
+        # crontab_id = data.get('crontab_id')
         task_id = data.get('task_id_name')
 
         try:
             self.scheduler.remove_job(job_id=task_id)
+        except JobLookupError as error:
+            logger.warning('删除时找不到job，任务执行异常!')
+            send_content(self.conn, {'del_flag': 0})
         except Exception as error:
             # 发送后端结果
-            logger.debug('删除job失败，失败原因: %s' % error)
+            logger.error('删除job失败，失败原因: %s' % error)
             send_content(self.conn, {'del_flag': 1})
             return
 
         # 发送结果
         send_content(self.conn, {'del_flag': 0})
-
+    
     def update_task(self, data):
-        # 删除任务
-        crontab_id = data.get('crontab_id')
-        task_id = data.get('task_id_name')
+        # crontab_id = data.get('crontab_id')
+        
+        params = self.get_add_params(data)
+
+        job_id = params.pop('id')
 
         try:
-            self.scheduler.remove_job(job_id=task_id)
+            self.scheduler.modify_job(job_id=job_id, **params)
         except Exception as error:
             # 发送后端结果
-            logger.debug('更新任务时删除job失败，失败原因: %s' % error)
-            send_content(self.conn, {'update_flag': 1})
-            return
-        
-        # 添加任务
-        params = self.get_add_params(data)
-        
-        try:
-            self.scheduler.add_job(**params)
-            # raise TypeError('????')
-        except Exception as error:
-            # 删除job
-            self.scheduler.remove_job(job_id=task_id)
-            # 发送后端结果
-            logger.debug('更新job失败，失败原因: %s' % error)
+            logger.error('更新任务时失败，失败原因: %s' % error)
             send_content(self.conn, {'update_flag': 1})
             return
 

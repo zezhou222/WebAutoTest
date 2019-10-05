@@ -88,10 +88,12 @@ class CrontabView(MethodView):
         for obj in crontab_objs:
             if obj.test_type == 'interface_test':
                 inter_obj = db.query(Interface_test).filter(Interface_test.id == obj.test_data_id).first()
-                obj.test_data = inter_obj.interface_name
+                if inter_obj:
+                    obj.test_data = inter_obj.interface_name
             elif obj.test_type == 'use_case':
                 usecase_obj = db.query(Use_case).filter(Use_case.id == obj.test_data_id).first()
-                obj.test_data = usecase_obj.name
+                if usecase_obj:
+                    obj.test_data = usecase_obj.name
 
         return render_template('crontab.html', crontab_objs=crontab_objs, page=page, now_user_id=user_id)
 
@@ -208,7 +210,6 @@ class CrontabView(MethodView):
         logger.debug('更新任务的返回结果：%s' % update_result)
         if update_result.get('update_flag') != 0:
             return {'error': '更新任务失败!'}, 500
-
 
         data.pop('crontab_id')
         data.pop('task_id_name')

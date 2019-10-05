@@ -154,10 +154,17 @@ class SeleniumServer(socketserver.BaseRequestHandler):
     def execute_use_case(self, data):
         # 读出数据库该用例的执行步骤
         uc_id = data.get('use_case_id')
-
-        # 写入执行结果的准备工作-------------------start
-        execute_time = datetime.now()
         user_id = data.get('user_id')
+
+        # 检验测试数据是否存在
+        self.cursor.execute('select * from use_case where id=%s and user_id=%s;', args=(uc_id, user_id))
+        ret = self.cursor.fetchone()
+        if not ret:
+            logger.debug('id=%s,user_id=%s的用例数据不存在,' % (uc_id, user_id))
+            return
+
+            # 写入执行结果的准备工作-------------------start
+        execute_time = datetime.now()
         # 先插入用例结果数据，小步骤存储时候需要
         self.cursor.execute('insert into use_case_result(status,execute_time,use_case_id,user_id) value(%s,%s,%s,%s);', args=('executing', execute_time, uc_id, user_id))
 
@@ -265,9 +272,16 @@ class SeleniumServer(socketserver.BaseRequestHandler):
 
         interface_test_id = data.get('interface_test_id')
         user_id = data.get('user_id')
-        execute_time = datetime.now()
+
+        # 检验测试数据是否存在
+        self.cursor.execute('select * from interface_test where id=%s and user_id=%s;', args=(interface_test_id, user_id))
+        ret = self.cursor.fetchone()
+        if not ret:
+            logger.debug('id=%s,user_id=%s的接口数据不存在,' % (interface_test_id, user_id))
+            return
 
         # 初始接口测试结果数据(让客户端能先看到正在执行)
+        execute_time = datetime.now()
         self.cursor.execute('insert into interface_test_result(state,execute_time,user_id,interface_test_id) value(%s,%s,%s,%s);', args=('executing', execute_time, user_id, interface_test_id))
 
         # 获取新增数据的自增id(为之后更改执行结果做准备)

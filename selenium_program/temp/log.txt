@@ -1575,3 +1575,685 @@
 [2019-10-04 16:52:40,420] DEBUG in selenium_socket-288: 接口测试状态码：200
 [2019-10-04 17:12:12,552] INFO in selenium_socket-391: ('127.0.0.1', 55871) 断开连接--
 [2019-10-04 17:12:12,553] INFO in selenium_socket-391: ('127.0.0.1', 55867) 断开连接--
+[2019-10-05 13:32:00,761] INFO in selenium_socket-369: ('127.0.0.1', 58218) 连接--
+[2019-10-05 13:32:01,919] INFO in selenium_socket-369: ('127.0.0.1', 58222) 连接--
+[2019-10-05 13:35:22,892] INFO in selenium_socket-369: ('127.0.0.1', 58335) 连接--
+[2019-10-05 13:35:22,892] DEBUG in selenium_socket-380: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '2', 'user_id': 1}}
+[2019-10-05 13:35:22,893] DEBUG in selenium_socket-264: 执行的接口测试数据：{'interface_test_id': '2', 'user_id': 1}
+[2019-10-05 13:35:22,896] DEBUG in selenium_socket-275: 接口测试新增数据的id为: 141
+[2019-10-05 13:35:22,905] DEBUG in selenium_socket-285: 查询结果：[{'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'username', 'value': 'admin', 'execute': 1}, {'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'password', 'value': 'admin', 'execute': 1}]
+[2019-10-05 13:35:22,912] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-05 13:35:22,935] DEBUG in connectionpool-437: http://127.0.0.1:9000 "POST /user_login/ HTTP/1.1" 200 16
+[2019-10-05 13:35:22,938] DEBUG in selenium_socket-288: 接口测试状态码：200
+[2019-10-05 13:36:22,881] DEBUG in selenium_socket-380: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '2', 'user_id': 1}}
+[2019-10-05 13:36:22,882] DEBUG in selenium_socket-264: 执行的接口测试数据：{'interface_test_id': '2', 'user_id': 1}
+[2019-10-05 13:36:22,884] DEBUG in selenium_socket-275: 接口测试新增数据的id为: 142
+[2019-10-05 13:36:22,891] DEBUG in selenium_socket-285: 查询结果：[{'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'username', 'value': 'admin', 'execute': 1}, {'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'password', 'value': 'admin', 'execute': 1}]
+[2019-10-05 13:36:22,895] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-05 13:36:22,914] DEBUG in connectionpool-437: http://127.0.0.1:9000 "POST /user_login/ HTTP/1.1" 200 16
+[2019-10-05 13:36:22,916] DEBUG in selenium_socket-288: 接口测试状态码：200
+[2019-10-05 13:37:22,893] DEBUG in selenium_socket-380: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '2', 'user_id': 1}}
+[2019-10-05 13:37:22,895] DEBUG in selenium_socket-264: 执行的接口测试数据：{'interface_test_id': '2', 'user_id': 1}
+[2019-10-05 13:37:22,896] DEBUG in selenium_socket-275: 接口测试新增数据的id为: 143
+[2019-10-05 13:37:22,902] DEBUG in selenium_socket-285: 查询结果：[{'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'username', 'value': 'admin', 'execute': 1}, {'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'password', 'value': 'admin', 'execute': 1}]
+[2019-10-05 13:37:22,906] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-05 13:37:22,919] DEBUG in connectionpool-437: http://127.0.0.1:9000 "POST /user_login/ HTTP/1.1" 200 16
+[2019-10-05 13:37:22,922] DEBUG in selenium_socket-288: 接口测试状态码：200
+[2019-10-05 13:38:09,494] INFO in selenium_socket-391: ('127.0.0.1', 58335) 断开连接--
+[2019-10-05 13:38:14,937] INFO in selenium_socket-391: ('127.0.0.1', 58222) 断开连接--
+[2019-10-05 13:38:14,939] INFO in selenium_socket-391: ('127.0.0.1', 58218) 断开连接--
+[2019-10-05 13:38:16,477] INFO in selenium_socket-369: ('127.0.0.1', 58619) 连接--
+[2019-10-05 13:38:17,756] INFO in selenium_socket-369: ('127.0.0.1', 58622) 连接--
+[2019-10-05 13:38:22,888] INFO in selenium_socket-369: ('127.0.0.1', 58631) 连接--
+[2019-10-05 13:38:22,888] DEBUG in selenium_socket-380: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '2', 'user_id': 1}}
+[2019-10-05 13:38:22,889] DEBUG in selenium_socket-264: 执行的接口测试数据：{'interface_test_id': '2', 'user_id': 1}
+[2019-10-05 13:38:22,890] DEBUG in selenium_socket-275: 接口测试新增数据的id为: 144
+[2019-10-05 13:38:22,900] DEBUG in selenium_socket-285: 查询结果：[{'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'username', 'value': 'admin', 'execute': 1}, {'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'password', 'value': 'admin', 'execute': 1}]
+[2019-10-05 13:38:22,903] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-05 13:38:22,934] DEBUG in connectionpool-437: http://127.0.0.1:9000 "POST /user_login/ HTTP/1.1" 200 16
+[2019-10-05 13:38:22,936] DEBUG in selenium_socket-288: 接口测试状态码：200
+[2019-10-05 13:39:22,887] DEBUG in selenium_socket-380: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '2', 'user_id': 1}}
+[2019-10-05 13:39:22,888] DEBUG in selenium_socket-264: 执行的接口测试数据：{'interface_test_id': '2', 'user_id': 1}
+[2019-10-05 13:39:22,889] DEBUG in selenium_socket-275: 接口测试新增数据的id为: 145
+[2019-10-05 13:39:22,898] DEBUG in selenium_socket-285: 查询结果：[{'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'username', 'value': 'admin', 'execute': 1}, {'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'password', 'value': 'admin', 'execute': 1}]
+[2019-10-05 13:39:22,900] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-05 13:39:22,927] DEBUG in connectionpool-437: http://127.0.0.1:9000 "POST /user_login/ HTTP/1.1" 200 16
+[2019-10-05 13:39:22,929] DEBUG in selenium_socket-288: 接口测试状态码：200
+[2019-10-05 13:40:22,886] DEBUG in selenium_socket-380: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '2', 'user_id': 1}}
+[2019-10-05 13:40:22,886] DEBUG in selenium_socket-264: 执行的接口测试数据：{'interface_test_id': '2', 'user_id': 1}
+[2019-10-05 13:40:22,887] DEBUG in selenium_socket-275: 接口测试新增数据的id为: 146
+[2019-10-05 13:40:22,906] DEBUG in selenium_socket-285: 查询结果：[{'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'username', 'value': 'admin', 'execute': 1}, {'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'password', 'value': 'admin', 'execute': 1}]
+[2019-10-05 13:40:22,908] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-05 13:40:22,936] DEBUG in connectionpool-437: http://127.0.0.1:9000 "POST /user_login/ HTTP/1.1" 200 16
+[2019-10-05 13:40:22,937] DEBUG in selenium_socket-288: 接口测试状态码：200
+[2019-10-05 13:41:22,889] DEBUG in selenium_socket-380: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '2', 'user_id': 1}}
+[2019-10-05 13:41:22,890] DEBUG in selenium_socket-264: 执行的接口测试数据：{'interface_test_id': '2', 'user_id': 1}
+[2019-10-05 13:41:22,891] DEBUG in selenium_socket-275: 接口测试新增数据的id为: 147
+[2019-10-05 13:41:22,895] DEBUG in selenium_socket-285: 查询结果：[{'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'username', 'value': 'admin', 'execute': 1}, {'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'password', 'value': 'admin', 'execute': 1}]
+[2019-10-05 13:41:22,899] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-05 13:41:22,911] DEBUG in connectionpool-437: http://127.0.0.1:9000 "POST /user_login/ HTTP/1.1" 200 16
+[2019-10-05 13:41:22,913] DEBUG in selenium_socket-288: 接口测试状态码：200
+[2019-10-05 13:41:29,954] INFO in selenium_socket-391: ('127.0.0.1', 58631) 断开连接--
+[2019-10-05 13:41:46,786] INFO in selenium_socket-391: ('127.0.0.1', 58622) 断开连接--
+[2019-10-05 13:41:46,787] INFO in selenium_socket-391: ('127.0.0.1', 58619) 断开连接--
+[2019-10-05 13:41:48,158] INFO in selenium_socket-369: ('127.0.0.1', 58657) 连接--
+[2019-10-05 13:41:49,450] INFO in selenium_socket-369: ('127.0.0.1', 58660) 连接--
+[2019-10-05 13:42:22,882] INFO in selenium_socket-369: ('127.0.0.1', 58668) 连接--
+[2019-10-05 13:42:22,883] DEBUG in selenium_socket-380: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '2', 'user_id': 1}}
+[2019-10-05 13:42:22,883] DEBUG in selenium_socket-264: 执行的接口测试数据：{'interface_test_id': '2', 'user_id': 1}
+[2019-10-05 13:42:22,884] DEBUG in selenium_socket-275: 接口测试新增数据的id为: 148
+[2019-10-05 13:42:22,891] DEBUG in selenium_socket-285: 查询结果：[{'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'username', 'value': 'admin', 'execute': 1}, {'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'password', 'value': 'admin', 'execute': 1}]
+[2019-10-05 13:42:22,895] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-05 13:42:22,920] DEBUG in connectionpool-437: http://127.0.0.1:9000 "POST /user_login/ HTTP/1.1" 200 16
+[2019-10-05 13:42:22,922] DEBUG in selenium_socket-288: 接口测试状态码：200
+[2019-10-05 13:42:36,528] INFO in selenium_socket-391: ('127.0.0.1', 58668) 断开连接--
+[2019-10-05 13:42:42,022] INFO in selenium_socket-391: ('127.0.0.1', 58660) 断开连接--
+[2019-10-05 13:42:42,024] INFO in selenium_socket-391: ('127.0.0.1', 58657) 断开连接--
+[2019-10-05 13:42:43,434] INFO in selenium_socket-369: ('127.0.0.1', 58672) 连接--
+[2019-10-05 13:42:44,628] INFO in selenium_socket-369: ('127.0.0.1', 58675) 连接--
+[2019-10-05 13:43:22,880] INFO in selenium_socket-369: ('127.0.0.1', 58690) 连接--
+[2019-10-05 13:43:22,880] DEBUG in selenium_socket-380: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '2', 'user_id': 1}}
+[2019-10-05 13:43:22,881] DEBUG in selenium_socket-264: 执行的接口测试数据：{'interface_test_id': '2', 'user_id': 1}
+[2019-10-05 13:43:22,882] DEBUG in selenium_socket-275: 接口测试新增数据的id为: 149
+[2019-10-05 13:43:22,899] DEBUG in selenium_socket-285: 查询结果：[{'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'username', 'value': 'admin', 'execute': 1}, {'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'password', 'value': 'admin', 'execute': 1}]
+[2019-10-05 13:43:22,903] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-05 13:43:22,923] DEBUG in connectionpool-437: http://127.0.0.1:9000 "POST /user_login/ HTTP/1.1" 200 16
+[2019-10-05 13:43:22,926] DEBUG in selenium_socket-288: 接口测试状态码：200
+[2019-10-05 13:44:22,880] DEBUG in selenium_socket-380: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '2', 'user_id': 1}}
+[2019-10-05 13:44:22,881] DEBUG in selenium_socket-264: 执行的接口测试数据：{'interface_test_id': '2', 'user_id': 1}
+[2019-10-05 13:44:22,882] DEBUG in selenium_socket-275: 接口测试新增数据的id为: 150
+[2019-10-05 13:44:22,888] DEBUG in selenium_socket-285: 查询结果：[{'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'username', 'value': 'admin', 'execute': 1}, {'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'password', 'value': 'admin', 'execute': 1}]
+[2019-10-05 13:44:22,891] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-05 13:44:22,920] DEBUG in connectionpool-437: http://127.0.0.1:9000 "POST /user_login/ HTTP/1.1" 200 16
+[2019-10-05 13:44:22,921] DEBUG in selenium_socket-288: 接口测试状态码：200
+[2019-10-05 13:44:49,942] INFO in selenium_socket-391: ('127.0.0.1', 58690) 断开连接--
+[2019-10-05 13:44:53,149] INFO in selenium_socket-391: ('127.0.0.1', 58672) 断开连接--
+[2019-10-05 13:44:53,155] INFO in selenium_socket-391: ('127.0.0.1', 58675) 断开连接--
+[2019-10-05 13:44:54,399] INFO in selenium_socket-369: ('127.0.0.1', 58712) 连接--
+[2019-10-05 13:44:55,431] INFO in selenium_socket-369: ('127.0.0.1', 58715) 连接--
+[2019-10-05 13:45:22,878] INFO in selenium_socket-369: ('127.0.0.1', 58722) 连接--
+[2019-10-05 13:45:22,878] DEBUG in selenium_socket-380: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '2', 'user_id': 1}}
+[2019-10-05 13:45:22,879] DEBUG in selenium_socket-264: 执行的接口测试数据：{'interface_test_id': '2', 'user_id': 1}
+[2019-10-05 13:45:22,880] DEBUG in selenium_socket-275: 接口测试新增数据的id为: 151
+[2019-10-05 13:45:22,901] DEBUG in selenium_socket-285: 查询结果：[{'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'username', 'value': 'admin', 'execute': 1}, {'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'password', 'value': 'admin', 'execute': 1}]
+[2019-10-05 13:45:22,904] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-05 13:45:22,917] DEBUG in connectionpool-437: http://127.0.0.1:9000 "POST /user_login/ HTTP/1.1" 200 16
+[2019-10-05 13:45:22,919] DEBUG in selenium_socket-288: 接口测试状态码：200
+[2019-10-05 13:45:26,382] INFO in selenium_socket-391: ('127.0.0.1', 58722) 断开连接--
+[2019-10-05 13:45:29,825] INFO in selenium_socket-391: ('127.0.0.1', 58715) 断开连接--
+[2019-10-05 13:45:29,826] INFO in selenium_socket-391: ('127.0.0.1', 58712) 断开连接--
+[2019-10-05 13:45:31,235] INFO in selenium_socket-369: ('127.0.0.1', 58726) 连接--
+[2019-10-05 13:45:32,245] INFO in selenium_socket-369: ('127.0.0.1', 58729) 连接--
+[2019-10-05 13:46:22,894] INFO in selenium_socket-369: ('127.0.0.1', 58736) 连接--
+[2019-10-05 13:46:22,894] DEBUG in selenium_socket-380: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '2', 'user_id': 1}}
+[2019-10-05 13:46:22,895] DEBUG in selenium_socket-264: 执行的接口测试数据：{'interface_test_id': '2', 'user_id': 1}
+[2019-10-05 13:46:22,897] DEBUG in selenium_socket-275: 接口测试新增数据的id为: 152
+[2019-10-05 13:46:22,920] DEBUG in selenium_socket-285: 查询结果：[{'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'username', 'value': 'admin', 'execute': 1}, {'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'password', 'value': 'admin', 'execute': 1}]
+[2019-10-05 13:46:22,923] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-05 13:46:22,949] DEBUG in connectionpool-437: http://127.0.0.1:9000 "POST /user_login/ HTTP/1.1" 200 16
+[2019-10-05 13:46:22,951] DEBUG in selenium_socket-288: 接口测试状态码：200
+[2019-10-05 13:47:22,883] DEBUG in selenium_socket-380: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '2', 'user_id': 1}}
+[2019-10-05 13:47:22,884] DEBUG in selenium_socket-264: 执行的接口测试数据：{'interface_test_id': '2', 'user_id': 1}
+[2019-10-05 13:47:22,885] DEBUG in selenium_socket-275: 接口测试新增数据的id为: 153
+[2019-10-05 13:47:22,892] DEBUG in selenium_socket-285: 查询结果：[{'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'username', 'value': 'admin', 'execute': 1}, {'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'password', 'value': 'admin', 'execute': 1}]
+[2019-10-05 13:47:22,894] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-05 13:47:22,915] DEBUG in connectionpool-437: http://127.0.0.1:9000 "POST /user_login/ HTTP/1.1" 200 16
+[2019-10-05 13:47:22,916] DEBUG in selenium_socket-288: 接口测试状态码：200
+[2019-10-05 13:48:22,878] DEBUG in selenium_socket-380: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '2', 'user_id': 1}}
+[2019-10-05 13:48:22,879] DEBUG in selenium_socket-264: 执行的接口测试数据：{'interface_test_id': '2', 'user_id': 1}
+[2019-10-05 13:48:22,880] DEBUG in selenium_socket-275: 接口测试新增数据的id为: 154
+[2019-10-05 13:48:22,887] DEBUG in selenium_socket-285: 查询结果：[{'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'username', 'value': 'admin', 'execute': 1}, {'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'password', 'value': 'admin', 'execute': 1}]
+[2019-10-05 13:48:22,888] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-05 13:48:22,918] DEBUG in connectionpool-437: http://127.0.0.1:9000 "POST /user_login/ HTTP/1.1" 200 16
+[2019-10-05 13:48:22,919] DEBUG in selenium_socket-288: 接口测试状态码：200
+[2019-10-05 13:49:22,879] DEBUG in selenium_socket-380: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '2', 'user_id': 1}}
+[2019-10-05 13:49:22,879] DEBUG in selenium_socket-264: 执行的接口测试数据：{'interface_test_id': '2', 'user_id': 1}
+[2019-10-05 13:49:22,881] DEBUG in selenium_socket-275: 接口测试新增数据的id为: 155
+[2019-10-05 13:49:22,889] DEBUG in selenium_socket-285: 查询结果：[{'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'username', 'value': 'admin', 'execute': 1}, {'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'password', 'value': 'admin', 'execute': 1}]
+[2019-10-05 13:49:22,891] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-05 13:49:22,908] DEBUG in connectionpool-437: http://127.0.0.1:9000 "POST /user_login/ HTTP/1.1" 200 16
+[2019-10-05 13:49:22,909] DEBUG in selenium_socket-288: 接口测试状态码：200
+[2019-10-05 13:50:22,880] DEBUG in selenium_socket-380: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '2', 'user_id': 1}}
+[2019-10-05 13:50:22,881] DEBUG in selenium_socket-264: 执行的接口测试数据：{'interface_test_id': '2', 'user_id': 1}
+[2019-10-05 13:50:22,881] DEBUG in selenium_socket-275: 接口测试新增数据的id为: 156
+[2019-10-05 13:50:22,892] DEBUG in selenium_socket-285: 查询结果：[{'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'username', 'value': 'admin', 'execute': 1}, {'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'password', 'value': 'admin', 'execute': 1}]
+[2019-10-05 13:50:22,894] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-05 13:50:22,924] DEBUG in connectionpool-437: http://127.0.0.1:9000 "POST /user_login/ HTTP/1.1" 200 16
+[2019-10-05 13:50:22,926] DEBUG in selenium_socket-288: 接口测试状态码：200
+[2019-10-05 13:51:22,880] DEBUG in selenium_socket-380: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '2', 'user_id': 1}}
+[2019-10-05 13:51:22,880] DEBUG in selenium_socket-264: 执行的接口测试数据：{'interface_test_id': '2', 'user_id': 1}
+[2019-10-05 13:51:22,881] DEBUG in selenium_socket-275: 接口测试新增数据的id为: 157
+[2019-10-05 13:51:22,894] DEBUG in selenium_socket-285: 查询结果：[{'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'username', 'value': 'admin', 'execute': 1}, {'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'password', 'value': 'admin', 'execute': 1}]
+[2019-10-05 13:51:22,896] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-05 13:51:22,913] DEBUG in connectionpool-437: http://127.0.0.1:9000 "POST /user_login/ HTTP/1.1" 200 16
+[2019-10-05 13:51:22,915] DEBUG in selenium_socket-288: 接口测试状态码：200
+[2019-10-05 13:52:22,880] DEBUG in selenium_socket-380: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '2', 'user_id': 1}}
+[2019-10-05 13:52:22,881] DEBUG in selenium_socket-264: 执行的接口测试数据：{'interface_test_id': '2', 'user_id': 1}
+[2019-10-05 13:52:22,882] DEBUG in selenium_socket-275: 接口测试新增数据的id为: 158
+[2019-10-05 13:52:22,893] DEBUG in selenium_socket-285: 查询结果：[{'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'username', 'value': 'admin', 'execute': 1}, {'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'password', 'value': 'admin', 'execute': 1}]
+[2019-10-05 13:52:22,895] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-05 13:52:22,905] DEBUG in connectionpool-437: http://127.0.0.1:9000 "POST /user_login/ HTTP/1.1" 200 16
+[2019-10-05 13:52:22,907] DEBUG in selenium_socket-288: 接口测试状态码：200
+[2019-10-05 13:53:22,888] DEBUG in selenium_socket-380: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '2', 'user_id': 1}}
+[2019-10-05 13:53:22,889] DEBUG in selenium_socket-264: 执行的接口测试数据：{'interface_test_id': '2', 'user_id': 1}
+[2019-10-05 13:53:22,890] DEBUG in selenium_socket-275: 接口测试新增数据的id为: 159
+[2019-10-05 13:53:22,911] DEBUG in selenium_socket-285: 查询结果：[{'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'username', 'value': 'admin', 'execute': 1}, {'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'password', 'value': 'admin', 'execute': 1}]
+[2019-10-05 13:53:22,913] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-05 13:53:22,941] DEBUG in connectionpool-437: http://127.0.0.1:9000 "POST /user_login/ HTTP/1.1" 200 16
+[2019-10-05 13:53:22,943] DEBUG in selenium_socket-288: 接口测试状态码：200
+[2019-10-05 13:53:23,141] INFO in selenium_socket-391: ('127.0.0.1', 58736) 断开连接--
+[2019-10-05 13:53:27,939] INFO in selenium_socket-391: ('127.0.0.1', 58729) 断开连接--
+[2019-10-05 13:53:27,941] INFO in selenium_socket-391: ('127.0.0.1', 58726) 断开连接--
+[2019-10-05 13:53:29,353] INFO in selenium_socket-369: ('127.0.0.1', 58777) 连接--
+[2019-10-05 13:53:30,398] INFO in selenium_socket-369: ('127.0.0.1', 58780) 连接--
+[2019-10-05 13:54:22,886] INFO in selenium_socket-369: ('127.0.0.1', 58790) 连接--
+[2019-10-05 13:54:22,887] DEBUG in selenium_socket-380: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '2', 'user_id': 1}}
+[2019-10-05 13:54:22,887] DEBUG in selenium_socket-264: 执行的接口测试数据：{'interface_test_id': '2', 'user_id': 1}
+[2019-10-05 13:54:22,888] DEBUG in selenium_socket-275: 接口测试新增数据的id为: 160
+[2019-10-05 13:54:22,907] DEBUG in selenium_socket-285: 查询结果：[{'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'username', 'value': 'admin', 'execute': 1}, {'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'password', 'value': 'admin', 'execute': 1}]
+[2019-10-05 13:54:22,909] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-05 13:54:22,938] DEBUG in connectionpool-437: http://127.0.0.1:9000 "POST /user_login/ HTTP/1.1" 200 16
+[2019-10-05 13:54:22,939] DEBUG in selenium_socket-288: 接口测试状态码：200
+[2019-10-05 13:55:00,011] DEBUG in selenium_socket-380: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '2', 'user_id': 1}}
+[2019-10-05 13:55:00,011] DEBUG in selenium_socket-264: 执行的接口测试数据：{'interface_test_id': '2', 'user_id': 1}
+[2019-10-05 13:55:00,012] DEBUG in selenium_socket-275: 接口测试新增数据的id为: 161
+[2019-10-05 13:55:00,024] DEBUG in selenium_socket-285: 查询结果：[{'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'username', 'value': 'admin', 'execute': 1}, {'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'password', 'value': 'admin', 'execute': 1}]
+[2019-10-05 13:55:00,028] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-05 13:55:00,055] DEBUG in connectionpool-437: http://127.0.0.1:9000 "POST /user_login/ HTTP/1.1" 200 16
+[2019-10-05 13:55:00,056] DEBUG in selenium_socket-288: 接口测试状态码：200
+[2019-10-05 13:56:08,545] INFO in selenium_socket-391: ('127.0.0.1', 58790) 断开连接--
+[2019-10-05 13:56:11,327] INFO in selenium_socket-391: ('127.0.0.1', 58777) 断开连接--
+[2019-10-05 13:56:11,334] INFO in selenium_socket-391: ('127.0.0.1', 58780) 断开连接--
+[2019-10-05 13:56:12,777] INFO in selenium_socket-369: ('127.0.0.1', 58813) 连接--
+[2019-10-05 13:56:14,024] INFO in selenium_socket-369: ('127.0.0.1', 58816) 连接--
+[2019-10-05 13:57:59,502] INFO in selenium_socket-391: ('127.0.0.1', 58816) 断开连接--
+[2019-10-05 13:57:59,503] INFO in selenium_socket-391: ('127.0.0.1', 58813) 断开连接--
+[2019-10-05 13:58:00,845] INFO in selenium_socket-369: ('127.0.0.1', 58845) 连接--
+[2019-10-05 13:58:01,710] INFO in selenium_socket-369: ('127.0.0.1', 58848) 连接--
+[2019-10-05 14:00:00,013] INFO in selenium_socket-369: ('127.0.0.1', 58876) 连接--
+[2019-10-05 14:00:00,014] DEBUG in selenium_socket-380: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '2', 'user_id': 1}}
+[2019-10-05 14:00:00,014] DEBUG in selenium_socket-264: 执行的接口测试数据：{'interface_test_id': '2', 'user_id': 1}
+[2019-10-05 14:00:00,015] DEBUG in selenium_socket-275: 接口测试新增数据的id为: 162
+[2019-10-05 14:00:00,019] DEBUG in selenium_socket-285: 查询结果：[{'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'username', 'value': 'admin', 'execute': 1}, {'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'password', 'value': 'admin', 'execute': 1}]
+[2019-10-05 14:00:00,022] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-05 14:00:00,038] DEBUG in connectionpool-437: http://127.0.0.1:9000 "POST /user_login/ HTTP/1.1" 200 16
+[2019-10-05 14:00:00,039] DEBUG in selenium_socket-288: 接口测试状态码：200
+[2019-10-05 14:02:12,549] INFO in selenium_socket-391: ('127.0.0.1', 58876) 断开连接--
+[2019-10-05 14:02:16,238] INFO in selenium_socket-391: ('127.0.0.1', 58848) 断开连接--
+[2019-10-05 14:02:16,240] INFO in selenium_socket-391: ('127.0.0.1', 58845) 断开连接--
+[2019-10-05 14:02:17,660] INFO in selenium_socket-369: ('127.0.0.1', 58881) 连接--
+[2019-10-05 14:02:18,714] INFO in selenium_socket-369: ('127.0.0.1', 58884) 连接--
+[2019-10-05 14:14:36,064] INFO in selenium_socket-391: ('127.0.0.1', 58881) 断开连接--
+[2019-10-05 14:14:36,068] INFO in selenium_socket-391: ('127.0.0.1', 58884) 断开连接--
+[2019-10-05 14:14:37,317] INFO in selenium_socket-369: ('127.0.0.1', 58933) 连接--
+[2019-10-05 14:14:38,820] INFO in selenium_socket-369: ('127.0.0.1', 58936) 连接--
+[2019-10-05 14:16:53,985] INFO in selenium_socket-391: ('127.0.0.1', 58936) 断开连接--
+[2019-10-05 14:16:53,986] INFO in selenium_socket-391: ('127.0.0.1', 58933) 断开连接--
+[2019-10-05 14:16:55,362] INFO in selenium_socket-369: ('127.0.0.1', 58963) 连接--
+[2019-10-05 14:16:56,486] INFO in selenium_socket-369: ('127.0.0.1', 58966) 连接--
+[2019-10-05 14:19:30,655] INFO in selenium_socket-369: ('127.0.0.1', 59001) 连接--
+[2019-10-05 14:19:30,656] DEBUG in selenium_socket-380: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '2', 'user_id': 1}}
+[2019-10-05 14:19:30,657] DEBUG in selenium_socket-264: 执行的接口测试数据：{'interface_test_id': '2', 'user_id': 1}
+[2019-10-05 14:19:30,658] DEBUG in selenium_socket-275: 接口测试新增数据的id为: 163
+[2019-10-05 14:19:30,666] DEBUG in selenium_socket-285: 查询结果：[{'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'username', 'value': 'admin', 'execute': 1}, {'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'password', 'value': 'admin', 'execute': 1}]
+[2019-10-05 14:19:30,669] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-05 14:19:30,681] DEBUG in connectionpool-437: http://127.0.0.1:9000 "POST /user_login/ HTTP/1.1" 200 16
+[2019-10-05 14:19:30,683] DEBUG in selenium_socket-288: 接口测试状态码：200
+[2019-10-05 14:24:30,675] DEBUG in selenium_socket-380: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '2', 'user_id': 1}}
+[2019-10-05 14:24:30,676] DEBUG in selenium_socket-264: 执行的接口测试数据：{'interface_test_id': '2', 'user_id': 1}
+[2019-10-05 14:24:30,677] DEBUG in selenium_socket-275: 接口测试新增数据的id为: 164
+[2019-10-05 14:24:30,682] DEBUG in selenium_socket-285: 查询结果：[{'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'username', 'value': 'admin', 'execute': 1}, {'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'password', 'value': 'admin', 'execute': 1}]
+[2019-10-05 14:24:30,684] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-05 14:24:30,692] DEBUG in connectionpool-437: http://127.0.0.1:9000 "POST /user_login/ HTTP/1.1" 200 16
+[2019-10-05 14:24:30,693] DEBUG in selenium_socket-288: 接口测试状态码：200
+[2019-10-05 14:29:30,663] DEBUG in selenium_socket-380: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '2', 'user_id': 1}}
+[2019-10-05 14:29:30,664] DEBUG in selenium_socket-264: 执行的接口测试数据：{'interface_test_id': '2', 'user_id': 1}
+[2019-10-05 14:29:30,665] DEBUG in selenium_socket-275: 接口测试新增数据的id为: 165
+[2019-10-05 14:29:30,672] DEBUG in selenium_socket-285: 查询结果：[{'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'username', 'value': 'admin', 'execute': 1}, {'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'password', 'value': 'admin', 'execute': 1}]
+[2019-10-05 14:29:30,674] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-05 14:29:30,711] DEBUG in connectionpool-437: http://127.0.0.1:9000 "POST /user_login/ HTTP/1.1" 200 16
+[2019-10-05 14:29:30,713] DEBUG in selenium_socket-288: 接口测试状态码：200
+[2019-10-05 14:34:30,677] DEBUG in selenium_socket-380: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '2', 'user_id': 1}}
+[2019-10-05 14:34:30,678] DEBUG in selenium_socket-264: 执行的接口测试数据：{'interface_test_id': '2', 'user_id': 1}
+[2019-10-05 14:34:30,679] DEBUG in selenium_socket-275: 接口测试新增数据的id为: 166
+[2019-10-05 14:34:30,686] DEBUG in selenium_socket-285: 查询结果：[{'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'username', 'value': 'admin', 'execute': 1}, {'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'password', 'value': 'admin', 'execute': 1}]
+[2019-10-05 14:34:30,688] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-05 14:34:30,728] DEBUG in connectionpool-437: http://127.0.0.1:9000 "POST /user_login/ HTTP/1.1" 200 16
+[2019-10-05 14:34:30,729] DEBUG in selenium_socket-288: 接口测试状态码：200
+[2019-10-05 14:39:30,676] DEBUG in selenium_socket-380: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '2', 'user_id': 1}}
+[2019-10-05 14:39:30,677] DEBUG in selenium_socket-264: 执行的接口测试数据：{'interface_test_id': '2', 'user_id': 1}
+[2019-10-05 14:39:30,680] DEBUG in selenium_socket-275: 接口测试新增数据的id为: 167
+[2019-10-05 14:39:30,691] DEBUG in selenium_socket-285: 查询结果：[{'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'username', 'value': 'admin', 'execute': 1}, {'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'password', 'value': 'admin', 'execute': 1}]
+[2019-10-05 14:39:30,693] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-05 14:39:30,716] DEBUG in connectionpool-437: http://127.0.0.1:9000 "POST /user_login/ HTTP/1.1" 200 16
+[2019-10-05 14:39:30,719] DEBUG in selenium_socket-288: 接口测试状态码：200
+[2019-10-05 14:44:30,675] DEBUG in selenium_socket-380: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '2', 'user_id': 1}}
+[2019-10-05 14:44:30,676] DEBUG in selenium_socket-264: 执行的接口测试数据：{'interface_test_id': '2', 'user_id': 1}
+[2019-10-05 14:44:30,677] DEBUG in selenium_socket-275: 接口测试新增数据的id为: 168
+[2019-10-05 14:44:30,683] DEBUG in selenium_socket-285: 查询结果：[{'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'username', 'value': 'admin', 'execute': 1}, {'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'password', 'value': 'admin', 'execute': 1}]
+[2019-10-05 14:44:30,685] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-05 14:44:30,700] DEBUG in connectionpool-437: http://127.0.0.1:9000 "POST /user_login/ HTTP/1.1" 200 16
+[2019-10-05 14:44:30,701] DEBUG in selenium_socket-288: 接口测试状态码：200
+[2019-10-05 14:49:30,668] DEBUG in selenium_socket-380: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '2', 'user_id': 1}}
+[2019-10-05 14:49:30,669] DEBUG in selenium_socket-264: 执行的接口测试数据：{'interface_test_id': '2', 'user_id': 1}
+[2019-10-05 14:49:30,671] DEBUG in selenium_socket-275: 接口测试新增数据的id为: 169
+[2019-10-05 14:49:30,677] DEBUG in selenium_socket-285: 查询结果：[{'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'username', 'value': 'admin', 'execute': 1}, {'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'password', 'value': 'admin', 'execute': 1}]
+[2019-10-05 14:49:30,678] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-05 14:49:30,694] DEBUG in connectionpool-437: http://127.0.0.1:9000 "POST /user_login/ HTTP/1.1" 200 16
+[2019-10-05 14:49:30,695] DEBUG in selenium_socket-288: 接口测试状态码：200
+[2019-10-05 14:54:30,663] DEBUG in selenium_socket-380: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '2', 'user_id': 1}}
+[2019-10-05 14:54:30,663] DEBUG in selenium_socket-264: 执行的接口测试数据：{'interface_test_id': '2', 'user_id': 1}
+[2019-10-05 14:54:30,664] DEBUG in selenium_socket-275: 接口测试新增数据的id为: 170
+[2019-10-05 14:54:30,685] DEBUG in selenium_socket-285: 查询结果：[{'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'username', 'value': 'admin', 'execute': 1}, {'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'password', 'value': 'admin', 'execute': 1}]
+[2019-10-05 14:54:30,687] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-05 14:54:30,715] DEBUG in connectionpool-437: http://127.0.0.1:9000 "POST /user_login/ HTTP/1.1" 200 16
+[2019-10-05 14:54:30,716] DEBUG in selenium_socket-288: 接口测试状态码：200
+[2019-10-05 14:59:30,671] DEBUG in selenium_socket-380: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '2', 'user_id': 1}}
+[2019-10-05 14:59:30,672] DEBUG in selenium_socket-264: 执行的接口测试数据：{'interface_test_id': '2', 'user_id': 1}
+[2019-10-05 14:59:30,672] DEBUG in selenium_socket-275: 接口测试新增数据的id为: 171
+[2019-10-05 14:59:30,678] DEBUG in selenium_socket-285: 查询结果：[{'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'username', 'value': 'admin', 'execute': 1}, {'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'password', 'value': 'admin', 'execute': 1}]
+[2019-10-05 14:59:30,679] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-05 14:59:30,693] DEBUG in connectionpool-437: http://127.0.0.1:9000 "POST /user_login/ HTTP/1.1" 200 16
+[2019-10-05 14:59:30,694] DEBUG in selenium_socket-288: 接口测试状态码：200
+[2019-10-05 15:01:20,628] INFO in selenium_socket-391: ('127.0.0.1', 58966) 断开连接--
+[2019-10-05 15:01:20,630] INFO in selenium_socket-391: ('127.0.0.1', 58963) 断开连接--
+[2019-10-05 15:01:21,211] INFO in selenium_socket-369: ('127.0.0.1', 59477) 连接--
+[2019-10-05 15:01:21,767] INFO in selenium_socket-369: ('127.0.0.1', 59480) 连接--
+[2019-10-05 15:03:10,430] INFO in selenium_socket-391: ('127.0.0.1', 59480) 断开连接--
+[2019-10-05 15:03:10,431] INFO in selenium_socket-391: ('127.0.0.1', 59477) 断开连接--
+[2019-10-05 15:03:11,177] INFO in selenium_socket-369: ('127.0.0.1', 59548) 连接--
+[2019-10-05 15:03:11,806] INFO in selenium_socket-369: ('127.0.0.1', 59551) 连接--
+[2019-10-05 15:04:30,671] DEBUG in selenium_socket-380: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '2', 'user_id': 1}}
+[2019-10-05 15:04:30,671] DEBUG in selenium_socket-264: 执行的接口测试数据：{'interface_test_id': '2', 'user_id': 1}
+[2019-10-05 15:13:23,350] INFO in selenium_socket-383: ('127.0.0.1', 59607) 连接--
+[2019-10-05 15:13:24,605] INFO in selenium_socket-383: ('127.0.0.1', 59611) 连接--
+[2019-10-05 15:14:40,148] INFO in selenium_socket-405: ('127.0.0.1', 59611) 断开连接--
+[2019-10-05 15:14:40,149] INFO in selenium_socket-405: ('127.0.0.1', 59607) 断开连接--
+[2019-10-05 15:14:41,686] INFO in selenium_socket-383: ('127.0.0.1', 59620) 连接--
+[2019-10-05 15:14:42,945] INFO in selenium_socket-383: ('127.0.0.1', 59623) 连接--
+[2019-10-05 15:19:30,667] INFO in selenium_socket-383: ('127.0.0.1', 59709) 连接--
+[2019-10-05 15:19:30,668] DEBUG in selenium_socket-394: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '1', 'user_id': 1}}
+[2019-10-05 15:19:30,670] DEBUG in selenium_socket-271: 执行的接口测试数据：{'interface_test_id': '1', 'user_id': 1}
+[2019-10-05 15:19:30,671] DEBUG in selenium_socket-280: id=1,user_id=1的接口数据不存在,
+[2019-10-05 15:21:30,666] DEBUG in selenium_socket-394: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '3', 'user_id': 1}}
+[2019-10-05 15:21:30,668] DEBUG in selenium_socket-271: 执行的接口测试数据：{'interface_test_id': '3', 'user_id': 1}
+[2019-10-05 15:21:30,670] DEBUG in selenium_socket-289: 接口测试新增数据的id为: 173
+[2019-10-05 15:21:30,682] DEBUG in selenium_socket-299: 查询结果：[{'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'username', 'value': 'admin', 'execute': 1}, {'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'password', 'value': 'admin', 'execute': 1}]
+[2019-10-05 15:21:30,691] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-05 15:21:30,709] DEBUG in connectionpool-437: http://127.0.0.1:9000 "POST /user_login/ HTTP/1.1" 200 16
+[2019-10-05 15:21:30,712] DEBUG in selenium_socket-302: 接口测试状态码：200
+[2019-10-05 15:23:30,664] DEBUG in selenium_socket-394: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '3', 'user_id': 1}}
+[2019-10-05 15:23:30,665] DEBUG in selenium_socket-271: 执行的接口测试数据：{'interface_test_id': '3', 'user_id': 1}
+[2019-10-05 15:23:30,668] DEBUG in selenium_socket-289: 接口测试新增数据的id为: 174
+[2019-10-05 15:23:30,676] DEBUG in selenium_socket-299: 查询结果：[{'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'username', 'value': 'admin', 'execute': 1}, {'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'password', 'value': 'admin', 'execute': 1}]
+[2019-10-05 15:23:30,680] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-05 15:23:30,704] DEBUG in connectionpool-437: http://127.0.0.1:9000 "POST /user_login/ HTTP/1.1" 200 16
+[2019-10-05 15:23:30,708] DEBUG in selenium_socket-302: 接口测试状态码：200
+[2019-10-05 15:25:30,672] DEBUG in selenium_socket-394: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '3', 'user_id': 1}}
+[2019-10-05 15:25:30,673] DEBUG in selenium_socket-271: 执行的接口测试数据：{'interface_test_id': '3', 'user_id': 1}
+[2019-10-05 15:25:30,676] DEBUG in selenium_socket-289: 接口测试新增数据的id为: 175
+[2019-10-05 15:25:30,684] DEBUG in selenium_socket-299: 查询结果：[{'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'username', 'value': 'admin', 'execute': 1}, {'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'password', 'value': 'admin', 'execute': 1}]
+[2019-10-05 15:25:30,688] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-05 15:25:30,712] DEBUG in connectionpool-437: http://127.0.0.1:9000 "POST /user_login/ HTTP/1.1" 200 16
+[2019-10-05 15:25:30,716] DEBUG in selenium_socket-302: 接口测试状态码：200
+[2019-10-05 15:27:30,663] DEBUG in selenium_socket-394: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '3', 'user_id': 1}}
+[2019-10-05 15:27:30,664] DEBUG in selenium_socket-271: 执行的接口测试数据：{'interface_test_id': '3', 'user_id': 1}
+[2019-10-05 15:27:30,668] DEBUG in selenium_socket-289: 接口测试新增数据的id为: 176
+[2019-10-05 15:27:30,687] DEBUG in selenium_socket-299: 查询结果：[{'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'username', 'value': 'admin', 'execute': 1}, {'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'password', 'value': 'admin', 'execute': 1}]
+[2019-10-05 15:27:30,689] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-05 15:27:30,706] DEBUG in connectionpool-437: http://127.0.0.1:9000 "POST /user_login/ HTTP/1.1" 200 16
+[2019-10-05 15:27:30,708] DEBUG in selenium_socket-302: 接口测试状态码：200
+[2019-10-05 15:29:30,676] DEBUG in selenium_socket-394: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '3', 'user_id': 1}}
+[2019-10-05 15:29:30,677] DEBUG in selenium_socket-271: 执行的接口测试数据：{'interface_test_id': '3', 'user_id': 1}
+[2019-10-05 15:29:30,681] DEBUG in selenium_socket-289: 接口测试新增数据的id为: 177
+[2019-10-05 15:29:30,691] DEBUG in selenium_socket-299: 查询结果：[{'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'username', 'value': 'admin', 'execute': 1}, {'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'password', 'value': 'admin', 'execute': 1}]
+[2019-10-05 15:29:30,696] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-05 15:29:30,706] DEBUG in connectionpool-437: http://127.0.0.1:9000 "POST /user_login/ HTTP/1.1" 200 16
+[2019-10-05 15:29:30,709] DEBUG in selenium_socket-302: 接口测试状态码：200
+[2019-10-05 15:31:30,662] DEBUG in selenium_socket-394: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '3', 'user_id': 1}}
+[2019-10-05 15:31:30,662] DEBUG in selenium_socket-271: 执行的接口测试数据：{'interface_test_id': '3', 'user_id': 1}
+[2019-10-05 15:31:30,665] DEBUG in selenium_socket-289: 接口测试新增数据的id为: 178
+[2019-10-05 15:31:30,682] DEBUG in selenium_socket-299: 查询结果：[{'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'username', 'value': 'admin', 'execute': 1}, {'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'password', 'value': 'admin', 'execute': 1}]
+[2019-10-05 15:31:30,684] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-05 15:31:30,707] DEBUG in connectionpool-437: http://127.0.0.1:9000 "POST /user_login/ HTTP/1.1" 200 16
+[2019-10-05 15:31:30,710] DEBUG in selenium_socket-302: 接口测试状态码：200
+[2019-10-05 15:33:30,666] DEBUG in selenium_socket-394: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '3', 'user_id': 1}}
+[2019-10-05 15:33:30,667] DEBUG in selenium_socket-271: 执行的接口测试数据：{'interface_test_id': '3', 'user_id': 1}
+[2019-10-05 15:33:30,669] DEBUG in selenium_socket-289: 接口测试新增数据的id为: 179
+[2019-10-05 15:33:30,678] DEBUG in selenium_socket-299: 查询结果：[{'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'username', 'value': 'admin', 'execute': 1}, {'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'password', 'value': 'admin', 'execute': 1}]
+[2019-10-05 15:33:30,681] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-05 15:33:30,704] DEBUG in connectionpool-437: http://127.0.0.1:9000 "POST /user_login/ HTTP/1.1" 200 16
+[2019-10-05 15:33:30,706] DEBUG in selenium_socket-302: 接口测试状态码：200
+[2019-10-05 15:35:30,658] DEBUG in selenium_socket-394: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '3', 'user_id': 1}}
+[2019-10-05 15:35:30,659] DEBUG in selenium_socket-271: 执行的接口测试数据：{'interface_test_id': '3', 'user_id': 1}
+[2019-10-05 15:35:30,662] DEBUG in selenium_socket-289: 接口测试新增数据的id为: 180
+[2019-10-05 15:35:30,674] DEBUG in selenium_socket-299: 查询结果：[{'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'username', 'value': 'admin', 'execute': 1}, {'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'password', 'value': 'admin', 'execute': 1}]
+[2019-10-05 15:35:30,676] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-05 15:35:30,698] DEBUG in connectionpool-437: http://127.0.0.1:9000 "POST /user_login/ HTTP/1.1" 200 16
+[2019-10-05 15:35:30,701] DEBUG in selenium_socket-302: 接口测试状态码：200
+[2019-10-05 15:37:30,661] DEBUG in selenium_socket-394: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '3', 'user_id': 1}}
+[2019-10-05 15:37:30,662] DEBUG in selenium_socket-271: 执行的接口测试数据：{'interface_test_id': '3', 'user_id': 1}
+[2019-10-05 15:37:30,665] DEBUG in selenium_socket-289: 接口测试新增数据的id为: 181
+[2019-10-05 15:37:30,675] DEBUG in selenium_socket-299: 查询结果：[{'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'username', 'value': 'admin', 'execute': 1}, {'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'password', 'value': 'admin', 'execute': 1}]
+[2019-10-05 15:37:30,679] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-05 15:37:30,695] DEBUG in connectionpool-437: http://127.0.0.1:9000 "POST /user_login/ HTTP/1.1" 200 16
+[2019-10-05 15:37:30,699] DEBUG in selenium_socket-302: 接口测试状态码：200
+[2019-10-05 15:39:30,661] DEBUG in selenium_socket-394: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '3', 'user_id': 1}}
+[2019-10-05 15:39:30,662] DEBUG in selenium_socket-271: 执行的接口测试数据：{'interface_test_id': '3', 'user_id': 1}
+[2019-10-05 15:39:30,664] DEBUG in selenium_socket-289: 接口测试新增数据的id为: 182
+[2019-10-05 15:39:30,674] DEBUG in selenium_socket-299: 查询结果：[{'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'username', 'value': 'admin', 'execute': 1}, {'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'password', 'value': 'admin', 'execute': 1}]
+[2019-10-05 15:39:30,677] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-05 15:39:30,700] DEBUG in connectionpool-437: http://127.0.0.1:9000 "POST /user_login/ HTTP/1.1" 200 16
+[2019-10-05 15:39:30,701] DEBUG in selenium_socket-302: 接口测试状态码：200
+[2019-10-05 15:41:30,662] DEBUG in selenium_socket-394: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '3', 'user_id': 1}}
+[2019-10-05 15:41:30,663] DEBUG in selenium_socket-271: 执行的接口测试数据：{'interface_test_id': '3', 'user_id': 1}
+[2019-10-05 15:41:30,665] DEBUG in selenium_socket-289: 接口测试新增数据的id为: 183
+[2019-10-05 15:41:30,677] DEBUG in selenium_socket-299: 查询结果：[{'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'username', 'value': 'admin', 'execute': 1}, {'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'password', 'value': 'admin', 'execute': 1}]
+[2019-10-05 15:41:30,680] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-05 15:41:30,711] DEBUG in connectionpool-437: http://127.0.0.1:9000 "POST /user_login/ HTTP/1.1" 200 16
+[2019-10-05 15:41:30,714] DEBUG in selenium_socket-302: 接口测试状态码：200
+[2019-10-05 15:43:30,663] DEBUG in selenium_socket-394: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '3', 'user_id': 1}}
+[2019-10-05 15:43:30,664] DEBUG in selenium_socket-271: 执行的接口测试数据：{'interface_test_id': '3', 'user_id': 1}
+[2019-10-05 15:43:30,666] DEBUG in selenium_socket-289: 接口测试新增数据的id为: 184
+[2019-10-05 15:43:30,683] DEBUG in selenium_socket-299: 查询结果：[{'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'username', 'value': 'admin', 'execute': 1}, {'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'password', 'value': 'admin', 'execute': 1}]
+[2019-10-05 15:43:30,685] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-05 15:43:30,705] DEBUG in connectionpool-437: http://127.0.0.1:9000 "POST /user_login/ HTTP/1.1" 200 16
+[2019-10-05 15:43:30,707] DEBUG in selenium_socket-302: 接口测试状态码：200
+[2019-10-05 15:45:30,664] DEBUG in selenium_socket-394: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '3', 'user_id': 1}}
+[2019-10-05 15:45:30,664] DEBUG in selenium_socket-271: 执行的接口测试数据：{'interface_test_id': '3', 'user_id': 1}
+[2019-10-05 15:45:30,665] DEBUG in selenium_socket-289: 接口测试新增数据的id为: 185
+[2019-10-05 15:45:30,671] DEBUG in selenium_socket-299: 查询结果：[{'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'username', 'value': 'admin', 'execute': 1}, {'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'password', 'value': 'admin', 'execute': 1}]
+[2019-10-05 15:45:30,672] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-05 15:45:30,686] DEBUG in connectionpool-437: http://127.0.0.1:9000 "POST /user_login/ HTTP/1.1" 200 16
+[2019-10-05 15:45:30,687] DEBUG in selenium_socket-302: 接口测试状态码：200
+[2019-10-05 15:47:30,652] DEBUG in selenium_socket-394: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '3', 'user_id': 1}}
+[2019-10-05 15:47:30,652] DEBUG in selenium_socket-271: 执行的接口测试数据：{'interface_test_id': '3', 'user_id': 1}
+[2019-10-05 15:47:30,654] DEBUG in selenium_socket-289: 接口测试新增数据的id为: 186
+[2019-10-05 15:47:30,664] DEBUG in selenium_socket-299: 查询结果：[{'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'username', 'value': 'admin', 'execute': 1}, {'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'password', 'value': 'admin', 'execute': 1}]
+[2019-10-05 15:47:30,665] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-05 15:47:30,681] DEBUG in connectionpool-437: http://127.0.0.1:9000 "POST /user_login/ HTTP/1.1" 200 16
+[2019-10-05 15:47:30,681] DEBUG in selenium_socket-302: 接口测试状态码：200
+[2019-10-05 15:49:30,662] DEBUG in selenium_socket-394: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '3', 'user_id': 1}}
+[2019-10-05 15:49:30,662] DEBUG in selenium_socket-271: 执行的接口测试数据：{'interface_test_id': '3', 'user_id': 1}
+[2019-10-05 15:49:30,663] DEBUG in selenium_socket-289: 接口测试新增数据的id为: 187
+[2019-10-05 15:49:30,685] DEBUG in selenium_socket-299: 查询结果：[{'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'username', 'value': 'admin', 'execute': 1}, {'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'password', 'value': 'admin', 'execute': 1}]
+[2019-10-05 15:49:30,686] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-05 15:49:30,691] DEBUG in connectionpool-437: http://127.0.0.1:9000 "POST /user_login/ HTTP/1.1" 200 16
+[2019-10-05 15:49:30,692] DEBUG in selenium_socket-302: 接口测试状态码：200
+[2019-10-05 15:51:30,654] DEBUG in selenium_socket-394: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '3', 'user_id': 1}}
+[2019-10-05 15:51:30,654] DEBUG in selenium_socket-271: 执行的接口测试数据：{'interface_test_id': '3', 'user_id': 1}
+[2019-10-05 15:51:30,655] DEBUG in selenium_socket-289: 接口测试新增数据的id为: 188
+[2019-10-05 15:51:30,664] DEBUG in selenium_socket-299: 查询结果：[{'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'username', 'value': 'admin', 'execute': 1}, {'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'password', 'value': 'admin', 'execute': 1}]
+[2019-10-05 15:51:30,665] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-05 15:51:30,679] DEBUG in connectionpool-437: http://127.0.0.1:9000 "POST /user_login/ HTTP/1.1" 200 16
+[2019-10-05 15:51:30,680] DEBUG in selenium_socket-302: 接口测试状态码：200
+[2019-10-05 15:53:30,664] DEBUG in selenium_socket-394: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '3', 'user_id': 1}}
+[2019-10-05 15:53:30,665] DEBUG in selenium_socket-271: 执行的接口测试数据：{'interface_test_id': '3', 'user_id': 1}
+[2019-10-05 15:53:30,666] DEBUG in selenium_socket-289: 接口测试新增数据的id为: 189
+[2019-10-05 15:53:30,675] DEBUG in selenium_socket-299: 查询结果：[{'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'username', 'value': 'admin', 'execute': 1}, {'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'password', 'value': 'admin', 'execute': 1}]
+[2019-10-05 15:53:30,677] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-05 15:53:30,683] DEBUG in connectionpool-437: http://127.0.0.1:9000 "POST /user_login/ HTTP/1.1" 200 16
+[2019-10-05 15:53:30,684] DEBUG in selenium_socket-302: 接口测试状态码：200
+[2019-10-05 15:55:30,653] DEBUG in selenium_socket-394: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '3', 'user_id': 1}}
+[2019-10-05 15:55:30,653] DEBUG in selenium_socket-271: 执行的接口测试数据：{'interface_test_id': '3', 'user_id': 1}
+[2019-10-05 15:55:30,657] DEBUG in selenium_socket-289: 接口测试新增数据的id为: 190
+[2019-10-05 15:55:30,684] DEBUG in selenium_socket-299: 查询结果：[{'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'username', 'value': 'admin', 'execute': 1}, {'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'password', 'value': 'admin', 'execute': 1}]
+[2019-10-05 15:55:30,685] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-05 15:55:30,700] DEBUG in connectionpool-437: http://127.0.0.1:9000 "POST /user_login/ HTTP/1.1" 200 16
+[2019-10-05 15:55:30,700] DEBUG in selenium_socket-302: 接口测试状态码：200
+[2019-10-05 15:57:30,656] DEBUG in selenium_socket-394: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '3', 'user_id': 1}}
+[2019-10-05 15:57:30,656] DEBUG in selenium_socket-271: 执行的接口测试数据：{'interface_test_id': '3', 'user_id': 1}
+[2019-10-05 15:57:30,657] DEBUG in selenium_socket-289: 接口测试新增数据的id为: 191
+[2019-10-05 15:57:30,663] DEBUG in selenium_socket-299: 查询结果：[{'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'username', 'value': 'admin', 'execute': 1}, {'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'password', 'value': 'admin', 'execute': 1}]
+[2019-10-05 15:57:30,664] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-05 15:57:30,679] DEBUG in connectionpool-437: http://127.0.0.1:9000 "POST /user_login/ HTTP/1.1" 200 16
+[2019-10-05 15:57:30,680] DEBUG in selenium_socket-302: 接口测试状态码：200
+[2019-10-05 15:59:30,659] DEBUG in selenium_socket-394: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '3', 'user_id': 1}}
+[2019-10-05 15:59:30,660] DEBUG in selenium_socket-271: 执行的接口测试数据：{'interface_test_id': '3', 'user_id': 1}
+[2019-10-05 15:59:30,660] DEBUG in selenium_socket-289: 接口测试新增数据的id为: 192
+[2019-10-05 15:59:30,667] DEBUG in selenium_socket-299: 查询结果：[{'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'username', 'value': 'admin', 'execute': 1}, {'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'password', 'value': 'admin', 'execute': 1}]
+[2019-10-05 15:59:30,668] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-05 15:59:30,676] DEBUG in connectionpool-437: http://127.0.0.1:9000 "POST /user_login/ HTTP/1.1" 200 16
+[2019-10-05 15:59:30,677] DEBUG in selenium_socket-302: 接口测试状态码：200
+[2019-10-05 16:01:30,659] DEBUG in selenium_socket-394: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '3', 'user_id': 1}}
+[2019-10-05 16:01:30,659] DEBUG in selenium_socket-271: 执行的接口测试数据：{'interface_test_id': '3', 'user_id': 1}
+[2019-10-05 16:01:30,661] DEBUG in selenium_socket-289: 接口测试新增数据的id为: 193
+[2019-10-05 16:01:30,667] DEBUG in selenium_socket-299: 查询结果：[{'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'username', 'value': 'admin', 'execute': 1}, {'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'password', 'value': 'admin', 'execute': 1}]
+[2019-10-05 16:01:30,668] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-05 16:01:30,687] DEBUG in connectionpool-437: http://127.0.0.1:9000 "POST /user_login/ HTTP/1.1" 200 16
+[2019-10-05 16:01:30,688] DEBUG in selenium_socket-302: 接口测试状态码：200
+[2019-10-05 16:03:30,662] DEBUG in selenium_socket-394: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '3', 'user_id': 1}}
+[2019-10-05 16:03:30,662] DEBUG in selenium_socket-271: 执行的接口测试数据：{'interface_test_id': '3', 'user_id': 1}
+[2019-10-05 16:03:30,664] DEBUG in selenium_socket-289: 接口测试新增数据的id为: 194
+[2019-10-05 16:03:30,690] DEBUG in selenium_socket-299: 查询结果：[{'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'username', 'value': 'admin', 'execute': 1}, {'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'password', 'value': 'admin', 'execute': 1}]
+[2019-10-05 16:03:30,691] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-05 16:03:30,706] DEBUG in connectionpool-437: http://127.0.0.1:9000 "POST /user_login/ HTTP/1.1" 200 16
+[2019-10-05 16:03:30,707] DEBUG in selenium_socket-302: 接口测试状态码：200
+[2019-10-05 16:05:30,664] DEBUG in selenium_socket-394: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '3', 'user_id': 1}}
+[2019-10-05 16:05:30,664] DEBUG in selenium_socket-271: 执行的接口测试数据：{'interface_test_id': '3', 'user_id': 1}
+[2019-10-05 16:05:30,665] DEBUG in selenium_socket-289: 接口测试新增数据的id为: 195
+[2019-10-05 16:05:30,673] DEBUG in selenium_socket-299: 查询结果：[{'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'username', 'value': 'admin', 'execute': 1}, {'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'password', 'value': 'admin', 'execute': 1}]
+[2019-10-05 16:05:30,675] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-05 16:05:30,681] DEBUG in connectionpool-437: http://127.0.0.1:9000 "POST /user_login/ HTTP/1.1" 200 16
+[2019-10-05 16:05:30,682] DEBUG in selenium_socket-302: 接口测试状态码：200
+[2019-10-05 16:07:30,654] DEBUG in selenium_socket-394: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '3', 'user_id': 1}}
+[2019-10-05 16:07:30,655] DEBUG in selenium_socket-271: 执行的接口测试数据：{'interface_test_id': '3', 'user_id': 1}
+[2019-10-05 16:07:30,656] DEBUG in selenium_socket-289: 接口测试新增数据的id为: 196
+[2019-10-05 16:07:30,662] DEBUG in selenium_socket-299: 查询结果：[{'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'username', 'value': 'admin', 'execute': 1}, {'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'password', 'value': 'admin', 'execute': 1}]
+[2019-10-05 16:07:30,664] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-05 16:07:30,681] DEBUG in connectionpool-437: http://127.0.0.1:9000 "POST /user_login/ HTTP/1.1" 200 16
+[2019-10-05 16:07:30,681] DEBUG in selenium_socket-302: 接口测试状态码：200
+[2019-10-05 16:09:30,662] DEBUG in selenium_socket-394: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '3', 'user_id': 1}}
+[2019-10-05 16:09:30,662] DEBUG in selenium_socket-271: 执行的接口测试数据：{'interface_test_id': '3', 'user_id': 1}
+[2019-10-05 16:09:30,663] DEBUG in selenium_socket-289: 接口测试新增数据的id为: 197
+[2019-10-05 16:09:30,672] DEBUG in selenium_socket-299: 查询结果：[{'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'username', 'value': 'admin', 'execute': 1}, {'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'password', 'value': 'admin', 'execute': 1}]
+[2019-10-05 16:09:30,673] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-05 16:09:30,687] DEBUG in connectionpool-437: http://127.0.0.1:9000 "POST /user_login/ HTTP/1.1" 200 16
+[2019-10-05 16:09:30,688] DEBUG in selenium_socket-302: 接口测试状态码：200
+[2019-10-05 16:11:30,652] DEBUG in selenium_socket-394: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '3', 'user_id': 1}}
+[2019-10-05 16:11:30,653] DEBUG in selenium_socket-271: 执行的接口测试数据：{'interface_test_id': '3', 'user_id': 1}
+[2019-10-05 16:11:30,654] DEBUG in selenium_socket-289: 接口测试新增数据的id为: 198
+[2019-10-05 16:11:30,675] DEBUG in selenium_socket-299: 查询结果：[{'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'username', 'value': 'admin', 'execute': 1}, {'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'password', 'value': 'admin', 'execute': 1}]
+[2019-10-05 16:11:30,678] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-05 16:11:30,698] DEBUG in connectionpool-437: http://127.0.0.1:9000 "POST /user_login/ HTTP/1.1" 200 16
+[2019-10-05 16:11:30,699] DEBUG in selenium_socket-302: 接口测试状态码：200
+[2019-10-05 16:13:30,653] DEBUG in selenium_socket-394: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '3', 'user_id': 1}}
+[2019-10-05 16:13:30,654] DEBUG in selenium_socket-271: 执行的接口测试数据：{'interface_test_id': '3', 'user_id': 1}
+[2019-10-05 16:13:30,656] DEBUG in selenium_socket-289: 接口测试新增数据的id为: 199
+[2019-10-05 16:13:30,664] DEBUG in selenium_socket-299: 查询结果：[{'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'username', 'value': 'admin', 'execute': 1}, {'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'password', 'value': 'admin', 'execute': 1}]
+[2019-10-05 16:13:30,665] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-05 16:13:30,680] DEBUG in connectionpool-437: http://127.0.0.1:9000 "POST /user_login/ HTTP/1.1" 200 16
+[2019-10-05 16:13:30,680] DEBUG in selenium_socket-302: 接口测试状态码：200
+[2019-10-05 16:15:30,653] DEBUG in selenium_socket-394: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '3', 'user_id': 1}}
+[2019-10-05 16:15:30,653] DEBUG in selenium_socket-271: 执行的接口测试数据：{'interface_test_id': '3', 'user_id': 1}
+[2019-10-05 16:15:30,656] DEBUG in selenium_socket-289: 接口测试新增数据的id为: 200
+[2019-10-05 16:15:30,667] DEBUG in selenium_socket-299: 查询结果：[{'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'username', 'value': 'admin', 'execute': 1}, {'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'password', 'value': 'admin', 'execute': 1}]
+[2019-10-05 16:15:30,668] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-05 16:15:30,685] DEBUG in connectionpool-437: http://127.0.0.1:9000 "POST /user_login/ HTTP/1.1" 200 16
+[2019-10-05 16:15:30,686] DEBUG in selenium_socket-302: 接口测试状态码：200
+[2019-10-05 16:17:30,655] DEBUG in selenium_socket-394: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '3', 'user_id': 1}}
+[2019-10-05 16:17:30,655] DEBUG in selenium_socket-271: 执行的接口测试数据：{'interface_test_id': '3', 'user_id': 1}
+[2019-10-05 16:17:30,657] DEBUG in selenium_socket-289: 接口测试新增数据的id为: 201
+[2019-10-05 16:17:30,666] DEBUG in selenium_socket-299: 查询结果：[{'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'username', 'value': 'admin', 'execute': 1}, {'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'password', 'value': 'admin', 'execute': 1}]
+[2019-10-05 16:17:30,667] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-05 16:17:30,685] DEBUG in connectionpool-437: http://127.0.0.1:9000 "POST /user_login/ HTTP/1.1" 200 16
+[2019-10-05 16:17:30,686] DEBUG in selenium_socket-302: 接口测试状态码：200
+[2019-10-05 16:19:30,656] DEBUG in selenium_socket-394: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '3', 'user_id': 1}}
+[2019-10-05 16:19:30,657] DEBUG in selenium_socket-271: 执行的接口测试数据：{'interface_test_id': '3', 'user_id': 1}
+[2019-10-05 16:19:30,658] DEBUG in selenium_socket-289: 接口测试新增数据的id为: 202
+[2019-10-05 16:19:30,663] DEBUG in selenium_socket-299: 查询结果：[{'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'username', 'value': 'admin', 'execute': 1}, {'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'password', 'value': 'admin', 'execute': 1}]
+[2019-10-05 16:19:30,664] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-05 16:19:30,679] DEBUG in connectionpool-437: http://127.0.0.1:9000 "POST /user_login/ HTTP/1.1" 200 16
+[2019-10-05 16:19:30,680] DEBUG in selenium_socket-302: 接口测试状态码：200
+[2019-10-05 16:21:30,655] DEBUG in selenium_socket-394: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '3', 'user_id': 1}}
+[2019-10-05 16:21:30,655] DEBUG in selenium_socket-271: 执行的接口测试数据：{'interface_test_id': '3', 'user_id': 1}
+[2019-10-05 16:21:30,656] DEBUG in selenium_socket-289: 接口测试新增数据的id为: 203
+[2019-10-05 16:21:30,666] DEBUG in selenium_socket-299: 查询结果：[{'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'username', 'value': 'admin', 'execute': 1}, {'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'password', 'value': 'admin', 'execute': 1}]
+[2019-10-05 16:21:30,668] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-05 16:21:30,687] DEBUG in connectionpool-437: http://127.0.0.1:9000 "POST /user_login/ HTTP/1.1" 200 16
+[2019-10-05 16:21:30,688] DEBUG in selenium_socket-302: 接口测试状态码：200
+[2019-10-05 16:23:30,663] DEBUG in selenium_socket-394: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '3', 'user_id': 1}}
+[2019-10-05 16:23:30,663] DEBUG in selenium_socket-271: 执行的接口测试数据：{'interface_test_id': '3', 'user_id': 1}
+[2019-10-05 16:23:30,664] DEBUG in selenium_socket-289: 接口测试新增数据的id为: 204
+[2019-10-05 16:23:30,670] DEBUG in selenium_socket-299: 查询结果：[{'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'username', 'value': 'admin', 'execute': 1}, {'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'password', 'value': 'admin', 'execute': 1}]
+[2019-10-05 16:23:30,671] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-05 16:23:30,688] DEBUG in connectionpool-437: http://127.0.0.1:9000 "POST /user_login/ HTTP/1.1" 200 16
+[2019-10-05 16:23:30,689] DEBUG in selenium_socket-302: 接口测试状态码：200
+[2019-10-05 16:25:30,658] DEBUG in selenium_socket-394: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '3', 'user_id': 1}}
+[2019-10-05 16:25:30,658] DEBUG in selenium_socket-271: 执行的接口测试数据：{'interface_test_id': '3', 'user_id': 1}
+[2019-10-05 16:25:30,659] DEBUG in selenium_socket-289: 接口测试新增数据的id为: 205
+[2019-10-05 16:25:30,664] DEBUG in selenium_socket-299: 查询结果：[{'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'username', 'value': 'admin', 'execute': 1}, {'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'password', 'value': 'admin', 'execute': 1}]
+[2019-10-05 16:25:30,666] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-05 16:25:30,680] DEBUG in connectionpool-437: http://127.0.0.1:9000 "POST /user_login/ HTTP/1.1" 200 16
+[2019-10-05 16:25:30,680] DEBUG in selenium_socket-302: 接口测试状态码：200
+[2019-10-05 16:27:30,662] DEBUG in selenium_socket-394: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '3', 'user_id': 1}}
+[2019-10-05 16:27:30,662] DEBUG in selenium_socket-271: 执行的接口测试数据：{'interface_test_id': '3', 'user_id': 1}
+[2019-10-05 16:27:30,663] DEBUG in selenium_socket-289: 接口测试新增数据的id为: 206
+[2019-10-05 16:27:30,669] DEBUG in selenium_socket-299: 查询结果：[{'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'username', 'value': 'admin', 'execute': 1}, {'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'password', 'value': 'admin', 'execute': 1}]
+[2019-10-05 16:27:30,670] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-05 16:29:30,662] DEBUG in selenium_socket-394: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '3', 'user_id': 1}}
+[2019-10-05 16:29:30,663] DEBUG in selenium_socket-271: 执行的接口测试数据：{'interface_test_id': '3', 'user_id': 1}
+[2019-10-05 16:29:30,664] DEBUG in selenium_socket-289: 接口测试新增数据的id为: 207
+[2019-10-05 16:29:30,669] DEBUG in selenium_socket-299: 查询结果：[{'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'username', 'value': 'admin', 'execute': 1}, {'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'password', 'value': 'admin', 'execute': 1}]
+[2019-10-05 16:29:30,671] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-05 16:29:30,690] DEBUG in connectionpool-437: http://127.0.0.1:9000 "POST /user_login/ HTTP/1.1" 200 16
+[2019-10-05 16:29:30,691] DEBUG in selenium_socket-302: 接口测试状态码：200
+[2019-10-05 16:31:30,651] DEBUG in selenium_socket-394: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '3', 'user_id': 1}}
+[2019-10-05 16:31:30,652] DEBUG in selenium_socket-271: 执行的接口测试数据：{'interface_test_id': '3', 'user_id': 1}
+[2019-10-05 16:31:30,653] DEBUG in selenium_socket-289: 接口测试新增数据的id为: 208
+[2019-10-05 16:31:30,660] DEBUG in selenium_socket-299: 查询结果：[{'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'username', 'value': 'admin', 'execute': 1}, {'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'password', 'value': 'admin', 'execute': 1}]
+[2019-10-05 16:31:30,661] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-05 16:31:30,675] DEBUG in connectionpool-437: http://127.0.0.1:9000 "POST /user_login/ HTTP/1.1" 200 16
+[2019-10-05 16:31:30,676] DEBUG in selenium_socket-302: 接口测试状态码：200
+[2019-10-05 16:33:30,656] DEBUG in selenium_socket-394: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '3', 'user_id': 1}}
+[2019-10-05 16:33:30,656] DEBUG in selenium_socket-271: 执行的接口测试数据：{'interface_test_id': '3', 'user_id': 1}
+[2019-10-05 16:33:30,657] DEBUG in selenium_socket-289: 接口测试新增数据的id为: 209
+[2019-10-05 16:33:30,669] DEBUG in selenium_socket-299: 查询结果：[{'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'username', 'value': 'admin', 'execute': 1}, {'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'password', 'value': 'admin', 'execute': 1}]
+[2019-10-05 16:33:30,672] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-05 16:33:30,691] DEBUG in connectionpool-437: http://127.0.0.1:9000 "POST /user_login/ HTTP/1.1" 200 16
+[2019-10-05 16:33:30,692] DEBUG in selenium_socket-302: 接口测试状态码：200
+[2019-10-05 16:35:30,656] DEBUG in selenium_socket-394: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '3', 'user_id': 1}}
+[2019-10-05 16:35:30,656] DEBUG in selenium_socket-271: 执行的接口测试数据：{'interface_test_id': '3', 'user_id': 1}
+[2019-10-05 16:35:30,657] DEBUG in selenium_socket-289: 接口测试新增数据的id为: 210
+[2019-10-05 16:35:30,663] DEBUG in selenium_socket-299: 查询结果：[{'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'username', 'value': 'admin', 'execute': 1}, {'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'password', 'value': 'admin', 'execute': 1}]
+[2019-10-05 16:35:30,664] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-05 16:35:30,679] DEBUG in connectionpool-437: http://127.0.0.1:9000 "POST /user_login/ HTTP/1.1" 200 16
+[2019-10-05 16:35:30,680] DEBUG in selenium_socket-302: 接口测试状态码：200
+[2019-10-05 16:37:30,658] DEBUG in selenium_socket-394: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '3', 'user_id': 1}}
+[2019-10-05 16:37:30,658] DEBUG in selenium_socket-271: 执行的接口测试数据：{'interface_test_id': '3', 'user_id': 1}
+[2019-10-05 16:37:30,659] DEBUG in selenium_socket-289: 接口测试新增数据的id为: 211
+[2019-10-05 16:37:30,665] DEBUG in selenium_socket-299: 查询结果：[{'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'username', 'value': 'admin', 'execute': 1}, {'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'password', 'value': 'admin', 'execute': 1}]
+[2019-10-05 16:37:30,666] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-05 16:37:30,685] DEBUG in connectionpool-437: http://127.0.0.1:9000 "POST /user_login/ HTTP/1.1" 200 16
+[2019-10-05 16:37:30,686] DEBUG in selenium_socket-302: 接口测试状态码：200
+[2019-10-05 16:39:30,660] DEBUG in selenium_socket-394: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '3', 'user_id': 1}}
+[2019-10-05 16:39:30,661] DEBUG in selenium_socket-271: 执行的接口测试数据：{'interface_test_id': '3', 'user_id': 1}
+[2019-10-05 16:39:30,661] DEBUG in selenium_socket-289: 接口测试新增数据的id为: 212
+[2019-10-05 16:39:30,669] DEBUG in selenium_socket-299: 查询结果：[{'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'username', 'value': 'admin', 'execute': 1}, {'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'password', 'value': 'admin', 'execute': 1}]
+[2019-10-05 16:39:30,671] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-05 16:39:30,685] DEBUG in connectionpool-437: http://127.0.0.1:9000 "POST /user_login/ HTTP/1.1" 200 16
+[2019-10-05 16:39:30,687] DEBUG in selenium_socket-302: 接口测试状态码：200
+[2019-10-05 16:41:30,661] DEBUG in selenium_socket-394: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '3', 'user_id': 1}}
+[2019-10-05 16:41:30,661] DEBUG in selenium_socket-271: 执行的接口测试数据：{'interface_test_id': '3', 'user_id': 1}
+[2019-10-05 16:41:30,662] DEBUG in selenium_socket-289: 接口测试新增数据的id为: 213
+[2019-10-05 16:41:30,674] DEBUG in selenium_socket-299: 查询结果：[{'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'username', 'value': 'admin', 'execute': 1}, {'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'password', 'value': 'admin', 'execute': 1}]
+[2019-10-05 16:41:30,675] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-05 16:41:30,679] DEBUG in connectionpool-437: http://127.0.0.1:9000 "POST /user_login/ HTTP/1.1" 200 16
+[2019-10-05 16:41:30,680] DEBUG in selenium_socket-302: 接口测试状态码：200
+[2019-10-05 16:43:30,651] DEBUG in selenium_socket-394: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '3', 'user_id': 1}}
+[2019-10-05 16:43:30,651] DEBUG in selenium_socket-271: 执行的接口测试数据：{'interface_test_id': '3', 'user_id': 1}
+[2019-10-05 16:43:30,652] DEBUG in selenium_socket-289: 接口测试新增数据的id为: 214
+[2019-10-05 16:43:30,660] DEBUG in selenium_socket-299: 查询结果：[{'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'username', 'value': 'admin', 'execute': 1}, {'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'password', 'value': 'admin', 'execute': 1}]
+[2019-10-05 16:43:30,662] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-05 16:43:30,679] DEBUG in connectionpool-437: http://127.0.0.1:9000 "POST /user_login/ HTTP/1.1" 200 16
+[2019-10-05 16:43:30,679] DEBUG in selenium_socket-302: 接口测试状态码：200
+[2019-10-05 16:45:30,651] DEBUG in selenium_socket-394: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '3', 'user_id': 1}}
+[2019-10-05 16:45:30,651] DEBUG in selenium_socket-271: 执行的接口测试数据：{'interface_test_id': '3', 'user_id': 1}
+[2019-10-05 16:45:30,652] DEBUG in selenium_socket-289: 接口测试新增数据的id为: 215
+[2019-10-05 16:45:30,660] DEBUG in selenium_socket-299: 查询结果：[{'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'username', 'value': 'admin', 'execute': 1}, {'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'password', 'value': 'admin', 'execute': 1}]
+[2019-10-05 16:45:30,661] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-05 16:45:30,668] DEBUG in connectionpool-437: http://127.0.0.1:9000 "POST /user_login/ HTTP/1.1" 200 16
+[2019-10-05 16:45:30,668] DEBUG in selenium_socket-302: 接口测试状态码：200
+[2019-10-05 16:47:30,662] DEBUG in selenium_socket-394: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '3', 'user_id': 1}}
+[2019-10-05 16:47:30,663] DEBUG in selenium_socket-271: 执行的接口测试数据：{'interface_test_id': '3', 'user_id': 1}
+[2019-10-05 16:47:30,663] DEBUG in selenium_socket-289: 接口测试新增数据的id为: 216
+[2019-10-05 16:47:30,669] DEBUG in selenium_socket-299: 查询结果：[{'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'username', 'value': 'admin', 'execute': 1}, {'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'password', 'value': 'admin', 'execute': 1}]
+[2019-10-05 16:47:30,670] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-05 16:47:30,685] DEBUG in connectionpool-437: http://127.0.0.1:9000 "POST /user_login/ HTTP/1.1" 200 16
+[2019-10-05 16:47:30,686] DEBUG in selenium_socket-302: 接口测试状态码：200
+[2019-10-05 16:49:30,650] DEBUG in selenium_socket-394: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '3', 'user_id': 1}}
+[2019-10-05 16:49:30,651] DEBUG in selenium_socket-271: 执行的接口测试数据：{'interface_test_id': '3', 'user_id': 1}
+[2019-10-05 16:49:30,652] DEBUG in selenium_socket-289: 接口测试新增数据的id为: 217
+[2019-10-05 16:49:30,656] DEBUG in selenium_socket-299: 查询结果：[{'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'username', 'value': 'admin', 'execute': 1}, {'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'password', 'value': 'admin', 'execute': 1}]
+[2019-10-05 16:49:30,657] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-05 16:49:30,671] DEBUG in connectionpool-437: http://127.0.0.1:9000 "POST /user_login/ HTTP/1.1" 200 16
+[2019-10-05 16:49:30,672] DEBUG in selenium_socket-302: 接口测试状态码：200
+[2019-10-05 16:51:30,649] DEBUG in selenium_socket-394: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '3', 'user_id': 1}}
+[2019-10-05 16:51:30,650] DEBUG in selenium_socket-271: 执行的接口测试数据：{'interface_test_id': '3', 'user_id': 1}
+[2019-10-05 16:51:30,651] DEBUG in selenium_socket-289: 接口测试新增数据的id为: 218
+[2019-10-05 16:51:30,658] DEBUG in selenium_socket-299: 查询结果：[{'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'username', 'value': 'admin', 'execute': 1}, {'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'password', 'value': 'admin', 'execute': 1}]
+[2019-10-05 16:51:30,659] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-05 16:51:30,676] DEBUG in connectionpool-437: http://127.0.0.1:9000 "POST /user_login/ HTTP/1.1" 200 16
+[2019-10-05 16:51:30,677] DEBUG in selenium_socket-302: 接口测试状态码：200
+[2019-10-05 16:53:30,651] DEBUG in selenium_socket-394: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '3', 'user_id': 1}}
+[2019-10-05 16:53:30,651] DEBUG in selenium_socket-271: 执行的接口测试数据：{'interface_test_id': '3', 'user_id': 1}
+[2019-10-05 16:53:30,652] DEBUG in selenium_socket-289: 接口测试新增数据的id为: 219
+[2019-10-05 16:53:30,684] DEBUG in selenium_socket-299: 查询结果：[{'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'username', 'value': 'admin', 'execute': 1}, {'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'password', 'value': 'admin', 'execute': 1}]
+[2019-10-05 16:53:30,685] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-05 16:53:30,698] DEBUG in connectionpool-437: http://127.0.0.1:9000 "POST /user_login/ HTTP/1.1" 200 16
+[2019-10-05 16:53:30,699] DEBUG in selenium_socket-302: 接口测试状态码：200
+[2019-10-05 16:55:30,650] DEBUG in selenium_socket-394: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '3', 'user_id': 1}}
+[2019-10-05 16:55:30,651] DEBUG in selenium_socket-271: 执行的接口测试数据：{'interface_test_id': '3', 'user_id': 1}
+[2019-10-05 16:55:30,651] DEBUG in selenium_socket-289: 接口测试新增数据的id为: 220
+[2019-10-05 16:55:30,659] DEBUG in selenium_socket-299: 查询结果：[{'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'username', 'value': 'admin', 'execute': 1}, {'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'password', 'value': 'admin', 'execute': 1}]
+[2019-10-05 16:55:30,660] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-05 16:55:30,674] DEBUG in connectionpool-437: http://127.0.0.1:9000 "POST /user_login/ HTTP/1.1" 200 16
+[2019-10-05 16:55:30,675] DEBUG in selenium_socket-302: 接口测试状态码：200
+[2019-10-05 16:57:30,649] DEBUG in selenium_socket-394: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '3', 'user_id': 1}}
+[2019-10-05 16:57:30,650] DEBUG in selenium_socket-271: 执行的接口测试数据：{'interface_test_id': '3', 'user_id': 1}
+[2019-10-05 16:57:30,651] DEBUG in selenium_socket-289: 接口测试新增数据的id为: 221
+[2019-10-05 16:57:30,657] DEBUG in selenium_socket-299: 查询结果：[{'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'username', 'value': 'admin', 'execute': 1}, {'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'password', 'value': 'admin', 'execute': 1}]
+[2019-10-05 16:57:30,657] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-05 16:57:30,663] DEBUG in connectionpool-437: http://127.0.0.1:9000 "POST /user_login/ HTTP/1.1" 200 16
+[2019-10-05 16:57:30,663] DEBUG in selenium_socket-302: 接口测试状态码：200
+[2019-10-05 16:59:30,650] DEBUG in selenium_socket-394: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '3', 'user_id': 1}}
+[2019-10-05 16:59:30,650] DEBUG in selenium_socket-271: 执行的接口测试数据：{'interface_test_id': '3', 'user_id': 1}
+[2019-10-05 16:59:30,651] DEBUG in selenium_socket-289: 接口测试新增数据的id为: 222
+[2019-10-05 16:59:30,657] DEBUG in selenium_socket-299: 查询结果：[{'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'username', 'value': 'admin', 'execute': 1}, {'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'password', 'value': 'admin', 'execute': 1}]
+[2019-10-05 16:59:30,658] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-05 16:59:30,671] DEBUG in connectionpool-437: http://127.0.0.1:9000 "POST /user_login/ HTTP/1.1" 200 16
+[2019-10-05 16:59:30,672] DEBUG in selenium_socket-302: 接口测试状态码：200
+[2019-10-05 17:01:30,650] DEBUG in selenium_socket-394: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '3', 'user_id': 1}}
+[2019-10-05 17:01:30,651] DEBUG in selenium_socket-271: 执行的接口测试数据：{'interface_test_id': '3', 'user_id': 1}
+[2019-10-05 17:01:30,651] DEBUG in selenium_socket-289: 接口测试新增数据的id为: 223
+[2019-10-05 17:01:30,658] DEBUG in selenium_socket-299: 查询结果：[{'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'username', 'value': 'admin', 'execute': 1}, {'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'password', 'value': 'admin', 'execute': 1}]
+[2019-10-05 17:01:30,659] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-05 17:01:30,667] DEBUG in connectionpool-437: http://127.0.0.1:9000 "POST /user_login/ HTTP/1.1" 200 16
+[2019-10-05 17:01:30,668] DEBUG in selenium_socket-302: 接口测试状态码：200
+[2019-10-05 17:03:30,651] DEBUG in selenium_socket-394: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '3', 'user_id': 1}}
+[2019-10-05 17:03:30,651] DEBUG in selenium_socket-271: 执行的接口测试数据：{'interface_test_id': '3', 'user_id': 1}
+[2019-10-05 17:03:30,652] DEBUG in selenium_socket-289: 接口测试新增数据的id为: 224
+[2019-10-05 17:03:30,659] DEBUG in selenium_socket-299: 查询结果：[{'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'username', 'value': 'admin', 'execute': 1}, {'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'password', 'value': 'admin', 'execute': 1}]
+[2019-10-05 17:03:30,660] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-05 17:03:30,678] DEBUG in connectionpool-437: http://127.0.0.1:9000 "POST /user_login/ HTTP/1.1" 200 16
+[2019-10-05 17:03:30,679] DEBUG in selenium_socket-302: 接口测试状态码：200
+[2019-10-05 17:05:30,663] DEBUG in selenium_socket-394: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '3', 'user_id': 1}}
+[2019-10-05 17:05:30,664] DEBUG in selenium_socket-271: 执行的接口测试数据：{'interface_test_id': '3', 'user_id': 1}
+[2019-10-05 17:05:30,666] DEBUG in selenium_socket-289: 接口测试新增数据的id为: 225
+[2019-10-05 17:05:30,685] DEBUG in selenium_socket-299: 查询结果：[{'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'username', 'value': 'admin', 'execute': 1}, {'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'password', 'value': 'admin', 'execute': 1}]
+[2019-10-05 17:05:30,686] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-05 17:05:31,086] DEBUG in connectionpool-437: http://127.0.0.1:9000 "POST /user_login/ HTTP/1.1" 200 16
+[2019-10-05 17:05:31,087] DEBUG in selenium_socket-302: 接口测试状态码：200
+[2019-10-05 17:05:41,966] INFO in selenium_socket-405: ('127.0.0.1', 59623) 断开连接--
+[2019-10-05 17:05:41,967] INFO in selenium_socket-405: ('127.0.0.1', 59620) 断开连接--
+[2019-10-05 17:05:42,600] INFO in selenium_socket-383: ('127.0.0.1', 62029) 连接--
+[2019-10-05 17:05:43,175] INFO in selenium_socket-383: ('127.0.0.1', 62032) 连接--
+[2019-10-05 17:08:24,551] INFO in selenium_socket-405: ('127.0.0.1', 62032) 断开连接--
+[2019-10-05 17:08:25,180] INFO in selenium_socket-383: ('127.0.0.1', 62148) 连接--
+[2019-10-05 17:35:30,687] DEBUG in selenium_socket-394: 接收的数据: {'opt': 'execute_interface_test', 'data': {'interface_test_id': '3', 'user_id': 1}}
+[2019-10-05 17:35:30,688] DEBUG in selenium_socket-271: 执行的接口测试数据：{'interface_test_id': '3', 'user_id': 1}
+[2019-10-05 17:35:30,690] DEBUG in selenium_socket-289: 接口测试新增数据的id为: 226
+[2019-10-05 17:35:30,702] DEBUG in selenium_socket-299: 查询结果：[{'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'username', 'value': 'admin', 'execute': 1}, {'request_type': 'POST', 'request_url': 'http://127.0.0.1:9000/user_login/', 'params_type': 'request', 'key': 'password', 'value': 'admin', 'execute': 1}]
+[2019-10-05 17:35:30,704] DEBUG in connectionpool-225: Starting new HTTP connection (1): 127.0.0.1:9000
+[2019-10-05 17:35:30,761] DEBUG in connectionpool-437: http://127.0.0.1:9000 "POST /user_login/ HTTP/1.1" 200 16
+[2019-10-05 17:35:30,763] DEBUG in selenium_socket-302: 接口测试状态码：200
