@@ -9,6 +9,7 @@ from lib.global_func import (
     get_db,
     send_to_selenium,
     get_logger,
+    send_to_redis,
 )
 from lib.myrequest import MyRequest
 from lib.paging import Paging
@@ -63,14 +64,21 @@ def execute_interface_test(interface_test_id=None):
     user_obj = db.query(Userinfo).filter(Userinfo.id == user_id).first()
     logger.debug("执行内容：%s, 执行的用户id：%s, 执行的接口测试id：%s" % ('interface_test', user_obj.id, interface_test_id))
 
-    try:
-        send_to_selenium({'opt': 'execute_interface_test', 'data': {'interface_test_id': interface_test_id, 'user_id': session.get('user_id')}})
-    except ConnectionResetError as error:
-        # 让其重新连接，但不再发数据
-        send_to_selenium({}, conn_flag=True)
-        # 告诉前端这次请求失败
-        logger.warning('连接selenium失败. %s' % error)
+    data = {'opt': 'execute_interface_test', 'data': {'interface_test_id': interface_test_id, 'user_id': session.get('user_id')}}
+
+    ret = send_to_redis(data)
+    if ret != 1:
+        logger.warning('像redis添加数据失败.')
         return {'error': '执行失败! 请稍后重试.'}, 500
+
+    # try:
+    #     send_to_selenium(data)
+    # except ConnectionResetError as error:
+    #     # 让其重新连接，但不再发数据
+    #     send_to_selenium({}, conn_flag=True)
+    #     # 告诉前端这次请求失败
+    #     logger.warning('连接selenium失败. %s' % error)
+    #     return {'error': '执行失败! 请稍后重试.'}, 500
 
     return {}, 202
 

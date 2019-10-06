@@ -94,8 +94,6 @@ if __name__ == '__main__':
 
     logger = main_app.logger
     try:
-        # 通过socket连接Selenium
-        ConnectSelenium()
         ConnectCrontab()
     except ConnectionRefusedError as e:
         logger.error(e)

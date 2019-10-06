@@ -4,7 +4,7 @@ from lib.flask_form import UseCaseForm
 from sqlalchemy.sql import or_
 
 from lib.models import (Use_case_step, Userinfo, Use_case, Step_detail, Use_case_result, Result_step, Project)
-from lib.global_func import (get_db, save_data_to_db, del_db_data, send_to_selenium, get_logger)
+from lib.global_func import (get_db, save_data_to_db, del_db_data, send_to_selenium, get_logger, send_to_redis)
 from lib.use_case_func import (check_public_uc_name, check_general_uc_name, add_uc_data)
 
 
@@ -209,14 +209,22 @@ def execute_use_case():
 
     logger.debug("执行内容：%s, 执行的用户id：%s, 执行的用例id：%s" % ('use_case_test', user_obj.id, to_execute_uc_id))
 
-    # 要执行的用例，及各种数据发送至selenium端，让其执行用例(web端和执行端拆开)
-    try:
-        send_to_selenium({'opt': 'execute_use_case', 'data': {'use_case_id': to_execute_uc_id, 'user_id': user_obj.id, 'send_mail': user_obj.send_mail}})
-    except ConnectionResetError:
-        # 让其重新连接，但不再发数据
-        send_to_selenium({}, conn_flag=True)
-        # 告诉前端这次请求失败
+    data = {'opt': 'execute_use_case', 'data': {'use_case_id': to_execute_uc_id, 'user_id': user_obj.id, 'send_mail': user_obj.send_mail}}
+
+    ret = send_to_redis(data)
+    if ret != 1:
+        logger.warning('像redis添加数据失败.')
         ret['flag'] = 1
         ret['error_info'] = "执行失败! 请稍后重试."
+
+    # # 要执行的用例，及各种数据发送至selenium端，让其执行用例(web端和执行端拆开)
+    # try:
+    #     send_to_selenium()
+    # except ConnectionResetError:
+    #     # 让其重新连接，但不再发数据
+    #     send_to_selenium({}, conn_flag=True)
+    #     # 告诉前端这次请求失败
+    #     ret['flag'] = 1
+    #     ret['error_info'] = "执行失败! 请稍后重试."
 
     return jsonify(ret)

@@ -4,6 +4,8 @@ import struct
 from lib.log import Log
 from lib.connect_selenim_socket import ConnectSelenium
 from lib.connect_mysql import ConnectMysql
+from lib.connect_redis import ConnectRedis
+from conf.settings import execute_data_key_name
 
 
 def get_logger():
@@ -32,6 +34,13 @@ def send_to_selenium(data, conn_flag=False):
         send_content(sk, data)
     else:
         ConnectSelenium(conn_flag)
+
+
+def send_to_redis(data):
+    obj = ConnectRedis()
+    cursor = obj.get_cursor()
+    ret = cursor.lpush(execute_data_key_name, json.dumps(data))
+    return ret
 
 
 # 获取数据库的操作光标

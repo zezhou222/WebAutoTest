@@ -3,6 +3,7 @@ from pytz import timezone
 from pymongo import MongoClient
 from apscheduler.schedulers.background import BackgroundScheduler
 from apscheduler.jobstores.mongodb import MongoDBJobStore
+from apscheduler.jobstores.redis import RedisJobStore
 from apscheduler.executors.pool import ThreadPoolExecutor
 # from apscheduler.triggers.combining import AndTrigger
 from apscheduler.triggers.interval import IntervalTrigger
@@ -14,12 +15,15 @@ from conf.settings import (
     mongodb_port,
     mongodb_database,
     mongodb_job_table,
+    redis_host,
+    redis_port,
+    redis_db,
+    redis_password
 )
 from lib.global_func import (
-    send_to_selenium,
-    # commit_data,
     send_content,
-    get_logger
+    get_logger,
+    send_to_redis
 )
 
 logger = get_logger()
@@ -41,6 +45,9 @@ class MyScheduler(object):
             client = MongoClient(host=mongodb_host, port=mongodb_port, document_class=dict)
             # 做关联
             m_job = MongoDBJobStore(database=mongodb_database, client=client, collection=mongodb_job_table)
+            
+            # Redis存储
+            # redis_job = RedisJobStore(host=redis_host, port=redis_port, db=redis_db, password=redis_password)
 
             # 初始信息
             jobstores = {
@@ -68,18 +75,21 @@ class MyScheduler(object):
         test_data_id = data.get('test_data_id')
         test_type = data.get('test_type')
         user_id = data.get('user_id')
-
+        
+        # 调用的方法
+        func = send_to_redis
+        
         args = [{'opt': 'execute_' + test_type, 'data': {test_type + '_id': test_data_id, 'user_id': user_id}}]
 
         if task_type == 'interval_task':
             t = execute_time.split('-')
-            params = {'trigger': IntervalTrigger(**{t[0]: int(t[1])}), 'id': task_id, 'func': send_to_selenium, 'args': args}
+            params = {'trigger': IntervalTrigger(**{t[0]: int(t[1])}), 'id': task_id, 'func': func, 'args': args}
         elif task_type == 'once_task':
-            params = {'trigger': DateTrigger(**{'run_date': execute_time}), 'id': task_id, 'func': send_to_selenium, 'args': args}
+            params = {'trigger': DateTrigger(**{'run_date': execute_time}), 'id': task_id, 'func': func, 'args': args}
         elif task_type == 'crontab_task':
             t = execute_time.split(' ')
             dic = {'minute': t[0], 'hour': t[1], 'day': t[2], 'month': t[3], 'week': t[4]}
-            params = {'trigger': CronTrigger(**dic), 'id': task_id, 'func': send_to_selenium, 'args': args}
+            params = {'trigger': CronTrigger(**dic), 'id': task_id, 'func': func, 'args': args}
 
         return params
 

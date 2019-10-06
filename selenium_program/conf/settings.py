@@ -11,6 +11,14 @@ mysql_pwd = 'wzz123'
 connect_to_db = 'auto_test'
 db_charset = 'utf8'
 
+# 获取数据
+# Redis数据库的连接配置
+redis_host = '192.168.1.100'
+redis_port = 6379
+redis_db = 1
+redis_password = 'wzz123'
+execute_data_key_name = 'execute_data'
+
 # selenium执行开启的线程数(最大：CPU个数 * 5)
 # 开几个线程也表示了能同时执行几个用例
 thread_count = 5

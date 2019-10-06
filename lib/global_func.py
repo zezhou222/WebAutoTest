@@ -7,8 +7,10 @@ from uuid import uuid4
 
 from sqlalchemy.orm import sessionmaker
 from create_table import engine
+from lib.connect_redis import ConnectRedis
 from lib.connect_selenim_socket import ConnectSelenium
 from lib.connect_crontab_socket import ConnectCrontab
+from settings import execute_data_key_name
 
 
 # 生成MD5的密码
@@ -94,6 +96,13 @@ def send_to_crontab(data, conn_flag=False):
         # sk.send(json.dumps(data).encode('utf-8'))
     else:
         ConnectCrontab(conn_flag)
+
+
+def send_to_redis(data):
+    obj = ConnectRedis()
+    cursor = obj.get_cursor()
+    ret = cursor.lpush(execute_data_key_name, json.dumps(data))
+    return ret
 
 
 def get_sk(params_type='crontab'):

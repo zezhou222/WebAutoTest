@@ -1,5 +1,5 @@
 import os
-from redis import Redis
+import socketserver
 import json
 import struct
 from datetime import datetime
@@ -8,23 +8,10 @@ import time
 import requests
 from jinja2 import Template
 from concurrent.futures import ThreadPoolExecutor
-from lib.global_func import (get_cursor, commit_data, get_redis_cursor)
+from lib.global_func import (get_cursor, commit_data)
 from core.selenium_operate import SeleniumOperate
-from conf.settings import (
-    thread_count,
-    step_result_template_path,
-    sender,
-    sender_username,
-    sender_password,
-    screen_shot_path,
-    inteface_test_template_path,
-    redis_host,
-    redis_port,
-    redis_db,
-    redis_password,
-    execute_data_key_name
-)
-
+from conf.settings import (thread_count, step_result_template_path, sender, sender_username, sender_password,
+                           screen_shot_path, inteface_test_template_path)
 from lib.log import get_logger
 from lib.send_mail import MyEmail
 
@@ -35,7 +22,7 @@ thread = ThreadPoolExecutor(thread_count)
 logger = get_logger()
 
 
-class SeleniumServer(object):
+class SeleniumServer(socketserver.BaseRequestHandler):
 
     def execute_public_use_case(self, public_use_case_name, execute, uc_result_id):
         # 判断这个公共用例是否执行
@@ -384,18 +371,26 @@ class SeleniumServer(object):
         # print(msg.decode('utf-8'))
         return json.loads(msg.decode('utf-8'))
 
-    def start(self):
-        redis_conn = get_redis_cursor()
+    # 客户端连接成功会先到这个方法
+    def handle(self):
+        conn = self.request  # 客户端的通道
+        addr = self.client_address  # 客户端的地址
         # 实例selenium对象，执行实例方法需要调用，为了拆分文件
         self.selenium_obj = SeleniumOperate()
         # 数据库的操作句柄
         self.cursor = get_cursor()
 
+        logger.info('%s %s' % (addr, '连接--'))
         while 1:
             # 接收内容
-            content = redis_conn.brpop(execute_data_key_name, timeout=0)[1]
-            
-            content = json.loads(content)
+            try:
+                content = self.recv_content(conn)
+            except ConnectionResetError:
+                break
+                
+            if content == b'':
+                break
+
             logger.debug('接收的数据: %s' % content)
             # 执行操作方法
             opt = content.get('opt')
@@ -407,10 +402,15 @@ class SeleniumServer(object):
             else:
                 break
 
+        logger.info("%s %s" % (addr, '断开连接--'))
+
+        conn.close()
+
 
 def run():
     print('server start.')
-    SeleniumServer().start()
+    server = socketserver.ThreadingTCPServer(('0.0.0.0', 9001), SeleniumServer)
+    server.serve_forever()
 
 
 if __name__ == '__main__':

@@ -2,7 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="360ac1f5-6e4e-4126-9e78-3ee009677907" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../doc/项目的启动流程.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../doc/项目的启动流程.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/connect_redis.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lib/connect_redis.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../selenium_program/core/selenium_socket(socketserver).py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../selenium_program/lib/connect_redis.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Blueprint/interface_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Blueprint/interface_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Blueprint/test_case.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Blueprint/test_case.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/conf/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/myscheduler.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/myscheduler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/global_func.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/global_func.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/crontab_log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/temp/crontab_log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../doc/项目的设计.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../doc/项目的设计.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lib/global_func.py" beforeDir="false" afterPath="$PROJECT_DIR$/../lib/global_func.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../run_web.py" beforeDir="false" afterPath="$PROJECT_DIR$/../run_web.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../selenium_program/conf/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/../selenium_program/conf/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../selenium_program/core/selenium_socket.py" beforeDir="false" afterPath="$PROJECT_DIR$/../selenium_program/core/selenium_socket.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../selenium_program/lib/global_func.py" beforeDir="false" afterPath="$PROJECT_DIR$/../selenium_program/lib/global_func.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../selenium_program/temp/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../selenium_program/temp/log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/../settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../temp/web_log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../temp/web_log.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -11,48 +30,50 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/crontab_program$run_crontab.coverage" NAME="run_crontab Coverage Results" MODIFIED="1570259676131" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/crontab_program$run_crontab.coverage" NAME="run_crontab Coverage Results" MODIFIED="1570367960094" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/crontab_program$connect_redis.coverage" NAME="connect_redis Coverage Results" MODIFIED="1570363364096" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lib" />
     <SUITE FILE_PATH="coverage/crontab_program$connect_selenim_socket.coverage" NAME="connect_selenim_socket Coverage Results" MODIFIED="1570012527396" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lib" />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="1631345291">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
+          <entry key="project.closed" value="4" />
           <entry key="project.open.time.1" value="2" />
+          <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.3" value="2" />
-          <entry key="project.opened" value="4" />
+          <entry key="project.opened" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="29" />
-          <entry key="txt" value="3" />
+          <entry key="py" value="33" />
+          <entry key="txt" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="PLAIN_TEXT" value="3" />
-          <entry key="Python" value="29" />
+          <entry key="PLAIN_TEXT" value="4" />
+          <entry key="Python" value="33" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="10" />
-          <entry key="py" value="3444" />
+          <entry key="py" value="4014" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="10" />
-          <entry key="Python" value="3444" />
+          <entry key="Python" value="4014" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/run_crontab.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="135">
@@ -64,8 +85,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/crontab_socket.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-112">
-              <caret line="46" column="12" selection-start-line="46" selection-start-column="12" selection-end-line="46" selection-end-column="12" />
+            <state relative-caret-position="-289">
+              <caret line="36" column="40" lean-forward="true" selection-start-line="36" selection-start-column="40" selection-end-line="36" selection-end-column="40" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -76,25 +97,24 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/myscheduler.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-980">
-              <caret line="77" column="82" selection-start-line="77" selection-start-column="82" selection-end-line="77" selection-end-column="82" />
+            <state relative-caret-position="286">
+              <caret line="51" column="18" lean-forward="true" selection-start-line="51" selection-start-column="18" selection-end-line="51" selection-end-column="18" />
               <folding>
                 <element signature="e#0#53#0" expanded="true" />
-                <marker date="1570266504020" expanded="true" signature="778:779" ph="..." />
-                <marker date="1570266504020" expanded="true" signature="1913:2975" ph="..." />
-                <marker date="1570266504020" expanded="true" signature="4360:4823" ph="..." />
+                <marker date="1570367958934" expanded="true" signature="875:876" ph="..." />
+                <marker date="1570367958934" expanded="true" signature="2157:3245" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/connect_mysql.py">
+        <entry file="file://$PROJECT_DIR$/lib/connect_redis.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-54">
-              <caret line="15" column="41" lean-forward="true" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
+            <state relative-caret-position="200">
+              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
               <folding>
-                <element signature="e#0#14#0" expanded="true" />
+                <element signature="e#0#23#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -103,11 +123,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/global_func.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="281">
-              <caret line="31" column="30" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="30" />
+            <state relative-caret-position="461">
+              <caret line="41" column="63" selection-start-line="41" selection-start-column="63" selection-end-line="41" selection-end-column="63" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
-                <marker date="1570101466184" expanded="true" signature="168:173" ph="..." />
+                <marker date="1570367599603" expanded="true" signature="259:264" ph="..." />
+                <marker date="1570367599603" expanded="true" signature="857:994" ph="..." />
               </folding>
             </state>
           </provider>
@@ -137,11 +158,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/conf/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="646">
-              <caret line="27" column="19" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
+            <state relative-caret-position="324">
+              <caret line="24" column="38" selection-start-line="24" selection-start-column="38" selection-end-line="24" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -162,9 +183,11 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/run_crontab.py" />
-        <option value="$PROJECT_DIR$/conf/settings.py" />
         <option value="$PROJECT_DIR$/lib/connect_selenim_socket.py" />
         <option value="$PROJECT_DIR$/core/crontab_socket.py" />
+        <option value="$PROJECT_DIR$/temp/crontab_log.txt" />
+        <option value="$PROJECT_DIR$/lib/connect_redis.py" />
+        <option value="$PROJECT_DIR$/conf/settings.py" />
         <option value="$PROJECT_DIR$/lib/global_func.py" />
         <option value="$PROJECT_DIR$/core/myscheduler.py" />
       </list>
@@ -176,7 +199,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="565" />
     <option name="y" value="55" />
     <option name="width" value="1160" />
@@ -188,6 +211,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -219,7 +243,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -248,6 +271,28 @@
     </option>
   </component>
   <component name="RunManager" selected="Python.run_crontab">
+    <configuration name="connect_redis" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="crontab_program" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/lib" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lib/connect_redis.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="connect_selenim_socket" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="crontab_program" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -295,10 +340,12 @@
     <list>
       <item itemvalue="Python.connect_selenim_socket" />
       <item itemvalue="Python.run_crontab" />
+      <item itemvalue="Python.connect_redis" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.run_crontab" />
+        <item itemvalue="Python.connect_redis" />
         <item itemvalue="Python.connect_selenim_socket" />
       </list>
     </recent_temporary>
@@ -317,14 +364,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49895614" visible="true" weight="0.117962465" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49895614" visible="true" weight="0.17091152" />
       <window_info id="Structure" order="1" sideWeight="0.50104386" side_tool="true" weight="0.117962465" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.24229075" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.39353892" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -377,40 +424,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/temp/crontab_log.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-35503" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/requirements.txt">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/log.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="702">
-          <caret line="31" column="23" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/connect_selenim_socket.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="918">
-          <caret line="35" selection-start-line="35" selection-end-line="35" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/run_crontab.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../autotest_crontab_env/Lib/site-packages/apscheduler/job.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -454,19 +469,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/crontab_socket.py">
+    <entry file="file://$PROJECT_DIR$/temp/crontab_log.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/log.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-112">
-          <caret line="46" column="12" selection-start-line="46" selection-start-column="12" selection-end-line="46" selection-end-column="12" />
+        <state relative-caret-position="702">
+          <caret line="31" column="23" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="23" />
           <folding>
-            <element signature="e#0#19#0" expanded="true" />
+            <element signature="e#0#14#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/connect_selenim_socket.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="918">
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../autotest_crontab_env/Lib/site-packages/apscheduler/jobstores/redis.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="11" column="28" lean-forward="true" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/connect_mysql.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-54">
+        <state relative-caret-position="405">
           <caret line="15" column="41" lean-forward="true" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
@@ -474,34 +509,61 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/conf/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="24" column="38" selection-start-line="24" selection-start-column="38" selection-end-line="24" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/lib/global_func.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="31" column="30" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="30" />
+        <state relative-caret-position="461">
+          <caret line="41" column="63" selection-start-line="41" selection-start-column="63" selection-end-line="41" selection-end-column="63" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
-            <marker date="1570101466184" expanded="true" signature="168:173" ph="..." />
+            <marker date="1570367599603" expanded="true" signature="259:264" ph="..." />
+            <marker date="1570367599603" expanded="true" signature="857:994" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/connect_redis.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/crontab_socket.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-289">
+          <caret line="36" column="40" lean-forward="true" selection-start-line="36" selection-start-column="40" selection-end-line="36" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/core/myscheduler.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-980">
-          <caret line="77" column="82" selection-start-line="77" selection-start-column="82" selection-end-line="77" selection-end-column="82" />
+        <state relative-caret-position="286">
+          <caret line="51" column="18" lean-forward="true" selection-start-line="51" selection-start-column="18" selection-end-line="51" selection-end-column="18" />
           <folding>
             <element signature="e#0#53#0" expanded="true" />
-            <marker date="1570266504020" expanded="true" signature="778:779" ph="..." />
-            <marker date="1570266504020" expanded="true" signature="1913:2975" ph="..." />
-            <marker date="1570266504020" expanded="true" signature="4360:4823" ph="..." />
+            <marker date="1570367958934" expanded="true" signature="875:876" ph="..." />
+            <marker date="1570367958934" expanded="true" signature="2157:3245" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/conf/settings.py">
+    <entry file="file://$PROJECT_DIR$/run_crontab.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="27" column="19" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
+        <state relative-caret-position="135">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>

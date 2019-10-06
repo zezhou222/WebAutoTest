@@ -17,6 +17,13 @@ mongodb_port = 27017
 mongodb_database = 'test'
 mongodb_job_table = 'jobs'
 
+# Redis数据库的连接配置
+redis_host = '192.168.1.100'
+redis_port = 6379
+redis_db = 1
+redis_password = 'wzz123'
+execute_data_key_name = 'execute_data'
+
 # selenium的socket的ip和端口
 selenium_sk_ip = '127.0.0.1'
 selenium_sk_port = 9001

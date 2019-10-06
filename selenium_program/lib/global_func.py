@@ -3,12 +3,17 @@ import hashlib
 from uuid import uuid4
 from aip import AipOcr
 from lib.connect_mysql import ConnectMysql
+from lib.connect_redis import ConnectRedis
 
 
-# 获取数据库的操作光标
+# 获取mysql数据库的操作光标
 def get_cursor():
     obj = ConnectMysql()
     return obj.get_cursor()
+
+
+def get_redis_cursor():
+    return ConnectRedis().get_cursor()
 
 
 # 提交数据，数据写入数据库中
